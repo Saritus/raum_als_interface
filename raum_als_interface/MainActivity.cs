@@ -16,4 +16,3 @@ namespace raum_als_interface
         }
     }
 }
-
