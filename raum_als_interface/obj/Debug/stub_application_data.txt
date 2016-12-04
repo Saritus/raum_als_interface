@@ -1,2 +1,0 @@
-android.app.Application
-raum_als_interface.raum_als_interface
