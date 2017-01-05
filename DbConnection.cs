@@ -5,17 +5,11 @@ using System.Collections.Generic;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
-class DbConnection
+abstract class DbConnection
 {
+    private static MySqlConnection sqlconn;
 
-    private MySqlConnection sqlconn;
-
-    public DbConnection()
-    {
-        // TODO: create a new db connection
-    }
-
-    public bool connect()
+    public static bool connect()
     {
         // TODO: connect to mariaDB / MySQL database
         try
@@ -32,19 +26,19 @@ class DbConnection
         }
     }
 
-    public bool close()
+    public static bool close()
     {
         // TODO: close the sql connection
         return false;
     }
 
-    Drop[] getNewEvents(DateTime lastTime)
+    public static Drop[] getNewEvents(DateTime lastTime)
     {
         // TODO: return fetched drops from database
         return null;
     }
 
-    bool saveNewEvent(Drop newDrop)
+    public static bool saveNewEvent(Drop newDrop)
     {
         // TODO: push new drop to database
         return false;
