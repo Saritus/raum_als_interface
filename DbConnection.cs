@@ -45,13 +45,15 @@ abstract class DbConnection
 
         // TODO: return fetched drops from database
 
-        List<Drop> products = new List<Drop>();
+        MySqlCommand cmd = sqlconn.CreateCommand();
+        cmd.CommandText = "select item.NAME from ITEM as item where lastChange > lastUpdate";       
+        MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
 
         DataSet tickets = new DataSet();
-        string queryString = "select item.NAME from ITEM as item where lastChange > lastUpdate";
-        MySqlDataAdapter adapter = new MySqlDataAdapter(queryString, sqlconn);
-        adapter.Fill(tickets, "Item");
-        foreach (DataRow row in tickets.Tables["Item"].Rows)
+        adapter.Fill(tickets, "Drops");
+
+        List<Drop> products = new List<Drop>();
+        foreach (DataRow row in tickets.Tables["Drops"].Rows)
         {
             products.Add(new Drop(row));
         }
