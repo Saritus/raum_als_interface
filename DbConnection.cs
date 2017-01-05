@@ -48,7 +48,7 @@ abstract class DbConnection
         connect();
 
         MySqlCommand cmd = sqlconn.CreateCommand();
-        cmd.CommandText = "select item.NAME from ITEM as item where lastChange > lastUpdate";       
+        cmd.CommandText = "select item.NAME from ITEM as item where lastChange > lastUpdate";
         MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
 
         DataSet tickets = new DataSet();
