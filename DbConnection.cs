@@ -57,7 +57,7 @@ class DbConnection
     public bool connect()
     {
         // TODO: connect to mariaDB / MySQL database
-        return true;
+        return false;
     }
 
     Drop[] getNewEvents(DateTime lastTime)
@@ -69,6 +69,6 @@ class DbConnection
     bool saveNewEvent(Drop newDrop)
     {
         // TODO: push new drop to database
-        return true;
+        return false;
     }
 }
