@@ -7,6 +7,9 @@ using MySql.Data.MySqlClient;
 
 class DbConnection
 {
+
+    private MySqlConnection sqlconn;
+
     public DbConnection()
     {
         // TODO: create a new db connection
