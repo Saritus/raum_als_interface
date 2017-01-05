@@ -37,8 +37,8 @@ abstract class DbConnection
     {
         /*
         SELECT *
-        FROM testadressen
-        WHERE anrede = 'Frau' AND familienstand = 'single'
+        FROM temp
+        WHERE mydate > '2009-06-29 16:00:44';
         */
 
         // TODO: return fetched drops from database
