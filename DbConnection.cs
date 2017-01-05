@@ -60,6 +60,14 @@ abstract class DbConnection
     public static bool saveNewDrop(Drop newDrop)
     {
         // TODO: push new drop to database
+
+        MySqlCommand cmd = sqlconn.CreateCommand();
+        cmd.CommandText = "INSERT INTO Drops(Name, Pos, Start) VALUES (@Name, @Pos, @Start)";
+        cmd.Parameters.AddWithValue("@Name", newDrop.name);
+        cmd.Parameters.AddWithValue("@Pos", newDrop.pos);
+        cmd.Parameters.AddWithValue("@Start", newDrop.start);
+        cmd.ExecuteNonQuery();
+
         return false;
     }
 }
