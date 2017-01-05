@@ -6,12 +6,7 @@ namespace TouchWalkthrough
     {
         public Event()
         {
-        }
 
-        public override bool saveToFile()
-        {
-            // TODO: Save Event to file
-            return true;
         }
     }
 }

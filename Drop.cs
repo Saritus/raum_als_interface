@@ -22,7 +22,5 @@ namespace TouchWalkthrough
             get { return start; }
             set { start = value; }
         }
-
-        public abstract bool saveToFile();
     }
 }
