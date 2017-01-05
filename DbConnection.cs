@@ -14,7 +14,7 @@ abstract class DbConnection
         // TODO: connect to mariaDB / MySQL database
         try
         {
-            string connsqlstring = "Server=your.ip.address;Port=3306;database=YOUR_DATA_BASE;User Id=root;Password=password;charset=utf8";
+            string connsqlstring = "Server=your.ip.address;Port=3306;database=YOUR_DATA_BASE;User Id=root;Password=password;charset=utf8"; // TODO: change values in string
             sqlconn = new MySqlConnection(connsqlstring);
             sqlconn.Open();
             return true;
@@ -29,13 +29,32 @@ abstract class DbConnection
     public static bool close()
     {
         // TODO: close the sql connection
+        sqlconn.Close();
         return false;
     }
 
-    public static Drop[] getNewEvents(DateTime lastTime)
+    public static List<Drop> getNewEvents(DateTime lastUpdate)
     {
+        /*
+        SELECT *
+        FROM testadressen
+        WHERE anrede = 'Frau' AND familienstand = 'single'
+        */
+
         // TODO: return fetched drops from database
-        return null;
+
+        List<Drop> products = new List<Drop>();
+
+        DataSet tickets = new DataSet();
+        string queryString = "select item.NAME from ITEM as item where lastChange > lastUpdate";
+        MySqlDataAdapter adapter = new MySqlDataAdapter(queryString, sqlconn);
+        adapter.Fill(tickets, "Item");
+        foreach (DataRow row in tickets.Tables["Item"].Rows)
+        {
+            products.Add(new Drop(row));
+        }
+
+        return products;
     }
 
     public static bool saveNewEvent(Drop newDrop)
