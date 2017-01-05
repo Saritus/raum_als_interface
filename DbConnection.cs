@@ -9,7 +9,7 @@ abstract class DbConnection
 {
     private static MySqlConnection sqlconn;
 
-    public static bool connect()
+    private static bool connect()
     {
         // TODO: connect to mariaDB / MySQL database
         try
@@ -26,11 +26,13 @@ abstract class DbConnection
         }
     }
 
-    public static bool close()
+    private static void close()
     {
         // TODO: close the sql connection
-        sqlconn.Close();
-        return false;
+        if (sqlconn.State == ConnectionState.Open)
+        {
+            sqlconn.Close();
+        }
     }
 
     public static List<Drop> getNewDrops(DateTime lastUpdate)
