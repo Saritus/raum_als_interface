@@ -1,4 +1,7 @@
 using System;
+using System.Data;
+using System.Collections.Generic;
+
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
@@ -24,6 +27,33 @@ namespace TouchWalkthrough
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        public List<String> LoadAllItemFromMySQL()
+        {
+            List<String> products = new List<String>();
+            try
+            {
+                string connsqlstring = "Server=your.ip.address;Port=3306;database=YOUR_DATA_BASE;User Id=root;Password=password;charset=utf8";
+                MySqlConnection sqlconn = new MySqlConnection(connsqlstring);
+                sqlconn.Open();
+
+                DataSet tickets = new DataSet();
+                string queryString = "select item.NAME from ITEM as item";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(queryString, sqlconn);
+                adapter.Fill(tickets, "Item");
+                foreach (DataRow row in tickets.Tables["Item"].Rows)
+                {
+                    products.Add(row[0].ToString());
+                }
+
+                sqlconn.Close();
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.Message);
+            }
+            return products;
         }
 
         public bool connect()
