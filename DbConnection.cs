@@ -21,6 +21,12 @@ class DbConnection
         return false;
     }
 
+    public bool close()
+    {
+        // TODO: close the sql connection
+        return false;
+    }
+
     Drop[] getNewEvents(DateTime lastTime)
     {
         // TODO: return fetched drops from database
