@@ -1,12 +1,9 @@
 using System;
 
-namespace TouchWalkthrough
+class Event : Drop
 {
-    class Event : Drop
+    public Event()
     {
-        public Event()
-        {
 
-        }
     }
 }
