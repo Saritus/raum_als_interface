@@ -13,6 +13,16 @@ class Drop
 
     public string imagepath { get; set; }
 
+    public Drop()
+    {
+        // TODO: create a new drop
+    }
+
+    public Drop(string xmlfile)
+    {
+        // TODO: load a drop from a xml file
+    }
+
     public bool save(string filename)
     {
         // TODO: save this drop to xml file
