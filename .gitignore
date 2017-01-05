@@ -1,7 +1,11 @@
+# Compiled versions
 Debug/
 Release/
 
- Windows image file caches
+# Visual Studio version files
+.suo
+
+# Windows image file caches
 Thumbs.db
 ehthumbs.db
 
