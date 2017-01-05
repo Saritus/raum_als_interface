@@ -45,6 +45,8 @@ abstract class DbConnection
 
         // TODO: return fetched drops from database
 
+        connect();
+
         MySqlCommand cmd = sqlconn.CreateCommand();
         cmd.CommandText = "select item.NAME from ITEM as item where lastChange > lastUpdate";       
         MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
@@ -58,12 +60,15 @@ abstract class DbConnection
             products.Add(new Drop(row));
         }
 
+        close();
+
         return products;
     }
 
     public static bool saveNewDrop(Drop newDrop)
     {
         // TODO: push new drop to database
+        connect();
 
         MySqlCommand cmd = sqlconn.CreateCommand();
         cmd.CommandText = "INSERT INTO Drops(Name, Pos, Start) VALUES (@Name, @Pos, @Start)";
@@ -71,6 +76,8 @@ abstract class DbConnection
         cmd.Parameters.AddWithValue("@Pos", newDrop.pos);
         cmd.Parameters.AddWithValue("@Start", newDrop.start);
         cmd.ExecuteNonQuery();
+
+        close();
 
         return false;
     }
