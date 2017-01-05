@@ -12,9 +12,9 @@ using Android.Widget;
 
 namespace TouchWalkthrough
 {
-    class DbConnection
+    class Drop
     {
-        public DbConnection()
+        public Drop()
         {
 
         }
