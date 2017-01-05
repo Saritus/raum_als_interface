@@ -26,4 +26,10 @@ abstract class Drop
         get { return imagepath; }
         set { imagepath = value; }
     }
+
+    public bool save()
+    {
+        // TODO: save this drop to xml file
+        return false;
+    }
 }
