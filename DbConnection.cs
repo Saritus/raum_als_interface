@@ -33,7 +33,7 @@ abstract class DbConnection
         return false;
     }
 
-    public static List<Drop> getNewEvents(DateTime lastUpdate)
+    public static List<Drop> getNewDrops(DateTime lastUpdate)
     {
         /*
         SELECT *
@@ -57,7 +57,7 @@ abstract class DbConnection
         return products;
     }
 
-    public static bool saveNewEvent(Drop newDrop)
+    public static bool saveNewDrop(Drop newDrop)
     {
         // TODO: push new drop to database
         return false;
