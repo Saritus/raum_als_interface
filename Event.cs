@@ -2,18 +2,15 @@ using System;
 
 namespace TouchWalkthrough
 {
-    class Event
+    class Event : Drop
     {
-        public String name { get; set; }
-        public Location pos { get; set; }
-        public DateTime start { get; set; }
-
         public Event()
         {
         }
 
-        public bool saveToFile(String filename)
+        public override bool saveToFile()
         {
+            // TODO: Save Event to file
             return true;
         }
     }
