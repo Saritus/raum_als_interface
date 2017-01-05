@@ -5,29 +5,13 @@ class Drop
 {
     public enum type { Event, Idea };
 
-    public String name
-    {
-        get { return name; }
-        set { name = value; }
-    }
+    public String name { get; set; }
 
-    public Location pos
-    {
-        get { return pos; }
-        set { pos = value; }
-    }
+    public Location pos { get; set; }
 
-    public DateTime start
-    {
-        get { return start; }
-        set { start = value; }
-    }
+    public DateTime start { get; set; }
 
-    public string imagepath
-    {
-        get { return imagepath; }
-        set { imagepath = value; }
-    }
+    public string imagepath { get; set; }
 
     public bool save(string filename)
     {
