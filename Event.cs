@@ -2,16 +2,16 @@
 
 public class Event 
 {
-    public String name;
-    public Location pos;
-    public Time start;
+    public String name { get; set; }
+    public Location pos { get; set; }
+    public Time start { get; set; }
 
-	public Event()
+    public Event()
 	{
 	}
 
-    public saveToFile(String filename)
+    public bool saveToFile(String filename)
     {
-
+        return true;
     }
 }
