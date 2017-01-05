@@ -1,8 +1,10 @@
 using System;
 using Android.Locations;
 
-abstract class Drop
+class Drop
 {
+    public enum type { Event, Idea };
+
     public String name
     {
         get { return name; }
