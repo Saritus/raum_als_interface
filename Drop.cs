@@ -29,9 +29,10 @@ class Drop
         set { imagepath = value; }
     }
 
-    public bool save()
+    public bool save(string filename)
     {
         // TODO: save this drop to xml file
+        XML.Save<Drop>(this, filename);
         return false;
     }
 }
