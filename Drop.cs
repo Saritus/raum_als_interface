@@ -1,26 +1,53 @@
-﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TouchWalkthrough
+using System;
+using Android.Locations;
+using System.Data;
+
+class Drop
 {
+  
+    private int id              { get; set; }
+    private string description  { get; set; }
+    private Category category   { get; set; }
+  
+    private DateTime startTime  { get; set; }
+    private DateTime endTime    { get; set; }
 
-    class Drop
+    private ExtendedLocation location { get; set; }
+
+    private bool followed       { get; set; }
+    private bool ignored        { get; set; }
+
+    public enum type { Event, Idea };
+
+    public String name { get; set; }
+
+    public Location pos { get; set; }
+
+    public string imagepath { get; set; }
+
+    public Drop()
     {
-        private int id              { get; set; }
-        private string name         { get; set; }
-        private string description  { get; set; }
-        private Category category   { get; set; }
+        // TODO: create a new drop
+    }
 
-        private DateTime startTime  { get; set; }
-        private DateTime endTime    { get; set; }
+    public Drop(string xmlfile)
+    {
+        // TODO: load a drop from a xml file
+    }
 
-        private ExtendedLocation location { get; set; }
+    public Drop(DataRow row)
+    {
+        // TODO: create a new Drop from a datarow
+    }
 
-        private bool followed       { get; set; }
-        private bool ignored        { get; set; }
-
-        private string picturePath { get; set; }
+    public bool save(string filename)
+    {
+        // TODO: save this drop to xml file
+        XML.Save<Drop>(this, filename);
+        return false;
     }
 }
