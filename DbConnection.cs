@@ -2,8 +2,8 @@ using System;
 using System.Data;
 using System.Collections.Generic;
 
-using MySql.Data;
-using MySql.Data.MySqlClient;
+//using MySql.Data;
+//using MySql.Data.MySqlClient;
 
 abstract class DbConnection
 {
@@ -37,11 +37,10 @@ abstract class DbConnection
 
     public static List<Drop> getNewDrops(DateTime lastUpdate)
     {
-        /*
-        SELECT *
-        FROM temp
-        WHERE mydate > '2009-06-29 16:00:44';
-        */
+        //SELECT *
+        //FROM temp
+        //WHERE mydate > '2009-06-29 16:00:44';
+        
 
         // TODO: return fetched drops from database
 
