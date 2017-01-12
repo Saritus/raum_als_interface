@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 abstract class DbConnection
 {
+    /*
     private static MySqlConnection sqlconn;
 
     private static bool connect()
@@ -80,4 +81,5 @@ abstract class DbConnection
 
         return false;
     }
+    */
 }
