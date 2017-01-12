@@ -1,16 +1,31 @@
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 using System;
 using Android.Locations;
 using System.Data;
 
 class Drop
 {
+  
+    private int id              { get; set; }
+    private string description  { get; set; }
+    private Category category   { get; set; }
+  
+    private DateTime startTime  { get; set; }
+    private DateTime endTime    { get; set; }
+
+    private ExtendedLocation location { get; set; }
+
+    private bool followed       { get; set; }
+    private bool ignored        { get; set; }
+
     public enum type { Event, Idea };
 
     public String name { get; set; }
 
     public Location pos { get; set; }
-
-    public DateTime start { get; set; }
 
     public string imagepath { get; set; }
 
