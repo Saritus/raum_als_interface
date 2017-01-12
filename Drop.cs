@@ -1,5 +1,6 @@
 using System;
 using Android.Locations;
+using System.Data;
 
 class Drop
 {
@@ -21,6 +22,11 @@ class Drop
     public Drop(string xmlfile)
     {
         // TODO: load a drop from a xml file
+    }
+
+    public Drop(DataRow row)
+    {
+        // TODO: create a new Drop from a datarow
     }
 
     public bool save(string filename)
