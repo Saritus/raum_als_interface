@@ -6,48 +6,51 @@ using System;
 using Android.Locations;
 using System.Data;
 
-class Drop
+namespace TouchWalkthrough
 {
-  
-    private int id              { get; set; }
-    private string description  { get; set; }
-    private Category category   { get; set; }
-  
-    private DateTime startTime  { get; set; }
-    private DateTime endTime    { get; set; }
-
-    private ExtendedLocation location { get; set; }
-
-    private bool followed       { get; set; }
-    private bool ignored        { get; set; }
-
-    public enum type { Event, Idea };
-
-    public String name { get; set; }
-
-    public Location pos { get; set; }
-
-    public string imagepath { get; set; }
-
-    public Drop()
+    class Drop
     {
-        // TODO: create a new drop
-    }
 
-    public Drop(string xmlfile)
-    {
-        // TODO: load a drop from a xml file
-    }
+        private int id { get; set; }
+        private string description { get; set; }
+        private Category category { get; set; }
 
-    public Drop(DataRow row)
-    {
-        // TODO: create a new Drop from a datarow
-    }
+        private DateTime startTime { get; set; }
+        private DateTime endTime { get; set; }
 
-    public bool save(string filename)
-    {
-        // TODO: save this drop to xml file
-        XML.Save<Drop>(this, filename);
-        return false;
+        private ExtendedLocation location { get; set; }
+
+        private bool followed { get; set; }
+        private bool ignored { get; set; }
+
+        public enum type { Event, Idea };
+
+        public String name { get; set; }
+
+        public Location pos { get; set; }
+
+        public string imagepath { get; set; }
+
+        public Drop()
+        {
+            // TODO: create a new drop
+        }
+
+        public Drop(string xmlfile)
+        {
+            // TODO: load a drop from a xml file
+        }
+
+        public Drop(DataRow row)
+        {
+            // TODO: create a new Drop from a datarow
+        }
+
+        public bool save(string filename)
+        {
+            // TODO: save this drop to xml file
+            XML.Save<Drop>(this, filename);
+            return false;
+        }
     }
 }

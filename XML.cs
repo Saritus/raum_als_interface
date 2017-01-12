@@ -1,30 +1,33 @@
 using System.Xml.Serialization;
 using System.IO;
 
-abstract class XML
+namespace TouchWalkthrough
 {
-    public static T Load<T>(string FileSpec)
+    abstract class XML
     {
-        XmlSerializer formatter = new XmlSerializer(typeof(T));
-
-        using (FileStream aFile = new FileStream(FileSpec, FileMode.Open))
+        public static T Load<T>(string FileSpec)
         {
-            byte[] buffer = new byte[aFile.Length];
-            aFile.Read(buffer, 0, (int)aFile.Length);
+            XmlSerializer formatter = new XmlSerializer(typeof(T));
 
-            using (MemoryStream stream = new MemoryStream(buffer))
+            using (FileStream aFile = new FileStream(FileSpec, FileMode.Open))
             {
-                return (T)formatter.Deserialize(stream);
+                byte[] buffer = new byte[aFile.Length];
+                aFile.Read(buffer, 0, (int)aFile.Length);
+
+                using (MemoryStream stream = new MemoryStream(buffer))
+                {
+                    return (T)formatter.Deserialize(stream);
+                }
             }
         }
-    }
 
-    public static void Save<T>(T ToSerialize, string FileSpec)
-    {
-        Directory.CreateDirectory(FileSpec.Substring(0, FileSpec.LastIndexOf('\\')));
-        FileStream outFile = File.Create(FileSpec);
-        XmlSerializer formatter = new XmlSerializer(typeof(T));
+        public static void Save<T>(T ToSerialize, string FileSpec)
+        {
+            Directory.CreateDirectory(FileSpec.Substring(0, FileSpec.LastIndexOf('\\')));
+            FileStream outFile = File.Create(FileSpec);
+            XmlSerializer formatter = new XmlSerializer(typeof(T));
 
-        formatter.Serialize(outFile, ToSerialize);
+            formatter.Serialize(outFile, ToSerialize);
+        }
     }
 }
