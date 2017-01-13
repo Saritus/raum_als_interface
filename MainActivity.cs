@@ -1,10 +1,9 @@
 ﻿namespace TouchWalkthrough
 {
-	using Android.App;
-	using Android.Content;
-	using Android.OS;
-	using Android.Views;
-	using Android.Widget;
+    using Android.App;
+    using Android.OS;
+    using Android.Views;
+    using Android.Widget;
 
 
     [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/ic_launcher")]
