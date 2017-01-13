@@ -1,12 +1,11 @@
 namespace TouchWalkthrough
 {
-	using Android.Content;
-	using Android.Graphics;
-	using Android.Graphics.Drawables;
-	using Android.Util;
-	using Android.Views;
+    using Android.Content;
+    using Android.Graphics;
+    using Android.Graphics.Drawables;
+    using Android.Views;
 
-	public class GestureRecognizerView : View
+    public class GestureRecognizerView : View
 	{
 		private static readonly int InvalidPointerId = -1;
 		private readonly Drawable _icon;
