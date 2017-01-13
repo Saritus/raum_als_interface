@@ -4,16 +4,16 @@ namespace TouchWalkthrough
 {
     interface UIHandler
     {
-        private List<Drop> allEvents { get; set; }
+        List<Drop> allEvents { get; set; }
 
-        public Drop[] getEvents();
-        public Drop[] getFilteredEvents(Category[] filters);
-        public Drop[] getFollowedEvents();
+        Drop[] getEvents();
+        Drop[] getFilteredEvents(Category[] filters);
+        Drop[] getFollowedEvents();
 
-        public void showEvents();
-        public void filter(Category[] filter);
-        public void ignoreEvent(Drop ev);
-        public void followEvent(Drop ev);
-        public void showEventDetail(Drop ev);
+        void showEvents();
+        void filter(Category[] filter);
+        void ignoreEvent(Drop ev);
+        void followEvent(Drop ev);
+        void showEventDetail(Drop ev);
     }
 }

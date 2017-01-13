@@ -5,8 +5,8 @@ namespace TouchWalkthrough
 {
     interface ServiceHandler
     {
-        static int RANGE = 10; //meters
-        public Drop[] updateEventList(DateTime lastUpdate);
-        public Drop[] getEventsInRange(int range, Location position);
+        //int RANGE = 10; //meters
+        Drop[] updateEventList(DateTime lastUpdate);
+        Drop[] getEventsInRange(int range, Location position);
     }
 }
