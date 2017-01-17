@@ -1,31 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffff0000">
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-    <LinearLayout
-        android:layout_gravity="right"
+    android:background="@drawable/background"
+    android:id="@+id/linearLayout">
+    <ImageButton
+        android:src="@drawable/history_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#60d12b">
-        <Button
-            android:id="@+id/Button_filter"
-            android:background="@drawable/filter_button_normal"
-            android:layout_marginRight="5dp"
+        android:id="@+id/imageButton6"
+        android:background="@android:color/transparent" />
+    <ImageView
+        android:src="@drawable/karte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView1"
+        android:layout_weight="0.75"
+        android:scaleType="fitCenter" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_weight="0"
+        android:showDividers="none"
+        android:background="@android:color/transparent"
+        android:alpha="1">
+        <ImageButton
+            android:src="@drawable/filter_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-        <Button
-            android:id="@+id/Button_plus"
-            android:background="@drawable/plus_button_normal"
+            android:id="@+id/imageButton2"
+            android:background="@android:color/transparent" />
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:id="@+id/imageButton1"
+            android:src="@drawable/plus_button"
+            android:background="@android:color/transparent" />
+        <ImageButton
+            android:src="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton5"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent" />
+        <ImageButton
+            android:src="@drawable/arrow_left_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton3"
+            android:background="@android:color/transparent" />
+        <ImageButton
+            android:src="@drawable/arrow_right_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton4"
+            android:background="@android:color/transparent" />
     </LinearLayout>
 </LinearLayout>
