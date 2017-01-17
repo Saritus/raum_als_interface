@@ -87,29 +87,35 @@ namespace TouchWalkthrough
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f06000f
-			public const int gestureRecognizerView1 = 2131099663;
+			// aapt resource value: 0x7f06000a
+			public const int ViewIsOnlyForAlphaValueBackground = 2131099658;
+			
+			// aapt resource value: 0x7f060007
+			public const int absoluteLayout1 = 2131099655;
+			
+			// aapt resource value: 0x7f060011
+			public const int gestureRecognizerView1 = 2131099665;
 			
 			// aapt resource value: 0x7f060005
 			public const int historyList = 2131099653;
 			
-			// aapt resource value: 0x7f06000b
-			public const int imageButton1 = 2131099659;
-			
-			// aapt resource value: 0x7f06000a
-			public const int imageButton2 = 2131099658;
-			
 			// aapt resource value: 0x7f06000d
-			public const int imageButton3 = 2131099661;
-			
-			// aapt resource value: 0x7f06000e
-			public const int imageButton4 = 2131099662;
+			public const int imageButton1 = 2131099661;
 			
 			// aapt resource value: 0x7f06000c
-			public const int imageButton5 = 2131099660;
+			public const int imageButton2 = 2131099660;
 			
-			// aapt resource value: 0x7f060007
-			public const int imageButton6 = 2131099655;
+			// aapt resource value: 0x7f06000f
+			public const int imageButton3 = 2131099663;
+			
+			// aapt resource value: 0x7f060010
+			public const int imageButton4 = 2131099664;
+			
+			// aapt resource value: 0x7f06000e
+			public const int imageButton5 = 2131099662;
+			
+			// aapt resource value: 0x7f060008
+			public const int imageButton6 = 2131099656;
 			
 			// aapt resource value: 0x7f060003
 			public const int imageButton97 = 2131099651;
@@ -120,14 +126,14 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f060001
 			public const int imageButton99 = 2131099649;
 			
-			// aapt resource value: 0x7f060008
-			public const int imageView1 = 2131099656;
+			// aapt resource value: 0x7f060009
+			public const int imageView1 = 2131099657;
 			
 			// aapt resource value: 0x7f060006
 			public const int linearLayout = 2131099654;
 			
-			// aapt resource value: 0x7f060009
-			public const int linearLayout1 = 2131099657;
+			// aapt resource value: 0x7f06000b
+			public const int linearLayout1 = 2131099659;
 			
 			// aapt resource value: 0x7f060000
 			public const int linearLayoutFilter = 2131099648;
