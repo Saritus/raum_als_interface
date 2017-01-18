@@ -23,7 +23,7 @@
 			base.OnCreate (bundle);
 			SetContentView(Resource.Layout.Main);
 
-
+            /*
 			//For ListView
 			listnames = FindViewById<ListView>(Resource.Id.historyList);
 
@@ -39,7 +39,7 @@
 
 			listnames.ItemClick += Listnames_ItemClick;
 			//For ListView ENDE
-
+            */
 
 			//For History-Button
 			ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
