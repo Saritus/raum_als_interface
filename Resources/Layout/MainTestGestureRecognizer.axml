@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/gestureRecognizerView1"
         android:layout_weight="0.1"
-        android:background="@drawable/karte_z" />
+        android:background="@drawable/karte_z_eg" />
     <LinearLayout
         android:orientation="horizontal"
         android:minWidth="25px"
