@@ -27,11 +27,11 @@
         android:id="@+id/imageButton6"
         android:background="@android:color/transparent" />
     <RelativeLayout
-          android:id="@+id/relativeLayout_navbar"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:layout_alignParentBottom="true">
+        android:id="@+id/relativeLayout_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true">
       <FrameLayout
           android:layout_weight="0"
           android:layout_width="match_parent"
@@ -91,16 +91,16 @@
       </FrameLayout>
     </RelativeLayout>
     <RelativeLayout
-          android:minWidth="25px"
-          android:minHeight="25px"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/relativeLayoutFilter"
-          android:layout_weight="0"
-          android:layout_above="@id/relativeLayout_navbar"
-          android:layout_alignLeft="@id/imageButton6"
-          android:layout_alignRight="@id/imageButton6"
-          android:visibility="gone">
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayoutFilter"
+        android:layout_weight="0"
+        android:layout_above="@id/relativeLayout_navbar"
+        android:layout_alignLeft="@id/imageButton6"
+        android:layout_alignRight="@id/imageButton6"
+        android:visibility="gone">
       <FrameLayout
           android:id="@+id/frameLayoutFilter"
           android:layout_weight="0"
@@ -140,6 +140,5 @@
           android:layout_below="@id/imageButton97"
           android:layout_centerHorizontal="true" />
     </RelativeLayout>
-
   </RelativeLayout>
 </LinearLayout>
