@@ -33,7 +33,7 @@
 			itemlist.Add("Item 2");
 			itemlist.Add("Item 3");
 			itemlist.Add("Item 4");
-
+			 
 			ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1,itemlist);
 			listnames.Adapter = adapter;
 
@@ -48,7 +48,7 @@
 			history_button.Click += (object sender, EventArgs e) =>
 			{
 				if (history_button_on == false)
-				{
+				{ 
 					history_button.SetImageResource(Resource.Drawable.plus_button);
 					showHistoryLayout.Visibility = ViewStates.Visible;
 				}
@@ -59,19 +59,19 @@
 			};
 			//For History-Button ENDE
 
-
+			 
 			//For Filter-Button
 			ImageButton filter_button = FindViewById<ImageButton>(Resource.Id.imageButton2);
-			LinearLayout showFilterLayout = FindViewById<LinearLayout>(Resource.Id.linearLayoutFilter);
+			//RelativeLayout showFilterLayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayoutFilter); //GEHT NICHT?!
 
 			filter_button.Click += (object sender, EventArgs e) =>
 			{
 				if (filter_button_on == false)//Öffnet Untermenü
 				{
-					showFilterLayout.Visibility = ViewStates.Visible;
+					//showFilterLayout.Visibility = ViewStates.Visible;
 				}
 				else {//Schließt Untermenü
-					showFilterLayout.Visibility = ViewStates.Gone;
+					//showFilterLayout.Visibility = ViewStates.Gone;
 				}
 			};
 			//For Filter-Button ENDE

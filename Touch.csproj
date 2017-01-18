@@ -81,7 +81,6 @@
     <AndroidResource Include="Resources\Drawable\filter_button.png" />
     <AndroidResource Include="Resources\Drawable\history_button.png" />
     <AndroidResource Include="Resources\Drawable\plus_button.png" />
-    <AndroidResource Include="Resources\Drawable\karte_Z.png" />
     <AndroidResource Include="Resources\Layout\Main.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -89,7 +88,9 @@
     <AndroidResource Include="Resources\Layout\Filter_Menue.xml" />
     <AndroidResource Include="Resources\Drawable\Karte_Gebaeude.png" />
     <AndroidResource Include="Resources\Drawable\Karte_Z_EG.png" />
-    <AndroidResource Include="Resources\Drawable\arrow_right_button232.png" />
+    <AndroidResource Include="Resources\Drawable\icon_hap1.png" />
+    <AndroidResource Include="Resources\Drawable\icon_hap2.png" />
+    <AndroidResource Include="Resources\Drawable\icon_hap3.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
