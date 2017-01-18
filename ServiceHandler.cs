@@ -3,7 +3,7 @@ using System;
 
 namespace TouchWalkthrough
 {
-    interface ServiceHandler
+    interface iServiceHandler
     {
         //int RANGE = 10; //meters
         Drop[] updateEventList(DateTime lastUpdate);
