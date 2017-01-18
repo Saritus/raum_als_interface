@@ -20,7 +20,7 @@ namespace TouchWalkthrough
 		public GestureRecognizerView (Context context)
             : base(context, null, 0)
 		{
-			_icon = context.Resources.GetDrawable (Resource.Drawable.karte_Z);
+			_icon = context.Resources.GetDrawable (Resource.Drawable.Karte_Z_EG);
             _icon.SetBounds(0, 0, _icon.IntrinsicWidth, _icon.IntrinsicHeight);
             _scaleDetector = new ScaleGestureDetector (context, new MyScaleListener (this));
 		}
