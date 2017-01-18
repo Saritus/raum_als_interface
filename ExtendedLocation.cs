@@ -16,7 +16,11 @@ namespace TouchWalkthrough
 
         public ExtendedLocation(ExtendedLocation l) : base(l)
         {
-        
+
+        }
+
+        public ExtendedLocation() : base("")
+        {
         }
     }
 }
