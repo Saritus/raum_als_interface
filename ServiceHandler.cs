@@ -13,10 +13,9 @@ using Android.Locations;
 
 namespace TouchWalkthrough
 {
-    interface ServiceHandler
+    interface iServiceHandler
     {
-        static int RANGE = 10; //meters
-        public Drop[] updateEventList(DateTime lastUpdate);
-        public Drop[] getEventsInRange(int range, Location position);
+        Drop[] updateEventList(DateTime lastUpdate);
+        Drop[] getEventsInRange(int range, Location position);
     }
 }

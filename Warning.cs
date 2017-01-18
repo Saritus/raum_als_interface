@@ -11,8 +11,12 @@ using Android.Views;
 using Android.Widget;
 
 namespace TouchWalkthrough
-{
+{/*
     class Warning : Drop
     {
-    }
+        public Warning() : base()
+        {
+
+        }
+    }*/
 }
