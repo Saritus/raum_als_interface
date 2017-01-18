@@ -51,7 +51,7 @@ namespace TouchWalkthrough
 			public const int arrow_right_button = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int arrow_right_button2 = 2130837506;
+			public const int arrow_right_button232 = 2130837506;
 			
 			// aapt resource value: 0x7f020003
 			public const int background = 2130837507;

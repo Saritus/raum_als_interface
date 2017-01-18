@@ -89,7 +89,7 @@
     <AndroidResource Include="Resources\Layout\Filter_Menue.xml" />
     <AndroidResource Include="Resources\Drawable\Karte_Gebaeude.png" />
     <AndroidResource Include="Resources\Drawable\Karte_Z_EG.png" />
-    <AndroidResource Include="Resources\Drawable\arrow_right_button2.png" />
+    <AndroidResource Include="Resources\Drawable\arrow_right_button232.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
