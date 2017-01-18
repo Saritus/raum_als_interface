@@ -13,7 +13,7 @@ namespace TouchWalkthrough
         private DateTime startTime { get; set; }
         private DateTime endTime { get; set; }
 
-        private ExtendedLocation location;
+        private ExtendedLocation location { get; set; }
 
         private bool followed { get; set; }
         private bool ignored { get; set; }
