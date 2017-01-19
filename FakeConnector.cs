@@ -6,6 +6,27 @@ namespace TouchWalkthrough
 {
     public class FakeConnector : Connector
     {
+
+        // Singleton-part
+
+        private static FakeConnector instance;
+
+        private FakeConnector() { }
+
+        public static FakeConnector Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new FakeConnector();
+                }
+                return instance;
+            }
+        }
+
+        // Fake-part
+
         static public List<Drop> dummyDrops
         {
             get
@@ -32,6 +53,8 @@ namespace TouchWalkthrough
         }
 
         static bool dummyDropsCreated = false;
+
+        // Connector-part
 
         public bool connect()
         {
