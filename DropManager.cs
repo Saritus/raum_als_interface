@@ -39,6 +39,12 @@ namespace TouchWalkthrough
             return tempList;
         }
 
+        public List<Drop> getNotIgnoredDrops()
+        {
+            var tmp = from drop in drops where !drop.ignored select drop;
+            return tmp.ToList();
+        }
+
         public void ignoreDrop(Drop ev)
         {
             ev.ignored = true;
