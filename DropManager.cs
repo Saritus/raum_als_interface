@@ -19,7 +19,7 @@ namespace TouchWalkthrough
             }
         }
 
-        public List<Drop> getDrops(Category[] filters)
+        public List<Drop> getFilteredDrops(Category[] filters)
         {
             return drops.Where(drop => filters.Contains(drop.category)).ToList();
         }
