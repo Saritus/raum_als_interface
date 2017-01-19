@@ -58,11 +58,9 @@ namespace TouchWalkthrough
             lastTimestamp = DateTime.Now;
         }
 
-        public List<Drop> updateDropsSince(DateTime lastTimestamp)
+        public List<Drop> updateDropsSince(DateTime lastUpdate)
         {
-            List<Drop> receivedDrops = new List<Drop>();
-            //TODO: frage bei server nach neuen events seit lastTimestamp
-            return receivedDrops;
+            return connector.getNewDrops(lastTimestamp);
         }
 
         //Front end related
