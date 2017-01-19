@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TouchWalkthrough
 {
@@ -19,7 +20,7 @@ namespace TouchWalkthrough
 
         public static List<Drop> getNewDrops(DateTime lastUpdate)
         {
-            return null;
+            return dummyDrops.Where(drop => drop.lastChange >= lastUpdate).ToList();
         }
 
         public static bool saveNewDrop(Drop newDrop)
