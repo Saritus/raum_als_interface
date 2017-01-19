@@ -1,6 +1,6 @@
 ﻿namespace TouchWalkthrough
 {
-    enum Category
+    public enum Category
     {
         EVENT, 
         WARNING, 
