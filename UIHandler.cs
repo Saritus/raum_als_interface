@@ -75,7 +75,7 @@ namespace TouchWalkthrough
                 for (int j = 0; j < i; j++)
                 {
                     string f = Enum.GetName(typeof(Category), filter);
-                    tempList.Add(new Drop(i, "Test" + f + i, filter, "Test" + f + i + "Description, ", DateTime.Today, DateTime.Now, new ExtendedLocation(), ""));
+                    tempList.Add(new Drop(i, "Test" + f + i, filter, "Test" + f + i + "Description, ", DateTime.Today, DateTime.Now, new ExtendedLocation()));
                 }
             }
             return tempList;
