@@ -6,9 +6,11 @@ namespace TouchWalkthrough
 {
     class Drop
     {
+        // Internal settings
+        public int id { get; private set; }
+        public DateTime lastChange { get; private set; }
 
-        // Global settings
-        public int id { get; set; }
+        // Creator settings
         public string name { get; set; }
 
         public Category category { get; set; }
