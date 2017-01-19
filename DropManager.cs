@@ -27,7 +27,7 @@ namespace TouchWalkthrough
         // manager-part
 
         public List<Drop> drops { get; set; }
-        public DateTime lastTimestamp { get; private set; }
+        public DateTime lastUpdate { get; private set; }
 
         //server daten
 
@@ -51,16 +51,15 @@ namespace TouchWalkthrough
         //server related
         public void updateDropList()
         {
-            List<Drop> receivedDrops = new List<Drop>();
-            receivedDrops = updateDropsSince(lastTimestamp);
+            List<Drop> receivedDrops = updateDropsSince(lastUpdate);
             if (receivedDrops.Count > 0)
                 drops.AddRange(receivedDrops);
-            lastTimestamp = DateTime.Now;
+            lastUpdate = DateTime.Now;
         }
 
         public List<Drop> updateDropsSince(DateTime lastUpdate)
         {
-            return connector.getNewDrops(lastTimestamp);
+            return connector.getNewDrops(lastUpdate);
         }
 
         //Front end related
