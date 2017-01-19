@@ -48,17 +48,10 @@ namespace TouchWalkthrough
 
         public FakeConnector connector = FakeConnector.Instance;
 
-        public void updateDropList()
+        public void updateDrops()
         {
-            List<Drop> receivedDrops = updateDropsSince(lastUpdate);
-            if (receivedDrops.Count > 0)
-                drops.AddRange(receivedDrops);
+            drops.AddRange(connector.getNewDrops(lastUpdate));
             lastUpdate = DateTime.Now;
-        }
-
-        public List<Drop> updateDropsSince(DateTime lastUpdate)
-        {
-            return connector.getNewDrops(lastUpdate);
         }
 
         // front-end-part
