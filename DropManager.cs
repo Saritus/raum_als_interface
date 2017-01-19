@@ -61,7 +61,7 @@ namespace TouchWalkthrough
             return connector.getNewDrops(lastUpdate);
         }
 
-        //Front end related
+        // front-end-part
         public void showDrop(Drop ev)
         {
             Console.WriteLine(ev.id + ", " + ev.name);
