@@ -1,70 +1,34 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TouchWalkthrough
 {
-    class UIHandler //: iUIHandler
+    class DropManager
     {
-        private List<Drop> allDrops;
-        private DateTime lastTimestamp;
+        public List<Drop> drops { get; set; }
+        public DateTime lastTimestamp { get; private set; }
         //server daten
 
-        public UIHandler()
+        public DropManager()
         {
-            this.allDrops = createDummyDrops(5);
-            foreach (Drop d in getDrops())
-            {
-                showDrop(d);
-            }
+            this.drops = createDummyDrops(5);
+            drops.ForEach(drop => showDrop(drop));
         }
 
-        public List<Drop> getDrops()
+        public List<Drop> getFilteredDrops(Category[] filters)
         {
-            return allDrops;
-        }
-
-        public List<Drop> getDrops(Category[] filters)
-        {
-            //if all filters are active
-            if (filters.Length == Enum.GetNames(typeof(Category)).Length)
-            {
-                return getDrops();
-            }
-            else
-            {
-                List<Drop> tempList = new List<Drop>();
-                foreach (Drop drop in allDrops)
-                {
-                    foreach (Category filter in filters)
-                    {
-                        if (drop.category == filter)
-                            tempList.Add(drop);
-                        break;
-                    }
-                }
-                return tempList;
-            }
+            return drops.Where(drop => filters.Contains(drop.category)).ToList();
         }
 
         public List<Drop> getFollowedDrops()
         {
-            List<Drop> tempList = new List<Drop>();
-            foreach (Drop drop in allDrops)
-            {
-                if (drop.followed)
-                    tempList.Add(drop);
-            }
-            return tempList;
+            return drops.Where(drop => drop.followed).ToList();
         }
 
-        public void ignoreDrop(Drop ev)
+        public List<Drop> getNotIgnoredDrops()
         {
-            ev.ignored = true;
-        }
-
-        public void followDrop(Drop ev)
-        {
-            ev.followed = true;
+            return (from drop in drops where !drop.ignored select drop).ToList();
         }
 
         public List<Drop> createDummyDrops(int i)
@@ -88,7 +52,7 @@ namespace TouchWalkthrough
             List<Drop> receivedDrops = new List<Drop>();
             receivedDrops = updateDropsSince(lastTimestamp);
             if (receivedDrops.Count > 0)
-                allDrops.AddRange(receivedDrops);
+                drops.AddRange(receivedDrops);
             lastTimestamp = DateTime.Now;
         }
 
@@ -108,11 +72,6 @@ namespace TouchWalkthrough
         public void showDropDetail(Drop ev)
         {
             Console.WriteLine("Details: " + ev.id + ", " + ev.name + ", " + ev.description);
-        }
-
-        public void setLastTimestamp(DateTime t)
-        {
-            this.lastTimestamp = t;
         }
     }
 }
