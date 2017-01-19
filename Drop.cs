@@ -6,28 +6,26 @@ namespace TouchWalkthrough
 {
     class Drop
     {
-        private int id { get; set; }
-        private string description { get; set; }
-        private Category category { get; set; }
 
-        private DateTime startTime { get; set; }
-        private DateTime endTime { get; set; }
+        // Global settings
+        public int id { get; set; }
+        public string name { get; set; }
 
-        private ExtendedLocation location { get; set; }
+        public Category category { get; set; }
+        public string description { get; set; }
 
-        private bool followed { get; set; }
-        private bool ignored { get; set; }
+        public DateTime startTime { get; set; }
+        public DateTime endTime { get; set; }
 
-        public String name { get; set; }
+        public ExtendedLocation location { get; set; }
 
-        private string picturePath { get; set; }
-        
-        public Drop(int id, string name, string description, Category category, DateTime startTime, DateTime endTime, ExtendedLocation Location, bool f, bool i) 
-            : this(id, name, description, category, startTime, endTime, Location, f, i, "")
-        {
-        }
+        public string picturePath { get; set; }
 
-        public Drop(int id, string name, string description, Category category, DateTime startTime, DateTime endTime, ExtendedLocation location, bool f, bool i, string picPath)
+        // User settings
+        public bool followed { get; set; }
+        public bool ignored { get; set; }
+
+        public Drop(int id, string name, Category category, string description, DateTime startTime, DateTime endTime, ExtendedLocation location, string picturePath)
         {
             this.id = id;
             this.name = name;
@@ -36,79 +34,33 @@ namespace TouchWalkthrough
             this.startTime = startTime;
             this.endTime = endTime;
             this.location = location;
-            this.followed = f;
-            this.ignored = i;
-            this.picturePath = picPath;
+            this.picturePath = picturePath;
         }
 
-        public int getId()
+        public Drop(int id, string name, Category category, string description, DateTime startTime, DateTime endTime, ExtendedLocation location)
+            : this(id, name, category, description, startTime, endTime, location, "")
         {
-            return id;
+
         }
 
-        public string getName()
+        public Drop(int id)
         {
-            return name;
+            this.id = id;
         }
 
-        public string getDescription()
+        public Drop()
         {
-            return description;
+
         }
 
-        public Category getCategory()
-        {
-            return category;
-        }
-
-        public DateTime getStartTime()
-        {
-            return startTime;
-        }
-
-        public DateTime getEndTime()
-        {
-            return endTime;
-        }
-
-        public ExtendedLocation getLocation()
-        {
-            return null;
-        }
-
-        public bool isFollowed()
-        {
-            return followed;
-        }
-
-        public void follow(bool i)
-        {
-            this.followed = i;
-        }
-
-        public bool isIgnored()
-        {
-            return ignored;
-        }
-
-        public void ignore(bool i)
-        {
-            this.ignored = i;
-        }
-
-        public string getPicturePath()
-        {
-            return picturePath;
-        }
-
-        public Drop(string xmlfile)
+        public Drop(string filename)
         {
             // TODO: load a drop from a xml file
         }
 
         public Drop(DataRow row)
         {
-            // TODO: create a new Drop from a datarow
+            // TODO: create a new Drop from a datarow (SQL)
         }
 
         public bool save(string filename)
