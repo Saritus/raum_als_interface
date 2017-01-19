@@ -52,7 +52,9 @@
   <ItemGroup>
     <Compile Include="Building.cs" />
     <Compile Include="Category.cs" />
-    <Compile Include="DbConnection.cs" />
+    <Compile Include="DbConnector.cs" />
+    <Compile Include="FakeConnector.cs" />
+    <Compile Include="MySqlConnector.cs" />
     <Compile Include="Drop.cs" />
     <Compile Include="EventClient.cs" />
     <Compile Include="ExtendedLocation.cs" />
