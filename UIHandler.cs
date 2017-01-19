@@ -11,7 +11,7 @@ namespace TouchWalkthrough
 
         public UIHandler()
         {
-            this.allDrops=createDummyDrops(5);
+            this.allDrops = createDummyDrops(5);
             foreach (Drop d in getDrops())
             {
                 showDrop(d);
@@ -37,7 +37,7 @@ namespace TouchWalkthrough
                 {
                     foreach (Category filter in filters)
                     {
-                        if (drop.getCategory() == filter)
+                        if (drop.category == filter)
                             tempList.Add(drop);
                         break;
                     }
@@ -51,7 +51,7 @@ namespace TouchWalkthrough
             List<Drop> tempList = new List<Drop>();
             foreach (Drop drop in allDrops)
             {
-                if (drop.isFollowed())
+                if (drop.followed)
                     tempList.Add(drop);
             }
             return tempList;
@@ -59,22 +59,23 @@ namespace TouchWalkthrough
 
         public void ignoreDrop(Drop ev)
         {
-            ev.ignore(true);
+            ev.ignored = true;
         }
 
         public void followDrop(Drop ev)
         {
-            ev.follow(true);
+            ev.followed = true;
         }
 
         public List<Drop> createDummyDrops(int i)
         {
             List<Drop> tempList = new List<Drop>();
-            foreach (Category filter in Enum.GetValues(typeof(Category))){
+            foreach (Category filter in Enum.GetValues(typeof(Category)))
+            {
                 for (int j = 0; j < i; j++)
                 {
                     string f = Enum.GetName(typeof(Category), filter);
-                    tempList.Add(new Drop(i, "Test"+ f + i, "Test" + f + i + " Description", filter, DateTime.Today, DateTime.Now, new ExtendedLocation(), false, false));
+                    tempList.Add(new Drop(i, "Test" + f + i, filter, "Test" + f + i + "Description, ", DateTime.Today, DateTime.Now, new ExtendedLocation(), ""));
                 }
             }
             return tempList;
@@ -97,16 +98,16 @@ namespace TouchWalkthrough
             //TODO: frage bei server nach neuen events seit lastTimestamp
             return receivedDrops;
         }
-        
+
         //Front end related
         public void showDrop(Drop ev)
         {
-            Console.WriteLine(ev.getId() + ", "+ev.getName());
+            Console.WriteLine(ev.id + ", " + ev.name);
         }
 
         public void showDropDetail(Drop ev)
         {
-            Console.WriteLine("Details: "+ev.getId() + ", " + ev.getName()+", "+ev.getDescription());
+            Console.WriteLine("Details: " + ev.id + ", " + ev.name + ", " + ev.description);
         }
 
         public void setLastTimestamp(DateTime t)
