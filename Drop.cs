@@ -44,7 +44,7 @@ namespace TouchWalkthrough
 
         public Drop(DataRow row)
         {
-            // TODO: create a new Drop from a datarow
+            // TODO: create a new Drop from a datarow (SQL)
         }
 
         public bool save(string filename)
