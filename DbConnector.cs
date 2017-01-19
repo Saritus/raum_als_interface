@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace TouchWalkthrough
 {
-    interface DbConnector
+    public interface DbConnector
     {
         bool connect();
 
