@@ -6,7 +6,11 @@ namespace TouchWalkthrough
 {
     class Drop
     {
+
+        // Global settings
         private int id { get; set; }
+        private string name { get; set; }
+
         private string description { get; set; }
         private Category category { get; set; }
 
@@ -15,12 +19,11 @@ namespace TouchWalkthrough
 
         private ExtendedLocation location { get; set; }
 
+        private string picturePath { get; set; }
+
+        // User settings
         private bool followed { get; set; }
         private bool ignored { get; set; }
-
-        private string name { get; set; }
-
-        private string picturePath { get; set; }
 
         public Drop(int id, string name, string description, Category category, DateTime startTime, DateTime endTime, ExtendedLocation location, bool f, bool i, string picPath)
         {
