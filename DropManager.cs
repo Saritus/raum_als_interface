@@ -21,16 +21,8 @@ namespace TouchWalkthrough
 
         public List<Drop> getDrops(Category[] filters)
         {
-            //if all filters are active
-            if (filters.Length == Enum.GetNames(typeof(Category)).Length)
-            {
-                return drops;
-            }
-            else
-            {
-                List<Drop> tempList = drops.Where(drop => filters.Contains(drop.category)).ToList();
-                return tempList;
-            }
+            List<Drop> tempList = drops.Where(drop => filters.Contains(drop.category)).ToList();
+            return tempList;
         }
 
         public List<Drop> getFollowedDrops()
