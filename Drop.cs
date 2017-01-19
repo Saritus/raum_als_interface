@@ -37,7 +37,7 @@ namespace TouchWalkthrough
             this.picturePath = picturePath;
         }
 
-        public Drop(string xmlfile)
+        public Drop(string filename)
         {
             // TODO: load a drop from a xml file
         }
