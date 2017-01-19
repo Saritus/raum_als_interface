@@ -34,6 +34,11 @@ namespace TouchWalkthrough
             return drops.Where(drop => filters.Contains(drop.category)).ToList();
         }
 
+        public List<Drop> getBuildingDrops(Building building)
+        {
+            return drops.Where(drop => drop.location.building == building).ToList();
+        }
+
         public List<Drop> getFollowedDrops()
         {
             return drops.Where(drop => drop.followed).ToList();

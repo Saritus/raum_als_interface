@@ -5,9 +5,8 @@ namespace TouchWalkthrough
 {
     public class ExtendedLocation : Location
     {
-        private Building building { get; set; }
-        private int floor { get; set; }
-
+        public Building building { get; set; }
+        public int floor { get; set; }
 
         public ExtendedLocation(String provider) : base(provider)
         {
