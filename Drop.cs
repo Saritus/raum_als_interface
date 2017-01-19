@@ -21,11 +21,6 @@ namespace TouchWalkthrough
         public string name { get; set; }
 
         private string picturePath { get; set; }
-        
-        public Drop(int id, string name, string description, Category category, DateTime startTime, DateTime endTime, ExtendedLocation Location, bool f, bool i) 
-            : this(id, name, description, category, startTime, endTime, Location, f, i, "")
-        {
-        }
 
         public Drop(int id, string name, string description, Category category, DateTime startTime, DateTime endTime, ExtendedLocation location, bool f, bool i, string picPath)
         {
