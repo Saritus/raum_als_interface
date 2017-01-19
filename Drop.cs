@@ -25,7 +25,7 @@ namespace TouchWalkthrough
         private bool followed { get; set; }
         private bool ignored { get; set; }
 
-        public Drop(int id, string name, string description, Category category, DateTime startTime, DateTime endTime, ExtendedLocation location, string picPath)
+        public Drop(int id, string name, string description, Category category, DateTime startTime, DateTime endTime, ExtendedLocation location, string picturePath)
         {
             this.id = id;
             this.name = name;
@@ -34,7 +34,7 @@ namespace TouchWalkthrough
             this.startTime = startTime;
             this.endTime = endTime;
             this.location = location;
-            this.picturePath = picPath;
+            this.picturePath = picturePath;
         }
 
         public Drop(string xmlfile)
