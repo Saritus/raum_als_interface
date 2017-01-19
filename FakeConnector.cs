@@ -5,7 +5,7 @@ namespace TouchWalkthrough
 {
     abstract class FakeConnector
     {
-        List<Drop> dummyDrops;
+        static List<Drop> dummyDrops;
 
         private static bool connect()
         {
@@ -24,7 +24,8 @@ namespace TouchWalkthrough
 
         public static bool saveNewDrop(Drop newDrop)
         {
-            return false;
+            dummyDrops.Add(newDrop);
+            return true;
         }
     }
 }
