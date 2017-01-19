@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TouchWalkthrough
 {
@@ -30,11 +31,9 @@ namespace TouchWalkthrough
                 List<Drop> tempList = new List<Drop>();
                 foreach (Drop drop in Drops)
                 {
-                    foreach (Category filter in filters)
+                    if (filters.Contains(drop.category))
                     {
-                        if (drop.category == filter)
-                            tempList.Add(drop);
-                        break;
+                        tempList.Add(drop);
                     }
                 }
                 return tempList;
