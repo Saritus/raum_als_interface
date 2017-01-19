@@ -4,7 +4,7 @@ using System.Data;
 
 namespace TouchWalkthrough
 {
-    class Drop
+    public class Drop
     {
         // Internal settings
         public int id { get; private set; }
