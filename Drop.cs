@@ -43,6 +43,11 @@ namespace TouchWalkthrough
 
         }
 
+        public Drop(int id)
+        {
+            this.id = id;
+        }
+
         public Drop(string filename)
         {
             // TODO: load a drop from a xml file
