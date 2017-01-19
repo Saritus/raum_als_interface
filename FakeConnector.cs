@@ -6,7 +6,7 @@ namespace TouchWalkthrough
 {
     public class FakeConnector : DbConnector
     {
-        static List<Drop> dummyDrops
+        static public List<Drop> dummyDrops
         {
             get
             {
@@ -25,25 +25,30 @@ namespace TouchWalkthrough
                 }
                 return dummyDrops;
             }
+            private set
+            {
+                dummyDrops = value;
+            }
         }
+
         static bool dummyDropsCreated = false;
 
-        private static bool connect()
+        public bool connect()
         {
             return true;
         }
 
-        private static void close()
+        public void close()
         {
-
+            return;
         }
 
-        public static List<Drop> getNewDrops(DateTime lastUpdate)
+        public List<Drop> getNewDrops(DateTime lastUpdate)
         {
             return dummyDrops.Where(drop => drop.lastChange >= lastUpdate).ToList();
         }
 
-        public static bool saveNewDrop(Drop newDrop)
+        public bool saveNewDrop(Drop newDrop)
         {
             dummyDrops.Add(newDrop);
             return true;
