@@ -68,11 +68,12 @@
 			{
 				if (filter_button_on == false)//Öffnet Untermenü
 				{
-					//showFilterLayout.Visibility = ViewStates.Visible;
-				}
+					showFilterLayout.Visibility = ViewStates.Visible;
+
+                }
 				else {//Schließt Untermenü
-					//showFilterLayout.Visibility = ViewStates.Gone;
-				}
+					showFilterLayout.Visibility = ViewStates.Gone;
+                }
 			};
 			//For Filter-Button ENDE
 
