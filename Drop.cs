@@ -18,7 +18,7 @@ namespace TouchWalkthrough
         private bool followed { get; set; }
         private bool ignored { get; set; }
 
-        public string name { get; set; }
+        private string name { get; set; }
 
         private string picturePath { get; set; }
 
