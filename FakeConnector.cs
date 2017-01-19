@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace TouchWalkthrough
 {
-    public class FakeConnector : DbConnector
+    public class FakeConnector : Connector
     {
         static public List<Drop> dummyDrops
         {
