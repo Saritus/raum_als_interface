@@ -27,8 +27,7 @@ namespace TouchWalkthrough
 
         public List<Drop> getFollowedDrops()
         {
-            List<Drop> tempList = drops.Where(drop => drop.followed).ToList();
-            return tempList;
+            return drops.Where(drop => drop.followed).ToList();
         }
 
         public List<Drop> getNotIgnoredDrops()
