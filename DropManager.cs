@@ -24,14 +24,10 @@ namespace TouchWalkthrough
             }
         }
 
-        // manager-part
+        // local-part
 
         public List<Drop> drops { get; set; }
         public DateTime lastUpdate { get; private set; }
-
-        //server daten
-
-        public FakeConnector connector = FakeConnector.Instance;
 
         public List<Drop> getFilteredDrops(Category[] filters)
         {
@@ -48,7 +44,10 @@ namespace TouchWalkthrough
             return (from drop in drops where !drop.ignored select drop).ToList();
         }
 
-        //server related
+        // server-part
+
+        public FakeConnector connector = FakeConnector.Instance;
+
         public void updateDropList()
         {
             List<Drop> receivedDrops = updateDropsSince(lastUpdate);
