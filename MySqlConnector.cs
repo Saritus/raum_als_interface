@@ -11,7 +11,7 @@ namespace TouchWalkthrough
 
         //private static MySqlConnection sqlconn;
 
-        private static bool connect()
+        public bool connect()
         {
             /*
             // TODO: connect to mariaDB / MySQL database
@@ -31,7 +31,7 @@ namespace TouchWalkthrough
             return false;
         }
 
-        private static void close()
+        public void close()
         {
             /*
             // TODO: close the sql connection
@@ -42,7 +42,7 @@ namespace TouchWalkthrough
             */
         }
 
-        public static List<Drop> getNewDrops(DateTime lastUpdate)
+        public List<Drop> getNewDrops(DateTime lastUpdate)
         {
             /*
             //SELECT *
@@ -70,10 +70,13 @@ namespace TouchWalkthrough
             close();
 
             return products;
+            */
+            return null;
         }
 
-        public static bool saveNewDrop(Drop newDrop)
+        public bool saveNewDrop(Drop newDrop)
         {
+            /*
             // TODO: push new drop to database
             connect();
 
@@ -89,7 +92,7 @@ namespace TouchWalkthrough
             return false;
         }
         */
-            return null;
+            return false;
         }
     }
 }
