@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TouchWalkthrough
 {
-    class DropManager //: iUIHandler
+    class DropManager
     {
         public List<Drop> Drops { get; set; }
         public DateTime lastTimestamp { get; private set; }
