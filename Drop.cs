@@ -11,17 +11,94 @@ namespace TouchWalkthrough
         public DateTime lastChange { get; private set; }
 
         // Creator settings
-        public string name { get; set; }
+        public string name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                lastChange = DateTime.Now;
+                name = value;
+            }
+        }
 
-        public Category category { get; set; }
-        public string description { get; set; }
+        public Category category
+        {
+            get
+            {
+                return category;
+            }
+            set
+            {
+                lastChange = DateTime.Now;
+                category = value;
+            }
+        }
+        public string description
+        {
+            get
+            {
+                return description;
+            }
+            set
+            {
+                lastChange = DateTime.Now;
+                description = value;
+            }
+        }
 
-        public DateTime startTime { get; set; }
-        public DateTime endTime { get; set; }
+        public DateTime startTime
+        {
+            get
+            {
+                return startTime;
+            }
+            set
+            {
+                lastChange = DateTime.Now;
+                startTime = value;
+            }
+        }
+        public DateTime endTime
+        {
+            get
+            {
+                return endTime;
+            }
+            set
+            {
+                lastChange = DateTime.Now;
+                endTime = value;
+            }
+        }
 
-        public ExtendedLocation location { get; set; }
+        public ExtendedLocation location
+        {
+            get
+            {
+                return location;
+            }
+            set
+            {
+                lastChange = DateTime.Now;
+                location = value;
+            }
+        }
 
-        public string picturePath { get; set; }
+        public string picturePath
+        {
+            get
+            {
+                return picturePath;
+            }
+            set
+            {
+                lastChange = DateTime.Now;
+                picturePath = value;
+            }
+        }
 
         // User settings
         public bool followed { get; set; }
