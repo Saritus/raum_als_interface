@@ -117,7 +117,7 @@ namespace TouchWalkthrough
         }
 
         public Drop(int id, string name, Category category, string description, DateTime startTime, DateTime endTime, ExtendedLocation location)
-            : this(id, name, category, description, startTime, endTime, location, "")
+            : this(id, name, category, description, startTime, endTime, location, null)
         {
 
         }
@@ -132,21 +132,21 @@ namespace TouchWalkthrough
 
         }
 
-        public Drop(string filename)
-        {
-            // TODO: load a drop from a xml file
-        }
-
-        public Drop(DataRow row)
-        {
-            // TODO: create a new Drop from a datarow (SQL)
-        }
-
         public bool save(string filename)
         {
             // TODO: save this drop to xml file
             XML.Save<Drop>(this, filename);
             return false;
+        }
+
+        public void show()
+        {
+            Console.WriteLine(id + ", " + name);
+        }
+
+        public void showDetail()
+        {
+            Console.WriteLine("Details: " + id + ", " + name + ", " + description);
         }
     }
 }

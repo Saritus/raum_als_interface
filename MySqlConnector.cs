@@ -13,6 +13,7 @@ namespace TouchWalkthrough
 
         public bool connect()
         {
+            throw new TimeoutException();
             /*
             // TODO: connect to mariaDB / MySQL database
             try
@@ -28,7 +29,6 @@ namespace TouchWalkthrough
                 return false;
             }
             */
-            return false;
         }
 
         public void close()
@@ -44,6 +44,7 @@ namespace TouchWalkthrough
 
         public List<Drop> getNewDrops(DateTime lastUpdate)
         {
+            throw new TimeoutException();
             /*
             //SELECT *
             //FROM temp
@@ -71,11 +72,11 @@ namespace TouchWalkthrough
 
             return products;
             */
-            return null;
         }
 
         public bool saveNewDrop(Drop newDrop)
         {
+            throw new TimeoutException();
             /*
             // TODO: push new drop to database
             connect();
@@ -92,7 +93,6 @@ namespace TouchWalkthrough
             return false;
         }
         */
-            return false;
         }
     }
 }

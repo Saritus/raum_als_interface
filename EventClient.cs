@@ -1,6 +1,6 @@
 namespace TouchWalkthrough
 {
-    class ClientEvent
+    public class ClientEvent
     {
         public ClientEvent()
         {

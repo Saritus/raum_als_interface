@@ -6,20 +6,37 @@ namespace TouchWalkthrough
 {
     public class DropManager
     {
-        public List<Drop> drops { get; set; }
-        public DateTime lastTimestamp { get; private set; }
+        // Singelton-part
 
-        //server daten
+        private static DropManager instance;
 
-        public DropManager()
+        private DropManager() { }
+
+        public static DropManager Instance
         {
-            //this.drops;
-            drops.ForEach(drop => showDrop(drop));
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DropManager();
+                }
+                return instance;
+            }
         }
+
+        // local-part
+
+        public List<Drop> drops { get; private set; }
+        public DateTime lastUpdate { get; private set; }
 
         public List<Drop> getFilteredDrops(Category[] filters)
         {
             return drops.Where(drop => filters.Contains(drop.category)).ToList();
+        }
+
+        public List<Drop> getBuildingDrops(Building building)
+        {
+            return drops.Where(drop => drop.location.building == building).ToList();
         }
 
         public List<Drop> getFollowedDrops()
@@ -32,32 +49,14 @@ namespace TouchWalkthrough
             return (from drop in drops where !drop.ignored select drop).ToList();
         }
 
-        //server related
-        public void updateDropList()
-        {
-            List<Drop> receivedDrops = new List<Drop>();
-            receivedDrops = updateDropsSince(lastTimestamp);
-            if (receivedDrops.Count > 0)
-                drops.AddRange(receivedDrops);
-            lastTimestamp = DateTime.Now;
-        }
+        // server-part
 
-        public List<Drop> updateDropsSince(DateTime lastTimestamp)
-        {
-            List<Drop> receivedDrops = new List<Drop>();
-            //TODO: frage bei server nach neuen events seit lastTimestamp
-            return receivedDrops;
-        }
+        public FakeConnector connector = FakeConnector.Instance;
 
-        //Front end related
-        public void showDrop(Drop ev)
+        public void updateDrops()
         {
-            Console.WriteLine(ev.id + ", " + ev.name);
-        }
-
-        public void showDropDetail(Drop ev)
-        {
-            Console.WriteLine("Details: " + ev.id + ", " + ev.name + ", " + ev.description);
+            drops.AddRange(connector.getNewDrops(lastUpdate));
+            lastUpdate = DateTime.Now;
         }
     }
 }
