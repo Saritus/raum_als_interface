@@ -21,8 +21,7 @@ namespace TouchWalkthrough
 
         public List<Drop> getDrops(Category[] filters)
         {
-            List<Drop> tempList = drops.Where(drop => filters.Contains(drop.category)).ToList();
-            return tempList;
+            return drops.Where(drop => filters.Contains(drop.category)).ToList();
         }
 
         public List<Drop> getFollowedDrops()
@@ -32,8 +31,7 @@ namespace TouchWalkthrough
 
         public List<Drop> getNotIgnoredDrops()
         {
-            var tmp = from drop in drops where !drop.ignored select drop;
-            return tmp.ToList();
+            return (from drop in drops where !drop.ignored select drop).ToList();
         }
 
         public void ignoreDrop(Drop ev)
