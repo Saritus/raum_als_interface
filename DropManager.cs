@@ -28,14 +28,7 @@ namespace TouchWalkthrough
             }
             else
             {
-                List<Drop> tempList = new List<Drop>();
-                foreach (Drop drop in drops)
-                {
-                    if (filters.Contains(drop.category))
-                    {
-                        tempList.Add(drop);
-                    }
-                }
+                List<Drop> tempList = drops.Where(drop => filters.Contains(drop.category)).ToList();
                 return tempList;
             }
         }
