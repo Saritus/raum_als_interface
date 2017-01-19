@@ -132,16 +132,6 @@ namespace TouchWalkthrough
 
         }
 
-        public Drop(string filename)
-        {
-            // TODO: load a drop from a xml file
-        }
-
-        public Drop(DataRow row)
-        {
-            // TODO: create a new Drop from a datarow (SQL)
-        }
-
         public bool save(string filename)
         {
             // TODO: save this drop to xml file
