@@ -31,6 +31,8 @@ namespace TouchWalkthrough
 
         //server daten
 
+        public FakeConnector connector = FakeConnector.Instance;
+
         public List<Drop> getFilteredDrops(Category[] filters)
         {
             return drops.Where(drop => filters.Contains(drop.category)).ToList();
