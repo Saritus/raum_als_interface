@@ -148,5 +148,15 @@ namespace TouchWalkthrough
             XML.Save<Drop>(this, filename);
             return false;
         }
+
+        public void show()
+        {
+            Console.WriteLine(id + ", " + name);
+        }
+
+        public void showDetail()
+        {
+            Console.WriteLine("Details: " + id + ", " + name + ", " + description);
+        }
     }
 }

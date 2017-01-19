@@ -53,17 +53,5 @@ namespace TouchWalkthrough
             drops.AddRange(connector.getNewDrops(lastUpdate));
             lastUpdate = DateTime.Now;
         }
-
-        // front-end-part
-
-        public void showDrop(Drop ev)
-        {
-            Console.WriteLine(ev.id + ", " + ev.name);
-        }
-
-        public void showDropDetail(Drop ev)
-        {
-            Console.WriteLine("Details: " + ev.id + ", " + ev.name + ", " + ev.description);
-        }
     }
 }
