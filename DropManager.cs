@@ -6,16 +6,30 @@ namespace TouchWalkthrough
 {
     public class DropManager
     {
+        // Singelton-part
+
+        private static DropManager instance;
+
+        private DropManager() { }
+
+        public static DropManager Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DropManager();
+                }
+                return instance;
+            }
+        }
+
+        // manager-part
+
         public List<Drop> drops { get; set; }
         public DateTime lastTimestamp { get; private set; }
 
         //server daten
-
-        public DropManager()
-        {
-            //this.drops;
-            drops.ForEach(drop => showDrop(drop));
-        }
 
         public List<Drop> getFilteredDrops(Category[] filters)
         {
