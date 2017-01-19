@@ -62,7 +62,7 @@
 			 
 			//For Filter-Button
 			ImageButton filter_button = FindViewById<ImageButton>(Resource.Id.imageButton2);
-			RelativeLayout showFilterLayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayoutFilter); //GEHT NICHT?!
+			RelativeLayout showFilterLayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayoutFilter);
 
 			filter_button.Click += (object sender, EventArgs e) =>
 			{
