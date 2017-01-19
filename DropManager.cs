@@ -5,22 +5,17 @@ namespace TouchWalkthrough
 {
     class DropManager //: iUIHandler
     {
-        private List<Drop> allDrops;
-        private DateTime lastTimestamp;
+        public List<Drop> Drops { get; set; }
+        public DateTime lastTimestamp { get; private set; }
         //server daten
 
         public DropManager()
         {
-            this.allDrops = createDummyDrops(5);
-            foreach (Drop d in getDrops())
+            this.Drops = createDummyDrops(5);
+            foreach (Drop d in Drops)
             {
                 showDrop(d);
             }
-        }
-
-        public List<Drop> getDrops()
-        {
-            return allDrops;
         }
 
         public List<Drop> getDrops(Category[] filters)
@@ -28,12 +23,12 @@ namespace TouchWalkthrough
             //if all filters are active
             if (filters.Length == Enum.GetNames(typeof(Category)).Length)
             {
-                return getDrops();
+                return Drops;
             }
             else
             {
                 List<Drop> tempList = new List<Drop>();
-                foreach (Drop drop in allDrops)
+                foreach (Drop drop in Drops)
                 {
                     foreach (Category filter in filters)
                     {
@@ -49,7 +44,7 @@ namespace TouchWalkthrough
         public List<Drop> getFollowedDrops()
         {
             List<Drop> tempList = new List<Drop>();
-            foreach (Drop drop in allDrops)
+            foreach (Drop drop in Drops)
             {
                 if (drop.followed)
                     tempList.Add(drop);
@@ -88,7 +83,7 @@ namespace TouchWalkthrough
             List<Drop> receivedDrops = new List<Drop>();
             receivedDrops = updateDropsSince(lastTimestamp);
             if (receivedDrops.Count > 0)
-                allDrops.AddRange(receivedDrops);
+                Drops.AddRange(receivedDrops);
             lastTimestamp = DateTime.Now;
         }
 
