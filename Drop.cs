@@ -8,22 +8,22 @@ namespace TouchWalkthrough
     {
 
         // Global settings
-        private int id { get; set; }
-        private string name { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
 
-        private Category category { get; set; }
-        private string description { get; set; }
+        public Category category { get; set; }
+        public string description { get; set; }
 
-        private DateTime startTime { get; set; }
-        private DateTime endTime { get; set; }
+        public DateTime startTime { get; set; }
+        public DateTime endTime { get; set; }
 
-        private ExtendedLocation location { get; set; }
+        public ExtendedLocation location { get; set; }
 
-        private string picturePath { get; set; }
+        public string picturePath { get; set; }
 
         // User settings
-        private bool followed { get; set; }
-        private bool ignored { get; set; }
+        public bool followed { get; set; }
+        public bool ignored { get; set; }
 
         public Drop(int id, string name, Category category, string description, DateTime startTime, DateTime endTime, ExtendedLocation location, string picturePath)
         {
