@@ -5,6 +5,7 @@ namespace TouchWalkthrough
 {
     abstract class FakeConnector
     {
+        List<Drop> DummyDrops;
 
         private static bool connect()
         {
