@@ -42,12 +42,7 @@ namespace TouchWalkthrough
 
         public List<Drop> getFollowedDrops()
         {
-            List<Drop> tempList = new List<Drop>();
-            foreach (Drop drop in drops)
-            {
-                if (drop.followed)
-                    tempList.Add(drop);
-            }
+            List<Drop> tempList = drops.Where(drop => drop.followed).ToList();
             return tempList;
         }
 
