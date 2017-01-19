@@ -13,10 +13,7 @@ namespace TouchWalkthrough
         public DropManager()
         {
             this.drops = createDummyDrops(5);
-            foreach (Drop d in drops)
-            {
-                showDrop(d);
-            }
+            drops.ForEach(drop => showDrop(drop));
         }
 
         public List<Drop> getFilteredDrops(Category[] filters)
