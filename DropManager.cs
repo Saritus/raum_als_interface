@@ -34,16 +34,6 @@ namespace TouchWalkthrough
             return (from drop in drops where !drop.ignored select drop).ToList();
         }
 
-        public void ignoreDrop(Drop ev)
-        {
-            ev.ignored = true;
-        }
-
-        public void followDrop(Drop ev)
-        {
-            ev.followed = true;
-        }
-
         public List<Drop> createDummyDrops(int i)
         {
             List<Drop> tempList = new List<Drop>();
