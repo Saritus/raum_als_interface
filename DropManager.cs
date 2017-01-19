@@ -104,10 +104,5 @@ namespace TouchWalkthrough
         {
             Console.WriteLine("Details: " + ev.id + ", " + ev.name + ", " + ev.description);
         }
-
-        public void setLastTimestamp(DateTime t)
-        {
-            this.lastTimestamp = t;
-        }
     }
 }
