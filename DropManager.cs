@@ -26,7 +26,7 @@ namespace TouchWalkthrough
 
         // local-part
 
-        public List<Drop> drops { get; set; }
+        public List<Drop> drops { get; private set; }
         public DateTime lastUpdate { get; private set; }
 
         public List<Drop> getFilteredDrops(Category[] filters)
@@ -62,6 +62,7 @@ namespace TouchWalkthrough
         }
 
         // front-end-part
+
         public void showDrop(Drop ev)
         {
             Console.WriteLine(ev.id + ", " + ev.name);
