@@ -117,7 +117,7 @@ namespace TouchWalkthrough
         }
 
         public Drop(int id, string name, Category category, string description, DateTime startTime, DateTime endTime, ExtendedLocation location)
-            : this(id, name, category, description, startTime, endTime, location, "")
+            : this(id, name, category, description, startTime, endTime, location, null)
         {
 
         }
