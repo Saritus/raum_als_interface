@@ -8,11 +8,12 @@ namespace TouchWalkthrough
     {
         public List<Drop> drops { get; set; }
         public DateTime lastTimestamp { get; private set; }
+
         //server daten
 
         public DropManager()
         {
-            this.drops = createDummyDrops(5);
+            //this.drops;
             drops.ForEach(drop => showDrop(drop));
         }
 
