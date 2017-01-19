@@ -50,12 +50,14 @@
                 if (history_button_on == false)
                 {
                     history_button.SetImageResource(Resource.Drawable.plus_button);
-                    showHistoryLayout.Visibility = ViewStates.Visible;
+                    //showHistoryLayout.Visibility = ViewStates.Visible;
+                    history_button_on = true;
                 }
                 else
                 {
                     history_button.SetImageResource(Resource.Drawable.history_button);
-                    showHistoryLayout.Visibility = ViewStates.Gone;
+                    //showHistoryLayout.Visibility = ViewStates.Gone;
+                    history_button_on = false;
                 }
             };
             //For History-Button ENDE
