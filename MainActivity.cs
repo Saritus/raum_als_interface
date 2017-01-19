@@ -7,7 +7,7 @@
     using Android.Widget;
     using System.Collections.Generic; //For ListView
 
-    [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/Icon")]
+    [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/logo")]
     public class MainActivity : Activity
     {
         bool history_button_on = false;
