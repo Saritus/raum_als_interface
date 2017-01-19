@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace TouchWalkthrough
 {
-    class DropManager
+    public class DropManager
     {
         public List<Drop> drops { get; set; }
         public DateTime lastTimestamp { get; private set; }
