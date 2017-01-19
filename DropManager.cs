@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace TouchWalkthrough
 {
-    class UIHandler //: iUIHandler
+    class DropManager //: iUIHandler
     {
         private List<Drop> allDrops;
         private DateTime lastTimestamp;
         //server daten
 
-        public UIHandler()
+        public DropManager()
         {
             this.allDrops = createDummyDrops(5);
             foreach (Drop d in getDrops())
