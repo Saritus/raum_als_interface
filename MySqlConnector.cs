@@ -6,13 +6,14 @@ using System.Collections.Generic;
 //using MySql.Data.MySqlClient;
 namespace TouchWalkthrough
 {
-    public class MySqlConnector
+    public class MySqlConnector : DbConnector
     {
-        /*
-        private static MySqlConnection sqlconn;
+
+        //private static MySqlConnection sqlconn;
 
         private static bool connect()
         {
+            /*
             // TODO: connect to mariaDB / MySQL database
             try
             {
@@ -26,19 +27,24 @@ namespace TouchWalkthrough
                 Console.WriteLine(ex.Message);
                 return false;
             }
+            */
+            return false;
         }
 
         private static void close()
         {
+            /*
             // TODO: close the sql connection
             if (sqlconn.State == ConnectionState.Open)
             {
                 sqlconn.Close();
             }
+            */
         }
 
         public static List<Drop> getNewDrops(DateTime lastUpdate)
         {
+            /*
             //SELECT *
             //FROM temp
             //WHERE mydate > '2009-06-29 16:00:44';
@@ -83,5 +89,7 @@ namespace TouchWalkthrough
             return false;
         }
         */
+            return null;
+        }
     }
 }
