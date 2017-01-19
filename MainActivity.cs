@@ -69,10 +69,12 @@
 				if (filter_button_on == false)//Öffnet Untermenü
 				{
 					showFilterLayout.Visibility = ViewStates.Visible;
+                    filter_button_on = true;
 
                 }
 				else {//Schließt Untermenü
 					showFilterLayout.Visibility = ViewStates.Gone;
+                    filter_button_on = false;
                 }
 			};
 			//For Filter-Button ENDE
