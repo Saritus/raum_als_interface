@@ -6,7 +6,6 @@ namespace TouchWalkthrough
 {
     class Drop
     {
-
         private int id { get; set; }
         private string description { get; set; }
         private Category category { get; set; }
@@ -19,17 +18,87 @@ namespace TouchWalkthrough
         private bool followed { get; set; }
         private bool ignored { get; set; }
 
-        public enum type { Event, Idea };
-
         public String name { get; set; }
 
-        public Location pos { get; set; }
-
-        public string imagepath { get; set; }
-
-        public Drop()
+        private string picturePath { get; set; }
+        
+        public Drop(int id, string name, string description, Category category, DateTime startTime, DateTime endTime, ExtendedLocation Location, bool f, bool i) 
+            : this(id, name, description, category, startTime, endTime, Location, f, i, "")
         {
-            // TODO: create a new drop
+        }
+
+        public Drop(int id, string name, string description, Category category, DateTime startTime, DateTime endTime, ExtendedLocation location, bool f, bool i, string picPath)
+        {
+            this.id = id;
+            this.name = name;
+            this.description = description;
+            this.category = category;
+            this.startTime = startTime;
+            this.endTime = endTime;
+            this.location = location;
+            this.followed = f;
+            this.ignored = i;
+            this.picturePath = picPath;
+        }
+
+        public int getId()
+        {
+            return id;
+        }
+
+        public string getName()
+        {
+            return name;
+        }
+
+        public string getDescription()
+        {
+            return description;
+        }
+
+        public Category getCategory()
+        {
+            return category;
+        }
+
+        public DateTime getStartTime()
+        {
+            return startTime;
+        }
+
+        public DateTime getEndTime()
+        {
+            return endTime;
+        }
+
+        public ExtendedLocation getLocation()
+        {
+            return null;
+        }
+
+        public bool isFollowed()
+        {
+            return followed;
+        }
+
+        public void follow(bool i)
+        {
+            this.followed = i;
+        }
+
+        public bool isIgnored()
+        {
+            return ignored;
+        }
+
+        public void ignore(bool i)
+        {
+            this.ignored = i;
+        }
+
+        public string getPicturePath()
+        {
+            return picturePath;
         }
 
         public Drop(string xmlfile)

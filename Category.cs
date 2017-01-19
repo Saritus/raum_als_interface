@@ -1,4 +1,9 @@
 ﻿namespace TouchWalkthrough
 {
-    enum Category { EVENT, WARNING, VOTE };
+    enum Category
+    {
+        EVENT, 
+        WARNING, 
+        VOTE
+    };
 }
