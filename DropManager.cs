@@ -31,21 +31,6 @@ namespace TouchWalkthrough
             return (from drop in drops where !drop.ignored select drop).ToList();
         }
 
-        public List<Drop> createDummyDrops(int i)
-        {
-            List<Drop> tempList = new List<Drop>();
-            foreach (Category filter in Enum.GetValues(typeof(Category)))
-            {
-                for (int j = 0; j < i; j++)
-                {
-                    string f = Enum.GetName(typeof(Category), filter);
-                    tempList.Add(new Drop(i, "Test" + f + i, filter, "Test" + f + i + "Description, ", DateTime.Today, DateTime.Now, new ExtendedLocation()));
-                }
-            }
-            return tempList;
-        }
-
-
         //server related
         public void updateDropList()
         {
