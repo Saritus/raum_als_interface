@@ -6,7 +6,7 @@ using System.Collections.Generic;
 //using MySql.Data.MySqlClient;
 namespace TouchWalkthrough
 {
-    abstract class MySqlConnector
+    public class MySqlConnector
     {
         /*
         private static MySqlConnection sqlconn;
