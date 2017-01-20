@@ -130,13 +130,6 @@ namespace TouchWalkthrough
 
         }
 
-        public bool save(string filename)
-        {
-            // TODO: save this drop to xml file
-            XML.Save<Drop>(this, filename);
-            return false;
-        }
-
         public void show()
         {
             Console.WriteLine(id + ", " + name);
