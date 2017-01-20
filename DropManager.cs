@@ -70,7 +70,18 @@ namespace TouchWalkthrough
 
         public void updateDrops()
         {
-            drops.AddRange(connector.getNewDrops(lastUpdate));
+            List<Drop> newDrops = connector.getNewDrops(lastUpdate);
+            foreach (Drop newDrop in newDrops)
+            {
+                if (drops.Select(drop => drop.id).Contains(newDrop.id))
+                {
+                    drops.Where(drop => drop.id == newDrop.id).ToList().ForEach(drop => drop.update(newDrop));
+                }
+                else
+                {
+                    drops.Add(newDrop);
+                }
+            }
             lastUpdate = DateTime.Now;
         }
     }
