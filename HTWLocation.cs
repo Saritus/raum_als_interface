@@ -8,6 +8,8 @@ namespace TouchWalkthrough
         public Building building { get; set; }
         public int floor { get; set; }
 
+        public int room { get; set; }
+
         public HTWLocation(String provider)
         {
 
