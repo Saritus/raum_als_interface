@@ -98,8 +98,7 @@ namespace TouchWalkthrough
             this.name = name;
             this.description = description;
             this.category = category;
-            this.startTime = startTime;
-            this.endTime = endTime;
+            this.timeRange = new DateRange(startTime, endTime);
             this.location = location;
             this.picturePath = picturePath;
         }
