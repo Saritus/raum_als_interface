@@ -53,6 +53,7 @@
     <Compile Include="Building.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Connector.cs" />
+    <Compile Include="DateRange.cs" />
     <Compile Include="FakeConnector.cs" />
     <Compile Include="MySqlConnector.cs" />
     <Compile Include="Drop.cs" />
