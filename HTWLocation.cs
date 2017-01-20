@@ -10,7 +10,7 @@ namespace TouchWalkthrough
 
         public int room { get; set; }
 
-        public HTWLocation(String provider)
+        public HTWLocation(string room)
         {
 
         }
