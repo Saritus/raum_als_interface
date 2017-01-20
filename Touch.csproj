@@ -58,7 +58,7 @@
     <Compile Include="MySqlConnector.cs" />
     <Compile Include="Drop.cs" />
     <Compile Include="EventClient.cs" />
-    <Compile Include="ExtendedLocation.cs" />
+    <Compile Include="HTWLocation.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -49,20 +49,20 @@ namespace TouchWalkthrough
             }
         }
 
-        public DateRange dateRange
+        public DateTime startTime
         {
             get
             {
-                return dateRange;
+                return startTime;
             }
             set
             {
                 lastChange = DateTime.Now;
-                dateRange = value;
+                startTime = value;
             }
         }
 
-        public ExtendedLocation location
+        public HTWLocation location
         {
             get
             {
@@ -92,13 +92,13 @@ namespace TouchWalkthrough
         public bool followed { get; set; }
         public bool ignored { get; set; }
 
-        public Drop(int id, string name, Category category, string description, DateTime startTime, DateTime endTime, ExtendedLocation location, string picturePath)
+        public Drop(int id, string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
         {
             this.id = id;
             this.name = name;
             this.description = description;
             this.category = category;
-            this.dateRange = new DateRange(startTime, endTime);
+            this.startTime = startTime;
             this.location = location;
             this.picturePath = picturePath;
         }
@@ -109,13 +109,19 @@ namespace TouchWalkthrough
             this.name = newDrop.name;
             this.description = newDrop.description;
             this.category = newDrop.category;
-            this.dateRange = newDrop.dateRange;
+            this.startTime = newDrop.startTime;
             this.location = newDrop.location;
             this.picturePath = newDrop.picturePath;
         }
 
-        public Drop(int id, string name, Category category, string description, DateTime startTime, DateTime endTime, ExtendedLocation location)
-            : this(id, name, category, description, startTime, endTime, location, null)
+        public Drop(int id, string name, Category category, string description, DateTime startTime, HTWLocation location)
+            : this(id, name, category, description, startTime, location, null)
+        {
+
+        }
+
+        public Drop(int id, string name, Category category, string description, DateTime startTime)
+            : this(id, name, category, description, startTime, null, null)
         {
 
         }
