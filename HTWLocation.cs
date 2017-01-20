@@ -12,6 +12,8 @@ namespace TouchWalkthrough
 
         public int room { get; set; }
 
+        public Location location { get; set; }
+
         public HTWLocation(string room)
         {
             Regex regex = new Regex("[A-Z][0-9]+");
