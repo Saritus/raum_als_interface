@@ -54,6 +54,10 @@ namespace TouchWalkthrough
             return (from drop in drops where !drop.ignored select drop).ToList();
         }
 
+        public void save(string filename)
+        {
+        }
+
         // server-part
 
         public FakeConnector connector = FakeConnector.Instance;
