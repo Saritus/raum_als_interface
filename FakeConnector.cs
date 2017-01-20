@@ -33,16 +33,7 @@ namespace TouchWalkthrough
             {
                 if (!dummyDropsCreated)
                 {
-                    // Create dummy drops
-                    foreach (Category filter in Enum.GetValues(typeof(Category)))
-                    {
-                        for (int i = 0; i < 10; i++)
-                        {
-                            string f = Enum.GetName(typeof(Category), filter);
-                            dummyDrops.Add(new Drop(i, "Test" + f + i, filter, "Test" + f + i + "Description, ", DateTime.Today, DateTime.Now, new ExtendedLocation()));
-                        }
-                    }
-
+                    dummyDrops.AddRange(createDummyDrops());
                 }
                 return dummyDrops;
             }
@@ -53,6 +44,24 @@ namespace TouchWalkthrough
         }
 
         static bool dummyDropsCreated = false;
+
+        private static List<Drop> createDummyDrops()
+        {
+            List<Drop> dummyDrops = new List<Drop>();
+
+            dummyDrops.Add(new Drop(0, "HTW Dresden auf der KarriereStart Dresden", Category.EVENT, "PLACEHOLDER", new DateTime(2017, 01, 21, 10, 00, 00)));
+            dummyDrops.Add(new Drop(1, "HTW Dresden auf der KarriereStart Dresden", Category.EVENT, "PLACEHOLDER", new DateTime(2017, 01, 22, 10, 00, 00)));
+            dummyDrops.Add(new Drop(2, "Steuertipps für Studierende", Category.EVENT, "PLACEHOLDER", new DateTime(2017, 01, 24, 15, 00, 00)));
+            dummyDrops.Add(new Drop(3, "Bewerbungsfotoshooting", Category.EVENT, "PLACEHOLDER", new DateTime(2017, 01, 26, 14, 00, 00)));
+            dummyDrops.Add(new Drop(4, "Kommission Lehre und Studium", Category.EVENT, "PLACEHOLDER", new DateTime(2017, 01, 31, 15, 30, 00)));
+            dummyDrops.Add(new Drop(5, "Textile Filzpraxis in Tire, Türkei", Category.EVENT, "PLACEHOLDER", new DateTime(2017, 02, 01, 17, 00, 00)));
+            dummyDrops.Add(new Drop(6, "Kommission Hochschulmarketing", Category.EVENT, "PLACEHOLDER", new DateTime(2017, 02, 13, 08, 00, 00)));
+            dummyDrops.Add(new Drop(7, "Kommission Lehre und Studium", Category.EVENT, "PLACEHOLDER", new DateTime(2017, 02, 14, 15, 30, 00)));
+            dummyDrops.Add(new Drop(8, "D.A.CH-Tagung Flüssigboden 2017", Category.EVENT, "PLACEHOLDER", new DateTime(2017, 03, 09, 09, 00, 00)));
+            dummyDrops.Add(new Drop(9, "Nutzung des Bibliothekskataloges", Category.EVENT, "PLACEHOLDER", new DateTime(2017, 03, 14, 15, 00, 00)));
+
+            return dummyDrops;
+        }
 
         // Connector-part
 
