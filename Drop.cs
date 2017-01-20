@@ -62,7 +62,7 @@ namespace TouchWalkthrough
             }
         }
 
-        public ExtendedLocation location
+        public HTWLocation location
         {
             get
             {
@@ -92,7 +92,7 @@ namespace TouchWalkthrough
         public bool followed { get; set; }
         public bool ignored { get; set; }
 
-        public Drop(int id, string name, Category category, string description, DateTime startTime, ExtendedLocation location, string picturePath)
+        public Drop(int id, string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
         {
             this.id = id;
             this.name = name;
@@ -114,7 +114,7 @@ namespace TouchWalkthrough
             this.picturePath = newDrop.picturePath;
         }
 
-        public Drop(int id, string name, Category category, string description, DateTime startTime, ExtendedLocation location)
+        public Drop(int id, string name, Category category, string description, DateTime startTime, HTWLocation location)
             : this(id, name, category, description, startTime, location, null)
         {
 
