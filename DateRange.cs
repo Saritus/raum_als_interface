@@ -18,8 +18,8 @@ namespace TouchWalkthrough
             End = end;
         }
 
-        public DateTime Start { get; private set; }
-        public DateTime End { get; private set; }
+        public DateTime Start { get; set; }
+        public DateTime End { get; set; }
 
         public bool Includes(DateTime value)
         {
