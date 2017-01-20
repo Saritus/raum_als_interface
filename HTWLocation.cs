@@ -27,6 +27,18 @@ namespace TouchWalkthrough
             }
         }
 
+        public HTWLocation(char building, string room)
+            : this((Building)Enum.Parse(typeof(Building), building.ToString()), room)
+        {
+        }
+
+        public HTWLocation(Building building, string room)
+        {
+            this.building = building;
+            this.floor = int.Parse(room[0].ToString());
+            this.room = int.Parse(room);
+        }
+
         public HTWLocation()
         {
 
