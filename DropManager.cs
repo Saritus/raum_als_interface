@@ -54,9 +54,14 @@ namespace TouchWalkthrough
             return (from drop in drops where !drop.ignored select drop).ToList();
         }
 
-        public void save(string filename)
+        public void saveDrops(string filename)
         {
-            XML.Save<DropManager>(this, filename);
+            XML.Save(drops, filename);
+        }
+
+        public void loadDrops(string filename)
+        {
+            drops = XML.Load<List<Drop>>(filename);
         }
 
         // server-part
