@@ -103,6 +103,17 @@ namespace TouchWalkthrough
             this.picturePath = picturePath;
         }
 
+        public void update(Drop newDrop)
+        {
+            this.id = newDrop.id;
+            this.name = newDrop.name;
+            this.description = newDrop.description;
+            this.category = newDrop.category;
+            this.dateRange = newDrop.dateRange;
+            this.location = newDrop.location;
+            this.picturePath = newDrop.picturePath;
+        }
+
         public Drop(int id, string name, Category category, string description, DateTime startTime, DateTime endTime, ExtendedLocation location)
             : this(id, name, category, description, startTime, endTime, location, null)
         {
