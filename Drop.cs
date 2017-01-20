@@ -49,28 +49,16 @@ namespace TouchWalkthrough
             }
         }
 
-        public DateTime startTime
+        public DateRange timeRange
         {
             get
             {
-                return startTime;
+                return timeRange;
             }
             set
             {
                 lastChange = DateTime.Now;
-                startTime = value;
-            }
-        }
-        public DateTime endTime
-        {
-            get
-            {
-                return endTime;
-            }
-            set
-            {
-                lastChange = DateTime.Now;
-                endTime = value;
+                timeRange = value;
             }
         }
 
