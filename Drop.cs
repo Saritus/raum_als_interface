@@ -49,16 +49,16 @@ namespace TouchWalkthrough
             }
         }
 
-        public DateRange timeRange
+        public DateRange dateRange
         {
             get
             {
-                return timeRange;
+                return dateRange;
             }
             set
             {
                 lastChange = DateTime.Now;
-                timeRange = value;
+                dateRange = value;
             }
         }
 
@@ -98,7 +98,7 @@ namespace TouchWalkthrough
             this.name = name;
             this.description = description;
             this.category = category;
-            this.timeRange = new DateRange(startTime, endTime);
+            this.dateRange = new DateRange(startTime, endTime);
             this.location = location;
             this.picturePath = picturePath;
         }

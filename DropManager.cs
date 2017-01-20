@@ -41,7 +41,7 @@ namespace TouchWalkthrough
 
         public List<Drop> getDropInDateRange(DateRange daterange)
         {
-            return drops.Where(drop => daterange.Includes(drop.timeRange)).ToList();
+            return drops.Where(drop => daterange.Includes(drop.dateRange)).ToList();
         }
 
         public List<Drop> getFollowedDrops()
