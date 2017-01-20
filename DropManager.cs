@@ -56,6 +56,7 @@ namespace TouchWalkthrough
 
         public void save(string filename)
         {
+            XML.Save<DropManager>(this, filename);
         }
 
         // server-part
