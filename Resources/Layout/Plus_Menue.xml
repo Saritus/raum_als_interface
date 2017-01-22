@@ -5,31 +5,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background"
-    android:id="@+id/layoutPlus_Menue">
-    <EditText
-        android:layout_width="match_parent"
+    android:id="@+id/linearLayout">
+    <ImageButton
+        android:src="@android:drawable/ic_menu_save"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1"
-        android:hint="Was?" />
-    <EditText
-        android:layout_width="match_parent"
+        android:id="@+id/imageButton1" />
+    <ImageButton
+        android:src="@android:drawable/ic_menu_camera"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:hint="Wann?"
-        android:inputType="date" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:hint="Wo?" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText4"
-        android:hint="Kategorie" />
+        android:id="@+id/imageButton2" />
     <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView1"
-        android:src="@drawable/logo" />
+        android:id="@+id/imageView1" />
 </LinearLayout>
