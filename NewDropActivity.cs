@@ -55,7 +55,7 @@ namespace TouchWalkthrough
 		}
 
 		protected override void OnCreate(Bundle savedInstanceState)
-		{
+		{ 
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Plus_Menue);
 			// Create your application here
@@ -74,7 +74,7 @@ namespace TouchWalkthrough
 			{
 				CreateDirectoryForPictures();
 
-      			//ImageView imageViewPicture = FindViewById<ImageView>(Resource.Id.imageView1);
+      			ImageView imageViewPicture = FindViewById<ImageView>(Resource.Id.imageView1);
 				Button take_picture_button = FindViewById<Button>(Resource.Id.imageButton2);
 				take_picture_button.Click += TakeAPicture;
 			}

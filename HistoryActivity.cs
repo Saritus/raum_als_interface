@@ -20,6 +20,10 @@ namespace TouchWalkthrough
 		private ListView listnames;
 		private List<string> itemlist;
 
+		//Create Dummy Drops
+		private UIHandler uiInstance;
+		private List<Drop> droplist = new List<Drop>();
+
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -27,16 +31,33 @@ namespace TouchWalkthrough
 			// Create your application here
 
 
-
 			//For ListView
+			//uiInstance.createDummyDrops(1);
+			//droplist = uiInstance.getDrops();
+
+
+
+			//uiInstance.getDrops();
+
+
+
+
+
+
 			listnames = FindViewById<ListView>(Resource.Id.historyList);
 
 			itemlist = new List<string>();
+			/*for (int i = 0; i < droplist.Count; i++) {
+				itemlist.Add(droplist[i].getName());
+			}*/
 			itemlist.Add("Item 0");
-			itemlist.Add("Item 1");
-			itemlist.Add("Item 2");
-			itemlist.Add("Item 3");
-			itemlist.Add("Item 4");
+			//itemlist.Add("Item 1");
+			//itemlist.Add("Item 2");
+			//itemlist.Add("Item 3");
+			//itemlist.Add("Item 4");
+
+			//itemlist.Add(droplist[0].getName());
+			//itemlist.Add(droplist[1].getName());
 			 
 			ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1,itemlist);
 			listnames.Adapter = adapter;
