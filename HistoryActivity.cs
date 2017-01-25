@@ -21,7 +21,7 @@ namespace TouchWalkthrough
         private List<string> itemlist;
 
         //Create Dummy Drops
-        private DropManager dropmanager;
+        private DropManager dropmanager = DropManager.Instance;
         private List<Drop> droplist = new List<Drop>();
 
         protected override void OnCreate(Bundle savedInstanceState)
