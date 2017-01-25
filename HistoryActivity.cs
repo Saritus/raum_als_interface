@@ -20,9 +20,9 @@ namespace TouchWalkthrough
 		private ListView listnames;
 		private List<string> itemlist;
 
-		//Create Dummy Drops
-		private UIHandler uiInstance;
-		private List<Drop> droplist = new List<Drop>();
+        //Create Dummy Drops
+        private DropManager dropmanager;
+        private List<Drop> droplist = new List<Drop>();
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
