@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background"
-    android:id="@+id/linearLayoutHistory"
-    tools:visibility="gone">
+    android:id="@+id/linearLayoutHistory">
     <ImageButton
-        android:src="@android:drawable/ic_menu_gallery"
+        android:src="@drawable/history_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton1" />
+        android:id="@+id/imageButton122"
+        android:background="@android:color/transparent" />
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"

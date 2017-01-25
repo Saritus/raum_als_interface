@@ -1,11 +1,14 @@
 ﻿<Properties StartupConfiguration="{38B273A3-4394-4D78-9E00-576E38F44508}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="HistoryActivity.cs">
     <Files>
-      <File FileName="MainActivity.cs" Line="65" Column="6" />
+      <File FileName="MainActivity.cs" Line="18" Column="3" />
+      <File FileName="HistoryActivity.cs" Line="40" Column="28" />
+      <File FileName="UIHandler.cs" Line="15" Column="43" />
+      <File FileName="Drop.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Touch AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus_4_API_21" AndroidDesignerPreferredTheme="Theme.Black.NoTitleBar" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.ItemProperties.Touch AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.4.7_WXGA_API_16" AndroidDesignerPreferredTheme="Theme.Black.NoTitleBar" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

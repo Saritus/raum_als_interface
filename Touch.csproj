@@ -68,6 +68,9 @@
     <Compile Include="Voting.cs" />
     <Compile Include="Warning.cs" />
     <Compile Include="XML.cs" />
+    <Compile Include="HistoryActivity.cs" />
+    <Compile Include="NewDropActivity.cs" />
+    <Compile Include="BitmapHelpers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -94,6 +97,12 @@
     <AndroidResource Include="Resources\Drawable\icon_hap1.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap2.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap3.png" />
+    <AndroidResource Include="Resources\Layout\Plus_Menue.xml" />
+    <AndroidResource Include="Resources\Drawable\history_button2.png" />
+    <AndroidResource Include="Resources\Drawable\test_platzhalter_andere_karte.png" />
+    <AndroidResource Include="Resources\Drawable\icon_hap1_off.png" />
+    <AndroidResource Include="Resources\Drawable\icon_hap2_off.png" />
+    <AndroidResource Include="Resources\Drawable\icon_hap3_off.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
@@ -111,8 +120,5 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\karte.png" />
   </ItemGroup>
 </Project>
