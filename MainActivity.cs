@@ -1,5 +1,6 @@
 ﻿namespace TouchWalkthrough
 {
+
 	using System;
 	using Android.App;
 	using Android.OS;
@@ -134,5 +135,3 @@
 		//Use Hardware-Back-Button ENDE ##############################################################
     }
 }
-
-

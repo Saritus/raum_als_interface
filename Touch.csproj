@@ -52,16 +52,19 @@
   <ItemGroup>
     <Compile Include="Building.cs" />
     <Compile Include="Category.cs" />
-    <Compile Include="DbConnection.cs" />
+    <Compile Include="Connector.cs" />
+    <Compile Include="DateRange.cs" />
+    <Compile Include="FakeConnector.cs" />
+    <Compile Include="MySqlConnector.cs" />
     <Compile Include="Drop.cs" />
     <Compile Include="EventClient.cs" />
-    <Compile Include="ExtendedLocation.cs" />
+    <Compile Include="HTWLocation.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GestureRecognizerView.cs" />
     <Compile Include="ServiceHandler.cs" />
-    <Compile Include="UIHandler.cs" />
+    <Compile Include="DropManager.cs" />
     <Compile Include="Voting.cs" />
     <Compile Include="Warning.cs" />
     <Compile Include="XML.cs" />
