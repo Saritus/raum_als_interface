@@ -31,10 +31,8 @@ namespace TouchWalkthrough
             // Create your application here
 
             //For ListView
-            //uiInstance.createDummyDrops(1);
-            //droplist = uiInstance.getDrops();
-
-            //uiInstance.getDrops();
+            dropmanager.updateDrops();
+            droplist = dropmanager.drops;
 
             listnames = FindViewById<ListView>(Resource.Id.historyList);
 
