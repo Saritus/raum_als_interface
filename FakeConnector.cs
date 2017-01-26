@@ -11,7 +11,10 @@ namespace TouchWalkthrough
 
         private static FakeConnector instance;
 
-        private FakeConnector() { }
+        private FakeConnector()
+        {
+            dummyDrops = createDummyDrops();
+        }
 
         public static FakeConnector Instance
         {
@@ -27,29 +30,15 @@ namespace TouchWalkthrough
 
         // Fake-part
 
-        static public List<Drop> dummyDrops
-        {
-            get
-            {
-                if (!dummyDropsCreated)
-                {
-                    dummyDrops.AddRange(createDummyDrops());
-                }
-                return dummyDrops;
-            }
-            private set
-            {
-                dummyDrops = value;
-            }
-        }
-
-        static bool dummyDropsCreated = false;
+        static public List<Drop> dummyDrops { get; private set; }
 
         private static List<Drop> createDummyDrops()
         {
             List<Drop> dummyDrops = new List<Drop>();
 
-            dummyDrops.Add(new Drop(0, "HTW Dresden auf der KarriereStart Dresden", Category.Messen, "PLACEHOLDER", new DateTime(2017, 01, 21, 10, 00, 00)));
+            Drop newdrop = new Drop(0, "HTW Dresden auf der KarriereStart Dresden", Category.Messen, "PLACEHOLDER", new DateTime(2017, 01, 21, 10, 00, 00));
+
+            dummyDrops.Add(newdrop);
             dummyDrops.Add(new Drop(1, "HTW Dresden auf der KarriereStart Dresden", Category.Messen, "PLACEHOLDER", new DateTime(2017, 01, 22, 10, 00, 00)));
             dummyDrops.Add(new Drop(2, "Steuertipps für Studierende", Category.Workshop, "PLACEHOLDER", new DateTime(2017, 01, 24, 15, 00, 00)));
             dummyDrops.Add(new Drop(3, "Bewerbungsfotoshooting", Category.Veranstaltung, "PLACEHOLDER", new DateTime(2017, 01, 26, 14, 00, 00)));
