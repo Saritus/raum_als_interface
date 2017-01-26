@@ -11,18 +11,7 @@ namespace TouchWalkthrough
         public DateTime lastChange { get; private set; }
 
         // Creator settings
-        public string name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                lastChange = DateTime.Now;
-                name = value;
-            }
-        }
+        public string name { get; set; }
 
         public Category category
         {
@@ -32,7 +21,6 @@ namespace TouchWalkthrough
             }
             set
             {
-                lastChange = DateTime.Now;
                 category = value;
             }
         }
@@ -44,7 +32,6 @@ namespace TouchWalkthrough
             }
             set
             {
-                lastChange = DateTime.Now;
                 description = value;
             }
         }
@@ -57,7 +44,6 @@ namespace TouchWalkthrough
             }
             set
             {
-                lastChange = DateTime.Now;
                 startTime = value;
             }
         }
@@ -70,7 +56,6 @@ namespace TouchWalkthrough
             }
             set
             {
-                lastChange = DateTime.Now;
                 location = value;
             }
         }
@@ -83,7 +68,6 @@ namespace TouchWalkthrough
             }
             set
             {
-                lastChange = DateTime.Now;
                 picturePath = value;
             }
         }
