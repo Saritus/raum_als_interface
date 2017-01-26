@@ -40,11 +40,13 @@ namespace TouchWalkthrough
 
             droplist.ForEach(drop => itemlist.Add(drop.name));
 
+            itemlist.Add(droplist.Count.ToString());
+
             itemlist.Add("Item 0");
-            //itemlist.Add("Item 1");
-            //itemlist.Add("Item 2");
-            //itemlist.Add("Item 3");
-            //itemlist.Add("Item 4");
+            itemlist.Add("Item 1");
+            itemlist.Add("Item 2");
+            itemlist.Add("Item 3");
+            itemlist.Add("Item 4");
 
             //itemlist.Add(droplist[0].getName());
             //itemlist.Add(droplist[1].getName());
