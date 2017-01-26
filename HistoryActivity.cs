@@ -21,7 +21,7 @@ namespace TouchWalkthrough
         private List<string> itemlist;
 
         //Create Dummy Drops
-        private DropManager dropmanager = DropManager.Instance;
+        //private DropManager dropmanager = DropManager.Instance;
         private List<Drop> droplist = new List<Drop>();
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -31,8 +31,8 @@ namespace TouchWalkthrough
             // Create your application here
 
             //For ListView
-            dropmanager.updateDrops();
-            droplist = dropmanager.drops;
+            //dropmanager.updateDrops();
+            //droplist = dropmanager.drops;
 
             listnames = FindViewById<ListView>(Resource.Id.historyList);
 
