@@ -75,7 +75,7 @@ namespace TouchWalkthrough
 				CreateDirectoryForPictures();
 
       			ImageView imageViewPicture = FindViewById<ImageView>(Resource.Id.imageView1);
-				Button take_picture_button = FindViewById<Button>(Resource.Id.imageButton2);
+				ImageButton take_picture_button = FindViewById<ImageButton>(Resource.Id.imageButton2);
 				take_picture_button.Click += TakeAPicture;
 			}
 			//Take Picture ENDE ###########################################################
