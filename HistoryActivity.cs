@@ -37,9 +37,9 @@ namespace TouchWalkthrough
             listnames = FindViewById<ListView>(Resource.Id.historyList);
 
             itemlist = new List<string>();
-            /*for (int i = 0; i < droplist.Count; i++) {
-				itemlist.Add(droplist[i].getName());
-			}*/
+
+            droplist.ForEach(drop => itemlist.Add(drop.name));
+
             itemlist.Add("Item 0");
             //itemlist.Add("Item 1");
             //itemlist.Add("Item 2");
