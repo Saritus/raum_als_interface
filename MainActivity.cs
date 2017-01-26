@@ -121,7 +121,8 @@
 			alert.SetMessage("Möchtest du die Anwendung beenden?");
 			alert.SetPositiveButton("Ja", (senderAlert, args) =>
 			{
-				base.OnBackPressed();
+				//base.OnBackPressed();
+				base.Finish();
 			});
 
 			alert.SetNegativeButton("Nein", (senderAlert, args) =>

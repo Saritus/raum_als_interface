@@ -71,6 +71,8 @@
     <Compile Include="HistoryActivity.cs" />
     <Compile Include="NewDropActivity.cs" />
     <Compile Include="BitmapHelpers.cs" />
+    <Compile Include="HomeScreenAdapter.cs" />
+    <Compile Include="TableItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -103,6 +105,8 @@
     <AndroidResource Include="Resources\Drawable\icon_hap1_off.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap2_off.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap3_off.png" />
+    <AndroidResource Include="Resources\Layout\HomeScreen.axml" />
+    <AndroidResource Include="Resources\Layout\CustomView.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
