@@ -21,7 +21,7 @@ namespace TouchWalkthrough
         private List<string> itemlist;
 
         //Create Dummy Drops
-        private DropManager dropmanager;
+        private DropManager dropmanager = DropManager.Instance;
         private List<Drop> droplist = new List<Drop>();
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -31,17 +31,15 @@ namespace TouchWalkthrough
             // Create your application here
 
             //For ListView
-            //uiInstance.createDummyDrops(1);
-            //droplist = uiInstance.getDrops();
-
-            //uiInstance.getDrops();
+            dropmanager.updateDrops();
+            droplist = dropmanager.drops;
 
             listnames = FindViewById<ListView>(Resource.Id.historyList);
 
             itemlist = new List<string>();
-            /*for (int i = 0; i < droplist.Count; i++) {
-				itemlist.Add(droplist[i].getName());
-			}*/
+
+            droplist.ForEach(drop => itemlist.Add(drop.name));
+
             itemlist.Add("Item 0");
             //itemlist.Add("Item 1");
             //itemlist.Add("Item 2");
