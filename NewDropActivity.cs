@@ -24,48 +24,135 @@ namespace TouchWalkthrough
 	[Activity(Label = "NewDropActivity", Theme = "@android:style/Theme.NoTitleBar")]
 	public class NewDropActivity : Activity
 	{
-		private ImageView imageViewPicture;
+		bool hap1_button_on = true;
+		bool hap2_button_on = true;
+		bool hap3_button_on = true;
 
+		//Take Picture################################
+		private ImageView imageViewPicture;
 		protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
 		{
 			base.OnActivityResult(requestCode, resultCode, data);
-
-			// Make it available in the gallery
-
-			Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
-			Uri contentUri = Uri.FromFile(App._file);
-			mediaScanIntent.SetData(contentUri);
-			SendBroadcast(mediaScanIntent);
-
-			// Display in ImageView. We will resize the bitmap to fit the display
-			// Loading the full sized image will consume to much memory 
-			// and cause the application to crash.
-
-			int height = Resources.DisplayMetrics.HeightPixels;
-			int width = imageViewPicture.Height;
-			App.bitmap = App._file.Path.LoadAndResizeBitmap(width, height);
-			if (App.bitmap != null)
+			 
+			//Fuer FilePicker #############################
+			if (requestCode == 1)
 			{
-				imageViewPicture.SetImageBitmap(App.bitmap);
-				App.bitmap = null;
+				var imageView = FindViewById<ImageView>(Resource.Id.imageView1);
+				imageView.SetImageURI(data.Data);
 			}
+			//Fuer FilePicker ENDE #############################
 
-			// Dispose of the Java side bitmap.
-			GC.Collect();
+
+			if (requestCode == 0)
+			{
+				// Make it available in the gallery
+				Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
+				Uri contentUri = Uri.FromFile(App._file);
+				mediaScanIntent.SetData(contentUri);
+				SendBroadcast(mediaScanIntent);
+
+				// Display in ImageView. We will resize the bitmap to fit the display
+				// Loading the full sized image will consume to much memory 
+				// and cause the application to crash.
+
+				int height = Resources.DisplayMetrics.HeightPixels;
+				//int width = imageViewPicture.Height;
+				int width = Resources.DisplayMetrics.WidthPixels;
+				App.bitmap = App._file.Path.LoadAndResizeBitmap(width, height);
+				if (App.bitmap != null)
+				{
+					imageViewPicture.SetImageBitmap(App.bitmap);
+					App.bitmap = null;
+				}
+
+				// Dispose of the Java side bitmap.
+				GC.Collect();
+			}
 		}
+		//Take Picture ENDE################################
 
 		protected override void OnCreate(Bundle savedInstanceState)
-		{ 
+		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Plus_Menue);
 			// Create your application here
 
-			//File-Picker ###############################################################
-			/*Button filepicker_button = FindViewById<Button>(Resource.Id.imageButton1);
-			filepicker_button.Click += (object sender, EventArgs e) =>
-			{
 
-			};*/
+			//For Filter-Button ON/OFF FILTER ###########################################################
+			ImageButton hap1_button = FindViewById<ImageButton>(Resource.Id.imageButton33);
+			ImageButton hap2_button = FindViewById<ImageButton>(Resource.Id.imageButton44);
+			ImageButton hap3_button = FindViewById<ImageButton>(Resource.Id.imageButton55);
+
+			hap1_button.Click += (object sender, EventArgs e) =>
+			{
+				if (hap1_button_on == false)
+				{
+					hap1_button.SetImageResource(Resource.Drawable.icon_hap1_off);
+					hap1_button_on = true;
+				}
+				else {
+					hap2_button.SetImageResource(Resource.Drawable.icon_hap2_off);
+					hap2_button_on = true;
+					hap3_button.SetImageResource(Resource.Drawable.icon_hap3_off);
+					hap3_button_on = true;
+
+					hap1_button.SetImageResource(Resource.Drawable.icon_hap1);
+					hap1_button_on = false;
+				}
+			};
+			//############ 
+
+			hap2_button.Click += (object sender, EventArgs e) =>
+			{
+				if (hap2_button_on == false)
+				{
+					hap2_button.SetImageResource(Resource.Drawable.icon_hap2_off);
+					hap2_button_on = true;
+				}
+				else {
+					hap1_button.SetImageResource(Resource.Drawable.icon_hap1_off);
+					hap1_button_on = true;
+					hap3_button.SetImageResource(Resource.Drawable.icon_hap3_off);
+					hap3_button_on = true;
+
+
+					hap2_button.SetImageResource(Resource.Drawable.icon_hap2);
+					hap2_button_on = false;
+				}
+			};
+			//############
+			hap3_button.Click += (object sender, EventArgs e) =>
+			{
+				if (hap3_button_on == false)
+				{
+					hap3_button.SetImageResource(Resource.Drawable.icon_hap3_off);
+					hap3_button_on = true;
+				}
+				else {
+					hap1_button.SetImageResource(Resource.Drawable.icon_hap1_off);
+					hap1_button_on = true;
+					hap2_button.SetImageResource(Resource.Drawable.icon_hap2_off);
+					hap2_button_on = true;
+
+					hap3_button.SetImageResource(Resource.Drawable.icon_hap3);
+					hap3_button_on = false;
+				}
+			};
+			//For Filter-Button ON/OFF FILTER ENDE###########################################################
+
+
+
+
+			//File-Picker ###############################################################
+			ImageButton filepicker_button = FindViewById<ImageButton>(Resource.Id.imageButton1);
+			filepicker_button.Click += delegate
+			{
+				var imageIntent = new Intent();
+				imageIntent.SetType("image/*");
+				imageIntent.SetAction(Intent.ActionGetContent);
+				StartActivityForResult(
+					Intent.CreateChooser(imageIntent, "Select photo"), 1);
+			};
 			//File-Picker ENDE ###########################################################
 
 
@@ -74,7 +161,7 @@ namespace TouchWalkthrough
 			{
 				CreateDirectoryForPictures();
 
-      			ImageView imageViewPicture = FindViewById<ImageView>(Resource.Id.imageView1);
+				//ImageView imageViewPicture = FindViewById<ImageView>(Resource.Id.imageView1);
 				ImageButton take_picture_button = FindViewById<ImageButton>(Resource.Id.imageButton2);
 				take_picture_button.Click += TakeAPicture;
 			}

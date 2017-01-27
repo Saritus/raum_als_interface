@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background"
     android:id="@+id/linearLayout">
     <RelativeLayout
         android:minWidth="25px"
@@ -12,14 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/RelativeLayoutMap"
-        android:layout_weight="5">
+        android:layout_weight="5"
+        android:background="#ffff5252">
         <ImageView
-            android:src="@drawable/karte_gebaeude"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/imageViewKarte"
-            android:scaleType="fitCenter"
-            android:layout_weight="0.75" />
+            android:scaleType="centerCrop"
+            android:layout_weight="0.75"
+            android:src="@drawable/karte_z_eg"
+            android:layout_above="@+id/relativeLayout_navbar" />
         <ImageButton
             android:src="@drawable/history_button"
             android:layout_width="wrap_content"
@@ -41,8 +42,8 @@
                     android:id="@+id/ViewIsOnlyForAlphaValueBackground"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#ff424242"
-                    android:alpha="0.7" />
+                    android:alpha="0.5"
+                    android:background="@drawable/navbar_background" />
                 <LinearLayout
                     android:orientation="horizontal"
                     android:minWidth="25px"

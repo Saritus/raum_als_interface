@@ -92,7 +92,7 @@
 					hap3_button_on = false;
 				}
 			};
-			//For Filter-Button ON/OFF FILTER ###########################################################
+			//For Filter-Button ON/OFF FILTER ENDE###########################################################
 
 			//OPEN CREAT NEW DROP (Plus-Button) ##########################################################
 			ImageButton plus_button = FindViewById<ImageButton>(Resource.Id.imageButton1);
@@ -107,7 +107,7 @@
 			ImageButton arrow_left_button = FindViewById<ImageButton>(Resource.Id.imageButton3);
 			arrow_left_button.Click += (object sender, EventArgs e) =>
 			{
-				karte.SetImageResource(Resource.Drawable.test_platzhalter_andere_karte);
+				//karte.SetImageResource(Resource.Drawable.test_platzhalter_andere_karte);
 			};
 			//For arrow_left Button ENDE ##############################################################
 

@@ -100,13 +100,12 @@
     <AndroidResource Include="Resources\Drawable\icon_hap2.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap3.png" />
     <AndroidResource Include="Resources\Layout\Plus_Menue.xml" />
-    <AndroidResource Include="Resources\Drawable\history_button2.png" />
-    <AndroidResource Include="Resources\Drawable\test_platzhalter_andere_karte.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap1_off.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap2_off.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap3_off.png" />
     <AndroidResource Include="Resources\Layout\HomeScreen.axml" />
     <AndroidResource Include="Resources\Layout\CustomView.axml" />
+    <AndroidResource Include="Resources\Drawable\navbar_background.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
