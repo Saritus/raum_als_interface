@@ -69,10 +69,10 @@
     <Compile Include="Warning.cs" />
     <Compile Include="XML.cs" />
     <Compile Include="HistoryActivity.cs" />
-    <Compile Include="NewDropActivity.cs" />
     <Compile Include="BitmapHelpers.cs" />
     <Compile Include="HomeScreenAdapter.cs" />
     <Compile Include="TableItem.cs" />
+    <Compile Include="NewDropActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -105,6 +105,8 @@
     <AndroidResource Include="Resources\Layout\CustomView.axml" />
     <AndroidResource Include="Resources\Drawable\navbar_background.png" />
     <AndroidResource Include="Resources\Drawable\karte_z_eg.png" />
+    <AndroidResource Include="Resources\Drawable\haken.png" />
+    <AndroidResource Include="Resources\Drawable\kreuz.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />

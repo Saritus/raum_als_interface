@@ -10,81 +10,86 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent">
-        <TextView
+        android:background="#ffef5350">
+        <EditText
             android:id="@+id/Text1"
-            android:text="TITEL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#ffffffff"
             android:textSize="20dip"
-            android:textStyle="bold" />
-        <TextView
+            android:textStyle="bold"
+            android:hint="Titel ..." />
+        <EditText
             android:id="@+id/Text2"
-            android:text="Beschreibung"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14dip"
             android:textColor="#ffffffff"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            android:hint="Beschreibung ..." />
     </LinearLayout>
-    <ImageButton
-        android:src="@android:drawable/ic_menu_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton1"
-        android:layout_below="@+id/imageButton2" />
-    <TextView
-        android:id="@+id/Text3"
-        android:text="Aus Gallerie wählen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dip"
-        android:textColor="#ffffffff"
-        android:textStyle="normal"
-        android:layout_toRightOf="@+id/imageButton1"
-        android:layout_alignTop="@+id/imageButton1"
-        android:layout_alignBottom="@+id/imageButton1"
-        android:gravity="center" />
-    <ImageButton
-        android:src="@android:drawable/ic_menu_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton2"
-        android:layout_below="@+id/relLayout2" />
-    <TextView
-        android:id="@+id/Text4"
-        android:text="Foto machen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dip"
-        android:textColor="#ffffffff"
-        android:textStyle="normal"
-        android:layout_alignTop="@+id/imageButton2"
-        android:layout_alignBottom="@+id/imageButton2"
-        android:layout_toRightOf="@+id/imageButton2"
-        android:gravity="center" />
-    <ImageView
-        android:src="@android:drawable/ic_menu_gallery"
+    <RelativeLayout
+        android:id="@+id/LinearFileFotoPick"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView1"
-        android:layout_below="@+id/imageButton1"
-        android:background="#ffe51111" />
-    <DatePicker
-        android:layout_width="match_parent"
-        android:layout_height="169.5dp"
-        android:id="@+id/datePicker1"
-        android:layout_below="@+id/Text12"
-        style="@android:style/Widget.DatePicker" />
+        android:layout_below="@+id/RelLayoutdropplazieren">
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton1"
+            android:layout_below="@+id/imageButton2" />
+        <TextView
+            android:id="@+id/Text3"
+            android:text="Aus Gallerie wählen    "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dip"
+            android:textColor="#ffffffff"
+            android:textStyle="normal"
+            android:layout_toRightOf="@+id/imageButton1"
+            android:layout_alignTop="@+id/imageButton1"
+            android:layout_alignBottom="@+id/imageButton1"
+            android:gravity="center" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton2"
+            android:layout_below="@+id/relLayout2" />
+        <TextView
+            android:id="@+id/Text4"
+            android:text="Foto machen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dip"
+            android:textColor="#ffffffff"
+            android:textStyle="normal"
+            android:layout_alignTop="@+id/imageButton2"
+            android:layout_alignBottom="@+id/imageButton2"
+            android:layout_toRightOf="@+id/imageButton2"
+            android:gravity="center" />
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView1"
+            android:layout_below="@+id/imageButton1"
+            android:layout_alignTop="@+id/imageButton2"
+            android:layout_alignBottom="@+id/imageButton1"
+            android:layout_toRightOf="@+id/Text3"
+            android:scaleType="fitCenter"
+            android:background="#ffe0e0e0" />
+    </RelativeLayout>
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:layout_below="@+id/datePicker1"
-        android:id="@+id/relLayout2">
+        android:id="@+id/relLayout2"
+        android:layout_below="@+id/DateAndTime">
         <ImageButton
             android:src="@drawable/icon_hap1_off"
             android:layout_width="wrap_content"
@@ -121,8 +126,7 @@
                 android:id="@+id/ViewIsOnlyForAlphaValueBackground3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#ff424242"
-                android:alpha="0.7" />
+                android:background="#ffef5350" />
             <LinearLayout
                 android:orientation="horizontal"
                 android:minWidth="25px"
@@ -140,14 +144,14 @@
                     android:layout_gravity="center"
                     android:background="@android:color/transparent" />
                 <ImageButton
-                    android:src="@drawable/arrow_left_button"
+                    android:src="@drawable/kreuz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/imageButton367"
                     android:background="@android:color/transparent"
                     android:scaleType="fitCenter" />
                 <ImageButton
-                    android:src="@drawable/arrow_right_button"
+                    android:src="@drawable/haken"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/imageButton467"
@@ -162,7 +166,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:layout_below="@+id/imageView1">
+        android:layout_below="@+id/Text12">
         <LinearLayout
             android:id="@+id/ganztaegig"
             android:orientation="horizontal"
@@ -187,7 +191,6 @@
                 android:gravity="center"
                 android:layout_weight="0.1" />
             <ImageView
-                android:src="#fff21919"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/schiebtSwitchRechts"
@@ -198,5 +201,36 @@
                 android:id="@+id/switch1"
                 android:layout_weight="0.15" />
         </LinearLayout>
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="169.5dp"
+            android:id="@+id/datePicker1"
+            android:layout_below="@+id/Text12"
+            style="@android:style/Widget.DatePicker" />
     </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/RelLayoutdropplazieren"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayout2">
+        <ImageButton
+            android:src="@android:drawable/ic_menu_mapmode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton66"
+            android:scaleType="fitCenter" />
+        <TextView
+            android:id="@+id/Text29"
+            android:text="Auf Karte platzieren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dip"
+            android:textColor="#ffffffff"
+            android:textStyle="normal"
+            android:layout_toRightOf="@+id/imageButton66"
+            android:layout_alignTop="@+id/imageButton66"
+            android:layout_alignBottom="@+id/imageButton66"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
 </RelativeLayout>
