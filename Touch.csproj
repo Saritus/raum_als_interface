@@ -110,7 +110,7 @@
     <AndroidResource Include="Resources\Drawable\kreuz.png" />
     <AndroidResource Include="Resources\Drawable\switch1.png" />
     <AndroidResource Include="Resources\Drawable\switch2.png" />
-    <AndroidResource Include="Resources\Layout\DropDetails.axml" />
+    <AndroidResource Include="Resources\Layout\DropDetails.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />

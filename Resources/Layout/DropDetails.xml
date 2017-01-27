@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:id="@+id/lRelLayout23">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/LinLayout10"
+        android:background="#ffff5252"
+        android:layout_above="@+id/relativeLayout_navbar2">
+        <TextView
+            android:text="NAME DES EVENTS"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <TextView
+            android:text="Beschreibung: bladfskjsadfj sdf dfsjaljsdf s dflksdjafkasdjf lsfdjal ksadflksadfjlkfskadlk sdfjlksdf fsdaljsadflk afsd l sdafkasfdj lasfdfsad sjdfasdflj sadkfsad jsd lks adf asjkldf lfksda klasf kfsdaksdf jsafl jsfda fsd sadf aksfdj sfkd sakf ksfad fskd fsdaj fdsak fjk fsdk sfda jklasdfjasdfklsdafs sfdk fssfdjk sdfsfkdjlskfd jksdfsfdjdfsj klfsdjsdfjs dfsdfsdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout_navbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true">
+        <FrameLayout
+            android:layout_weight="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="1">
+            <ImageView
+                android:id="@+id/ViewIsOnlyForAlphaValueBackground3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffef5350" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout11"
+                android:layout_weight="0">
+                <ImageButton
+                    android:src="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton567"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent" />
+                <ImageButton
+                    android:src="@drawable/arrow_left_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton367"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter" />
+                <ImageButton
+                    android:src="@drawable/arrow_right_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton467"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>
