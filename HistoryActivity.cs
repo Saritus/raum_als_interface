@@ -44,7 +44,7 @@ namespace TouchWalkthrough
 			listView.Adapter = new HomeScreenAdapter(this, tableItems);
 
 			listView.ItemClick += OnListItemClick;
-
+			 
         }
 
          protected void OnListItemClick(object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
@@ -53,6 +53,8 @@ namespace TouchWalkthrough
 			var t = tableItems[e.Position];
 			Android.Widget.Toast.MakeText(this, t.Heading, Android.Widget.ToastLength.Short).Show();
 			Console.WriteLine("Clicked on " + t.Heading);
+
+			StartActivity(typeof(DropDetailsActivity));
 		}
     }
 }

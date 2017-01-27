@@ -98,6 +98,12 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f020011
 			public const int plus_button = 2130837521;
 			
+			// aapt resource value: 0x7f020012
+			public const int switch1 = 2130837522;
+			
+			// aapt resource value: 0x7f020013
+			public const int switch2 = 2130837523;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -277,7 +283,7 @@ namespace TouchWalkthrough
 			public const int schiebtSwitchRechts = 2131099699;
 			
 			// aapt resource value: 0x7f060034
-			public const int switch1 = 2131099700;
+			public const int switch_button = 2131099700;
 			
 			static Id()
 			{
@@ -296,22 +302,25 @@ namespace TouchWalkthrough
 			public const int CustomView = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Filter_Menue = 2130903041;
+			public const int DropDetails = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int History = 2130903042;
+			public const int Filter_Menue = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int HomeScreen = 2130903043;
+			public const int History = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Main = 2130903044;
+			public const int HomeScreen = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int MainTestGestureRecognizer = 2130903045;
+			public const int Main = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int Plus_Menue = 2130903046;
+			public const int MainTestGestureRecognizer = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int Plus_Menue = 2130903047;
 			
 			static Layout()
 			{

@@ -23,7 +23,9 @@
             android:id="@+id/ImageViewKarte"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/karte_z_eg" />
+            android:src="@drawable/karte_z_eg"
+            android:layout_above="@+id/relativeLayout_navbar"
+            android:scaleType="centerInside" />
         <RelativeLayout
             android:id="@+id/relativeLayout_navbar"
             android:layout_width="match_parent"
@@ -39,7 +41,8 @@
                     android:id="@+id/ViewIsOnlyForAlphaValueBackground"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:alpha="0.5" />
+                    android:alpha="0.35"
+                    android:background="#ff212121" />
                 <LinearLayout
                     android:orientation="horizontal"
                     android:minWidth="25px"

@@ -76,7 +76,17 @@ namespace TouchWalkthrough
 			SetContentView(Resource.Layout.Plus_Menue);
 			// Create your application here
 
-			//Kreuz/Haken Buttons ##################################################
+			//Auf Karte platzieren Button ########################################################
+			ImageButton dropPlatzieren_button = FindViewById<ImageButton>(Resource.Id.imageButton66);
+			dropPlatzieren_button.Click += (object sender, EventArgs e) =>
+			{
+				StartActivity(typeof(MainActivity));
+			};
+
+
+			//Auf Karte platzieren Button ########################################################
+
+			//Kreuz+Haken Buttons ##################################################
 			ImageButton kreuz_button = FindViewById<ImageButton>(Resource.Id.imageButton367);
 			ImageButton haken_button = FindViewById<ImageButton>(Resource.Id.imageButton467);
 
@@ -101,7 +111,7 @@ namespace TouchWalkthrough
 			{
 				base.OnBackPressed();
 			};
-			//Kreuz/Haken Buttons ENDE ##################################################
+			//Kreuz+Haken Buttons ENDE ##################################################
 
 			//For Filter-Button ON/OFF FILTER ###########################################################
 			ImageButton hap1_button = FindViewById<ImageButton>(Resource.Id.imageButton33);

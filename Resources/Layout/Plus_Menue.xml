@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background"
+    android:background="#ffff5252"
     android:id="@+id/lRelLayout23">
     <LinearLayout
         android:id="@+id/Text12"
@@ -18,15 +18,26 @@
             android:textColor="#ffffffff"
             android:textSize="20dip"
             android:textStyle="bold"
-            android:hint="Titel ..." />
+            android:hint="Titel ..."
+            android:textColorHint="#ffbdbdbd"
+            android:backgroundTint="#ff912727"
+            android:inputType="text"
+            android:maxLines="1" />
         <EditText
             android:id="@+id/Text2"
+            android:inputType="textMultiLine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14dip"
             android:textColor="#ffffffff"
             android:textStyle="normal"
-            android:hint="Beschreibung ..." />
+            android:hint="Beschreibung ..."
+            android:backgroundTint="#ff912727"
+            android:textColorHint="#ffbdbdbd"
+            android:minHeight="75dp"
+            android:maxHeight="75dp"
+            android:gravity="top"
+            android:maxLines="3" />
     </LinearLayout>
     <RelativeLayout
         android:id="@+id/LinearFileFotoPick"
@@ -73,7 +84,7 @@
         <ImageView
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/imageView1"
             android:layout_below="@+id/imageButton1"
             android:layout_alignTop="@+id/imageButton2"
@@ -126,7 +137,8 @@
                 android:id="@+id/ViewIsOnlyForAlphaValueBackground3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#ffef5350" />
+                android:background="#ff212121"
+                android:alpha="0.35" />
             <LinearLayout
                 android:orientation="horizontal"
                 android:minWidth="25px"
@@ -198,8 +210,11 @@
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/switch1"
-                android:layout_weight="0.15" />
+                android:id="@+id/switch_button"
+                android:layout_weight="0.15"
+                android:visibility="visible"
+                android:thumb="@drawable/switch1"
+                android:track="@drawable/switch2" />
         </LinearLayout>
         <DatePicker
             android:layout_width="match_parent"
@@ -223,7 +238,7 @@
         <TextView
             android:id="@+id/Text29"
             android:text="Auf Karte platzieren"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14dip"
             android:textColor="#ffffffff"

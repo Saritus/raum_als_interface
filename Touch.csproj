@@ -73,6 +73,7 @@
     <Compile Include="HomeScreenAdapter.cs" />
     <Compile Include="TableItem.cs" />
     <Compile Include="NewDropActivity.cs" />
+    <Compile Include="DropDetailsActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -107,6 +108,9 @@
     <AndroidResource Include="Resources\Drawable\karte_z_eg.png" />
     <AndroidResource Include="Resources\Drawable\haken.png" />
     <AndroidResource Include="Resources\Drawable\kreuz.png" />
+    <AndroidResource Include="Resources\Drawable\switch1.png" />
+    <AndroidResource Include="Resources\Drawable\switch2.png" />
+    <AndroidResource Include="Resources\Layout\DropDetails.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
