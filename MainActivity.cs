@@ -20,7 +20,7 @@
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
-			SetContentView(Resource.Layout.Main);
+ 			SetContentView(Resource.Layout.Main);
 
 			//OPEN-HISTORY##############################################################
 			ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
@@ -30,7 +30,7 @@
 			};
 			//OPEN-HISTORY ENDE ##############################################################
 
-
+			 
 			//For Filter-Button open menue##############################################################
 			ImageButton filter_button = FindViewById<ImageButton>(Resource.Id.imageButton2);
 			RelativeLayout showFilterLayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayoutFilter);
@@ -103,7 +103,7 @@
 			//OPEN CREAT NEW DROP (Plus-Button) ENDE ##########################################################
 
 			//For arrow_left Button ##############################################################
-			ImageView karte = FindViewById<ImageView>(Resource.Id.imageViewKarte);
+			//ImageView karte = FindViewById<ImageView>(Resource.Id.imageViewKarte);
 			ImageButton arrow_left_button = FindViewById<ImageButton>(Resource.Id.imageButton3);
 			arrow_left_button.Click += (object sender, EventArgs e) =>
 			{

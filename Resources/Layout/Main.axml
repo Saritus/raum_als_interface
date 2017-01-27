@@ -13,20 +13,17 @@
         android:id="@+id/RelativeLayoutMap"
         android:layout_weight="5"
         android:background="#ffff5252">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageViewKarte"
-            android:scaleType="centerCrop"
-            android:layout_weight="0.75"
-            android:src="@drawable/karte_z_eg"
-            android:layout_above="@+id/relativeLayout_navbar" />
         <ImageButton
             android:src="@drawable/history_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton6"
             android:background="@android:color/transparent" />
+        <ImageView
+            android:id="@+id/ImageViewKarte"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/karte_z_eg" />
         <RelativeLayout
             android:id="@+id/relativeLayout_navbar"
             android:layout_width="match_parent"
@@ -42,8 +39,7 @@
                     android:id="@+id/ViewIsOnlyForAlphaValueBackground"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:alpha="0.5"
-                    android:background="@drawable/navbar_background" />
+                    android:alpha="0.5" />
                 <LinearLayout
                     android:orientation="horizontal"
                     android:minWidth="25px"
@@ -115,7 +111,7 @@
                     android:id="@+id/ViewIsOnlyForAlphaValueBackground2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#ff424242"
+                    android:background="#ff4c4747"
                     android:alpha="0.7" />
             </FrameLayout>
             <ImageButton

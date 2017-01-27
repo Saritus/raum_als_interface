@@ -81,19 +81,16 @@ namespace TouchWalkthrough
 			public const int icon_hap3_off = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int Karte_Gebaeude = 2130837516;
+			public const int karte_z_eg = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int Karte_Z_EG = 2130837517;
+			public const int logo = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int logo = 2130837518;
+			public const int navbar_background = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int navbar_background = 2130837519;
-			
-			// aapt resource value: 0x7f020010
-			public const int plus_button = 2130837520;
+			public const int plus_button = 2130837519;
 			
 			static Drawable()
 			{
@@ -116,6 +113,9 @@ namespace TouchWalkthrough
 			
 			// aapt resource value: 0x7f060003
 			public const int Image = 2131099651;
+			
+			// aapt resource value: 0x7f060011
+			public const int ImageViewKarte = 2131099665;
 			
 			// aapt resource value: 0x7f06000d
 			public const int List = 2131099661;
@@ -204,8 +204,8 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f06002b
 			public const int imageButton567 = 2131099691;
 			
-			// aapt resource value: 0x7f060012
-			public const int imageButton6 = 2131099666;
+			// aapt resource value: 0x7f060010
+			public const int imageButton6 = 2131099664;
 			
 			// aapt resource value: 0x7f060006
 			public const int imageButton97 = 2131099654;
@@ -221,9 +221,6 @@ namespace TouchWalkthrough
 			
 			// aapt resource value: 0x7f060030
 			public const int imageView2 = 2131099696;
-			
-			// aapt resource value: 0x7f060010
-			public const int imageViewKarte = 2131099664;
 			
 			// aapt resource value: 0x7f06001e
 			public const int lRelLayout23 = 2131099678;
@@ -252,8 +249,8 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f06001a
 			public const int relativeLayoutFilter = 2131099674;
 			
-			// aapt resource value: 0x7f060011
-			public const int relativeLayout_navbar = 2131099665;
+			// aapt resource value: 0x7f060012
+			public const int relativeLayout_navbar = 2131099666;
 			
 			// aapt resource value: 0x7f060028
 			public const int relativeLayout_navbar2 = 2131099688;
