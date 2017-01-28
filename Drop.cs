@@ -90,5 +90,10 @@ namespace TouchWalkthrough
         {
             Console.WriteLine("Details: " + id + ", " + name + ", " + description);
         }
+
+        public TableItem ToTableItem()
+        {
+            return new TableItem();
+        }
     }
 }
