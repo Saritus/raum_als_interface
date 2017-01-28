@@ -11,82 +11,16 @@ namespace TouchWalkthrough
         public DateTime lastChange { get; private set; }
 
         // Creator settings
-        public string name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                lastChange = DateTime.Now;
-                name = value;
-            }
-        }
+        public string name { get; set; }
 
-        public Category category
-        {
-            get
-            {
-                return category;
-            }
-            set
-            {
-                lastChange = DateTime.Now;
-                category = value;
-            }
-        }
-        public string description
-        {
-            get
-            {
-                return description;
-            }
-            set
-            {
-                lastChange = DateTime.Now;
-                description = value;
-            }
-        }
+        public Category category { get; set; }
+        public string description { get; set; }
 
-        public DateTime startTime
-        {
-            get
-            {
-                return startTime;
-            }
-            set
-            {
-                lastChange = DateTime.Now;
-                startTime = value;
-            }
-        }
+        public DateTime startTime { get; set; }
 
-        public HTWLocation location
-        {
-            get
-            {
-                return location;
-            }
-            set
-            {
-                lastChange = DateTime.Now;
-                location = value;
-            }
-        }
+        public HTWLocation location { get; set; }
 
-        public string picturePath
-        {
-            get
-            {
-                return picturePath;
-            }
-            set
-            {
-                lastChange = DateTime.Now;
-                picturePath = value;
-            }
-        }
+        public string picturePath { get; set; }
 
         // User settings
         public bool followed { get; set; }
@@ -121,9 +55,20 @@ namespace TouchWalkthrough
         }
 
         public Drop(int id, string name, Category category, string description, DateTime startTime)
-            : this(id, name, category, description, startTime, null, null)
         {
+            this.id = id;
+            this.name = name;
+            this.description = description;
+            this.category = category;
+            this.startTime = startTime;
+        }
 
+        public Drop(int id, string name, Category category, string description)
+        {
+            this.id = id;
+            this.name = name;
+            this.description = description;
+            this.category = category;
         }
 
         public Drop(int id)

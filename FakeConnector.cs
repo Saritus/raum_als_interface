@@ -11,7 +11,10 @@ namespace TouchWalkthrough
 
         private static FakeConnector instance;
 
-        private FakeConnector() { }
+        private FakeConnector()
+        {
+            dummyDrops = createDummyDrops();
+        }
 
         public static FakeConnector Instance
         {
@@ -27,23 +30,7 @@ namespace TouchWalkthrough
 
         // Fake-part
 
-        static public List<Drop> dummyDrops
-        {
-            get
-            {
-                if (!dummyDropsCreated)
-                {
-                    dummyDrops.AddRange(createDummyDrops());
-                }
-                return dummyDrops;
-            }
-            private set
-            {
-                dummyDrops = value;
-            }
-        }
-
-        static bool dummyDropsCreated = false;
+        static public List<Drop> dummyDrops { get; private set; }
 
         private static List<Drop> createDummyDrops()
         {

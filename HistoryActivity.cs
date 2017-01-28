@@ -16,6 +16,8 @@ namespace TouchWalkthrough
     [Activity(Label = "HistoryActivity", Theme = "@android:style/Theme.NoTitleBar")]
     public class HistoryActivity : Activity 
     {
+        DropManager dropmanager = DropManager.Instance;
+
         List<TableItem> tableItems = new List<TableItem>();
 		ListView listView;
 
@@ -26,7 +28,6 @@ namespace TouchWalkthrough
             // Create your application here
 
 			listView = FindViewById<ListView>(Resource.Id.List);
-
 
 			tableItems.Add(new TableItem() { Heading = "Ausstellung Architektur", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap1 });
 			tableItems.Add(new TableItem() { Heading = "Party Semesterstart", SubHeading = "Gebäude Z103; 13.02.2017", ImageResourceId = Resource.Drawable.icon_hap2 });
