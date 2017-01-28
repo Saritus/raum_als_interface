@@ -54,6 +54,12 @@ namespace TouchWalkthrough
 
         }
 
+        public Drop(int id, string name, Category category, DateTime startTime, HTWLocation location)
+            : this(id, name, category, "", startTime, location, null)
+        {
+
+        }
+
         public Drop(int id, string name, Category category, string description, DateTime startTime)
         {
             this.id = id;
