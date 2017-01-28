@@ -13,64 +13,14 @@ namespace TouchWalkthrough
         // Creator settings
         public string name { get; set; }
 
-        public Category category
-        {
-            get
-            {
-                return category;
-            }
-            set
-            {
-                category = value;
-            }
-        }
-        public string description
-        {
-            get
-            {
-                return description;
-            }
-            set
-            {
-                description = value;
-            }
-        }
+        public Category category { get; set; }
+        public string description { get; set; }
 
-        public DateTime startTime
-        {
-            get
-            {
-                return startTime;
-            }
-            set
-            {
-                startTime = value;
-            }
-        }
+        public DateTime startTime { get; set; }
 
-        public HTWLocation location
-        {
-            get
-            {
-                return location;
-            }
-            set
-            {
-                location = value;
-            }
-        }
+        public HTWLocation location { get; set; }
 
-        public string picturePath
-        {
-            get
-            {
-                return picturePath;
-            }
-            set
-            {
-                picturePath = value;
-            }
-        }
+        public string picturePath { get; set; }
 
         // User settings
         public bool followed { get; set; }
