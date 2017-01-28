@@ -20,7 +20,7 @@
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
-			SetContentView(Resource.Layout.Main);
+ 			SetContentView(Resource.Layout.Main);
 
 			//OPEN-HISTORY##############################################################
 			ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
@@ -30,7 +30,7 @@
 			};
 			//OPEN-HISTORY ENDE ##############################################################
 
-
+			 
 			//For Filter-Button open menue##############################################################
 			ImageButton filter_button = FindViewById<ImageButton>(Resource.Id.imageButton2);
 			RelativeLayout showFilterLayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayoutFilter);
@@ -92,7 +92,7 @@
 					hap3_button_on = false;
 				}
 			};
-			//For Filter-Button ON/OFF FILTER ###########################################################
+			//For Filter-Button ON/OFF FILTER ENDE###########################################################
 
 			//OPEN CREAT NEW DROP (Plus-Button) ##########################################################
 			ImageButton plus_button = FindViewById<ImageButton>(Resource.Id.imageButton1);
@@ -103,11 +103,11 @@
 			//OPEN CREAT NEW DROP (Plus-Button) ENDE ##########################################################
 
 			//For arrow_left Button ##############################################################
-			ImageView karte = FindViewById<ImageView>(Resource.Id.imageViewKarte);
+			//ImageView karte = FindViewById<ImageView>(Resource.Id.imageViewKarte);
 			ImageButton arrow_left_button = FindViewById<ImageButton>(Resource.Id.imageButton3);
 			arrow_left_button.Click += (object sender, EventArgs e) =>
 			{
-				karte.SetImageResource(Resource.Drawable.test_platzhalter_andere_karte);
+				//karte.SetImageResource(Resource.Drawable.test_platzhalter_andere_karte);
 			};
 			//For arrow_left Button ENDE ##############################################################
 
@@ -121,7 +121,8 @@
 			alert.SetMessage("Möchtest du die Anwendung beenden?");
 			alert.SetPositiveButton("Ja", (senderAlert, args) =>
 			{
-				base.OnBackPressed();
+				//base.OnBackPressed();
+				base.Finish();
 			});
 
 			alert.SetNegativeButton("Nein", (senderAlert, args) =>

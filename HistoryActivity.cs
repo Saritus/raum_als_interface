@@ -14,61 +14,47 @@ using Android.Widget;
 namespace TouchWalkthrough
 {
     [Activity(Label = "HistoryActivity", Theme = "@android:style/Theme.NoTitleBar")]
-    public class HistoryActivity : Activity
+    public class HistoryActivity : Activity 
     {
-        //For ListView
-        private ListView listnames;
-        private List<string> itemlist;
-
-        //Create Dummy Drops
-        private DropManager dropmanager = DropManager.Instance;
-        private List<Drop> droplist = new List<Drop>();
+        List<TableItem> tableItems = new List<TableItem>();
+		ListView listView;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.History);
+            SetContentView(Resource.Layout.HomeScreen);
             // Create your application here
 
-            //For ListView
-            dropmanager.updateDrops();
-            droplist = dropmanager.drops;
+			listView = FindViewById<ListView>(Resource.Id.List);
 
-            listnames = FindViewById<ListView>(Resource.Id.historyList);
 
-            itemlist = new List<string>();
+			tableItems.Add(new TableItem() { Heading = "Ausstellung Architektur", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap1 });
+			tableItems.Add(new TableItem() { Heading = "Party Semesterstart", SubHeading = "Gebäude Z103; 13.02.2017", ImageResourceId = Resource.Drawable.icon_hap2 });
+			tableItems.Add(new TableItem() { Heading = "Grillen Fak. Informatik", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap3 });
+			tableItems.Add(new TableItem() { Heading = "Tag der offenen Tür", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap1 });
+			tableItems.Add(new TableItem() { Heading = "Seminar EWZ", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap3 });
+			tableItems.Add(new TableItem() { Heading = "Feierliche Immatrikulation", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap2 });
+			tableItems.Add(new TableItem() { Heading = "Ausstellung Architektur", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap1 });
+			tableItems.Add(new TableItem() { Heading = "Party Semesterstart", SubHeading = "Gebäude Z103; 13.02.2017", ImageResourceId = Resource.Drawable.icon_hap2 });
+			tableItems.Add(new TableItem() { Heading = "Grillen Fak. Informatik", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap3 });
+			tableItems.Add(new TableItem() { Heading = "Tag der offenen Tür", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap1 });
+			tableItems.Add(new TableItem() { Heading = "Seminar EWZ", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap3 });
+			tableItems.Add(new TableItem() { Heading = "Feierliche Immatrikulation", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap2 });
 
-            droplist.ForEach(drop => itemlist.Add(drop.name));
+			listView.Adapter = new HomeScreenAdapter(this, tableItems);
 
-            itemlist.Add("Item 0");
-            //itemlist.Add("Item 1");
-            //itemlist.Add("Item 2");
-            //itemlist.Add("Item 3");
-            //itemlist.Add("Item 4");
-
-            //itemlist.Add(droplist[0].getName());
-            //itemlist.Add(droplist[1].getName());
-
-            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, itemlist);
-            listnames.Adapter = adapter;
-
-            listnames.ItemClick += Listnames_ItemClick;
-            //For ListView ENDE
-
-            ImageButton history_button2 = FindViewById<ImageButton>(Resource.Id.imageButton122);
-            history_button2.Click += (object sender, EventArgs e) =>
-            {
-                StartActivity(typeof(MainActivity));
-
-            };
-
+			listView.ItemClick += OnListItemClick;
+			 
         }
 
-        //For ListView ##############################################################
-        private void Listnames_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            Toast.MakeText(this, e.Position.ToString(), ToastLength.Long).Show();
-        }
-        //For ListView ENDE ##############################################################
+         protected void OnListItemClick(object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
+		{
+			var listView2 = sender as ListView;
+			var t = tableItems[e.Position];
+			Android.Widget.Toast.MakeText(this, t.Heading, Android.Widget.ToastLength.Short).Show();
+			Console.WriteLine("Clicked on " + t.Heading);
+
+			StartActivity(typeof(DropDetailsActivity));
+		}
     }
 }
