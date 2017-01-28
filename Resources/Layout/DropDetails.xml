@@ -3,33 +3,82 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background"
+    android:background="#ffe57373"
     android:id="@+id/lRelLayout23">
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/dropart1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1"
+            android:layout_alignParentRight="true" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout12"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageButton568"
+            android:layout_toLeftOf="@+id/imageView1">
+            <TextView
+                android:text="BA-Ausstellung Architektur"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Gebäude Z-903"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton568"
+            android:alpha="0"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+    <LinearLayout
         android:orientation="vertical"
-        android:id="@+id/LinLayout10"
-        android:background="#ffff5252"
-        android:layout_above="@+id/relativeLayout_navbar2">
-        <TextView
-            android:text="NAME DES EVENTS"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout134"
+        android:layout_below="@+id/linearLayout133">
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2" />
+            android:id="@+id/imageButton5695"
+            android:background="@android:color/transparent"
+            android:alpha="0" />
+        <TextView
+            android:text="Beschreibung:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView25" />
         <TextView
             android:text="Beschreibung: bladfskjsadfj sdf dfsjaljsdf s dflksdjafkasdjf lsfdjal ksadflksadfjlkfskadlk sdfjlksdf fsdaljsadflk afsd l sdafkasfdj lasfdfsad sjdfasdflj sadkfsad jsd lks adf asjkldf lfksda klasf kfsdaksdf jsafl jsfda fsd sadf aksfdj sfkd sakf ksfad fskd fsdaj fdsak fjk fsdk sfda jklasdfjasdfklsdafs sfdk fssfdjk sdfsfkdjlskfd jksdfsfdjdfsj klfsdjsdfjs dfsdfsdf"
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView1" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
     <RelativeLayout
         android:id="@+id/relativeLayout_navbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom">
         <FrameLayout
             android:layout_weight="0"
             android:layout_width="match_parent"
@@ -57,14 +106,14 @@
                     android:layout_gravity="center"
                     android:background="@android:color/transparent" />
                 <ImageButton
-                    android:src="@drawable/arrow_left_button"
+                    android:src="@drawable/kreuz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/imageButton367"
                     android:background="@android:color/transparent"
                     android:scaleType="fitCenter" />
                 <ImageButton
-                    android:src="@drawable/arrow_right_button"
+                    android:src="@drawable/haken"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/imageButton467"
@@ -73,4 +122,130 @@
             </LinearLayout>
         </FrameLayout>
     </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/linearLayout133"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout135">
+        <ImageButton
+            android:src="@drawable/aufmap_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton5694"
+            android:layout_weight="0.3"
+            android:background="@android:color/transparent" />
+        <TextView
+            android:text="Auf Karte anzeigen"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView23"
+            android:layout_weight="0.7"
+            android:gravity="center" />
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView24"
+            android:layout_weight="0.3"
+            android:gravity="center_vertical"
+            android:text="15:00 - 19:00"
+            android:alpha="0" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout13"
+        android:layout_below="@+id/relativeLayoutTop">
+        <ImageButton
+            android:src="@drawable/wann_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton569"
+            android:layout_weight="0.3"
+            android:background="@android:color/transparent" />
+        <TextView
+            android:text="Mittwoch, 25. Jan"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView23"
+            android:layout_weight="0.7"
+            android:gravity="center" />
+        <TextView
+            android:text="15:00 - 19:00"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView24"
+            android:layout_weight="0.3"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout1"
+        android:layout_below="@+id/linearLayout134"
+        android:layout_above="@+id/relativeLayout_navbar2">
+        <ImageView
+            android:src="@drawable/beispielbild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:scaleType="centerInside"
+            android:layout_below="@+id/imageButton5696"
+            android:layout_above="@+id/imageButton5697"
+            android:layout_toRightOf="@+id/imageButton5698"
+            android:layout_toLeftOf="@+id/imageButton5699" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton5696"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:alpha="0" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton5697"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:alpha="0" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton5698"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:alpha="0" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton5699"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:alpha="0" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout135"
+        android:layout_below="@+id/linearLayout13" />
 </RelativeLayout>
