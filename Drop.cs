@@ -93,7 +93,26 @@ namespace TouchWalkthrough
 
         public TableItem ToTableItem()
         {
-            return new TableItem();
+            TableItem tableitem = new TableItem();
+
+            tableitem.Heading = name;
+
+            tableitem.SubHeading = location.ToString() + "; " + startTime.ToString();
+
+            switch (category)
+            {
+                case Category.EVENT:
+                    tableitem.ImageResourceId = Resource.Drawable.icon_hap1;
+                    break;
+                case Category.VOTE:
+                    tableitem.ImageResourceId = Resource.Drawable.icon_hap3;
+                    break;
+                case Category.WARNING:
+                    tableitem.ImageResourceId = Resource.Drawable.icon_hap2;
+                    break;
+            }
+
+            return tableitem;
         }
     }
 }
