@@ -97,7 +97,7 @@ namespace TouchWalkthrough
 
             tableitem.Heading = name;
 
-            tableitem.SubHeading = location.ToString() + "; " + startTime.ToString();
+            tableitem.SubHeading = location.ToString() + "; " + startTime.ToString("dd.MM.yyyy");
 
             switch (category)
             {
