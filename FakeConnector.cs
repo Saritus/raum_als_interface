@@ -36,16 +36,18 @@ namespace TouchWalkthrough
         {
             List<Drop> dummyDrops = new List<Drop>();
 
-            dummyDrops.Add(new Drop(0, "HTW Dresden auf der KarriereStart Dresden", Category.Messen, "PLACEHOLDER", new DateTime(2017, 01, 21, 10, 00, 00)));
-            dummyDrops.Add(new Drop(1, "HTW Dresden auf der KarriereStart Dresden", Category.Messen, "PLACEHOLDER", new DateTime(2017, 01, 22, 10, 00, 00)));
-            dummyDrops.Add(new Drop(2, "Steuertipps für Studierende", Category.Workshop, "PLACEHOLDER", new DateTime(2017, 01, 24, 15, 00, 00)));
-            dummyDrops.Add(new Drop(3, "Bewerbungsfotoshooting", Category.Veranstaltung, "PLACEHOLDER", new DateTime(2017, 01, 26, 14, 00, 00)));
-            dummyDrops.Add(new Drop(4, "Kommission Lehre und Studium", Category.Kommission, "PLACEHOLDER", new DateTime(2017, 01, 31, 15, 30, 00)));
-            dummyDrops.Add(new Drop(5, "Textile Filzpraxis in Tire, Türkei", Category.Ausstellung, "PLACEHOLDER", new DateTime(2017, 02, 01, 17, 00, 00)));
-            dummyDrops.Add(new Drop(6, "Kommission Hochschulmarketing", Category.Kommission, "PLACEHOLDER", new DateTime(2017, 02, 13, 08, 00, 00)));
-            dummyDrops.Add(new Drop(7, "Kommission Lehre und Studium", Category.Kommission, "PLACEHOLDER", new DateTime(2017, 02, 14, 15, 30, 00)));
-            dummyDrops.Add(new Drop(8, "D.A.CH-Tagung Flüssigboden 2017", Category.Tagung, "PLACEHOLDER", new DateTime(2017, 03, 09, 09, 00, 00)));
-            dummyDrops.Add(new Drop(9, "Nutzung des Bibliothekskataloges", Category.Seminar, "PLACEHOLDER", new DateTime(2017, 03, 14, 15, 00, 00)));
+            dummyDrops.Add(new Drop(0, "Ausstellung Architektur", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
+            dummyDrops.Add(new Drop(1, "Party Semesterstart", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
+            dummyDrops.Add(new Drop(2, "Grillen Fak. Informatik", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
+            dummyDrops.Add(new Drop(3, "Tag der offenen Tür", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
+            dummyDrops.Add(new Drop(4, "Seminar EWZ", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
+            dummyDrops.Add(new Drop(5, "Feierliche Immatrikulation", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
+            dummyDrops.Add(new Drop(6, "Ausstellung Architektur", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
+            dummyDrops.Add(new Drop(7, "Party Semesterstart", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
+            dummyDrops.Add(new Drop(8, "Grillen Fak. Informatik", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
+            dummyDrops.Add(new Drop(9, "Kommission Hochschulmarketing", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
+            dummyDrops.Add(new Drop(10, "Kommission Lehre und Studium", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
+            dummyDrops.Add(new Drop(11, "Bewerbungsfotoshooting", Category.EVENT, new DateTime(2017, 1, 31), new HTWLocation(Building.Z, "902")));
 
             return dummyDrops;
         }
