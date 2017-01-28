@@ -29,6 +29,9 @@ namespace TouchWalkthrough
 
             listView = FindViewById<ListView>(Resource.Id.List);
 
+            Drop test = new Drop(0, "Ausstellung Architektur", Category.EVENT, "", new DateTime(2017, 1, 11), new HTWLocation(Building.S, "131"));
+            tableItems.Add(test.ToTableItem());
+
             tableItems.Add(new TableItem() { Heading = "Ausstellung Architektur", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap1 });
             tableItems.Add(new TableItem() { Heading = "Party Semesterstart", SubHeading = "Gebäude Z103; 13.02.2017", ImageResourceId = Resource.Drawable.icon_hap2 });
             tableItems.Add(new TableItem() { Heading = "Grillen Fak. Informatik", SubHeading = "Gebäude Z902; 09.02.2017", ImageResourceId = Resource.Drawable.icon_hap3 });
