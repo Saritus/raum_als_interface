@@ -10,7 +10,10 @@ namespace TouchWalkthrough
 
         private static DropManager instance;
 
-        private DropManager() { }
+        private DropManager()
+        {
+            drops = new List<Drop>();
+        }
 
         public static DropManager Instance
         {
