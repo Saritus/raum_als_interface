@@ -68,10 +68,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView25" />
         <TextView
-            android:text="Beschreibung: bladfskjsadfj sdf dfsjaljsdf s dflksdjafkasdjf lsfdjal ksadflksadfjlkfskadlk sdfjlksdf fsdaljsadflk afsd l sdafkasfdj lasfdfsad sjdfasdflj sadkfsad jsd lks adf asjkldf lfksda klasf kfsdaksdf jsafl jsfda fsd sadf aksfdj sfkd sakf ksfad fskd fsdaj fdsak fjk fsdk sfda jklasdfjasdfklsdafs sfdk fssfdjk sdfsfkdjlskfd jksdfsfdjdfsj klfsdjsdfjs dfsdfsdf"
             android:id="@+id/textView1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
     </LinearLayout>
     <RelativeLayout
         android:id="@+id/relativeLayout_navbar2"
