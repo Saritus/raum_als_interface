@@ -133,13 +133,17 @@ namespace TouchWalkthrough
 			{
 				if (time_switch_is_on == false)
 				{
-					start_time.Visibility = ViewStates.Visible;
-					end_time.Visibility = ViewStates.Visible;
+					//start_time.Visibility = ViewStates.Visible;
+					//end_time.Visibility = ViewStates.Visible;
+					start_time.SetTextColor(Color.Rgb(128,124,123));
+					end_time.SetTextColor(Color.Rgb(128, 124, 123));
 					time_switch_is_on = true;
 				}
 				else {
-					start_time.Visibility = ViewStates.Gone;
-					end_time.Visibility = ViewStates.Gone;
+					start_time.SetTextColor(Color.Transparent);
+					end_time.SetTextColor(Color.Transparent);
+					//start_time.Visibility = ViewStates.Gone;
+					//end_time.Visibility = ViewStates.Gone;
 					time_switch_is_on = false;
 				}
 			};

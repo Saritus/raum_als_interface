@@ -40,7 +40,6 @@
             android:backgroundTint="@android:color/transparent" />
     </LinearLayout>
     <ImageView
-        android:src="@drawable/beispielbild"
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -48,7 +47,8 @@
         android:layout_below="@+id/RelLayoutdropplazieren"
         android:layout_above="@+id/textView35"
         android:scaleType="fitCenter"
-        android:background="#ff616161" />
+        android:background="#ff616161"
+        android:src="@android:drawable/ic_menu_gallery" />
     <TextView
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -329,11 +329,10 @@
                     android:id="@+id/textView29"
                     android:textColor="#807c7b"
                     android:gravity="center" />
-                <DatePicker
+                <DatePicker xmlns:tools="http://schemas.android.com/tools"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/datePicker2"
-                    xmlns:tools="http://schemas.android.com/tools"
                     tools:visibility="gone" />
             </LinearLayout>
             <LinearLayout
