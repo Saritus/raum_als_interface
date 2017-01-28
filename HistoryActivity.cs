@@ -16,9 +16,10 @@ namespace TouchWalkthrough
     [Activity(Label = "HistoryActivity", Theme = "@android:style/Theme.NoTitleBar")]
     public class HistoryActivity : Activity 
     {
+        DropManager dropmanager = DropManager.Instance;
 
         List<TableItem> tableItems = new List<TableItem>();
-		    ListView listView;
+		ListView listView;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
