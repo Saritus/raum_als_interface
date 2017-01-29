@@ -54,6 +54,12 @@ namespace TouchWalkthrough
 
         }
 
+        public Drop(int id, string name, Category category, DateTime startTime, HTWLocation location)
+            : this(id, name, category, "", startTime, location, null)
+        {
+
+        }
+
         public Drop(int id, string name, Category category, string description, DateTime startTime)
         {
             this.id = id;
@@ -89,6 +95,30 @@ namespace TouchWalkthrough
         public void showDetail()
         {
             Console.WriteLine("Details: " + id + ", " + name + ", " + description);
+        }
+
+        public TableItem ToTableItem()
+        {
+            TableItem tableitem = new TableItem();
+
+            tableitem.Heading = name;
+
+            tableitem.SubHeading = location.ToString() + "; " + startTime.ToString("dd.MM.yyyy");
+
+            switch (category)
+            {
+                case Category.EVENT:
+                    tableitem.ImageResourceId = Resource.Drawable.icon_hap1;
+                    break;
+                case Category.VOTE:
+                    tableitem.ImageResourceId = Resource.Drawable.icon_hap3;
+                    break;
+                case Category.WARNING:
+                    tableitem.ImageResourceId = Resource.Drawable.icon_hap2;
+                    break;
+            }
+
+            return tableitem;
         }
     }
 }
