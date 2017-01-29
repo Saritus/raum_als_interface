@@ -101,7 +101,7 @@ namespace TouchWalkthrough
         {
             TableItem tableitem = new TableItem();
 
-            tableitem.Heading = id.ToString() + " : " + name;
+            tableitem.Heading = name;
 
             tableitem.SubHeading = location.ToString() + "; " + startTime.ToString("dd.MM.yyyy");
 
