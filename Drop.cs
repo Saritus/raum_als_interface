@@ -4,118 +4,121 @@ using System.Data;
 
 namespace TouchWalkthrough
 {
-    class Drop
+    public class Drop
     {
-        private int id { get; set; }
-        private string description { get; set; }
-        private Category category { get; set; }
+        // Internal settings
+        public int id { get; private set; }
+        public DateTime lastChange { get; private set; }
 
-        private DateTime startTime { get; set; }
-        private DateTime endTime { get; set; }
+        // Creator settings
+        public string name { get; set; }
 
-        private ExtendedLocation location { get; set; }
+        public Category category { get; set; }
+        public string description { get; set; }
 
-        private bool followed { get; set; }
-        private bool ignored { get; set; }
+        public DateTime startTime { get; set; }
 
-        public String name { get; set; }
+        public HTWLocation location { get; set; }
 
-        private string picturePath { get; set; }
-        
-        public Drop(int id, string name, string description, Category category, DateTime startTime, DateTime endTime, ExtendedLocation Location, bool f, bool i) 
-            : this(id, name, description, category, startTime, endTime, Location, f, i, "")
-        {
-        }
+        public string picturePath { get; set; }
 
-        public Drop(int id, string name, string description, Category category, DateTime startTime, DateTime endTime, ExtendedLocation location, bool f, bool i, string picPath)
+        // User settings
+        public bool followed { get; set; }
+        public bool ignored { get; set; }
+
+        public Drop(int id, string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
         {
             this.id = id;
             this.name = name;
             this.description = description;
             this.category = category;
             this.startTime = startTime;
-            this.endTime = endTime;
             this.location = location;
-            this.followed = f;
-            this.ignored = i;
-            this.picturePath = picPath;
+            this.picturePath = picturePath;
         }
 
-        public int getId()
+        public void update(Drop newDrop)
         {
-            return id;
+            this.id = newDrop.id;
+            this.name = newDrop.name;
+            this.description = newDrop.description;
+            this.category = newDrop.category;
+            this.startTime = newDrop.startTime;
+            this.location = newDrop.location;
+            this.picturePath = newDrop.picturePath;
         }
 
-        public string getName()
+        public Drop(int id, string name, Category category, string description, DateTime startTime, HTWLocation location)
+            : this(id, name, category, description, startTime, location, null)
         {
-            return name;
+
         }
 
-        public string getDescription()
+        public Drop(int id, string name, Category category, DateTime startTime, HTWLocation location)
+            : this(id, name, category, "", startTime, location, null)
         {
-            return description;
+
         }
 
-        public Category getCategory()
+        public Drop(int id, string name, Category category, string description, DateTime startTime)
         {
-            return category;
+            this.id = id;
+            this.name = name;
+            this.description = description;
+            this.category = category;
+            this.startTime = startTime;
         }
 
-        public DateTime getStartTime()
+        public Drop(int id, string name, Category category, string description)
         {
-            return startTime;
+            this.id = id;
+            this.name = name;
+            this.description = description;
+            this.category = category;
         }
 
-        public DateTime getEndTime()
+        public Drop(int id)
         {
-            return endTime;
+            this.id = id;
         }
 
-        public ExtendedLocation getLocation()
+        public Drop()
         {
-            return null;
+
         }
 
-        public bool isFollowed()
+        public void show()
         {
-            return followed;
+            Console.WriteLine(id + ", " + name);
         }
 
-        public void follow(bool i)
+        public void showDetail()
         {
-            this.followed = i;
+            Console.WriteLine("Details: " + id + ", " + name + ", " + description);
         }
 
-        public bool isIgnored()
+        public TableItem ToTableItem()
         {
-            return ignored;
-        }
+            TableItem tableitem = new TableItem();
 
-        public void ignore(bool i)
-        {
-            this.ignored = i;
-        }
+            tableitem.Heading = name;
 
-        public string getPicturePath()
-        {
-            return picturePath;
-        }
+            tableitem.SubHeading = location.ToString() + "; " + startTime.ToString("dd.MM.yyyy");
 
-        public Drop(string xmlfile)
-        {
-            // TODO: load a drop from a xml file
-        }
+            switch (category)
+            {
+                case Category.EVENT:
+                    tableitem.ImageResourceId = Resource.Drawable.icon_hap1;
+                    break;
+                case Category.VOTE:
+                    tableitem.ImageResourceId = Resource.Drawable.icon_hap3;
+                    break;
+                case Category.WARNING:
+                    tableitem.ImageResourceId = Resource.Drawable.icon_hap2;
+                    break;
+            }
 
-        public Drop(DataRow row)
-        {
-            // TODO: create a new Drop from a datarow
-        }
-
-        public bool save(string filename)
-        {
-            // TODO: save this drop to xml file
-            XML.Save<Drop>(this, filename);
-            return false;
+            return tableitem;
         }
     }
 }
