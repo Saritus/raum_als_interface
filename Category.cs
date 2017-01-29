@@ -4,7 +4,7 @@
     {
         EVENT,
         WARNING,
-        VOTE,
+        VOTE/*,
 
         Ausstellung,
         Exkursion,
@@ -17,6 +17,6 @@
         Tagung,
         Veranstaltung,
         Vortrag,
-        Workshop
+        Workshop*/
     };
 }
