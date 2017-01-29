@@ -52,7 +52,7 @@ namespace TouchWalkthrough
 
         public override string ToString()
         {
-            return building.ToString() + " " + room;
+            return name;
         }
     }
 }
