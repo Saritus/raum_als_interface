@@ -7,7 +7,7 @@ namespace TouchWalkthrough
     public class Drop
     {
         // Internal settings
-        public int id { get; private set; }
+        public Guid id { get; private set; }
         public DateTime lastChange { get; private set; }
 
         // Creator settings
@@ -26,7 +26,7 @@ namespace TouchWalkthrough
         public bool followed { get; set; }
         public bool ignored { get; set; }
 
-        public Drop(int id, string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
+        public Drop(Guid id, string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
         {
             this.id = id;
             this.name = name;
@@ -35,6 +35,24 @@ namespace TouchWalkthrough
             this.startTime = startTime;
             this.location = location;
             this.picturePath = picturePath;
+        }
+
+        public Drop(string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
+            : this(Guid.NewGuid(), name, category, description, startTime, location, picturePath)
+        {
+
+        }
+
+        public Drop(string name, Category category, string description, DateTime startTime, HTWLocation location)
+            : this(Guid.NewGuid(), name, category, description, startTime, location, null)
+        {
+
+        }
+
+        public Drop(string name, Category category, DateTime startTime, HTWLocation location)
+            : this(Guid.NewGuid(), name, category, "", startTime, location, null)
+        {
+
         }
 
         public void update(Drop newDrop)
@@ -46,55 +64,6 @@ namespace TouchWalkthrough
             this.startTime = newDrop.startTime;
             this.location = newDrop.location;
             this.picturePath = newDrop.picturePath;
-        }
-
-        public Drop(int id, string name, Category category, string description, DateTime startTime, HTWLocation location)
-            : this(id, name, category, description, startTime, location, null)
-        {
-
-        }
-
-        public Drop(int id, string name, Category category, DateTime startTime, HTWLocation location)
-            : this(id, name, category, "", startTime, location, null)
-        {
-
-        }
-
-        public Drop(int id, string name, Category category, string description, DateTime startTime)
-        {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            this.category = category;
-            this.startTime = startTime;
-        }
-
-        public Drop(int id, string name, Category category, string description)
-        {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            this.category = category;
-        }
-
-        public Drop(int id)
-        {
-            this.id = id;
-        }
-
-        public Drop()
-        {
-
-        }
-
-        public void show()
-        {
-            Console.WriteLine(id + ", " + name);
-        }
-
-        public void showDetail()
-        {
-            Console.WriteLine("Details: " + id + ", " + name + ", " + description);
         }
 
         public TableItem ToTableItem()
