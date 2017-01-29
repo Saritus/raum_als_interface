@@ -32,23 +32,6 @@ namespace TouchWalkthrough
         public List<Drop> drops { get; private set; }
         public DateTime lastUpdate { get; private set; }
 
-        public Drop createDrop(string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
-        {
-            Drop newDrop = new Drop(Guid.NewGuid(), name, category, description, startTime, location, picturePath);
-            drops.Add(newDrop);
-            return newDrop;
-        }
-
-        public Drop createDrop(string name, Category category, string description, DateTime startTime, HTWLocation location)
-        {
-            return createDrop(name, category, description, startTime, location, null);
-        }
-
-        public Drop createDrop(string name, Category category, DateTime startTime, HTWLocation location)
-        {
-            return createDrop(name, category, "", startTime, location, null);
-        }
-
         public List<Drop> getFilteredDrops(Category[] filters)
         {
             return drops.Where(drop => filters.Contains(drop.category)).ToList();
