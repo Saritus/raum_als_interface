@@ -35,6 +35,7 @@ namespace TouchWalkthrough
             this.startTime = startTime;
             this.location = location;
             this.picturePath = picturePath;
+            this.lastChange = DateTime.Now;
         }
 
         public Drop(string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
