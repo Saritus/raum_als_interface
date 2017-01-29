@@ -48,45 +48,6 @@ namespace TouchWalkthrough
             this.picturePath = newDrop.picturePath;
         }
 
-        public Drop(Guid id, string name, Category category, string description, DateTime startTime, HTWLocation location)
-            : this(id, name, category, description, startTime, location, null)
-        {
-
-        }
-
-        public Drop(Guid id, string name, Category category, DateTime startTime, HTWLocation location)
-            : this(id, name, category, "", startTime, location, null)
-        {
-
-        }
-
-        public Drop(Guid id, string name, Category category, string description, DateTime startTime)
-        {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            this.category = category;
-            this.startTime = startTime;
-        }
-
-        public Drop(Guid id, string name, Category category, string description)
-        {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            this.category = category;
-        }
-
-        public Drop(Guid id)
-        {
-            this.id = id;
-        }
-
-        public Drop()
-        {
-
-        }
-
         public void show()
         {
             Console.WriteLine(id + ", " + name);
