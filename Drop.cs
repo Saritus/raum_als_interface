@@ -7,7 +7,7 @@ namespace TouchWalkthrough
     public class Drop
     {
         // Internal settings
-        public int id { get; private set; }
+        public Guid id { get; private set; }
         public DateTime lastChange { get; private set; }
 
         // Creator settings
@@ -26,7 +26,7 @@ namespace TouchWalkthrough
         public bool followed { get; set; }
         public bool ignored { get; set; }
 
-        public Drop(int id, string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
+        public Drop(Guid id, string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
         {
             this.id = id;
             this.name = name;
@@ -48,19 +48,19 @@ namespace TouchWalkthrough
             this.picturePath = newDrop.picturePath;
         }
 
-        public Drop(int id, string name, Category category, string description, DateTime startTime, HTWLocation location)
+        public Drop(Guid id, string name, Category category, string description, DateTime startTime, HTWLocation location)
             : this(id, name, category, description, startTime, location, null)
         {
 
         }
 
-        public Drop(int id, string name, Category category, DateTime startTime, HTWLocation location)
+        public Drop(Guid id, string name, Category category, DateTime startTime, HTWLocation location)
             : this(id, name, category, "", startTime, location, null)
         {
 
         }
 
-        public Drop(int id, string name, Category category, string description, DateTime startTime)
+        public Drop(Guid id, string name, Category category, string description, DateTime startTime)
         {
             this.id = id;
             this.name = name;
@@ -69,7 +69,7 @@ namespace TouchWalkthrough
             this.startTime = startTime;
         }
 
-        public Drop(int id, string name, Category category, string description)
+        public Drop(Guid id, string name, Category category, string description)
         {
             this.id = id;
             this.name = name;
@@ -77,7 +77,7 @@ namespace TouchWalkthrough
             this.category = category;
         }
 
-        public Drop(int id)
+        public Drop(Guid id)
         {
             this.id = id;
         }
@@ -101,7 +101,7 @@ namespace TouchWalkthrough
         {
             TableItem tableitem = new TableItem();
 
-            tableitem.Heading = name;
+            tableitem.Heading = id.ToString() + " : " + name;
 
             tableitem.SubHeading = location.ToString() + "; " + startTime.ToString("dd.MM.yyyy");
 
