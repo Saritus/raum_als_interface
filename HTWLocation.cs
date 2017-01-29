@@ -6,6 +6,8 @@ namespace TouchWalkthrough
 {
     public class HTWLocation
     {
+        public string name { get; set; }
+
         public Building building { get; set; }
 
         public int floor { get; set; }
@@ -16,6 +18,8 @@ namespace TouchWalkthrough
 
         public HTWLocation(string room)
         {
+            name = room;
+
             Regex regex = new Regex("[A-Z][0-9]+[a-z]?");
             if (regex.IsMatch(room))
             {
@@ -25,7 +29,7 @@ namespace TouchWalkthrough
             }
             else
             {
-                throw new Exception("Invalid room");
+                // No regular room
             }
         }
 
