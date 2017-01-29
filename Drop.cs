@@ -48,16 +48,6 @@ namespace TouchWalkthrough
             this.picturePath = newDrop.picturePath;
         }
 
-        public void show()
-        {
-            Console.WriteLine(id + ", " + name);
-        }
-
-        public void showDetail()
-        {
-            Console.WriteLine("Details: " + id + ", " + name + ", " + description);
-        }
-
         public TableItem ToTableItem()
         {
             TableItem tableitem = new TableItem();
