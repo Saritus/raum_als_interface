@@ -8,7 +8,7 @@ namespace TouchWalkthrough
 {
     public class HTWLocation
     {
-        static Dictionary<string, Point> roomDictionary;
+        static Dictionary<string, Point> roomTable;
 
         public string name { get; set; }
 
@@ -24,12 +24,12 @@ namespace TouchWalkthrough
 
         public HTWLocation(string room)
         {
-            if (roomDictionary == null)
+            if (roomTable == null)
             {
                 fillDictionary();
             }
 
-            position = roomDictionary[room];
+            position = roomTable[room];
 
             name = room;
 
@@ -65,8 +65,8 @@ namespace TouchWalkthrough
 
         private void fillDictionary()
         {
-            roomDictionary = new Dictionary<string, Point>();
-            roomDictionary["Z136b"] = new Point(3, 4);
+            roomTable = new Dictionary<string, Point>();
+            roomTable["Z136b"] = new Point(3, 4);
         }
     }
 }
