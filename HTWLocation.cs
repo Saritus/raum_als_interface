@@ -1,5 +1,6 @@
 using Android.Locations;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Text.RegularExpressions;
 
@@ -7,6 +8,8 @@ namespace TouchWalkthrough
 {
     public class HTWLocation
     {
+        static Dictionary<string, Point> roomDictionary;
+
         public string name { get; set; }
 
         public Building building { get; set; }
