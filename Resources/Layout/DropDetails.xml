@@ -14,6 +14,13 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/imageButton5700"
+            android:background="@android:color/transparent"
+            android:alpha="0" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/imageButton568"
             android:alpha="0"
             android:background="@android:color/transparent" />
@@ -22,7 +29,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView1"
-            android:layout_alignParentRight="true" />
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/button1" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:layout_alignParentRight="true"
+            android:alpha="0" />
         <LinearLayout
             android:orientation="vertical"
             android:minWidth="25px"
@@ -32,10 +46,11 @@
             android:id="@+id/linearLayout12"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/imageButton568"
-            android:layout_toLeftOf="@+id/imageView1">
+            android:layout_toLeftOf="@+id/imageView1"
+            android:layout_below="@+id/imageButton5700">
             <TextView
                 android:text="BA-Ausstellung Architektur"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:id="@+id/textView22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,11 +64,13 @@
                 android:layout_height="wrap_content"
                 android:textColor="#ffffffff" />
         </LinearLayout>
-        <Button
-            android:text="Button"
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button2" />
+            android:id="@+id/imageButton5701"
+            android:layout_below="@+id/linearLayout12"
+            android:alpha="0" />
     </RelativeLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -106,27 +123,36 @@
                 android:id="@+id/linearLayout11"
                 android:layout_weight="0">
                 <ImageButton
-                    android:src="@android:color/transparent"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageButton567"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:background="@android:color/transparent" />
-                <ImageButton
                     android:src="@drawable/kreuz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/imageButton367"
                     android:background="@android:color/transparent"
-                    android:scaleType="fitCenter" />
-                <ImageButton
-                    android:src="@drawable/haken"
+                    android:scaleType="fitCenter"
+                    android:alpha="0"
+                    android:layout_weight="0.25" />
+                <TextView
+                    android:text="ignorieren"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageButton467"
-                    android:background="@android:color/transparent"
-                    android:scaleType="fitCenter" />
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView26"
+                    android:layout_weight="0.25"
+                    android:gravity="center" />
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/switch_button"
+                    android:layout_weight="0.05"
+                    android:visibility="visible"
+                    android:thumb="@drawable/switch1"
+                    android:track="@drawable/switch2" />
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:alpha="0"
+                    android:layout_weight="0.1" />
             </LinearLayout>
         </FrameLayout>
     </RelativeLayout>
@@ -137,7 +163,8 @@
         android:id="@+id/linearLayout133"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout135">
+        android:layout_below="@+id/linearLayout135"
+        android:layout_toRightOf="@+id/button2">
         <ImageButton
             android:src="@drawable/aufmap_icon"
             android:layout_width="wrap_content"
@@ -164,6 +191,19 @@
             android:text="15:00 - 19:00"
             android:alpha="0" />
     </LinearLayout>
+    <ImageButton
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton5702"
+        android:layout_below="@+id/relativeLayoutTop"
+        android:background="@android:color/transparent"
+        android:alpha="0" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:alpha="0" />
     <LinearLayout
         android:orientation="horizontal"
         android:minWidth="25px"
@@ -171,7 +211,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout13"
-        android:layout_below="@+id/relativeLayoutTop">
+        android:layout_below="@+id/imageButton5702"
+        android:layout_toRightOf="@+id/button2">
         <ImageButton
             android:src="@drawable/wann_icon"
             android:layout_width="wrap_content"
@@ -259,9 +300,4 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout135"
         android:layout_below="@+id/linearLayout13" />
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1" />
 </RelativeLayout>

@@ -94,7 +94,6 @@
             android:layout_weight="0"
             android:layout_above="@id/relativeLayout_navbar"
             android:layout_alignLeft="@id/imageButton6"
-            android:layout_alignRight="@id/imageButton6"
             android:visibility="gone">
             <FrameLayout
                 android:id="@+id/frameLayoutFilter"
@@ -103,38 +102,103 @@
                 android:layout_height="match_parent"
                 android:alpha="1"
                 android:layout_centerInParent="true"
-                android:layout_alignTop="@id/imageButton97"
-                android:layout_alignBottom="@id/imageButton99">
+                android:layout_alignTop="@+id/imageButton100"
+                android:layout_alignBottom="@+id/imageButton101">
                 <ImageView
                     android:id="@+id/ViewIsOnlyForAlphaValueBackground2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#ff212121"
-                    android:alpha="0.35" />
+                    android:background="#f1e7e6"
+                    android:alpha="0.9" />
             </FrameLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout2"
+                android:layout_toLeftOf="@+id/imageButton103"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:text="Event"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#ff616161"
+                    android:typeface="normal" />
+                <TextView
+                    android:text="Abstimmung"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffbdbdbd"
+                    android:typeface="normal" />
+                <TextView
+                    android:text="Meldung"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="normal" />
+            </LinearLayout>
+            <TextView
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton100"
+                android:textColor="@android:color/transparent" />
             <ImageButton
                 android:src="@drawable/icon_hap1"
                 android:id="@+id/imageButton99"
                 android:background="@android:color/transparent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imageButton98"
-                android:layout_centerHorizontal="true" />
+                android:layout_below="@+id/imageButton100"
+                android:layout_toRightOf="@+id/imageButton102" />
             <ImageButton
-                android:src="@drawable/icon_hap3"
+                android:src="@drawable/icon_hap3_off"
                 android:id="@+id/imageButton97"
                 android:background="@android:color/transparent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true" />
+                android:layout_toRightOf="@+id/imageButton99"
+                android:layout_alignBottom="@+id/imageButton99" />
             <ImageButton
-                android:src="@drawable/icon_hap2"
+                android:src="@drawable/icon_hap2_off"
                 android:id="@+id/imageButton98"
                 android:background="@android:color/transparent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imageButton97"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/imageButton97"
+                android:layout_alignBottom="@+id/imageButton99" />
+            <TextView
+                android:text="Small Text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton101"
+                android:layout_below="@+id/imageButton99"
+                android:textColor="@android:color/transparent" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton102"
+                android:layout_centerVertical="true"
+                android:alpha="0" />
+            <ImageButton
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton103"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:alpha="0" />
         </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>

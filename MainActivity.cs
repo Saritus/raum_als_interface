@@ -6,6 +6,13 @@
 	using Android.OS;
 	using Android.Views;
 	using Android.Widget;
+	using Android.Content;
+	using Android.Content.PM;
+	using Android.Graphics;
+	using Android.Provider;
+	using Java.IO;
+	using Environment = Android.OS.Environment;
+	using Uri = Android.Net.Uri;
 	using System.Collections.Generic; //For ListView
 
 	//
@@ -14,8 +21,8 @@
 	{
 		bool filter_button_on = false;
 		bool hap1_button_on = false;
-		bool hap2_button_on = false;
-		bool hap3_button_on = false;
+		bool hap2_button_on = true;
+		bool hap3_button_on = true;
 
 		protected override void OnCreate(Bundle bundle)
 		{
@@ -34,7 +41,6 @@
 			//For Filter-Button open menue##############################################################
 			ImageButton filter_button = FindViewById<ImageButton>(Resource.Id.imageButton2);
 			RelativeLayout showFilterLayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayoutFilter);
-
 			filter_button.Click += (object sender, EventArgs e) =>
 			{
 				if (filter_button_on == false)//Öffnet Untermenü
@@ -51,43 +57,58 @@
 			//For Filter-Button open menue ENDE ##############################################################
 
 			//For Filter-Button ON/OFF FILTER ###########################################################
+			TextView text1 = FindViewById<TextView>(Resource.Id.textView21);
 			ImageButton hap1_button = FindViewById<ImageButton>(Resource.Id.imageButton99);
 			hap1_button.Click += (object sender, EventArgs e) =>
 			{
 				if (hap1_button_on == false)
 				{
+					text1.SetTextColor(Color.Rgb(189, 189, 189));
+					text1.SetTypeface(Typeface.Default, TypefaceStyle.Normal);
 					hap1_button.SetImageResource(Resource.Drawable.icon_hap1_off);
 					hap1_button_on = true;
 				}
 				else {
+					text1.SetTextColor(Color.Rgb(97, 97, 97));
+					text1.SetTypeface(Typeface.Default, TypefaceStyle.Bold);
 					hap1_button.SetImageResource(Resource.Drawable.icon_hap1);
 					hap1_button_on = false;
 				}
 			};
 			//############ 
+			TextView text2 = FindViewById<TextView>(Resource.Id.textView3);
 			ImageButton hap2_button = FindViewById<ImageButton>(Resource.Id.imageButton98);
 			hap2_button.Click += (object sender, EventArgs e) =>
 			{
 				if (hap2_button_on == false)
 				{
+					text2.SetTextColor(Color.Rgb(189, 189, 189));
+					text2.SetTypeface(Typeface.Default, TypefaceStyle.Normal);
 					hap2_button.SetImageResource(Resource.Drawable.icon_hap2_off);
 					hap2_button_on = true;
 				}
 				else {
+					text2.SetTextColor(Color.Rgb(97, 97, 97));
+					text2.SetTypeface(Typeface.Default, TypefaceStyle.Bold);
 					hap2_button.SetImageResource(Resource.Drawable.icon_hap2);
 					hap2_button_on = false;
 				}
 			};
 			//############
+			TextView text3 = FindViewById<TextView>(Resource.Id.textView2);
 			ImageButton hap3_button = FindViewById<ImageButton>(Resource.Id.imageButton97);
 			hap3_button.Click += (object sender, EventArgs e) =>
 			{
 				if (hap3_button_on == false)
 				{
+					text3.SetTextColor(Color.Rgb(189, 189, 189));
+					text3.SetTypeface(Typeface.Default, TypefaceStyle.Normal);
 					hap3_button.SetImageResource(Resource.Drawable.icon_hap3_off);
 					hap3_button_on = true;
 				}
 				else {
+					text3.SetTextColor(Color.Rgb(97, 97, 97));
+					text3.SetTypeface(Typeface.Default, TypefaceStyle.Bold);
 					hap3_button.SetImageResource(Resource.Drawable.icon_hap3);
 					hap3_button_on = false;
 				}
