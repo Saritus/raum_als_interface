@@ -47,10 +47,8 @@ namespace TouchWalkthrough
         }
 
         public HTWLocation(Building building, string room)
+            : this(building.ToString() + room)
         {
-            this.building = building;
-            this.floor = int.Parse(room[0].ToString());
-            this.room = room;
         }
 
         public HTWLocation()
