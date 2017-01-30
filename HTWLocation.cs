@@ -1,5 +1,6 @@
 using Android.Locations;
 using System;
+using System.Drawing;
 using System.Text.RegularExpressions;
 
 namespace TouchWalkthrough
@@ -15,6 +16,8 @@ namespace TouchWalkthrough
         public string room { get; set; }
 
         public Location location { get; set; }
+
+        public Point position { get; set; }
 
         public HTWLocation(string room)
         {
