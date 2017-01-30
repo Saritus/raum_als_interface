@@ -10,7 +10,10 @@ namespace TouchWalkthrough
 
         private static DropManager instance;
 
-        private DropManager() { }
+        private DropManager()
+        {
+            drops = new List<Drop>();
+        }
 
         public static DropManager Instance
         {
@@ -27,7 +30,7 @@ namespace TouchWalkthrough
         // local-part
 
         public List<Drop> drops { get; private set; }
-        public DateTime lastUpdate { get; private set; }
+        public DateTime lastUpdate { get; private set; } = DateTime.MinValue;
 
         public List<Drop> getFilteredDrops(Category[] filters)
         {

@@ -11,7 +11,10 @@ namespace TouchWalkthrough
 
         private static FakeConnector instance;
 
-        private FakeConnector() { }
+        private FakeConnector()
+        {
+            dummyDrops = createDummyDrops();
+        }
 
         public static FakeConnector Instance
         {
@@ -27,38 +30,24 @@ namespace TouchWalkthrough
 
         // Fake-part
 
-        static public List<Drop> dummyDrops
-        {
-            get
-            {
-                if (!dummyDropsCreated)
-                {
-                    dummyDrops.AddRange(createDummyDrops());
-                }
-                return dummyDrops;
-            }
-            private set
-            {
-                dummyDrops = value;
-            }
-        }
-
-        static bool dummyDropsCreated = false;
+        static public List<Drop> dummyDrops { get; private set; }
 
         private static List<Drop> createDummyDrops()
         {
             List<Drop> dummyDrops = new List<Drop>();
 
-            dummyDrops.Add(new Drop(0, "HTW Dresden auf der KarriereStart Dresden", Category.Messen, "PLACEHOLDER", new DateTime(2017, 01, 21, 10, 00, 00)));
-            dummyDrops.Add(new Drop(1, "HTW Dresden auf der KarriereStart Dresden", Category.Messen, "PLACEHOLDER", new DateTime(2017, 01, 22, 10, 00, 00)));
-            dummyDrops.Add(new Drop(2, "Steuertipps für Studierende", Category.Workshop, "PLACEHOLDER", new DateTime(2017, 01, 24, 15, 00, 00)));
-            dummyDrops.Add(new Drop(3, "Bewerbungsfotoshooting", Category.Veranstaltung, "PLACEHOLDER", new DateTime(2017, 01, 26, 14, 00, 00)));
-            dummyDrops.Add(new Drop(4, "Kommission Lehre und Studium", Category.Kommission, "PLACEHOLDER", new DateTime(2017, 01, 31, 15, 30, 00)));
-            dummyDrops.Add(new Drop(5, "Textile Filzpraxis in Tire, Türkei", Category.Ausstellung, "PLACEHOLDER", new DateTime(2017, 02, 01, 17, 00, 00)));
-            dummyDrops.Add(new Drop(6, "Kommission Hochschulmarketing", Category.Kommission, "PLACEHOLDER", new DateTime(2017, 02, 13, 08, 00, 00)));
-            dummyDrops.Add(new Drop(7, "Kommission Lehre und Studium", Category.Kommission, "PLACEHOLDER", new DateTime(2017, 02, 14, 15, 30, 00)));
-            dummyDrops.Add(new Drop(8, "D.A.CH-Tagung Flüssigboden 2017", Category.Tagung, "PLACEHOLDER", new DateTime(2017, 03, 09, 09, 00, 00)));
-            dummyDrops.Add(new Drop(9, "Nutzung des Bibliothekskataloges", Category.Seminar, "PLACEHOLDER", new DateTime(2017, 03, 14, 15, 00, 00)));
+            dummyDrops.Add(new Drop("Ausstellung Architektur", Category.EVENT, new DateTime(2017, 1, 13), new HTWLocation("Z902")));
+            dummyDrops.Add(new Drop("Party Semesterstart", Category.WARNING, new DateTime(2017, 2, 20), new HTWLocation("Z325")));
+            dummyDrops.Add(new Drop("Grillen Fak. Informatik", Category.VOTE, new DateTime(2017, 3, 12), new HTWLocation("Parkplatz")));
+            dummyDrops.Add(new Drop("Tag der offenen Tür", Category.EVENT, new DateTime(2017, 4, 21), new HTWLocation("PAB")));
+            dummyDrops.Add(new Drop("Seminar EWZ", Category.VOTE, new DateTime(2017, 5, 13), new HTWLocation("S410")));
+            dummyDrops.Add(new Drop("Feierliche Immatrikulation", Category.WARNING, new DateTime(2017, 6, 11), new HTWLocation("TRE 204")));
+            dummyDrops.Add(new Drop("Ausstellung Architektur", Category.EVENT, new DateTime(2017, 7, 22), new HTWLocation("Z902")));
+            dummyDrops.Add(new Drop("Party Semesterstart", Category.VOTE, new DateTime(2017, 8, 10), new HTWLocation("Z311")));
+            dummyDrops.Add(new Drop("Grillen Fak. Informatik", Category.WARNING, new DateTime(2017, 9, 23), new HTWLocation("Parkplatz")));
+            dummyDrops.Add(new Drop("Kommission Hochschulmarketing", Category.EVENT, new DateTime(2017, 10, 9), new HTWLocation("Z136b")));
+            dummyDrops.Add(new Drop("Kommission Lehre und Studium", Category.VOTE, new DateTime(2017, 11, 24), new HTWLocation("Z136c")));
+            dummyDrops.Add(new Drop("Bewerbungsfotoshooting", Category.WARNING, new DateTime(2017, 12, 8), new HTWLocation("PAB")));
 
             return dummyDrops;
         }
