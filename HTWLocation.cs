@@ -29,6 +29,8 @@ namespace TouchWalkthrough
                 fillDictionary();
             }
 
+            position = roomDictionary[room];
+
             name = room;
 
             Regex regex = new Regex("[A-Z][0-9]+[a-z]?");
