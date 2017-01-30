@@ -24,6 +24,11 @@ namespace TouchWalkthrough
 
         public HTWLocation(string room)
         {
+            if (roomDictionary == null)
+            {
+                fillDictionary();
+            }
+
             name = room;
 
             Regex regex = new Regex("[A-Z][0-9]+[a-z]?");
@@ -54,6 +59,12 @@ namespace TouchWalkthrough
         public override string ToString()
         {
             return name;
+        }
+
+        private void fillDictionary()
+        {
+            roomDictionary = new Dictionary<string, Point>();
+            roomDictionary["Z136b"] = new Point(3, 4);
         }
     }
 }
