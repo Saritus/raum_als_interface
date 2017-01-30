@@ -64,7 +64,39 @@ namespace TouchWalkthrough
         private void fillDictionary()
         {
             roomTable = new Dictionary<string, Point>();
-            roomTable["Z136b"] = new Point(3, 4);
+            roomTable["Z017"] = new Point();
+            roomTable["Z107"] = new Point();
+            roomTable["Z136b"] = new Point();
+            roomTable["Z136c"] = new Point();
+            roomTable["Z146a"] = new Point();
+            roomTable["Z208"] = new Point();
+            roomTable["Z211"] = new Point();
+            roomTable["Z254"] = new Point();
+            roomTable["Z302"] = new Point();
+            roomTable["Z308"] = new Point();
+            roomTable["Z312"] = new Point();
+            roomTable["Z354"] = new Point();
+            roomTable["Z355"] = new Point();
+            roomTable["Z407"] = new Point();
+            roomTable["Z410"] = new Point();
+            roomTable["Z414"] = new Point();
+            roomTable["Z455"] = new Point();
+            roomTable["Z624"] = new Point();
+            roomTable["Z628"] = new Point();
+            roomTable["Z701"] = new Point();
+            roomTable["Z722"] = new Point();
+            roomTable["Z801"] = new Point();
+            roomTable["Z817"] = new Point();
+            roomTable["Z822"] = new Point();
+            roomTable["Z823"] = new Point();
+            roomTable["Z824"] = new Point();
+            roomTable["Z834"] = new Point();
+            roomTable["Z841"] = new Point();
+            roomTable["Z901"] = new Point();
+            roomTable["Z902"] = new Point();
+            roomTable["Z903"] = new Point();
+            roomTable["Z907"] = new Point();
+            roomTable["Z908"] = new Point();
         }
     }
 }
