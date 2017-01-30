@@ -327,13 +327,14 @@ namespace TouchWalkthrough
 			App._file = new File(App._dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
 			intent.PutExtra(MediaStore.ExtraOutput, Uri.FromFile(App._file));
 			StartActivityForResult(intent, 0);
-		}*/
+		}*/ 
 		//Take Picture ENDE ###########################################################
 
 		//Use Hardware-Back-Button ##############################################################
 		public override void OnBackPressed()
 		{
-			var alert = new AlertDialog.Builder(this);
+			ContextThemeWrapper ctw = new ContextThemeWrapper(this, Resource.Style.MyAppTheme);
+			var alert = new AlertDialog.Builder(ctw);
 			alert.SetTitle("Abbrechen?");
 			alert.SetMessage("Alle Einstellungen gehen verloren.");
 			alert.SetPositiveButton("Ja", (senderAlert, args) =>

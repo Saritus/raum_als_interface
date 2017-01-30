@@ -137,7 +137,8 @@
 		//Use Hardware-Back-Button ##############################################################
 		public override void OnBackPressed()
 		{
-			var alert = new AlertDialog.Builder(this);
+			ContextThemeWrapper ctw = new ContextThemeWrapper(this, Resource.Style.MyAppTheme);
+			var alert = new AlertDialog.Builder(ctw);//Resource.Style.MyAppTheme
 			alert.SetTitle("Verlassen");
 			alert.SetMessage("Möchtest du die Anwendung beenden?");
 			alert.SetPositiveButton("Ja", (senderAlert, args) =>
