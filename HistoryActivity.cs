@@ -27,10 +27,6 @@ namespace TouchWalkthrough
             SetContentView(Resource.Layout.HomeScreen);
             // Create your application here
 
-			dropmanager.
-
-
-
             dropmanager.updateDrops();
 
             listView = FindViewById<ListView>(Resource.Id.List);

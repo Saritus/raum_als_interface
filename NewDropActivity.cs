@@ -31,6 +31,8 @@ namespace TouchWalkthrough
 		bool end_date_is_open = false;
 		bool time_switch_is_on = true;
 
+		DropManager dropmanager = DropManager.Instance;
+
 		//Take Picture################################
 		//private ImageView imageViewPicture;
 		protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -194,6 +196,7 @@ namespace TouchWalkthrough
 
 			haken_button.Click += (object sender, EventArgs e) =>
 			{
+				
 				base.OnBackPressed();
 			};
 			//Kreuz+Haken Buttons ENDE ##################################################

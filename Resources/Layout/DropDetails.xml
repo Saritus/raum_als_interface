@@ -79,7 +79,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout134"
-        android:layout_below="@+id/linearLayout133">
+        android:layout_below="@+id/linearLayout133"
+        android:layout_toRightOf="@+id/imageButton5702"
+        android:layout_toLeftOf="@+id/imageButton5792">
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="match_parent"
@@ -252,7 +254,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView2"
-            android:scaleType="centerInside"
+            android:scaleType="centerCrop"
             android:layout_below="@+id/imageButton5696"
             android:layout_above="@+id/imageButton5697"
             android:layout_toRightOf="@+id/imageButton5698"
@@ -292,6 +294,33 @@
             android:background="@android:color/transparent"
             android:alpha="0" />
     </RelativeLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Vollbildlayout"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:visibility="gone">
+        <FrameLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frameLayout1">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView4"
+                android:background="#ff212121"
+                android:alpha="0.9" />
+            <ImageView
+                android:src="@drawable/beispielbild"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView3" />
+        </FrameLayout>
+    </RelativeLayout>
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -300,4 +329,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout135"
         android:layout_below="@+id/linearLayout13" />
+    <ImageButton
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton5792"
+        android:layout_below="@+id/relativeLayoutTop"
+        android:background="@android:color/transparent"
+        android:alpha="0"
+        android:layout_alignParentRight="true" />
 </RelativeLayout>
