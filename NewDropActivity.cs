@@ -225,6 +225,7 @@ namespace TouchWalkthrough
 
 			//Change Text
 			TextView filter_name = FindViewById<TextView>(Resource.Id.textView1);
+            Category category;
 
 			hap1_button.Click += (object sender, EventArgs e) =>
 			{
@@ -243,6 +244,7 @@ namespace TouchWalkthrough
 					hap1_button_on = false;
 
 					filter_name.Text = "EVENT";
+                    category = Category.EVENT;
 				}
 			};
 			//############ 
@@ -265,6 +267,7 @@ namespace TouchWalkthrough
 					hap2_button_on = false;
 
 					filter_name.Text = "WARNUNG";
+                    category = Category.WARNING;
 				}
 			};
 			//############
@@ -285,6 +288,7 @@ namespace TouchWalkthrough
 					hap3_button_on = false;
 
 					filter_name.Text = "VERANSTALTUNG";
+                    category = Category.VOTE;
 				}
 			};
 			//For Filter-Button ON/OFF FILTER ENDE###########################################################
