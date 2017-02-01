@@ -30,6 +30,7 @@ namespace TouchWalkthrough
 		bool start_date_is_open = false;
 		bool end_date_is_open = false;
 		bool time_switch_is_on = true;
+		String imagepath = "";
 
 		DropManager dropmanager = DropManager.Instance;
 
@@ -44,6 +45,7 @@ namespace TouchWalkthrough
 			{
 				var imageView = FindViewById<ImageView>(Resource.Id.imageView1);
 				imageView.SetImageURI(data.Data);
+				imagepath = data.DataString;
 			}
 			//Fuer FilePicker ENDE #############################
 
@@ -196,7 +198,22 @@ namespace TouchWalkthrough
 
 			haken_button.Click += (object sender, EventArgs e) =>
 			{
+				//HTWLocation loctw = new HTWLocation("z902");
+				//Drop newdrop = new Drop("test",Category.EVENT,"blabla",DateTime.Now,loctw);
+
+				TextView titel = FindViewById<TextView>(Resource.Id.Text1);
+				TextView beschreibung = FindViewById<TextView>(Resource.Id.Text2);
+				TextView kategorie = FindViewById<TextView>(Resource.Id.textView1);
+
+				//Enum.Parse(typeof(Category),kategorie.Text);
 				
+				HTWLocation loctw = new HTWLocation("Z902");
+				DateTime date = new DateTime(date_picker.Year, (date_picker.Month + 1), date_picker.DayOfMonth);
+				//(Category)Enum.Parse(typeof(Category) ???????????????????
+				Drop newdrop = new Drop(titel.Text,Category.EVENT,beschreibung.Text, date, loctw, imagepath);
+				dropmanager.drops.Add(newdrop);
+
+
 				base.OnBackPressed();
 			};
 			//Kreuz+Haken Buttons ENDE ##################################################

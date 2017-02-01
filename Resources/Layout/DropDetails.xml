@@ -227,7 +227,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView23"
+            android:id="@+id/textView239"
             android:layout_weight="0.7"
             android:gravity="center"
             android:textColor="#807c7b" />
@@ -294,13 +294,12 @@
             android:background="@android:color/transparent"
             android:alpha="0" />
     </RelativeLayout>
-    <RelativeLayout
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/Vollbildlayout"
-        xmlns:tools="http://schemas.android.com/tools"
         tools:visibility="gone">
         <FrameLayout
             android:minWidth="25px"

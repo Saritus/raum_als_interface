@@ -46,6 +46,12 @@ namespace TouchWalkthrough
             Android.Widget.Toast.MakeText(this, t.Heading, Android.Widget.ToastLength.Short).Show();
             Console.WriteLine("Clicked on " + t.Heading);
 
+
+			//gebe Daten des drops an Activity DropDetailsActivity.cs weiter... ID des drops reicht eigentlich oder?
+			var activity2 = new Intent(this, typeof(HistoryActivity));
+			activity2.PutExtra("MyData", "ID des drops");
+			//gebe Daten des drops an Activity DropDetailsActivity.cs weiter... ENDE
+
             StartActivity(typeof(DropDetailsActivity));
         }
     }

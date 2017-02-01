@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{38B273A3-4394-4D78-9E00-576E38F44508}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="NewDropActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DropDetailsActivity.cs">
     <Files>
-      <File FileName="NewDropActivity.cs" Line="34" Column="50" />
-      <File FileName="DropManager.cs" Line="74" Column="29" />
+      <File FileName="DropDetailsActivity.cs" Line="62" Column="29" />
+      <File FileName="HistoryActivity.cs" Line="54" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
