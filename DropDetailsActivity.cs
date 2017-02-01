@@ -23,6 +23,11 @@ namespace TouchWalkthrough
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.DropDetails);
+
+			//Emfpange Daten des angelickten drops von der Activity HistoryActivity.cs
+			string text = Intent.GetStringExtra("MyData") ?? "Data not available";
+			//Emfpange Daten des angelickten drops von der Activity HistoryActivity.cs ENDE
+
 			// Create your application here
 
 			//Vollbild ##############################################################
@@ -53,9 +58,7 @@ namespace TouchWalkthrough
 
 			//Drop Infos anzeigen #############################################
 
-			//Emfpange Daten des angelickten drops von der Activity HistoryActivity.cs
-			string text = Intent.GetStringExtra("MyData") ?? "Data not available";
-			//Emfpange Daten des angelickten drops von der Activity HistoryActivity.cs ENDE
+
 			 
 
 			TextView titel = FindViewById<TextView>(Resource.Id.textView22);
@@ -71,7 +74,6 @@ namespace TouchWalkthrough
 			beschreibung.Text = "Hier muss die Beschreibung beschrieben sein";
 			//bild.SetImageURI(Android.Net.Uri.Parse("hier muss der Pfad des Bildes als String rein"));
 			datum.Text = "Datum steht hier";
-
 
 			//Drop Infos anzeigen ENDE #############################################
 
