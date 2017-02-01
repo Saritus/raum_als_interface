@@ -287,7 +287,7 @@ namespace TouchWalkthrough
 					hap3_button.SetImageResource(Resource.Drawable.icon_hap3);
 					hap3_button_on = false;
 
-					filter_name.Text = "VERANSTALTUNG";
+					filter_name.Text = "ABSTIMMUNG";
                     category = Category.VOTE;
 				}
 			};
