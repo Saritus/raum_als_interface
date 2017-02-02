@@ -208,9 +208,10 @@ namespace TouchWalkthrough
 				//Enum.Parse(typeof(Category),kategorie.Text);
 				
 				HTWLocation loctw = new HTWLocation("Z902");
-				DateTime date = new DateTime(date_picker.Year, (date_picker.Month + 1), date_picker.DayOfMonth);
-				//(Category)Enum.Parse(typeof(Category) ???????????????????
-				Drop newdrop = new Drop(titel.Text,Category.EVENT,beschreibung.Text, date, loctw, imagepath);
+				DateTime startdate = new DateTime(date_picker.Year, (date_picker.Month + 1), date_picker.DayOfMonth);
+                DateTime enddate = new DateTime(date_picker2.Year, (date_picker2.Month + 1), date_picker2.DayOfMonth);
+                //(Category)Enum.Parse(typeof(Category) ???????????????????
+                Drop newdrop = new Drop(titel.Text,Category.EVENT,beschreibung.Text, startdate, enddate, loctw, imagepath);
 				dropmanager.drops.Add(newdrop);
 
 
