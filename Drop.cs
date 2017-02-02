@@ -59,6 +59,12 @@ namespace TouchWalkthrough
 
         }
 
+        public Drop(string name, Category category, DateTime startTime, HTWLocation location)
+            : this(Guid.NewGuid(), name, category, "", startTime, startTime, location, null)
+        {
+
+        }
+
         public void update(Drop newDrop)
         {
             this.id = newDrop.id;
