@@ -29,7 +29,10 @@ namespace TouchWalkthrough
                 fillDictionary();
             }
 
-            position = roomTable[room];
+            //position = roomTable[room];
+            Point pos;
+            roomTable.TryGetValue(room, out pos);
+            position = pos;
 
             name = room;
 
