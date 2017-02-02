@@ -53,6 +53,12 @@ namespace TouchWalkthrough
 
         }
 
+        public Drop(string name, Category category, string description, DateTime startTime, HTWLocation location)
+            : this(Guid.NewGuid(), name, category, description, startTime, startTime, location, null)
+        {
+
+        }
+
         public Drop(string name, Category category, DateTime startTime, DateTime endTime, HTWLocation location)
             : this(Guid.NewGuid(), name, category, "", startTime, endTime, location, null)
         {
