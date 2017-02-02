@@ -49,8 +49,7 @@ namespace TouchWalkthrough
 
 			//gebe Daten des drops an Activity DropDetailsActivity.cs weiter... ID des drops reicht eigentlich oder?
 			Intent intent = new Intent(this, typeof(DropDetailsActivity));
-            string header = dropmanager.drops[e.Position].name;
-			intent.PutExtra("MyData", header);
+			intent.PutExtra("ID", e.Position);
 			StartActivity(intent);
 			//gebe Daten des drops an Activity DropDetailsActivity.cs weiter... ENDE
 
