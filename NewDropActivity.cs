@@ -31,6 +31,7 @@ namespace TouchWalkthrough
 		bool end_date_is_open = false;
 		bool time_switch_is_on = true;
 		String imagepath = "";
+		Category category = Category.EVENT;
 
 		DropManager dropmanager = DropManager.Instance;
 
@@ -96,11 +97,20 @@ namespace TouchWalkthrough
 			TextView start_date = FindViewById<TextView>(Resource.Id.textView39);
 			DatePicker date_picker = FindViewById<DatePicker>(Resource.Id.datePicker1);
 			date_picker.Visibility = ViewStates.Gone;
+
+			TextView end_date = FindViewById<TextView>(Resource.Id.textView29);
+			DatePicker date_picker2 = FindViewById<DatePicker>(Resource.Id.datePicker2);
+			date_picker2.Visibility = ViewStates.Gone;
+
+			RelativeLayout datepickerlayout = FindViewById<RelativeLayout>(Resource.Id.datepickerlayout);
+			datepickerlayout.Visibility = ViewStates.Gone;
+
 			start_date.Click += (object sender, EventArgs e) =>
 			{
 				if (start_date_is_open == false)
 				{
-					date_picker.Visibility = ViewStates.Visible;
+					//date_picker.Visibility = ViewStates.Visible;
+					datepickerlayout.Visibility = ViewStates.Visible;
 					start_date_is_open = true;
 				}
 				else{
@@ -110,9 +120,6 @@ namespace TouchWalkthrough
 				}
 			};
 
-			TextView end_date = FindViewById<TextView>(Resource.Id.textView29);
-			DatePicker date_picker2 = FindViewById<DatePicker>(Resource.Id.datePicker2);
-			date_picker2.Visibility = ViewStates.Gone;
 			end_date.Click += (object sender, EventArgs e) =>
 			{
 				if (end_date_is_open == false)
@@ -122,7 +129,7 @@ namespace TouchWalkthrough
 				}
 				else {
 					date_picker2.Visibility = ViewStates.Gone;
-					end_date.Text = "" + date_picker2.DayOfMonth + "." + (date_picker.Month + 1) + "." + date_picker.Year;
+					end_date.Text = "" + date_picker2.DayOfMonth + "." + (date_picker2.Month + 1) + "." + date_picker2.Year;
 					end_date_is_open = false;
 				}
 			};
@@ -175,49 +182,6 @@ namespace TouchWalkthrough
 			};
 			//Auf Karte platzieren Button ########################################################
 
-			//Kreuz+Haken Buttons ##################################################
-			ImageButton kreuz_button = FindViewById<ImageButton>(Resource.Id.imageButton367);
-			ImageButton haken_button = FindViewById<ImageButton>(Resource.Id.imageButton467);
-
-			kreuz_button.Click += (object sender, EventArgs e) =>
-			{
-				var alert = new AlertDialog.Builder(this);
-				alert.SetTitle("Abbrechen?");
-				alert.SetMessage("Alle Einstellungen gehen verloren.");
-				alert.SetPositiveButton("Ja", (senderAlert, args) =>
-				{
-					base.OnBackPressed();
-				});
-				alert.SetNegativeButton("Nein", (senderAlert, args) =>
-				{
-					//do nothing
-				});
-				Dialog dialog = alert.Create();
-				dialog.Show();
-			};
-
-			haken_button.Click += (object sender, EventArgs e) =>
-			{
-				//HTWLocation loctw = new HTWLocation("z902");
-				//Drop newdrop = new Drop("test",Category.EVENT,"blabla",DateTime.Now,loctw);
-
-				TextView titel = FindViewById<TextView>(Resource.Id.Text1);
-				TextView beschreibung = FindViewById<TextView>(Resource.Id.Text2);
-				TextView kategorie = FindViewById<TextView>(Resource.Id.textView1);
-
-				//Enum.Parse(typeof(Category),kategorie.Text);
-				
-				HTWLocation loctw = new HTWLocation("Z902");
-				DateTime date = new DateTime(date_picker.Year, (date_picker.Month + 1), date_picker.DayOfMonth);
-				//(Category)Enum.Parse(typeof(Category) ???????????????????
-				Drop newdrop = new Drop(titel.Text,Category.EVENT,beschreibung.Text, date, loctw, imagepath);
-				dropmanager.drops.Add(newdrop);
-
-
-				base.OnBackPressed();
-			};
-			//Kreuz+Haken Buttons ENDE ##################################################
-
 			//For Filter-Button ON/OFF FILTER ###########################################################
 			ImageButton hap1_button = FindViewById<ImageButton>(Resource.Id.imageButton33);
 			ImageButton hap2_button = FindViewById<ImageButton>(Resource.Id.imageButton44);
@@ -225,7 +189,6 @@ namespace TouchWalkthrough
 
 			//Change Text
 			TextView filter_name = FindViewById<TextView>(Resource.Id.textView1);
-            Category category;
 
 			hap1_button.Click += (object sender, EventArgs e) =>
 			{
@@ -293,6 +256,47 @@ namespace TouchWalkthrough
 			};
 			//For Filter-Button ON/OFF FILTER ENDE###########################################################
 
+			//Kreuz+Haken Buttons ##################################################
+			ImageButton kreuz_button = FindViewById<ImageButton>(Resource.Id.imageButton367);
+			ImageButton haken_button = FindViewById<ImageButton>(Resource.Id.imageButton467);
+
+			kreuz_button.Click += (object sender, EventArgs e) =>
+			{
+				var alert = new AlertDialog.Builder(this);
+				alert.SetTitle("Abbrechen?");
+				alert.SetMessage("Alle Einstellungen gehen verloren.");
+				alert.SetPositiveButton("Ja", (senderAlert, args) =>
+				{
+					base.OnBackPressed();
+				});
+				alert.SetNegativeButton("Nein", (senderAlert, args) =>
+				{
+					//do nothing
+				});
+				Dialog dialog = alert.Create();
+				dialog.Show();
+			};
+
+			haken_button.Click += (object sender, EventArgs e) =>
+			{
+				//HTWLocation loctw = new HTWLocation("z902");
+				//Drop newdrop = new Drop("test",Category.EVENT,"blabla",DateTime.Now,loctw);
+
+				TextView titel = FindViewById<TextView>(Resource.Id.Text1);
+				TextView beschreibung = FindViewById<TextView>(Resource.Id.Text2);
+				TextView kategorie = FindViewById<TextView>(Resource.Id.textView1);
+
+				//Enum.Parse(typeof(Category),kategorie.Text);
+
+				HTWLocation loctw = new HTWLocation("Z902");
+				DateTime date = new DateTime(date_picker.Year, (date_picker.Month + 1), date_picker.DayOfMonth);
+				Drop newdrop = new Drop(titel.Text, category, beschreibung.Text, date, loctw, imagepath);
+				dropmanager.drops.Add(newdrop);
+
+
+				base.OnBackPressed();
+			};
+			//Kreuz+Haken Buttons ENDE ##################################################
 
 
 
