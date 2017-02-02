@@ -27,8 +27,6 @@ namespace TouchWalkthrough
             SetContentView(Resource.Layout.HomeScreen);
             // Create your application here
 
-            dropmanager.updateDrops();
-
             listView = FindViewById<ListView>(Resource.Id.List);
 
             dropmanager.drops.ForEach(drop => tableItems.Add(drop.ToTableItem()));
@@ -38,7 +36,7 @@ namespace TouchWalkthrough
             listView.ItemClick += OnListItemClick;
 
         }
-
+		 
         protected void OnListItemClick(object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
         {
             var listView2 = sender as ListView;
@@ -46,7 +44,14 @@ namespace TouchWalkthrough
             Android.Widget.Toast.MakeText(this, t.Heading, Android.Widget.ToastLength.Short).Show();
             Console.WriteLine("Clicked on " + t.Heading);
 
-            StartActivity(typeof(DropDetailsActivity));
+
+			//gebe Daten des drops an Activity DropDetailsActivity.cs weiter... ID des drops reicht eigentlich oder?
+			Intent intent = new Intent(this, typeof(DropDetailsActivity));
+			intent.PutExtra("ID", e.Position);
+			StartActivity(intent);
+			//gebe Daten des drops an Activity DropDetailsActivity.cs weiter... ENDE
+
+            //StartActivity(typeof(DropDetailsActivity));
         }
     }
 }
