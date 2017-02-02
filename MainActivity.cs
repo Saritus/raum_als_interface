@@ -29,8 +29,10 @@
 			base.OnCreate(bundle);
  			SetContentView(Resource.Layout.Main);
 
-			//OPEN-HISTORY##############################################################
-			ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
+            DropManager.Instance.updateDrops();
+
+            //OPEN-HISTORY##############################################################
+            ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
 			history_button.Click += (object sender, EventArgs e) =>
 			{
 				StartActivity(typeof(HistoryActivity));
