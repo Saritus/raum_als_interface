@@ -18,6 +18,8 @@ namespace TouchWalkthrough
 
         public DateTime startTime { get; set; }
 
+        public DateTime endTime { get; set; }
+
         public HTWLocation location { get; set; }
 
         public string picturePath { get; set; }
@@ -26,32 +28,51 @@ namespace TouchWalkthrough
         public bool followed { get; set; }
         public bool ignored { get; set; }
 
-        public Drop(Guid id, string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
+        public Drop(Guid id, string name, Category category, string description, DateTime startTime, DateTime endTime, HTWLocation location, string picturePath)
         {
             this.id = id;
             this.name = name;
             this.description = description;
             this.category = category;
             this.startTime = startTime;
+            this.endTime = endTime;
             this.location = location;
             this.picturePath = picturePath;
             this.lastChange = DateTime.Now;
         }
 
+        public Drop(string name, Category category, string description, DateTime startTime, DateTime endTime, HTWLocation location, string picturePath)
+            : this(Guid.NewGuid(), name, category, description, startTime, endTime, location, picturePath)
+        {
+
+        }
+
         public Drop(string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
-            : this(Guid.NewGuid(), name, category, description, startTime, location, picturePath)
+            : this(Guid.NewGuid(), name, category, description, startTime, startTime, location, picturePath)
+        {
+
+        }
+
+        public Drop(string name, Category category, string description, DateTime startTime, DateTime endTime, HTWLocation location)
+            : this(Guid.NewGuid(), name, category, description, startTime, endTime, location, null)
         {
 
         }
 
         public Drop(string name, Category category, string description, DateTime startTime, HTWLocation location)
-            : this(Guid.NewGuid(), name, category, description, startTime, location, null)
+            : this(Guid.NewGuid(), name, category, description, startTime, startTime, location, null)
+        {
+
+        }
+
+        public Drop(string name, Category category, DateTime startTime, DateTime endTime, HTWLocation location)
+            : this(Guid.NewGuid(), name, category, "", startTime, endTime, location, null)
         {
 
         }
 
         public Drop(string name, Category category, DateTime startTime, HTWLocation location)
-            : this(Guid.NewGuid(), name, category, "", startTime, location, null)
+            : this(Guid.NewGuid(), name, category, "", startTime, startTime, location, null)
         {
 
         }
@@ -63,6 +84,7 @@ namespace TouchWalkthrough
             this.description = newDrop.description;
             this.category = newDrop.category;
             this.startTime = newDrop.startTime;
+            this.endTime = newDrop.endTime;
             this.location = newDrop.location;
             this.picturePath = newDrop.picturePath;
         }
