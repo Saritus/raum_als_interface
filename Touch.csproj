@@ -114,6 +114,9 @@
     <AndroidResource Include="Resources\Drawable\aufmap_icon.png" />
     <AndroidResource Include="Resources\Drawable\wann_icon.png" />
     <AndroidResource Include="Resources\Drawable\dropart1.png" />
+    <AndroidResource Include="Resources\Drawable\bild_hinzuf.png" />
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+    <AndroidResource Include="Resources\Values\Colors.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />

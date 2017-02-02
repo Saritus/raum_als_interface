@@ -30,6 +30,9 @@ namespace TouchWalkthrough
 		bool start_date_is_open = false;
 		bool end_date_is_open = false;
 		bool time_switch_is_on = true;
+		String imagepath = "";
+
+		DropManager dropmanager = DropManager.Instance;
 
 		//Take Picture################################
 		//private ImageView imageViewPicture;
@@ -42,6 +45,7 @@ namespace TouchWalkthrough
 			{
 				var imageView = FindViewById<ImageView>(Resource.Id.imageView1);
 				imageView.SetImageURI(data.Data);
+				imagepath = data.DataString;
 			}
 			//Fuer FilePicker ENDE #############################
 
@@ -194,6 +198,22 @@ namespace TouchWalkthrough
 
 			haken_button.Click += (object sender, EventArgs e) =>
 			{
+				//HTWLocation loctw = new HTWLocation("z902");
+				//Drop newdrop = new Drop("test",Category.EVENT,"blabla",DateTime.Now,loctw);
+
+				TextView titel = FindViewById<TextView>(Resource.Id.Text1);
+				TextView beschreibung = FindViewById<TextView>(Resource.Id.Text2);
+				TextView kategorie = FindViewById<TextView>(Resource.Id.textView1);
+
+				//Enum.Parse(typeof(Category),kategorie.Text);
+				
+				HTWLocation loctw = new HTWLocation("Z902");
+				DateTime date = new DateTime(date_picker.Year, (date_picker.Month + 1), date_picker.DayOfMonth);
+				//(Category)Enum.Parse(typeof(Category) ???????????????????
+				Drop newdrop = new Drop(titel.Text,Category.EVENT,beschreibung.Text, date, loctw, imagepath);
+				dropmanager.drops.Add(newdrop);
+
+
 				base.OnBackPressed();
 			};
 			//Kreuz+Haken Buttons ENDE ##################################################
@@ -205,6 +225,7 @@ namespace TouchWalkthrough
 
 			//Change Text
 			TextView filter_name = FindViewById<TextView>(Resource.Id.textView1);
+            Category category;
 
 			hap1_button.Click += (object sender, EventArgs e) =>
 			{
@@ -223,6 +244,7 @@ namespace TouchWalkthrough
 					hap1_button_on = false;
 
 					filter_name.Text = "EVENT";
+                    category = Category.EVENT;
 				}
 			};
 			//############ 
@@ -245,6 +267,7 @@ namespace TouchWalkthrough
 					hap2_button_on = false;
 
 					filter_name.Text = "WARNUNG";
+                    category = Category.WARNING;
 				}
 			};
 			//############
@@ -264,7 +287,8 @@ namespace TouchWalkthrough
 					hap3_button.SetImageResource(Resource.Drawable.icon_hap3);
 					hap3_button_on = false;
 
-					filter_name.Text = "VERANSTALTUNG";
+					filter_name.Text = "ABSTIMMUNG";
+                    category = Category.VOTE;
 				}
 			};
 			//For Filter-Button ON/OFF FILTER ENDE###########################################################
@@ -327,13 +351,14 @@ namespace TouchWalkthrough
 			App._file = new File(App._dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
 			intent.PutExtra(MediaStore.ExtraOutput, Uri.FromFile(App._file));
 			StartActivityForResult(intent, 0);
-		}*/
+		}*/ 
 		//Take Picture ENDE ###########################################################
 
 		//Use Hardware-Back-Button ##############################################################
 		public override void OnBackPressed()
 		{
-			var alert = new AlertDialog.Builder(this);
+			ContextThemeWrapper ctw = new ContextThemeWrapper(this, Resource.Style.MyAppTheme);
+			var alert = new AlertDialog.Builder(ctw);
 			alert.SetTitle("Abbrechen?");
 			alert.SetMessage("Alle Einstellungen gehen verloren.");
 			alert.SetPositiveButton("Ja", (senderAlert, args) =>

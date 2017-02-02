@@ -38,7 +38,7 @@ namespace TouchWalkthrough
             listView.ItemClick += OnListItemClick;
 
         }
-
+		 
         protected void OnListItemClick(object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
         {
             var listView2 = sender as ListView;
@@ -46,7 +46,14 @@ namespace TouchWalkthrough
             Android.Widget.Toast.MakeText(this, t.Heading, Android.Widget.ToastLength.Short).Show();
             Console.WriteLine("Clicked on " + t.Heading);
 
-            StartActivity(typeof(DropDetailsActivity));
+
+			//gebe Daten des drops an Activity DropDetailsActivity.cs weiter... ID des drops reicht eigentlich oder?
+			Intent intent = new Intent(this, typeof(DropDetailsActivity));
+			intent.PutExtra("MyData", "ID des drops");
+			StartActivity(intent);
+			//gebe Daten des drops an Activity DropDetailsActivity.cs weiter... ENDE
+
+            //StartActivity(typeof(DropDetailsActivity));
         }
     }
 }
