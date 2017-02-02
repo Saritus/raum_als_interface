@@ -35,7 +35,7 @@ namespace TouchWalkthrough
             this.description = description;
             this.category = category;
             this.startTime = startTime;
-            this.startTime = endTime;
+            this.endTime = endTime;
             this.location = location;
             this.picturePath = picturePath;
             this.lastChange = DateTime.Now;
