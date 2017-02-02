@@ -122,7 +122,7 @@ namespace TouchWalkthrough
 				}
 				else {
 					date_picker2.Visibility = ViewStates.Gone;
-					end_date.Text = "" + date_picker2.DayOfMonth + "." + (date_picker.Month + 1) + "." + date_picker.Year;
+					end_date.Text = "" + date_picker2.DayOfMonth + "." + (date_picker2.Month + 1) + "." + date_picker2.Year;
 					end_date_is_open = false;
 				}
 			};
