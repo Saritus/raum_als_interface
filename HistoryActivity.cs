@@ -27,8 +27,6 @@ namespace TouchWalkthrough
             SetContentView(Resource.Layout.HomeScreen);
             // Create your application here
 
-            dropmanager.updateDrops();
-
             listView = FindViewById<ListView>(Resource.Id.List);
 
             dropmanager.drops.ForEach(drop => tableItems.Add(drop.ToTableItem()));
@@ -49,7 +47,7 @@ namespace TouchWalkthrough
 
 			//gebe Daten des drops an Activity DropDetailsActivity.cs weiter... ID des drops reicht eigentlich oder?
 			Intent intent = new Intent(this, typeof(DropDetailsActivity));
-			intent.PutExtra("MyData", "ID des drops");
+			intent.PutExtra("ID", e.Position);
 			StartActivity(intent);
 			//gebe Daten des drops an Activity DropDetailsActivity.cs weiter... ENDE
 
