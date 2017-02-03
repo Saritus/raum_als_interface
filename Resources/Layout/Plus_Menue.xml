@@ -308,12 +308,6 @@
                     android:id="@+id/textView39"
                     android:gravity="center"
                     android:textColor="#807c7b" />
-                <DatePicker xmlns:p3="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/datePicker1"
-                    p3:visibility="gone"
-                    style="@android:style/Widget.DatePicker" />
                 <TextView
                     android:text="Small Text"
                     android:textAppearance="?android:attr/textAppearanceSmall"
@@ -329,11 +323,6 @@
                     android:id="@+id/textView29"
                     android:textColor="#807c7b"
                     android:gravity="center" />
-                <DatePicker xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/datePicker2"
-                    tools:visibility="gone" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"
@@ -357,7 +346,7 @@
                     android:id="@+id/textView36"
                     android:textColor="@android:color/transparent" />
                 <TextView
-                    android:text="15:00"
+                    android:text="19:00"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -452,15 +441,13 @@
         android:alpha="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <RelativeLayout
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/datepickerlayout"
-        android:background="#f1e7e6"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:visibility="gone">
+        android:background="#f1e7e6">
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
             android:id="@+id/imageButton574"
@@ -477,26 +464,34 @@
             android:layout_centerInParent="true"
             android:minWidth="25px"
             android:minHeight="25px" />
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker4_enddate"
+            style="@android:style/Widget.Material.DatePicker"
+            android:layout_centerInParent="true"
+            android:minWidth="25px"
+            android:minHeight="25px" />
         <Button
             android:text="OK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button4"
-            style="@android:style/Widget.Material.Button"
-            android:backgroundTint="#c25e5c"
-            android:textColor="#fffafafa"
+            android:textColor="#ff424242"
             android:layout_above="@+id/imageButton574"
-            android:layout_toLeftOf="@+id/button10" />
+            android:layout_toLeftOf="@+id/button10"
+            android:backgroundTint="@android:color/transparent"
+            android:textStyle="bold" />
         <Button
             android:text="ABBRUCH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@+id/button4"
             android:id="@+id/button5"
-            style="@android:style/Widget.Material.Button"
-            android:backgroundTint="#c25e5c"
-            android:textColor="#fffafafa"
-            android:layout_above="@+id/imageButton574" />
+            android:textColor="#ff212121"
+            android:layout_above="@+id/imageButton574"
+            android:textStyle="bold"
+            android:backgroundTint="@android:color/transparent" />
         <Button
             android:id="@+id/button9"
             android:layout_width="wrap_content"
@@ -535,8 +530,8 @@
                 android:layout_weight="0.2"
                 android:backgroundTint="#c25e5c"
                 android:textColor="#ff4527a0"
-                style="@android:style/Widget.Material.Button"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                style="@android:style/Widget.Material.Button" />
             <Button
                 android:text="&gt;"
                 android:layout_width="wrap_content"
