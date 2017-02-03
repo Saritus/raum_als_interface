@@ -298,11 +298,12 @@ namespace TouchWalkthrough
 
 				TextView titel = FindViewById<TextView>(Resource.Id.Text1);
 				TextView beschreibung = FindViewById<TextView>(Resource.Id.Text2);
+                EditText raum = FindViewById<EditText>(Resource.Id.editText1);
 				//TextView kategorie = FindViewById<TextView>(Resource.Id.textView1);
 
 				//Enum.Parse(typeof(Category),kategorie.Text);
 
-				HTWLocation loctw = new HTWLocation("Z902");
+				HTWLocation loctw = new HTWLocation(raum.Text);
 				DateTime date = new DateTime(date_picker_startdate.Year, (date_picker_startdate.Month + 1), date_picker_startdate.DayOfMonth);
 				Drop newdrop = new Drop(titel.Text, category, beschreibung.Text, date, loctw, imagepath);
 				dropmanager.drops.Add(newdrop);
