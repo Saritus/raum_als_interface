@@ -30,13 +30,27 @@ namespace TouchWalkthrough
 
             //Emfpange Daten des angelickten drops von der Activity HistoryActivity.cs
             int id = Intent.GetIntExtra("ID", -1);
+            Drop drop = dropmanager.drops[id];
             //Emfpange Daten des angelickten drops von der Activity HistoryActivity.cs ENDE
 
             // Create your application here
 
             // Kategorie
             ImageView category = FindViewById<ImageView>(Resource.Id.imageView1);
-            category.SetImageResource(Resource.Drawable.icon_hap1);
+            switch(drop.category)
+            {
+                case Category.EVENT:
+                    category.SetImageResource(Resource.Drawable.icon_hap1);
+                    break;
+                case Category.WARNING:
+                    category.SetImageResource(Resource.Drawable.icon_hap2);
+                    break;
+                case Category.VOTE:
+                    category.SetImageResource(Resource.Drawable.icon_hap3);
+                    break;
+                default:
+                    break;
+            }
             // Kategorie Ende
 
             //Vollbild ##############################################################
@@ -67,8 +81,6 @@ namespace TouchWalkthrough
 
 
             //Drop Infos anzeigen #############################################
-
-            Drop drop = dropmanager.drops[id];
 
             TextView titel = FindViewById<TextView>(Resource.Id.textView22);
             TextView raum = FindViewById<TextView>(Resource.Id.textView3);
