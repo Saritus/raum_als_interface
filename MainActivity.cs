@@ -23,16 +23,49 @@
 		bool hap1_button_on = false;
 		bool hap2_button_on = true;
 		bool hap3_button_on = true;
+		DropManager dropmanager = DropManager.Instance;
 
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
  			SetContentView(Resource.Layout.Main);
 
-            DropManager.Instance.updateDrops();
+            DropManager.Instance.updateDrops();//bringt an der stelle nur 1x und zwar beim start der app was
 
-            //OPEN-HISTORY##############################################################
-            ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
+			//Drops auf Karte darstellen ###########################################################
+			ImageButton aktualisieren = FindViewById<ImageButton>(Resource.Id.imageButton104);
+			aktualisieren.Click += (object sender, EventArgs e) =>
+			{
+				List<Drop> mapDrops = dropmanager.drops;
+				RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
+				for (int i = 0; i < mapDrops.Count; i++)
+				{
+					ImageButton testbutton = new ImageButton(this);
+					switch (mapDrops[i].category)
+					{
+						case Category.EVENT:
+							testbutton.SetImageResource(Resource.Drawable.icon_hap1);
+							break;
+						case Category.WARNING:
+							testbutton.SetImageResource(Resource.Drawable.icon_hap2);
+							break;
+						case Category.VOTE:
+							testbutton.SetImageResource(Resource.Drawable.icon_hap3);
+							break;
+					}
+					testbutton.SetBackgroundColor(Color.Transparent);
+					maplayout.AddView(testbutton);
+					testbutton.SetX(50 + 5 * i);
+					testbutton.SetY(50 + 50 * i);
+				}
+			};
+			//Drops auf Karte darstellen ###########################################################
+
+
+
+
+			 //OPEN-HISTORY##############################################################
+			ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
 			history_button.Click += (object sender, EventArgs e) =>
 			{
 				StartActivity(typeof(HistoryActivity));
