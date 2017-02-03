@@ -299,7 +299,7 @@
                 android:id="@+id/linearLayout1438"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.2">
+                android:layout_weight="1">
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="match_parent"
@@ -326,7 +326,7 @@
                 android:id="@+id/linearLayout1438"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.3">
+                android:layout_weight="0.1">
                 <TextView
                     android:text="Von:"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -355,7 +355,7 @@
                 android:id="@+id/linearLayout14"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="0.7">
                 <TextView
                     android:text="dd.mm.yyyy"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -387,7 +387,7 @@
                 android:id="@+id/linearLayout143"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.3">
+                android:layout_weight="0.8">
                 <TextView
                     android:text="15:00"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -483,7 +483,9 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/editText1"
                     android:layout_weight="0.5"
-                    android:hint="z.B. Z 701" />
+                    android:hint="Z xxx"
+                    android:inputType="text"
+                    android:maxLength="10" />
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"

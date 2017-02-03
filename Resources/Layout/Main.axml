@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/RelativeLayoutMap"
         android:layout_weight="5"
-        android:background="#ffbfa09e">
+        android:background="#f1e7e6">
         <ImageButton
             android:src="@drawable/history_button"
             android:layout_width="wrap_content"

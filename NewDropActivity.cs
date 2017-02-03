@@ -85,14 +85,6 @@ namespace TouchWalkthrough
 			SetContentView(Resource.Layout.Plus_Menue);
 			// Create your application here
 
-			//#### Auf Karte platzieren #####
-			LinearLayout textbutton = FindViewById<LinearLayout>(Resource.Id.RelLayoutdropplazieren);
-			textbutton.Click += (object sender, EventArgs e) =>
-			{
-				StartActivity(typeof(MainActivity));
-			};
-			//#### Auf Karte platzieren ####ENDE
-
 			//Date Picker##############################
 			RelativeLayout datepickerlayout = FindViewById<RelativeLayout>(Resource.Id.datepickerlayout);
 			DatePicker date_picker_startdate = FindViewById<DatePicker>(Resource.Id.datePicker3);
@@ -162,7 +154,6 @@ namespace TouchWalkthrough
 				datepickerlayout.Visibility = ViewStates.Gone;
 				start_date.Text = "" + date_picker_startdate.DayOfMonth + "." + (date_picker_startdate.Month + 1) + "." + date_picker_startdate.Year;
 				end_date.Text = "" + date_picker_enddate.DayOfMonth + "." + (date_picker_enddate.Month + 1) + "." + date_picker_enddate.Year;
-			
 			};
 			//Wenn Datepicker geöffnet ENDE
 
