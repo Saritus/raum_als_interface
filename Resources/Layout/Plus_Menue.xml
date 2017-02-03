@@ -514,8 +514,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/datepickerlayout"
-        android:background="#f1e7e6"
-        tools:visibility="gone">
+        android:background="#f1e7e6">
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
             android:id="@+id/imageButton574"
@@ -529,27 +528,29 @@
             android:layout_height="wrap_content"
             android:id="@+id/datePicker3"
             style="@android:style/Widget.Material.DatePicker"
-            android:layout_centerInParent="true"
             android:minWidth="25px"
-            android:minHeight="25px" />
+            android:minHeight="25px"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/linearLayout1439" />
         <DatePicker
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/datePicker4_enddate"
             style="@android:style/Widget.Material.DatePicker"
-            android:layout_centerInParent="true"
             android:minWidth="25px"
-            android:minHeight="25px" />
+            android:minHeight="25px"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/linearLayout1439" />
         <Button
             android:text="OK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button4"
             android:textColor="#ff424242"
-            android:layout_above="@+id/imageButton574"
             android:layout_toLeftOf="@+id/button10"
             android:backgroundTint="@android:color/transparent"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_below="@+id/datePicker4_enddate" />
         <Button
             android:text="ABBRUCH"
             android:layout_width="wrap_content"
@@ -557,9 +558,9 @@
             android:layout_toLeftOf="@+id/button4"
             android:id="@+id/button5"
             android:textColor="#ff212121"
-            android:layout_above="@+id/imageButton574"
             android:textStyle="bold"
-            android:backgroundTint="@android:color/transparent" />
+            android:backgroundTint="@android:color/transparent"
+            android:layout_below="@+id/datePicker4_enddate" />
         <Button
             android:id="@+id/button9"
             android:layout_width="wrap_content"
@@ -580,43 +581,64 @@
             android:layout_alignParentRight="true"
             android:backgroundTint="@android:color/transparent" />
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout144"
-            android:background="#ffd9c3c1"
-            android:layout_toRightOf="@+id/button9"
-            android:layout_toLeftOf="@+id/button10"
-            android:layout_below="@+id/imageButton573">
-            <Button
-                android:text="BEGINN"
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:textColor="#ff4527a0"
-                android:textStyle="bold"
-                style="@android:style/Widget.Material.Button"
-                android:backgroundTint="#c25e5c" />
-            <Button
-                android:text="&gt;"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/button8"
-                android:layout_weight="0.5"
-                android:backgroundTint="@android:color/transparent"
-                android:textStyle="bold" />
-            <Button
-                android:text="ENDE"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/button7"
-                android:layout_weight="0.2"
-                android:backgroundTint="#c25e5c"
-                android:textColor="#fffafafa"
-                style="@android:style/Widget.Material.Button" />
+            android:id="@+id/linearLayout1439"
+            android:background="#8d6a8b">
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/textView40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/linearLayout144"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="BEGINN"
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:textColor="#ff4527a0"
+                    android:textStyle="bold"
+                    android:backgroundTint="#c25e5c"
+                    android:background="@android:color/transparent" />
+                <Button
+                    android:text="&gt;"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button8"
+                    android:layout_weight="0.1"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textStyle="bold" />
+                <Button
+                    android:text="ENDE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button7"
+                    android:layout_weight="0.2"
+                    android:backgroundTint="#c25e5c"
+                    android:textColor="#fffafafa"
+                    android:background="@android:color/transparent" />
+            </LinearLayout>
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView41" />
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView42"
+                android:background="#f1e7e6" />
         </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>
