@@ -37,7 +37,7 @@ namespace TouchWalkthrough
             List<Drop> dummyDrops = new List<Drop>();
 
             dummyDrops.Add(new Drop("Ausstellung Architektur", Category.EVENT, new DateTime(2017, 1, 13), new HTWLocation("Z902")));
-            dummyDrops.Add(new Drop("Party Semesterstart", Category.WARNING, new DateTime(2017, 2, 20), new HTWLocation("Z325")));
+            dummyDrops.Add(new Drop("Party Semesterstart", Category.WARNING, new DateTime(2017, 2, 20), new HTWLocation("Z107")));
             dummyDrops.Add(new Drop("Grillen Fak. Informatik", Category.VOTE, new DateTime(2017, 3, 12), new HTWLocation("Parkplatz")));
             dummyDrops.Add(new Drop("Tag der offenen Tür", Category.EVENT, new DateTime(2017, 4, 21), new HTWLocation("PAB")));
             dummyDrops.Add(new Drop("Seminar EWZ", Category.VOTE, new DateTime(2017, 5, 13), new HTWLocation("S410")));
