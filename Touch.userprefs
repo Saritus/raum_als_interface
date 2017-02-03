@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{38B273A3-4394-4D78-9E00-576E38F44508}|Default">
   <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.ItemProperties.Touch AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.4.7_WXGA_API_16" AndroidDesignerPreferredTheme="Theme.Black.NoTitleBar" />
+  <MonoDevelop.Ide.ItemProperties.Touch AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.3100774bda15b2d5" AndroidDesignerPreferredTheme="Theme.Black.NoTitleBar" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

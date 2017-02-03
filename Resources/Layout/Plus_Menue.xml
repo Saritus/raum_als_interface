@@ -596,10 +596,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
-                android:backgroundTint="#c25e5c"
                 android:textColor="#ff4527a0"
                 android:textStyle="bold"
-                style="@android:style/Widget.Material.Button" />
+                style="@android:style/Widget.Material.Button"
+                android:backgroundTint="#c25e5c" />
             <Button
                 android:text="&gt;"
                 android:layout_width="wrap_content"
