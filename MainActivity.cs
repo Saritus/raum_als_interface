@@ -57,6 +57,9 @@
 					maplayout.AddView(testbutton);
 					testbutton.SetX(50 + 5 * i);
 					testbutton.SetY(50 + 50 * i);
+
+					//testbutton.SetX(mapDrops[i].location.position.X);
+					//testbutton.SetY(mapDrops[i].location.position.Y);
 				}
 			};
 			//Drops auf Karte darstellen ###########################################################
