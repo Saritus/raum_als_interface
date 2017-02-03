@@ -4,12 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Android.Net;
+using Uri = Android.Net.Uri;
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Java.IO;
+using Environment = Android.OS.Environment;
+
 
 namespace TouchWalkthrough
 {
@@ -31,7 +35,8 @@ namespace TouchWalkthrough
             // Create your application here
 
             //Vollbild ##############################################################
-            ImageView image = FindViewById<ImageView>(Resource.Id.imageView2);
+            ImageView image = FindViewById<ImageView>(Resource.Id.imageView2);//nicht Vollbild
+			ImageView imageVollbild = FindViewById<ImageView>(Resource.Id.imageView3);//Vollbild
             RelativeLayout vollbildlayout = FindViewById<RelativeLayout>(Resource.Id.Vollbildlayout);
             vollbildlayout.Visibility = ViewStates.Gone;
 
@@ -46,7 +51,7 @@ namespace TouchWalkthrough
 
             vollbildlayout.Click += (object sender, EventArgs e) =>
             {
-                if (imageVollbild_on == true)//Öffnet Vollbildansicht
+                if (imageVollbild_on == true)//Schließt Vollbildansicht
                 {
                     vollbildlayout.Visibility = ViewStates.Gone;
                     imageVollbild_on = false;
@@ -64,15 +69,18 @@ namespace TouchWalkthrough
             TextView raum = FindViewById<TextView>(Resource.Id.textView3);
             TextView beschreibung = FindViewById<TextView>(Resource.Id.textView1);
             TextView datum = FindViewById<TextView>(Resource.Id.textView239);
-            ImageView bild = FindViewById<ImageView>(Resource.Id.imageView2);
 
             
             titel.Text = drop.name;
             raum.Text = drop.location.name;
             beschreibung.Text = drop.description;
-            //bild.SetImageURI(Android.Net.Uri.Parse("hier muss der Pfad des Bildes als String rein"));
-            datum.Text = drop.startTime.ToString("dd.MM.yyyy");
 
+			//File file = new File(drop.picturePath);
+			//Uri contentUri = Uri.FromFile(file);
+			//image.SetImageURI(contentUri);
+			//imageVollbild.SetImageURI(contentUri);
+
+            datum.Text = drop.startTime.ToString("dd.MM.yyyy");
             //Drop Infos anzeigen ENDE #############################################
 
         }

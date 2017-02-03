@@ -31,6 +31,7 @@ namespace TouchWalkthrough
 		bool end_date_is_open = false;
 		bool time_switch_is_on = true;
 		String imagepath = "";
+		Category category = Category.EVENT;
 
 		DropManager dropmanager = DropManager.Instance;
 
@@ -84,48 +85,78 @@ namespace TouchWalkthrough
 			SetContentView(Resource.Layout.Plus_Menue);
 			// Create your application here
 
-			//#### Auf Karte platzieren #####
-			LinearLayout textbutton = FindViewById<LinearLayout>(Resource.Id.RelLayoutdropplazieren);
-			textbutton.Click += (object sender, EventArgs e) =>
-			{
-				StartActivity(typeof(MainActivity));
-			};
-			//#### Auf Karte platzieren ####ENDE
-
 			//Date Picker##############################
+			RelativeLayout datepickerlayout = FindViewById<RelativeLayout>(Resource.Id.datepickerlayout);
+			DatePicker date_picker_startdate = FindViewById<DatePicker>(Resource.Id.datePicker3);
+			DatePicker date_picker_enddate = FindViewById<DatePicker>(Resource.Id.datePicker4_enddate);
 			TextView start_date = FindViewById<TextView>(Resource.Id.textView39);
-			DatePicker date_picker = FindViewById<DatePicker>(Resource.Id.datePicker1);
-			date_picker.Visibility = ViewStates.Gone;
+			TextView end_date = FindViewById<TextView>(Resource.Id.textView29);
+			Button beginn_Datum_button = FindViewById<Button>(Resource.Id.button6);
+			Button ende_Datum_button = FindViewById<Button>(Resource.Id.button7);
+			Button abbrechen_button = FindViewById<Button>(Resource.Id.button5);
+			Button ok_button = FindViewById<Button>(Resource.Id.button4);
+
+			datepickerlayout.Visibility = ViewStates.Gone;
+			date_picker_startdate.Visibility = ViewStates.Gone;
+			date_picker_enddate.Visibility = ViewStates.Gone;
+			//öffne Datepicker
 			start_date.Click += (object sender, EventArgs e) =>
 			{
-				if (start_date_is_open == false)
-				{
-					date_picker.Visibility = ViewStates.Visible;
-					start_date_is_open = true;
-				}
-				else{
-					date_picker.Visibility = ViewStates.Gone;
-					start_date.Text = "" + date_picker.DayOfMonth + "." + (date_picker.Month+1) + "." + date_picker.Year;
-					start_date_is_open = false;
-				}
-			};
-
-			TextView end_date = FindViewById<TextView>(Resource.Id.textView29);
-			DatePicker date_picker2 = FindViewById<DatePicker>(Resource.Id.datePicker2);
-			date_picker2.Visibility = ViewStates.Gone;
+				date_picker_startdate.Visibility = ViewStates.Visible;
+				date_picker_enddate.Visibility = ViewStates.Gone;
+				datepickerlayout.Visibility = ViewStates.Visible;
+				beginn_Datum_button.SetTextColor(Color.Rgb(69, 39, 160));
+				beginn_Datum_button.SetTypeface(Typeface.Default, TypefaceStyle.Bold);
+				ende_Datum_button.SetTextColor(Color.Rgb(250, 250, 250));
+				ende_Datum_button.SetTypeface(Typeface.Default, TypefaceStyle.Normal);
+			}; 
+			 
 			end_date.Click += (object sender, EventArgs e) =>
 			{
-				if (end_date_is_open == false)
-				{
-					date_picker2.Visibility = ViewStates.Visible;
-					end_date_is_open = true;
-				}
-				else {
-					date_picker2.Visibility = ViewStates.Gone;
-					end_date.Text = "" + date_picker2.DayOfMonth + "." + (date_picker2.Month + 1) + "." + date_picker2.Year;
-					end_date_is_open = false;
-				}
+				date_picker_startdate.Visibility = ViewStates.Gone;
+				date_picker_enddate.Visibility = ViewStates.Visible;
+				datepickerlayout.Visibility = ViewStates.Visible;
+				ende_Datum_button.SetTextColor(Color.Rgb(69, 39, 160));
+				ende_Datum_button.SetTypeface(Typeface.Default, TypefaceStyle.Bold);
+				beginn_Datum_button.SetTextColor(Color.Rgb(250, 250, 250));
+				beginn_Datum_button.SetTypeface(Typeface.Default, TypefaceStyle.Normal);
 			};
+			//öffne Datepicker ENDE
+
+			//Wenn Datepicker geöffnet
+			beginn_Datum_button.Click += (object sender, EventArgs e) =>
+			{
+				date_picker_startdate.Visibility = ViewStates.Visible;
+				date_picker_enddate.Visibility = ViewStates.Gone;
+				beginn_Datum_button.SetTextColor(Color.Rgb(69, 39, 160));
+				beginn_Datum_button.SetTypeface(Typeface.Default, TypefaceStyle.Bold);
+				ende_Datum_button.SetTextColor(Color.Rgb(250, 250, 250));
+				ende_Datum_button.SetTypeface(Typeface.Default, TypefaceStyle.Normal);
+			};
+
+			ende_Datum_button.Click += (object sender, EventArgs e) =>
+			{
+				date_picker_startdate.Visibility = ViewStates.Gone;
+				date_picker_enddate.Visibility = ViewStates.Visible;
+				ende_Datum_button.SetTextColor(Color.Rgb(69, 39, 160));
+				ende_Datum_button.SetTypeface(Typeface.Default, TypefaceStyle.Bold);
+				beginn_Datum_button.SetTextColor(Color.Rgb(250, 250, 250));
+				beginn_Datum_button.SetTypeface(Typeface.Default, TypefaceStyle.Normal);
+			};
+
+			abbrechen_button.Click += (object sender, EventArgs e) =>
+			{
+				datepickerlayout.Visibility = ViewStates.Gone;
+			};
+
+			ok_button.Click += (object sender, EventArgs e) =>
+			{
+				datepickerlayout.Visibility = ViewStates.Gone;
+				start_date.Text = "" + date_picker_startdate.DayOfMonth + "." + (date_picker_startdate.Month + 1) + "." + date_picker_startdate.Year;
+				end_date.Text = "" + date_picker_enddate.DayOfMonth + "." + (date_picker_enddate.Month + 1) + "." + date_picker_enddate.Year;
+			};
+			//Wenn Datepicker geöffnet ENDE
+
 			//Date Picker ENDE##############################
 
 			// Switch ganztägig ############################ 
@@ -164,61 +195,6 @@ namespace TouchWalkthrough
 
 
 
-
-
-
-			//Auf Karte platzieren Button ########################################################
-			ImageButton dropPlatzieren_button = FindViewById<ImageButton>(Resource.Id.imageButton1);
-			dropPlatzieren_button.Click += (object sender, EventArgs e) =>
-			{
-				StartActivity(typeof(MainActivity));
-			};
-			//Auf Karte platzieren Button ########################################################
-
-			//Kreuz+Haken Buttons ##################################################
-			ImageButton kreuz_button = FindViewById<ImageButton>(Resource.Id.imageButton367);
-			ImageButton haken_button = FindViewById<ImageButton>(Resource.Id.imageButton467);
-
-			kreuz_button.Click += (object sender, EventArgs e) =>
-			{
-				var alert = new AlertDialog.Builder(this);
-				alert.SetTitle("Abbrechen?");
-				alert.SetMessage("Alle Einstellungen gehen verloren.");
-				alert.SetPositiveButton("Ja", (senderAlert, args) =>
-				{
-					base.OnBackPressed();
-				});
-				alert.SetNegativeButton("Nein", (senderAlert, args) =>
-				{
-					//do nothing
-				});
-				Dialog dialog = alert.Create();
-				dialog.Show();
-			};
-
-			haken_button.Click += (object sender, EventArgs e) =>
-			{
-				//HTWLocation loctw = new HTWLocation("z902");
-				//Drop newdrop = new Drop("test",Category.EVENT,"blabla",DateTime.Now,loctw);
-
-				TextView titel = FindViewById<TextView>(Resource.Id.Text1);
-				TextView beschreibung = FindViewById<TextView>(Resource.Id.Text2);
-				TextView kategorie = FindViewById<TextView>(Resource.Id.textView1);
-
-				//Enum.Parse(typeof(Category),kategorie.Text);
-				
-				HTWLocation loctw = new HTWLocation("Z902");
-				DateTime startdate = new DateTime(date_picker.Year, (date_picker.Month + 1), date_picker.DayOfMonth);
-                DateTime enddate = new DateTime(date_picker2.Year, (date_picker2.Month + 1), date_picker2.DayOfMonth);
-                //(Category)Enum.Parse(typeof(Category) ???????????????????
-                Drop newdrop = new Drop(titel.Text,Category.EVENT,beschreibung.Text, startdate, enddate, loctw, imagepath);
-				dropmanager.drops.Add(newdrop);
-
-
-				base.OnBackPressed();
-			};
-			//Kreuz+Haken Buttons ENDE ##################################################
-
 			//For Filter-Button ON/OFF FILTER ###########################################################
 			ImageButton hap1_button = FindViewById<ImageButton>(Resource.Id.imageButton33);
 			ImageButton hap2_button = FindViewById<ImageButton>(Resource.Id.imageButton44);
@@ -226,7 +202,6 @@ namespace TouchWalkthrough
 
 			//Change Text
 			TextView filter_name = FindViewById<TextView>(Resource.Id.textView1);
-            Category category;
 
 			hap1_button.Click += (object sender, EventArgs e) =>
 			{
@@ -294,6 +269,48 @@ namespace TouchWalkthrough
 			};
 			//For Filter-Button ON/OFF FILTER ENDE###########################################################
 
+			//Kreuz+Haken Buttons ##################################################
+			ImageButton kreuz_button = FindViewById<ImageButton>(Resource.Id.imageButton367);
+			ImageButton haken_button = FindViewById<ImageButton>(Resource.Id.imageButton467);
+
+			kreuz_button.Click += (object sender, EventArgs e) =>
+			{
+				ContextThemeWrapper ctw = new ContextThemeWrapper(this, Resource.Style.MyAppTheme);
+				var alert = new AlertDialog.Builder(ctw);
+				alert.SetTitle("Abbrechen?");
+				alert.SetMessage("Alle Einstellungen gehen verloren.");
+				alert.SetPositiveButton("Ja", (senderAlert, args) =>
+				{
+					base.OnBackPressed();
+				});
+				alert.SetNegativeButton("Nein", (senderAlert, args) =>
+				{
+					//do nothing
+				});
+				Dialog dialog = alert.Create();
+				dialog.Show();
+			};
+
+			haken_button.Click += (object sender, EventArgs e) =>
+			{
+				//HTWLocation loctw = new HTWLocation("z902");
+				//Drop newdrop = new Drop("test",Category.EVENT,"blabla",DateTime.Now,loctw);
+
+				TextView titel = FindViewById<TextView>(Resource.Id.Text1);
+				TextView beschreibung = FindViewById<TextView>(Resource.Id.Text2);
+				//TextView kategorie = FindViewById<TextView>(Resource.Id.textView1);
+
+				//Enum.Parse(typeof(Category),kategorie.Text);
+
+				HTWLocation loctw = new HTWLocation("Z902");
+				DateTime date = new DateTime(date_picker_startdate.Year, (date_picker_startdate.Month + 1), date_picker_startdate.DayOfMonth);
+				Drop newdrop = new Drop(titel.Text, category, beschreibung.Text, date, loctw, imagepath);
+				dropmanager.drops.Add(newdrop);
+
+
+				base.OnBackPressed();
+			};
+			//Kreuz+Haken Buttons ENDE ##################################################
 
 
 
@@ -305,8 +322,7 @@ namespace TouchWalkthrough
 				var imageIntent = new Intent();
 				imageIntent.SetType("image/*");
 				imageIntent.SetAction(Intent.ActionGetContent);
-				StartActivityForResult(
-					Intent.CreateChooser(imageIntent, "Select photo"), 1);
+				StartActivityForResult(Intent.CreateChooser(imageIntent, "Select photo"), 1);
 			};
 			//File-Picker ENDE ###########################################################
 
