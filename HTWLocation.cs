@@ -67,10 +67,10 @@ namespace TouchWalkthrough
         private void fillDictionary()
         {
             roomTable = new Dictionary<string, Point>();
-            roomTable["Z017"] = new Point(400,800);//Nur Testweise...nicht korrekt
-            roomTable["Z107"] = new Point();
-            roomTable["Z136b"] = new Point();
-            roomTable["Z136c"] = new Point();
+            roomTable["Z017"] = new Point(400, 800);//Nur Testweise...nicht korrekt
+            roomTable["Z107"] = new Point(708, 1945);
+            roomTable["Z136b"] = new Point(507, 519);
+            roomTable["Z136c"] = new Point(479, 689);
             roomTable["Z146a"] = new Point();
             roomTable["Z208"] = new Point();
             roomTable["Z211"] = new Point();
