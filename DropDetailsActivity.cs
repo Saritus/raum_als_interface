@@ -34,6 +34,11 @@ namespace TouchWalkthrough
 
             // Create your application here
 
+            // Kategorie
+            ImageView category = FindViewById<ImageView>(Resource.Id.imageView1);
+            category.SetImageResource(Resource.Drawable.icon_hap1);
+            // Kategorie Ende
+
             //Vollbild ##############################################################
             ImageView image = FindViewById<ImageView>(Resource.Id.imageView2);//nicht Vollbild
 			ImageView imageVollbild = FindViewById<ImageView>(Resource.Id.imageView3);//Vollbild
