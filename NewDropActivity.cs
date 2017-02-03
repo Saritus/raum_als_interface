@@ -293,20 +293,16 @@ namespace TouchWalkthrough
 
 			haken_button.Click += (object sender, EventArgs e) =>
 			{
-				//HTWLocation loctw = new HTWLocation("z902");
-				//Drop newdrop = new Drop("test",Category.EVENT,"blabla",DateTime.Now,loctw);
-
 				TextView titel = FindViewById<TextView>(Resource.Id.Text1);
 				TextView beschreibung = FindViewById<TextView>(Resource.Id.Text2);
+                EditText raum = FindViewById<EditText>(Resource.Id.editText1);
 				//TextView kategorie = FindViewById<TextView>(Resource.Id.textView1);
 
-				//Enum.Parse(typeof(Category),kategorie.Text);
-
-				HTWLocation loctw = new HTWLocation("Z902");
-				DateTime date = new DateTime(date_picker_startdate.Year, (date_picker_startdate.Month + 1), date_picker_startdate.DayOfMonth);
-				Drop newdrop = new Drop(titel.Text, category, beschreibung.Text, date, loctw, imagepath);
+				HTWLocation loctw = new HTWLocation(raum.Text);
+				DateTime startdate = new DateTime(date_picker_startdate.Year, (date_picker_startdate.Month + 1), date_picker_startdate.DayOfMonth);
+                DateTime enddate = new DateTime(date_picker_enddate.Year, (date_picker_enddate.Month + 1), date_picker_enddate.DayOfMonth);
+                Drop newdrop = new Drop(titel.Text, category, beschreibung.Text, startdate, enddate, loctw, imagepath);
 				dropmanager.drops.Add(newdrop);
-
 
 				base.OnBackPressed();
 			};
