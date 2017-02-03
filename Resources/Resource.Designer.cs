@@ -148,8 +148,8 @@ namespace TouchWalkthrough
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080051
-			public const int DateAndTime = 2131230801;
+			// aapt resource value: 0x7f080052
+			public const int DateAndTime = 2131230802;
 			
 			// aapt resource value: 0x7f080003
 			public const int Image = 2131230723;
@@ -157,11 +157,11 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f080038
 			public const int ImageViewKarte = 2131230776;
 			
-			// aapt resource value: 0x7f08004e
-			public const int LinearFileFotoPick = 2131230798;
+			// aapt resource value: 0x7f08004f
+			public const int LinearFileFotoPick = 2131230799;
 			
-			// aapt resource value: 0x7f080063
-			public const int LinearFileFotoPick2 = 2131230819;
+			// aapt resource value: 0x7f080065
+			public const int LinearFileFotoPick2 = 2131230821;
 			
 			// aapt resource value: 0x7f080034
 			public const int List = 2131230772;
@@ -184,11 +184,11 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f080002
 			public const int Text2 = 2131230722;
 			
-			// aapt resource value: 0x7f08004f
-			public const int Text3 = 2131230799;
+			// aapt resource value: 0x7f080050
+			public const int Text3 = 2131230800;
 			
-			// aapt resource value: 0x7f080059
-			public const int Text46 = 2131230809;
+			// aapt resource value: 0x7f08005a
+			public const int Text46 = 2131230810;
 			
 			// aapt resource value: 0x7f080044
 			public const int ViewIsOnlyForAlphaValueBackground2 = 2131230788;
@@ -199,8 +199,14 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f080009
 			public const int button1 = 2131230729;
 			
-			// aapt resource value: 0x7f080069
-			public const int button10 = 2131230825;
+			// aapt resource value: 0x7f08006d
+			public const int button10 = 2131230829;
+			
+			// aapt resource value: 0x7f08004e
+			public const int button11 = 2131230798;
+			
+			// aapt resource value: 0x7f080067
+			public const int button12 = 2131230823;
 			
 			// aapt resource value: 0x7f08001c
 			public const int button2 = 2131230748;
@@ -208,32 +214,35 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f08001a
 			public const int button3 = 2131230746;
 			
-			// aapt resource value: 0x7f080068
-			public const int button4 = 2131230824;
-			
-			// aapt resource value: 0x7f08006a
-			public const int button5 = 2131230826;
+			// aapt resource value: 0x7f08006c
+			public const int button4 = 2131230828;
 			
 			// aapt resource value: 0x7f08006e
-			public const int button6 = 2131230830;
+			public const int button5 = 2131230830;
 			
-			// aapt resource value: 0x7f080070
-			public const int button7 = 2131230832;
+			// aapt resource value: 0x7f080072
+			public const int button6 = 2131230834;
+			
+			// aapt resource value: 0x7f080074
+			public const int button7 = 2131230836;
+			
+			// aapt resource value: 0x7f080073
+			public const int button8 = 2131230835;
 			
 			// aapt resource value: 0x7f08006f
-			public const int button8 = 2131230831;
+			public const int button9 = 2131230831;
+			
+			// aapt resource value: 0x7f08006a
+			public const int datePicker3 = 2131230826;
 			
 			// aapt resource value: 0x7f08006b
-			public const int button9 = 2131230827;
+			public const int datePicker4_enddate = 2131230827;
+			
+			// aapt resource value: 0x7f080068
+			public const int datepickerlayout = 2131230824;
 			
 			// aapt resource value: 0x7f080066
-			public const int datePicker3 = 2131230822;
-			
-			// aapt resource value: 0x7f080067
-			public const int datePicker4_enddate = 2131230823;
-			
-			// aapt resource value: 0x7f080064
-			public const int datepickerlayout = 2131230820;
+			public const int editText1 = 2131230822;
 			
 			// aapt resource value: 0x7f08002a
 			public const int frameLayout1 = 2131230762;
@@ -241,8 +250,8 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f080041
 			public const int frameLayoutFilter = 2131230785;
 			
-			// aapt resource value: 0x7f080058
-			public const int ganztaegig = 2131230808;
+			// aapt resource value: 0x7f080059
+			public const int ganztaegig = 2131230809;
 			
 			// aapt resource value: 0x7f08004a
 			public const int gestureRecognizerView1 = 2131230794;
@@ -274,8 +283,8 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f08003e
 			public const int imageButton3 = 2131230782;
 			
-			// aapt resource value: 0x7f080052
-			public const int imageButton33 = 2131230802;
+			// aapt resource value: 0x7f080053
+			public const int imageButton33 = 2131230803;
 			
 			// aapt resource value: 0x7f080017
 			public const int imageButton367 = 2131230743;
@@ -283,20 +292,20 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f08003f
 			public const int imageButton4 = 2131230783;
 			
-			// aapt resource value: 0x7f080054
-			public const int imageButton44 = 2131230804;
+			// aapt resource value: 0x7f080055
+			public const int imageButton44 = 2131230805;
 			
-			// aapt resource value: 0x7f080056
-			public const int imageButton467 = 2131230806;
+			// aapt resource value: 0x7f080057
+			public const int imageButton467 = 2131230807;
 			
 			// aapt resource value: 0x7f08003d
 			public const int imageButton5 = 2131230781;
 			
-			// aapt resource value: 0x7f080053
-			public const int imageButton55 = 2131230803;
+			// aapt resource value: 0x7f080054
+			public const int imageButton55 = 2131230804;
 			
-			// aapt resource value: 0x7f080055
-			public const int imageButton567 = 2131230805;
+			// aapt resource value: 0x7f080056
+			public const int imageButton567 = 2131230806;
 			
 			// aapt resource value: 0x7f080007
 			public const int imageButton568 = 2131230727;
@@ -331,14 +340,14 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f080010
 			public const int imageButton5702 = 2131230736;
 			
-			// aapt resource value: 0x7f080057
-			public const int imageButton572 = 2131230807;
+			// aapt resource value: 0x7f080058
+			public const int imageButton572 = 2131230808;
 			
-			// aapt resource value: 0x7f08006c
-			public const int imageButton573 = 2131230828;
+			// aapt resource value: 0x7f080070
+			public const int imageButton573 = 2131230832;
 			
-			// aapt resource value: 0x7f080065
-			public const int imageButton574 = 2131230821;
+			// aapt resource value: 0x7f080069
+			public const int imageButton574 = 2131230825;
 			
 			// aapt resource value: 0x7f080011
 			public const int imageButton5792 = 2131230737;
@@ -394,17 +403,20 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f08001b
 			public const int linearLayout135 = 2131230747;
 			
-			// aapt resource value: 0x7f08005d
-			public const int linearLayout14 = 2131230813;
-			
 			// aapt resource value: 0x7f080061
-			public const int linearLayout143 = 2131230817;
+			public const int linearLayout14 = 2131230817;
 			
-			// aapt resource value: 0x7f08006d
-			public const int linearLayout144 = 2131230829;
+			// aapt resource value: 0x7f080064
+			public const int linearLayout143 = 2131230820;
 			
-			// aapt resource value: 0x7f08005c
-			public const int linearLayout15 = 2131230812;
+			// aapt resource value: 0x7f08005e
+			public const int linearLayout1438 = 2131230814;
+			
+			// aapt resource value: 0x7f080071
+			public const int linearLayout144 = 2131230833;
+			
+			// aapt resource value: 0x7f08005d
+			public const int linearLayout15 = 2131230813;
 			
 			// aapt resource value: 0x7f080045
 			public const int linearLayout2 = 2131230789;
@@ -415,8 +427,8 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f080031
 			public const int linearLayoutHistory = 2131230769;
 			
-			// aapt resource value: 0x7f080050
-			public const int relLayout2 = 2131230800;
+			// aapt resource value: 0x7f080051
+			public const int relLayout2 = 2131230801;
 			
 			// aapt resource value: 0x7f080023
 			public const int relativeLayout1 = 2131230755;
@@ -433,8 +445,8 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f080015
 			public const int relativeLayout_navbar2 = 2131230741;
 			
-			// aapt resource value: 0x7f08005a
-			public const int schiebtSwitchRechts = 2131230810;
+			// aapt resource value: 0x7f08005b
+			public const int schiebtSwitchRechts = 2131230811;
 			
 			// aapt resource value: 0x7f080019
 			public const int switch_button = 2131230745;
@@ -466,26 +478,26 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f080018
 			public const int textView26 = 2131230744;
 			
-			// aapt resource value: 0x7f080060
-			public const int textView29 = 2131230816;
+			// aapt resource value: 0x7f080063
+			public const int textView29 = 2131230819;
 			
 			// aapt resource value: 0x7f08000c
 			public const int textView3 = 2131230732;
 			
-			// aapt resource value: 0x7f080062
-			public const int textView33 = 2131230818;
+			// aapt resource value: 0x7f08005f
+			public const int textView33 = 2131230815;
 			
-			// aapt resource value: 0x7f08005b
-			public const int textView34 = 2131230811;
+			// aapt resource value: 0x7f08005c
+			public const int textView34 = 2131230812;
 			
 			// aapt resource value: 0x7f08004d
 			public const int textView35 = 2131230797;
 			
-			// aapt resource value: 0x7f08005f
-			public const int textView36 = 2131230815;
+			// aapt resource value: 0x7f080060
+			public const int textView36 = 2131230816;
 			
-			// aapt resource value: 0x7f08005e
-			public const int textView39 = 2131230814;
+			// aapt resource value: 0x7f080062
+			public const int textView39 = 2131230818;
 			
 			static Id()
 			{

@@ -204,17 +204,6 @@ namespace TouchWalkthrough
 
 
 
-
-
-
-			//Auf Karte platzieren Button ########################################################
-			ImageButton dropPlatzieren_button = FindViewById<ImageButton>(Resource.Id.imageButton1);
-			dropPlatzieren_button.Click += (object sender, EventArgs e) =>
-			{
-				StartActivity(typeof(MainActivity));
-			};
-			//Auf Karte platzieren Button ########################################################
-
 			//For Filter-Button ON/OFF FILTER ###########################################################
 			ImageButton hap1_button = FindViewById<ImageButton>(Resource.Id.imageButton33);
 			ImageButton hap2_button = FindViewById<ImageButton>(Resource.Id.imageButton44);

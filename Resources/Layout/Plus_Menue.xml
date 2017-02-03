@@ -48,7 +48,14 @@
         android:layout_above="@+id/textView35"
         android:scaleType="fitCenter"
         android:background="#ff616161"
-        android:src="@android:drawable/ic_menu_gallery" />
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_toLeftOf="@+id/button11" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button11"
+        android:layout_alignParentRight="true"
+        android:alpha="0" />
     <TextView
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -99,19 +106,12 @@
                     android:text="Bild hinzufügen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="14dip"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#807c7b"
                     android:textStyle="normal"
                     android:layout_alignTop="@+id/imageButton1"
                     android:layout_alignBottom="@+id/imageButton1"
                     android:gravity="center" />
-                <Button
-                    android:text="Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/button3"
-                    android:background="@android:color/transparent"
-                    android:alpha="0" />
                 <Button
                     android:text="Button"
                     android:layout_width="wrap_content"
@@ -296,12 +296,68 @@
                 android:orientation="vertical"
                 android:minWidth="25px"
                 android:minHeight="25px"
+                android:id="@+id/linearLayout1438"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView33"
+                    android:textColor="#807c7b" />
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView36"
+                    android:textColor="@android:color/transparent" />
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView22"
+                    android:textColor="#807c7b" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/linearLayout1438"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3">
+                <TextView
+                    android:text="Von:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView33"
+                    android:textColor="#807c7b" />
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView36"
+                    android:textColor="@android:color/transparent" />
+                <TextView
+                    android:text="Bis:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView22"
+                    android:textColor="#807c7b" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
                 android:id="@+id/linearLayout14"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.8">
+                android:layout_weight="1">
                 <TextView
-                    android:text="Von dd.mm.yyyy"
+                    android:text="dd.mm.yyyy"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -316,7 +372,7 @@
                     android:id="@+id/textView36"
                     android:textColor="@android:color/transparent" />
                 <TextView
-                    android:text="Bis dd.mm.yyyy"
+                    android:text="dd.mm.yyyy"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -331,7 +387,7 @@
                 android:id="@+id/linearLayout143"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.2">
+                android:layout_weight="0.3">
                 <TextView
                     android:text="15:00"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -376,7 +432,7 @@
             android:minWidth="25px"
             android:minHeight="25px"
             android:id="@+id/linearLayout12"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageButton
                 android:src="@android:drawable/ic_menu_gallery"
@@ -408,21 +464,30 @@
                     android:alpha="0" />
                 <TextView
                     android:id="@+id/Text3"
-                    android:text="Auf Karte platzieren"
+                    android:text="Raum angeben:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="14dip"
                     android:textColor="#807c7b"
                     android:textStyle="normal"
                     android:layout_alignTop="@+id/imageButton1"
                     android:layout_alignBottom="@+id/imageButton1"
-                    android:gravity="center" />
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
                 <Button
-                    android:text="Button"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/button3"
-                    android:background="@android:color/transparent"
+                    android:alpha="0" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText1"
+                    android:layout_weight="0.5"
+                    android:hint="z.B. Z 701" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button12"
                     android:alpha="0" />
             </LinearLayout>
             <ImageButton
@@ -447,7 +512,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/datepickerlayout"
-        android:background="#f1e7e6">
+        android:background="#f1e7e6"
+        tools:visibility="gone">
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
             android:id="@+id/imageButton574"
