@@ -1,9 +1,5 @@
 ﻿<Properties StartupConfiguration="{38B273A3-4394-4D78-9E00-576E38F44508}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="NewDropActivity.cs">
-    <Files>
-      <File FileName="NewDropActivity.cs" Line="206" Column="16" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.ItemProperties.Touch AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.4.7_WXGA_API_16" AndroidDesignerPreferredTheme="Theme.Black.NoTitleBar" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
