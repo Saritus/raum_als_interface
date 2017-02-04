@@ -14,9 +14,9 @@
     public class MainActivity : Activity
     {
         // request codes
-        static int HISTORY_REQUEST = 1001;
-        static int DROPDETAIL_REQUEST = 1002;
-        static int NEWDROP_REQUEST = 1003;
+        const int HISTORY_REQUEST = 1001;
+        const int DROPDETAIL_REQUEST = 1002;
+        const int NEWDROP_REQUEST = 1003;
 
         bool filter_button_on = false;
         bool hap1_button_on = false;
@@ -225,17 +225,14 @@
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             // Check which request we're responding to
-            if (requestCode == HISTORY_REQUEST)
+            switch (requestCode)
             {
-
-            }
-            else if (requestCode == DROPDETAIL_REQUEST)
-            {
-
-            }
-            else if (requestCode == NEWDROP_REQUEST)
-            {
-
+                case HISTORY_REQUEST:
+                    break;
+                case DROPDETAIL_REQUEST:
+                    break;
+                case NEWDROP_REQUEST:
+                    break;
             }
             ResetDropButtons();
         }
