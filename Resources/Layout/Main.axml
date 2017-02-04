@@ -144,7 +144,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textColor="#ffbdbdbd"
+                    android:textColor="#ff616161"
                     android:typeface="normal" />
                 <TextView
                     android:text="Meldung"
@@ -154,7 +154,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:typeface="normal"
-                    android:textColor="#ffbdbdbd" />
+                    android:textColor="#ff616161" />
             </LinearLayout>
             <TextView
                 android:text="Medium Text"
