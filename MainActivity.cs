@@ -9,6 +9,7 @@
     using Android.Widget;
     using System;
     using System.Collections.Generic; //For ListView
+    using System.Threading;
 
     [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/logo", Theme = "@android:style/Theme.NoTitleBar")]
     public class MainActivity : Activity
@@ -20,9 +21,11 @@
 
         bool filter_button_on = false;
         bool hap1_button_on = false;
-        bool hap2_button_on = true;
-        bool hap3_button_on = true;
+        bool hap2_button_on = false;
+        bool hap3_button_on = false;
         DropManager dropmanager = DropManager.Instance;
+
+        private Timer timer;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -148,6 +151,20 @@
             };
             //For arrow_left Button ENDE ##############################################################
 
+
+            timer = new Timer(x => timerEvent(), null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+        }
+
+        private void timerEvent()
+        { 
+            if (timer != null)
+            {
+                this.RunOnUiThread(() => ResetDropButtons());
+
+                // stop timer
+                timer.Dispose();
+                timer = null;
+            }
         }
 
         //Use Hardware-Back-Button ##############################################################
@@ -188,11 +205,11 @@
             {
                 if (mapdrop.ignored)
                     continue;
-                if (mapdrop.category == Category.EVENT && hap1_button_on)
+                if (hap1_button_on && mapdrop.category == Category.EVENT)
                     continue;
-                if (mapdrop.category == Category.WARNING && hap2_button_on)
+                if (hap2_button_on && mapdrop.category == Category.WARNING)
                     continue;
-                if (mapdrop.category == Category.VOTE && hap3_button_on)
+                if (hap3_button_on && mapdrop.category == Category.VOTE)
                     continue;
 
                 ImageButton drop_button = mapdrop.ToImageButton(this);
@@ -239,6 +256,5 @@
             ResetDropButtons();
         }
         //Drops auf Karte darstellen ###########################################################
-
     }
 }
