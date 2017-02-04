@@ -38,7 +38,8 @@
 			{
 				List<Drop> mapDrops = dropmanager.drops;
 				RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
-				for (int i = 0; i < mapDrops.Count; i++)
+                ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.ImageViewKarte);
+                for (int i = 0; i < mapDrops.Count; i++)
 				{
 					ImageButton testbutton = new ImageButton(this);
 					switch (mapDrops[i].category)
@@ -55,10 +56,19 @@
 					}
 					testbutton.SetBackgroundColor(Color.Transparent);
 
-                    float scaleX = (float)maplayout.Width / (float)1224;
-                    float scaleY = (float)maplayout.Height / (float)2176;
-                    testbutton.SetX(mapDrops[i].location.position.X * scaleX);
-					testbutton.SetY(mapDrops[i].location.position.Y * scaleY);
+                    float left = ((float)kartenlayout.Width - ((float)1224 / (float)2176) * (float)kartenlayout.Height) / (float)2;
+                    float scaleX = (float)kartenlayout.Width / (float)1224;
+                    float scaleY = (float)kartenlayout.Height / (float)2176;
+                    float layoutX = kartenlayout.GetX();
+                    float layoutY = kartenlayout.GetY();
+
+                    int[] screen = new int[2];
+                    kartenlayout.GetLocationOnScreen(screen);
+                    int screenX = screen[0];
+                    int screenY = screen[1];
+
+                    testbutton.SetX(mapDrops[i].location.position.X * scaleY - layoutX - testbutton.Width / 2 - screenX + scaleY*left);
+                    testbutton.SetY(mapDrops[i].location.position.Y * scaleY - layoutY - testbutton.Height / 2 - screenY);
 
                     maplayout.AddView(testbutton);
 
