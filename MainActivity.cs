@@ -10,10 +10,14 @@
     using System;
     using System.Collections.Generic; //For ListView
 
-    //
     [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/logo", Theme = "@android:style/Theme.NoTitleBar")]
     public class MainActivity : Activity
     {
+        // request codes
+        const int HISTORY_REQUEST = 1001;
+        const int DROPDETAIL_REQUEST = 1002;
+        const int NEWDROP_REQUEST = 1003;
+
         bool filter_button_on = false;
         bool hap1_button_on = false;
         bool hap2_button_on = true;
@@ -38,7 +42,7 @@
             ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
             history_button.Click += (object sender, EventArgs e) =>
             {
-                StartActivity(typeof(HistoryActivity));
+                StartActivityForResult(typeof(HistoryActivity), HISTORY_REQUEST);
             };
             //OPEN-HISTORY ENDE ##############################################################
 
@@ -130,7 +134,7 @@
             ImageButton plus_button = FindViewById<ImageButton>(Resource.Id.imageButton1);
             plus_button.Click += (object sender, EventArgs e) =>
             {
-                StartActivity(typeof(NewDropActivity));
+                StartActivityForResult(typeof(NewDropActivity), NEWDROP_REQUEST);
             };
             //OPEN CREAT NEW DROP (Plus-Button) ENDE ##########################################################
 
@@ -181,6 +185,8 @@
 
             foreach (Drop mapdrop in mapDrops)
             {
+                if (mapdrop.ignored)
+                    continue;
                 if (mapdrop.category == Category.EVENT && hap1_button_on)
                     continue;
                 if (mapdrop.category == Category.WARNING && hap2_button_on)
@@ -209,11 +215,26 @@
                     Intent intent = new Intent(this, typeof(DropDetailsActivity));
                     intent.PutExtra("ID", dropmanager.getDropNumber(mapdrop.id));
 
-                    StartActivity(intent);
+                    StartActivityForResult(intent, DROPDETAIL_REQUEST);
                 };
 
                 maplayout.AddView(drop_button);
             }
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            // Check which request we're responding to
+            switch (requestCode)
+            {
+                case HISTORY_REQUEST:
+                    break;
+                case DROPDETAIL_REQUEST:
+                    break;
+                case NEWDROP_REQUEST:
+                    break;
+            }
+            ResetDropButtons();
         }
         //Drops auf Karte darstellen ###########################################################
 
