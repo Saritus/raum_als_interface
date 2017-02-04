@@ -32,16 +32,16 @@ namespace TouchWalkthrough
         public List<Drop> drops { get; private set; }
         public DateTime lastUpdate { get; private set; } = DateTime.MinValue;
 
-        public Drop getDropNumber(Guid id)
+        public int getDropNumber(Guid id)
         {
-            foreach (Drop drop in drops)
+            for (int i = 0; i < drops.Count; i++)
             {
-                if (drop.id == id)
+                if (drops[i].id == id)
                 {
-                    return drop;
+                    return i;
                 }
             }
-            return null;
+            return -1;
         }
 
         public List<Drop> getFilteredDrops(Category[] filters)
