@@ -115,6 +115,8 @@ namespace TouchWalkthrough
 
             tableitem.ImageResourceId = GetIconId();
 
+            tableitem.id = id;
+
             return tableitem;
         }
 

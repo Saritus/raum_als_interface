@@ -29,7 +29,8 @@
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
-            DropManager.Instance.updateDrops();//bringt an der stelle nur 1x und zwar beim start der app was
+            dropmanager.updateDrops();//bringt an der stelle nur 1x und zwar beim start der app was
+            dropmanager.sortDrops();
 
             ImageButton aktualisieren = FindViewById<ImageButton>(Resource.Id.imageButton104);
             aktualisieren.Click += (object sender, EventArgs e) =>
@@ -213,7 +214,7 @@
                 drop_button.Click += (object senderobject, EventArgs ea) =>
                 {
                     Intent intent = new Intent(this, typeof(DropDetailsActivity));
-                    intent.PutExtra("ID", dropmanager.getDropNumber(mapdrop.id));
+                    intent.PutExtra("ID", mapdrop.id.ToString());
 
                     StartActivityForResult(intent, DROPDETAIL_REQUEST);
                 };
@@ -234,6 +235,7 @@
                 case NEWDROP_REQUEST:
                     break;
             }
+            dropmanager.sortDrops();
             ResetDropButtons();
         }
         //Drops auf Karte darstellen ###########################################################
