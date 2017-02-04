@@ -214,7 +214,7 @@
                 drop_button.Click += (object senderobject, EventArgs ea) =>
                 {
                     Intent intent = new Intent(this, typeof(DropDetailsActivity));
-                    intent.PutExtra("ID", dropmanager.getDropNumber(mapdrop.id));
+                    intent.PutExtra("ID", mapdrop.id.ToString());
 
                     StartActivityForResult(intent, DROPDETAIL_REQUEST);
                 };

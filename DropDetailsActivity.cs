@@ -21,8 +21,8 @@ namespace TouchWalkthrough
             SetContentView(Resource.Layout.DropDetails);
 
             //Emfpange Daten des angelickten drops von der Activity HistoryActivity.cs
-            int id = Intent.GetIntExtra("ID", -1);
-            Drop drop = dropmanager.drops[id];
+            string id = Intent.GetStringExtra("ID");
+            Drop drop = dropmanager.getDrop(id);
             //Emfpange Daten des angelickten drops von der Activity HistoryActivity.cs ENDE
 
             // Create your application here
