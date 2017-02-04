@@ -19,13 +19,21 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton6"
             android:background="@android:color/transparent" />
-        <ImageView
-            android:id="@+id/ImageViewKarte"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/karte_z_eg"
-            android:layout_above="@+id/relativeLayout_navbar"
-            android:scaleType="centerInside" />
+        <RelativeLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3"
+            android:layout_above="@+id/relativeLayout_navbar">
+            <ImageView
+                android:id="@+id/ImageViewKarte"
+                android:src="@drawable/karte_z_eg"
+                android:scaleType="centerInside"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
         <RelativeLayout
             android:id="@+id/relativeLayout_navbar"
             android:layout_width="match_parent"

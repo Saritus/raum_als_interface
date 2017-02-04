@@ -37,7 +37,8 @@
 			aktualisieren.Click += (object sender, EventArgs e) =>
 			{
 				List<Drop> mapDrops = dropmanager.getBuildingDrops(Building.Z);
-				RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
+				//RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
+				RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.linearLayout3);
                 ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.ImageViewKarte);
                 foreach (Drop mapdrop in mapDrops)
 				{
