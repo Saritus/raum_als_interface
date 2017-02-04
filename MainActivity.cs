@@ -65,7 +65,7 @@
                     int screenX = screen[0];
                     int screenY = screen[1];
 
-                    testbutton.SetX(mapDrops[i].location.position.X * scaleY - testbutton.Width / 2 - screenX + scaleY * left);
+                    testbutton.SetX(mapDrops[i].location.position.X * scaleY - testbutton.Width / 2 - screenX + 0.44f * left);
                     testbutton.SetY(mapDrops[i].location.position.Y * scaleY - testbutton.Height / 2 - screenY);
 
                     maplayout.AddView(testbutton);
