@@ -1,9 +1,7 @@
 using Android.Content;
 using Android.Graphics;
-using Android.Locations;
 using Android.Widget;
 using System;
-using System.Data;
 
 namespace TouchWalkthrough
 {
@@ -92,6 +90,21 @@ namespace TouchWalkthrough
             this.picturePath = newDrop.picturePath;
         }
 
+        public int GetIconId()
+        {
+            switch (category)
+            {
+                case Category.EVENT:
+                    return Resource.Drawable.icon_hap1;
+                case Category.VOTE:
+                    return Resource.Drawable.icon_hap3;
+                case Category.WARNING:
+                    return Resource.Drawable.icon_hap2;
+                default:
+                    return -1;
+            }
+        }
+
         public TableItem ToTableItem()
         {
             TableItem tableitem = new TableItem();
@@ -100,18 +113,9 @@ namespace TouchWalkthrough
 
             tableitem.SubHeading = location.ToString() + "; " + startTime.ToString("dd.MM.yyyy");
 
-            switch (category)
-            {
-                case Category.EVENT:
-                    tableitem.ImageResourceId = Resource.Drawable.icon_hap1;
-                    break;
-                case Category.VOTE:
-                    tableitem.ImageResourceId = Resource.Drawable.icon_hap3;
-                    break;
-                case Category.WARNING:
-                    tableitem.ImageResourceId = Resource.Drawable.icon_hap2;
-                    break;
-            }
+            tableitem.ImageResourceId = GetIconId();
+
+            tableitem.id = id;
 
             return tableitem;
         }
@@ -121,18 +125,7 @@ namespace TouchWalkthrough
             ImageButton drop_button = new ImageButton(context);
 
             // Aussehen
-            switch (category)
-            {
-                case Category.EVENT:
-                    drop_button.SetImageResource(Resource.Drawable.icon_hap1);
-                    break;
-                case Category.WARNING:
-                    drop_button.SetImageResource(Resource.Drawable.icon_hap2);
-                    break;
-                case Category.VOTE:
-                    drop_button.SetImageResource(Resource.Drawable.icon_hap3);
-                    break;
-            }
+            drop_button.SetImageResource(GetIconId());
             drop_button.SetBackgroundColor(Color.Transparent);
 
             return drop_button;

@@ -29,7 +29,7 @@ namespace TouchWalkthrough
 
         // local-part
 
-        public List<Drop> drops { get; private set; }
+        private List<Drop> drops { get; set; }
         public DateTime lastUpdate { get; private set; } = DateTime.MinValue;
 
         public int getDropNumber(Guid id)
@@ -42,6 +42,38 @@ namespace TouchWalkthrough
                 }
             }
             return -1;
+        }
+
+        public void sortDrops()
+        {
+            drops.Sort((x, y) => DateTime.Compare(x.startTime, y.startTime));
+        }
+
+        public void addDrop(Drop drop)
+        {
+            drops.Add(drop);
+        }
+
+        public List<Drop> getDrops()
+        {
+            return drops;
+        }
+
+        public Drop getDrop(Guid id)
+        {
+            foreach (Drop drop in drops)
+            {
+                if (drop.id == id)
+                {
+                    return drop;
+                }
+            }
+            return null;
+        }
+
+        public Drop getDrop(string id)
+        {
+            return getDrop(new Guid(id));
         }
 
         public List<Drop> getFilteredDrops(Category[] filters)
