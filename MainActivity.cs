@@ -193,11 +193,11 @@
             {
                 if (mapdrop.ignored)
                     continue;
-                if (mapdrop.category == Category.EVENT && hap1_button_on)
+                if (hap1_button_on && mapdrop.category == Category.EVENT)
                     continue;
-                if (mapdrop.category == Category.WARNING && hap2_button_on)
+                if (hap2_button_on && mapdrop.category == Category.WARNING)
                     continue;
-                if (mapdrop.category == Category.VOTE && hap3_button_on)
+                if (hap3_button_on && mapdrop.category == Category.VOTE)
                     continue;
 
                 ImageButton drop_button = mapdrop.ToImageButton(this);
