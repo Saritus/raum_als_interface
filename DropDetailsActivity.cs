@@ -1,18 +1,10 @@
 ﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Android.Net;
-using Uri = Android.Net.Uri;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Java.IO;
-using Environment = Android.OS.Environment;
+using System;
 
 
 namespace TouchWalkthrough
@@ -37,7 +29,7 @@ namespace TouchWalkthrough
 
             // Kategorie
             ImageView category = FindViewById<ImageView>(Resource.Id.imageView1);
-            switch(drop.category)
+            switch (drop.category)
             {
                 case Category.EVENT:
                     category.SetImageResource(Resource.Drawable.icon_hap1);
@@ -55,7 +47,7 @@ namespace TouchWalkthrough
 
             //Vollbild ##############################################################
             ImageView image = FindViewById<ImageView>(Resource.Id.imageView2);//nicht Vollbild
-			ImageView imageVollbild = FindViewById<ImageView>(Resource.Id.imageView3);//Vollbild
+            ImageView imageVollbild = FindViewById<ImageView>(Resource.Id.imageView3);//Vollbild
             RelativeLayout vollbildlayout = FindViewById<RelativeLayout>(Resource.Id.Vollbildlayout);
             vollbildlayout.Visibility = ViewStates.Gone;
 
@@ -86,19 +78,19 @@ namespace TouchWalkthrough
             TextView raum = FindViewById<TextView>(Resource.Id.textView3);
             TextView beschreibung = FindViewById<TextView>(Resource.Id.textView1);
             TextView startdatum = FindViewById<TextView>(Resource.Id.textView39);
-			TextView enddatum = FindViewById<TextView>(Resource.Id.textView29);
-            
+            TextView enddatum = FindViewById<TextView>(Resource.Id.textView29);
+
             titel.Text = drop.name;
             raum.Text = drop.location.name;
             beschreibung.Text = drop.description;
 
-			//File file = new File(drop.picturePath);
-			//Uri contentUri = Uri.FromFile(file);
-			//image.SetImageURI(contentUri);
-			//imageVollbild.SetImageURI(contentUri);
+            //File file = new File(drop.picturePath);
+            //Uri contentUri = Uri.FromFile(file);
+            //image.SetImageURI(contentUri);
+            //imageVollbild.SetImageURI(contentUri);
 
             startdatum.Text = drop.startTime.ToString("dd.MM.yyyy");
-			enddatum.Text = drop.endTime.ToString("yy.MM.yyyy");
+            enddatum.Text = drop.endTime.ToString("yy.MM.yyyy");
             //Drop Infos anzeigen ENDE #############################################
 
         }
