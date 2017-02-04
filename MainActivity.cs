@@ -37,26 +37,15 @@
 			aktualisieren.Click += (object sender, EventArgs e) =>
 			{
 				List<Drop> mapDrops = dropmanager.getBuildingDrops(Building.Z);
-				RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
+				//RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
+				RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayout1);
                 ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.ImageViewKarte);
+
+                maplayout.RemoveAllViews();
+
                 foreach (Drop mapdrop in mapDrops)
 				{
-					ImageButton drop_button = new ImageButton(this);
-
-                    // Aussehen
-					switch (mapdrop.category)
-					{
-						case Category.EVENT:
-							drop_button.SetImageResource(Resource.Drawable.icon_hap1);
-							break;
-						case Category.WARNING:
-							drop_button.SetImageResource(Resource.Drawable.icon_hap2);
-							break;
-						case Category.VOTE:
-							drop_button.SetImageResource(Resource.Drawable.icon_hap3);
-							break;
-					}
-					drop_button.SetBackgroundColor(Color.Transparent);
+					ImageButton drop_button = mapdrop.ToImageButton(this);
 
                     // Position
                     float left = ((float)kartenlayout.Width - ((float)1224 / (float)2176) * (float)kartenlayout.Height) / (float)2;

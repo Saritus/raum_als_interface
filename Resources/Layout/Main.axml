@@ -27,6 +27,14 @@
             android:layout_above="@+id/relativeLayout_navbar"
             android:scaleType="centerInside" />
         <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout1"
+            android:layout_above="@+id/relativeLayoutFilter"
+            android:layout_alignParentTop="true" />
+        <RelativeLayout
             android:id="@+id/relativeLayout_navbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
