@@ -1,4 +1,7 @@
+using Android.Content;
+using Android.Graphics;
 using Android.Locations;
+using Android.Widget;
 using System;
 using System.Data;
 
@@ -111,6 +114,28 @@ namespace TouchWalkthrough
             }
 
             return tableitem;
+        }
+
+        public ImageButton ToImageButton(Context context)
+        {
+            ImageButton drop_button = new ImageButton(context);
+
+            // Aussehen
+            switch (category)
+            {
+                case Category.EVENT:
+                    drop_button.SetImageResource(Resource.Drawable.icon_hap1);
+                    break;
+                case Category.WARNING:
+                    drop_button.SetImageResource(Resource.Drawable.icon_hap2);
+                    break;
+                case Category.VOTE:
+                    drop_button.SetImageResource(Resource.Drawable.icon_hap3);
+                    break;
+            }
+            drop_button.SetBackgroundColor(Color.Transparent);
+
+            return drop_button;
         }
     }
 }
