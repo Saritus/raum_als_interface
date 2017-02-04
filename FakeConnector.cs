@@ -36,17 +36,17 @@ namespace TouchWalkthrough
         {
             List<Drop> dummyDrops = new List<Drop>();
 
-            dummyDrops.Add(new Drop("Ausstellung Architektur", Category.EVENT, new DateTime(2017, 1, 13), new HTWLocation("Z902")));
-            dummyDrops.Add(new Drop("Party Semesterstart", Category.WARNING, new DateTime(2017, 2, 20), new HTWLocation("Z107")));
-            dummyDrops.Add(new Drop("Grillen Fak. Informatik", Category.VOTE, new DateTime(2017, 3, 12), new HTWLocation("Parkplatz")));
-            dummyDrops.Add(new Drop("Tag der offenen Tür", Category.EVENT, new DateTime(2017, 4, 21), new HTWLocation("PAB")));
-            dummyDrops.Add(new Drop("Seminar EWZ", Category.VOTE, new DateTime(2017, 5, 13), new HTWLocation("S410")));
-            dummyDrops.Add(new Drop("Feierliche Immatrikulation", Category.WARNING, new DateTime(2017, 6, 11), new HTWLocation("TRE 204")));
-            dummyDrops.Add(new Drop("Party Semesterstart", Category.VOTE, new DateTime(2017, 8, 10), new HTWLocation("Z113a")));
-            dummyDrops.Add(new Drop("Grillen Fak. Informatik", Category.WARNING, new DateTime(2017, 9, 23), new HTWLocation("Parkplatz")));
-            dummyDrops.Add(new Drop("Kommission Hochschulmarketing", Category.EVENT, new DateTime(2017, 10, 9), new HTWLocation("Z136b")));
-            dummyDrops.Add(new Drop("Kommission Lehre und Studium", Category.VOTE, new DateTime(2017, 11, 24), new HTWLocation("S311")));
-            dummyDrops.Add(new Drop("Bewerbungsfotoshooting", Category.WARNING, new DateTime(2017, 12, 8), new HTWLocation("PAB")));
+            dummyDrops.Add(new Drop("Ausstellung Architektur", Category.EVENT, new DateTime(2017, 1, 13), new HTWLocation("Z150")));
+            dummyDrops.Add(new Drop("Party Semesterstart", Category.WARNING, new DateTime(2017, 2, 20), new HTWLocation("Z154b")));
+            dummyDrops.Add(new Drop("Grillen Fak. Informatik", Category.VOTE, new DateTime(2017, 3, 12), new HTWLocation("Z146b")));
+            dummyDrops.Add(new Drop("Tag der offenen Tür", Category.EVENT, new DateTime(2017, 4, 21), new HTWLocation("Z136b")));
+            dummyDrops.Add(new Drop("Seminar EWZ", Category.VOTE, new DateTime(2017, 5, 13), new HTWLocation("Z133")));
+            dummyDrops.Add(new Drop("Feierliche Immatrikulation", Category.WARNING, new DateTime(2017, 6, 11), new HTWLocation("Z107")));
+            dummyDrops.Add(new Drop("Party Semesterstart", Category.VOTE, new DateTime(2017, 8, 10), new HTWLocation("Z102")));
+            dummyDrops.Add(new Drop("Grillen Fak. Informatik", Category.WARNING, new DateTime(2017, 9, 23), new HTWLocation("Z126")));
+            dummyDrops.Add(new Drop("Kommission Hochschulmarketing", Category.EVENT, new DateTime(2017, 10, 9), new HTWLocation("Z123")));
+            dummyDrops.Add(new Drop("Kommission Lehre und Studium", Category.VOTE, new DateTime(2017, 11, 24), new HTWLocation("Z141")));
+            dummyDrops.Add(new Drop("Bewerbungsfotoshooting", Category.WARNING, new DateTime(2017, 12, 8), new HTWLocation("Z138")));
 
             return dummyDrops;
         }
