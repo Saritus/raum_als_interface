@@ -88,7 +88,8 @@
 					hap1_button.SetImageResource(Resource.Drawable.icon_hap1);
 					hap1_button_on = false;
 				}
-			};
+                ResetDropButtons();
+            };
 			//############ 
 			TextView text2 = FindViewById<TextView>(Resource.Id.textView3);
 			ImageButton hap2_button = FindViewById<ImageButton>(Resource.Id.imageButton98);
@@ -107,7 +108,8 @@
 					hap2_button.SetImageResource(Resource.Drawable.icon_hap2);
 					hap2_button_on = false;
 				}
-			};
+                ResetDropButtons();
+            };
 			//############
 			TextView text3 = FindViewById<TextView>(Resource.Id.textView2);
 			ImageButton hap3_button = FindViewById<ImageButton>(Resource.Id.imageButton97);
@@ -126,6 +128,7 @@
 					hap3_button.SetImageResource(Resource.Drawable.icon_hap3);
 					hap3_button_on = false;
 				}
+                ResetDropButtons();
 			};
 			//For Filter-Button ON/OFF FILTER ENDE###########################################################
 
