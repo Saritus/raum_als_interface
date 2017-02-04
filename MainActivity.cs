@@ -21,8 +21,8 @@
 
         bool filter_button_on = false;
         bool hap1_button_on = false;
-        bool hap2_button_on = true;
-        bool hap3_button_on = true;
+        bool hap2_button_on = false;
+        bool hap3_button_on = false;
         DropManager dropmanager = DropManager.Instance;
 
         private Timer timer;
@@ -244,6 +244,5 @@
             ResetDropButtons();
         }
         //Drops auf Karte darstellen ###########################################################
-
     }
 }
