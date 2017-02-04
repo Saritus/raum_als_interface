@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-
+﻿
 using Android.Graphics;
 
 namespace TouchWalkthrough

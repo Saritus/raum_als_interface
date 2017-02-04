@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using Android.App;
+﻿using Android.App;
 using Android.Content;
-using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
-using Android.Provider;
-using Android.Widget;
 using Android.Views;
-using Java.IO;
-using Environment = Android.OS.Environment;
-using Uri = Android.Net.Uri;
+using Android.Widget;
+using System;
 
 namespace TouchWalkthrough
 {

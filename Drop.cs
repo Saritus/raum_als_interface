@@ -1,9 +1,7 @@
 using Android.Content;
 using Android.Graphics;
-using Android.Locations;
 using Android.Widget;
 using System;
-using System.Data;
 
 namespace TouchWalkthrough
 {
