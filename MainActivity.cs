@@ -152,7 +152,19 @@
             //For arrow_left Button ENDE ##############################################################
 
 
-            timer = new Timer(x => this.RunOnUiThread(() => ResetDropButtons()), null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+            timer = new Timer(x => timerEvent(), null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+        }
+
+        private void timerEvent()
+        {
+            this.RunOnUiThread(() => ResetDropButtons());
+
+            // stop timer
+            if (timer != null)
+            {
+                timer.Dispose();
+                timer = null;
+            }
         }
 
         //Use Hardware-Back-Button ##############################################################
