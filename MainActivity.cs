@@ -39,12 +39,12 @@
 				List<Drop> mapDrops = dropmanager.getBuildingDrops(Building.Z);
 				RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
                 ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.ImageViewKarte);
-                for (int i = 0; i < mapDrops.Count; i++)
+                foreach (Drop mapdrop in mapDrops)
 				{
 					ImageButton drop_button = new ImageButton(this);
 
                     // Aussehen
-					switch (mapDrops[i].category)
+					switch (mapdrop.category)
 					{
 						case Category.EVENT:
 							drop_button.SetImageResource(Resource.Drawable.icon_hap1);
@@ -68,8 +68,8 @@
                     int screenX = screen[0];
                     int screenY = screen[1];
 
-                    drop_button.SetX(mapDrops[i].location.position.X * scaleY - drop_button.Width / 2 - screenX + 0.44f * left);
-                    drop_button.SetY(mapDrops[i].location.position.Y * scaleY - drop_button.Height / 2 - screenY);
+                    drop_button.SetX(mapdrop.location.position.X * scaleY - drop_button.Width / 2 - screenX + 0.44f * left);
+                    drop_button.SetY(mapdrop.location.position.Y * scaleY - drop_button.Height / 2 - screenY);
 
                     // Funktion
                     maplayout.AddView(drop_button);
