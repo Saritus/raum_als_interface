@@ -181,6 +181,8 @@
 
             foreach (Drop mapdrop in mapDrops)
             {
+                if (mapdrop.ignored)
+                    continue;
                 if (mapdrop.category == Category.EVENT && hap1_button_on)
                     continue;
                 if (mapdrop.category == Category.WARNING && hap2_button_on)
