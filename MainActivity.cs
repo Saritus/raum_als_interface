@@ -45,7 +45,14 @@
 
                 foreach (Drop mapdrop in mapDrops)
 				{
-					ImageButton drop_button = mapdrop.ToImageButton(this);
+                    if (mapdrop.category == Category.EVENT && !hap1_button_on)
+                        break;
+                    if (mapdrop.category == Category.WARNING && !hap2_button_on)
+                        break;
+                    if (mapdrop.category == Category.VOTE && !hap3_button_on)
+                        break;
+
+                    ImageButton drop_button = mapdrop.ToImageButton(this);
 
                     // Position
                     float left = ((float)kartenlayout.Width - ((float)1224 / (float)2176) * (float)kartenlayout.Height) / (float)2;
