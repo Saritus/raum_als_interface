@@ -156,12 +156,12 @@
         }
 
         private void timerEvent()
-        {
-            this.RunOnUiThread(() => ResetDropButtons());
-
-            // stop timer
+        { 
             if (timer != null)
             {
+                this.RunOnUiThread(() => ResetDropButtons());
+
+                // stop timer
                 timer.Dispose();
                 timer = null;
             }
