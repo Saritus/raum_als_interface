@@ -42,6 +42,8 @@
                 for (int i = 0; i < mapDrops.Count; i++)
 				{
 					ImageButton drop_button = new ImageButton(this);
+
+                    // Aussehen
 					switch (mapDrops[i].category)
 					{
 						case Category.EVENT:
@@ -56,6 +58,7 @@
 					}
 					drop_button.SetBackgroundColor(Color.Transparent);
 
+                    // Position
                     float left = ((float)kartenlayout.Width - ((float)1224 / (float)2176) * (float)kartenlayout.Height) / (float)2;
                     float scaleX = (float)kartenlayout.Width / (float)1224;
                     float scaleY = (float)kartenlayout.Height / (float)2176;
@@ -68,6 +71,7 @@
                     drop_button.SetX(mapDrops[i].location.position.X * scaleY - drop_button.Width / 2 - screenX + 0.44f * left);
                     drop_button.SetY(mapDrops[i].location.position.Y * scaleY - drop_button.Height / 2 - screenY);
 
+                    // Funktion
                     maplayout.AddView(drop_button);
                 }
 			};
