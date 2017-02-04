@@ -72,6 +72,14 @@
                     drop_button.SetY(mapdrop.location.position.Y * scaleY - drop_button.Height / 2 - screenY);
 
                     // Funktion
+                    drop_button.Click += (object senderobject, EventArgs ea) =>
+                    {
+                        Intent intent = new Intent(this, typeof(DropDetailsActivity));
+                        intent.PutExtra("ID", dropmanager.getDropNumber(mapdrop.id));
+                        
+                        StartActivity(intent);
+                    };
+
                     maplayout.AddView(drop_button);
                 }
 			};
