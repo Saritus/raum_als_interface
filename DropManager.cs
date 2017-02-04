@@ -49,6 +49,11 @@ namespace TouchWalkthrough
             drops.Sort((x, y) => DateTime.Compare(x.startTime, y.startTime));
         }
 
+        public List<Drop> getDrops()
+        {
+            return drops;
+        }
+
         public List<Drop> getFilteredDrops(Category[] filters)
         {
             return drops.Where(drop => filters.Contains(drop.category)).ToList();
