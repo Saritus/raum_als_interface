@@ -531,7 +531,8 @@
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/linearLayout1439" />
+            android:layout_below="@+id/linearLayout1439"
+            android:layout_above="@+id/imageButton575" />
         <DatePicker
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -540,27 +541,47 @@
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/linearLayout1439" />
-        <Button
-            android:text="OK"
+            android:layout_below="@+id/linearLayout1439"
+            android:layout_above="@+id/imageButton575" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button4"
-            android:textColor="#ff424242"
-            android:layout_toLeftOf="@+id/button10"
-            android:backgroundTint="@android:color/transparent"
-            android:textStyle="bold"
-            android:layout_below="@+id/datePicker4_enddate" />
-        <Button
-            android:text="ABBRUCH"
+            android:id="@+id/imageButton575"
+            android:layout_above="@+id/linearLayout1440"
+            android:background="@android:color/transparent"
+            android:alpha="0" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/button4"
-            android:id="@+id/button5"
-            android:textColor="#ff212121"
-            android:textStyle="bold"
-            android:backgroundTint="@android:color/transparent"
-            android:layout_below="@+id/datePicker4_enddate" />
+            android:id="@+id/linearLayout1440"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+            <Button
+                android:text="ABBRUCH"
+                android:id="@+id/button5"
+                android:textColor="#ff212121"
+                android:textStyle="bold"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Button
+                android:text="OK"
+                android:id="@+id/button4"
+                android:textColor="#ff424242"
+                android:backgroundTint="@android:color/transparent"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/button13"
+                android:alpha="0" />
+        </LinearLayout>
         <Button
             android:id="@+id/button9"
             android:layout_width="wrap_content"
