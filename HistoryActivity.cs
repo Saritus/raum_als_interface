@@ -24,7 +24,7 @@ namespace TouchWalkthrough
 
             listView = FindViewById<ListView>(Resource.Id.List);
 
-            dropmanager.drops.ForEach(drop => tableItems.Add(drop.ToTableItem()));
+            dropmanager.getDrops().ForEach(drop => tableItems.Add(drop.ToTableItem()));
 
             listView.Adapter = new HomeScreenAdapter(this, tableItems);
 
