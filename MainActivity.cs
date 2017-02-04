@@ -9,6 +9,7 @@
     using Android.Widget;
     using System;
     using System.Collections.Generic; //For ListView
+    using System.Threading;
 
     [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/logo", Theme = "@android:style/Theme.NoTitleBar")]
     public class MainActivity : Activity
@@ -23,6 +24,8 @@
         bool hap2_button_on = true;
         bool hap3_button_on = true;
         DropManager dropmanager = DropManager.Instance;
+
+        private Timer timer;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -148,6 +151,8 @@
             };
             //For arrow_left Button ENDE ##############################################################
 
+
+            timer = new Timer(x => this.RunOnUiThread(() => ResetDropButtons()), null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
         }
 
         //Use Hardware-Back-Button ##############################################################
