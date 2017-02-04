@@ -45,12 +45,12 @@
 
                 foreach (Drop mapdrop in mapDrops)
 				{
-                    if (mapdrop.category == Category.EVENT && !hap1_button_on)
-                        break;
-                    if (mapdrop.category == Category.WARNING && !hap2_button_on)
-                        break;
-                    if (mapdrop.category == Category.VOTE && !hap3_button_on)
-                        break;
+                    if (mapdrop.category == Category.EVENT && hap1_button_on)
+                        continue;
+                    if (mapdrop.category == Category.WARNING && hap2_button_on)
+                        continue;
+                    if (mapdrop.category == Category.VOTE && hap3_button_on)
+                        continue;
 
                     ImageButton drop_button = mapdrop.ToImageButton(this);
 
