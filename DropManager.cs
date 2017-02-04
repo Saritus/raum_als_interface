@@ -59,6 +59,23 @@ namespace TouchWalkthrough
             return drops;
         }
 
+        public Drop getDrop(Guid id)
+        {
+            foreach (Drop drop in drops)
+            {
+                if (drop.id == id)
+                {
+                    return drop;
+                }
+            }
+            return null;
+        }
+
+        public Drop getDrop(string id)
+        {
+            return getDrop(new Guid(id));
+        }
+
         public List<Drop> getFilteredDrops(Category[] filters)
         {
             return drops.Where(drop => filters.Contains(drop.category)).ToList();
