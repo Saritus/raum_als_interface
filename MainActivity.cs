@@ -10,7 +10,6 @@
     using System;
     using System.Collections.Generic; //For ListView
 
-    //
     [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/logo", Theme = "@android:style/Theme.NoTitleBar")]
     public class MainActivity : Activity
     {
@@ -43,7 +42,7 @@
             ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
             history_button.Click += (object sender, EventArgs e) =>
             {
-                StartActivity(typeof(HistoryActivity));
+                StartActivityForResult(typeof(HistoryActivity), HISTORY_REQUEST);
             };
             //OPEN-HISTORY ENDE ##############################################################
 
@@ -135,7 +134,7 @@
             ImageButton plus_button = FindViewById<ImageButton>(Resource.Id.imageButton1);
             plus_button.Click += (object sender, EventArgs e) =>
             {
-                StartActivity(typeof(NewDropActivity));
+                StartActivityForResult(typeof(NewDropActivity), NEWDROP_REQUEST);
             };
             //OPEN CREAT NEW DROP (Plus-Button) ENDE ##########################################################
 
@@ -216,7 +215,7 @@
                     Intent intent = new Intent(this, typeof(DropDetailsActivity));
                     intent.PutExtra("ID", dropmanager.getDropNumber(mapdrop.id));
 
-                    StartActivityForResult(intent, 0);
+                    StartActivityForResult(intent, DROPDETAIL_REQUEST);
                 };
 
                 maplayout.AddView(drop_button);
