@@ -36,7 +36,7 @@
 			ImageButton aktualisieren = FindViewById<ImageButton>(Resource.Id.imageButton104);
 			aktualisieren.Click += (object sender, EventArgs e) =>
 			{
-				List<Drop> mapDrops = dropmanager.drops;
+				List<Drop> mapDrops = dropmanager.getBuildingDrops(Building.Z);
 				RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
                 ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.ImageViewKarte);
                 for (int i = 0; i < mapDrops.Count; i++)
