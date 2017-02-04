@@ -122,18 +122,7 @@ namespace TouchWalkthrough
 
             tableitem.SubHeading = location.ToString() + "; " + startTime.ToString("dd.MM.yyyy");
 
-            switch (category)
-            {
-                case Category.EVENT:
-                    tableitem.ImageResourceId = Resource.Drawable.icon_hap1;
-                    break;
-                case Category.VOTE:
-                    tableitem.ImageResourceId = Resource.Drawable.icon_hap3;
-                    break;
-                case Category.WARNING:
-                    tableitem.ImageResourceId = Resource.Drawable.icon_hap2;
-                    break;
-            }
+            tableitem.ImageResourceId = GetIconId();
 
             return tableitem;
         }
