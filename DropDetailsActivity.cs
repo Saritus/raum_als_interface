@@ -93,6 +93,17 @@ namespace TouchWalkthrough
             enddatum.Text = drop.endTime.ToString("yy.MM.yyyy");
             //Drop Infos anzeigen ENDE #############################################
 
+            // Switch
+            Switch ignore_switch = FindViewById<Switch>(Resource.Id.switch_button);
+
+            ignore_switch.Checked = drop.ignored;
+
+            ignore_switch.CheckedChange += delegate (object sender, CompoundButton.CheckedChangeEventArgs e)
+            {
+                drop.ignored = ignore_switch.Checked;
+            };
+            // Switch ENDE
+
         }
     }
 }
