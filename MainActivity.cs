@@ -36,48 +36,7 @@
 			ImageButton aktualisieren = FindViewById<ImageButton>(Resource.Id.imageButton104);
 			aktualisieren.Click += (object sender, EventArgs e) =>
 			{
-				List<Drop> mapDrops = dropmanager.getBuildingDrops(Building.Z);
-				//RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
-				RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayout1);
-                ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.ImageViewKarte);
-
-                maplayout.RemoveAllViews();
-
-                foreach (Drop mapdrop in mapDrops)
-				{
-                    if (mapdrop.category == Category.EVENT && hap1_button_on)
-                        continue;
-                    if (mapdrop.category == Category.WARNING && hap2_button_on)
-                        continue;
-                    if (mapdrop.category == Category.VOTE && hap3_button_on)
-                        continue;
-
-                    ImageButton drop_button = mapdrop.ToImageButton(this);
-
-                    // Position
-                    float left = ((float)kartenlayout.Width - ((float)1224 / (float)2176) * (float)kartenlayout.Height) / (float)2;
-                    float scaleX = (float)kartenlayout.Width / (float)1224;
-                    float scaleY = (float)kartenlayout.Height / (float)2176;
-
-                    int[] screen = new int[2];
-                    kartenlayout.GetLocationOnScreen(screen);
-                    int screenX = screen[0];
-                    int screenY = screen[1];
-
-                    drop_button.SetX(mapdrop.location.position.X * scaleY - drop_button.Width / 2 - screenX + 0.44f * left);
-                    drop_button.SetY(mapdrop.location.position.Y * scaleY - drop_button.Height / 2 - screenY);
-
-                    // Funktion
-                    drop_button.Click += (object senderobject, EventArgs ea) =>
-                    {
-                        Intent intent = new Intent(this, typeof(DropDetailsActivity));
-                        intent.PutExtra("ID", dropmanager.getDropNumber(mapdrop.id));
-                        
-                        StartActivity(intent);
-                    };
-
-                    maplayout.AddView(drop_button);
-                }
+                ResetDropButtons();
 			};
 			//Drops auf Karte darstellen ###########################################################
 
@@ -211,5 +170,51 @@
 			dialog.Show();
 		} 
 		//Use Hardware-Back-Button ENDE ##############################################################
+
+        public void ResetDropButtons()
+        {
+            List<Drop> mapDrops = dropmanager.getBuildingDrops(Building.Z);
+            //RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
+            RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayout1);
+            ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.ImageViewKarte);
+
+            maplayout.RemoveAllViews();
+
+            foreach (Drop mapdrop in mapDrops)
+            {
+                if (mapdrop.category == Category.EVENT && hap1_button_on)
+                    continue;
+                if (mapdrop.category == Category.WARNING && hap2_button_on)
+                    continue;
+                if (mapdrop.category == Category.VOTE && hap3_button_on)
+                    continue;
+
+                ImageButton drop_button = mapdrop.ToImageButton(this);
+
+                // Position
+                float left = ((float)kartenlayout.Width - ((float)1224 / (float)2176) * (float)kartenlayout.Height) / (float)2;
+                float scaleX = (float)kartenlayout.Width / (float)1224;
+                float scaleY = (float)kartenlayout.Height / (float)2176;
+
+                int[] screen = new int[2];
+                kartenlayout.GetLocationOnScreen(screen);
+                int screenX = screen[0];
+                int screenY = screen[1];
+
+                drop_button.SetX(mapdrop.location.position.X * scaleY - drop_button.Width / 2 - screenX + 0.44f * left);
+                drop_button.SetY(mapdrop.location.position.Y * scaleY - drop_button.Height / 2 - screenY);
+
+                // Funktion
+                drop_button.Click += (object senderobject, EventArgs ea) =>
+                {
+                    Intent intent = new Intent(this, typeof(DropDetailsActivity));
+                    intent.PutExtra("ID", dropmanager.getDropNumber(mapdrop.id));
+
+                    StartActivity(intent);
+                };
+
+                maplayout.AddView(drop_button);
+            }
+        }
     }
 }
