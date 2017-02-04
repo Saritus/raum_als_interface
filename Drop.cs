@@ -90,6 +90,30 @@ namespace TouchWalkthrough
             this.picturePath = newDrop.picturePath;
         }
 
+        public int GetIconId()
+        {
+            switch (category)
+            {
+                case Category.EVENT:
+                    if (ignored)
+                        return Resource.Drawable.icon_hap1_off;
+                    else
+                        return Resource.Drawable.icon_hap1;
+                case Category.VOTE:
+                    if (ignored)
+                        return Resource.Drawable.icon_hap3_off;
+                    else
+                        return Resource.Drawable.icon_hap3;
+                case Category.WARNING:
+                    if (ignored)
+                        return Resource.Drawable.icon_hap2_off;
+                    else
+                        return Resource.Drawable.icon_hap2;
+                default:
+                    return -1;
+            }
+        }
+
         public TableItem ToTableItem()
         {
             TableItem tableitem = new TableItem();
