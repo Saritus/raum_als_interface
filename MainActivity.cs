@@ -32,15 +32,12 @@
 
             DropManager.Instance.updateDrops();//bringt an der stelle nur 1x und zwar beim start der app was
 
-			//Drops auf Karte darstellen ###########################################################
-			ImageButton aktualisieren = FindViewById<ImageButton>(Resource.Id.imageButton104);
+            
+            ImageButton aktualisieren = FindViewById<ImageButton>(Resource.Id.imageButton104);
 			aktualisieren.Click += (object sender, EventArgs e) =>
 			{
                 ResetDropButtons();
 			};
-			//Drops auf Karte darstellen ###########################################################
-
-
 
 
 			 //OPEN-HISTORY##############################################################
@@ -171,9 +168,11 @@
 
 			Dialog dialog = alert.Create();
 			dialog.Show();
-		} 
-		//Use Hardware-Back-Button ENDE ##############################################################
+		}
+        //Use Hardware-Back-Button ENDE ##############################################################
 
+
+        //Drops auf Karte darstellen ###########################################################
         public void ResetDropButtons()
         {
             List<Drop> mapDrops = dropmanager.getBuildingDrops(Building.Z);
@@ -219,5 +218,7 @@
                 maplayout.AddView(drop_button);
             }
         }
+        //Drops auf Karte darstellen ###########################################################
+
     }
 }
