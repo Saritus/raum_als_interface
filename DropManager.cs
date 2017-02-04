@@ -29,7 +29,7 @@ namespace TouchWalkthrough
 
         // local-part
 
-        public List<Drop> drops { get; private set; }
+        private List<Drop> drops { get; set; }
         public DateTime lastUpdate { get; private set; } = DateTime.MinValue;
 
         public int getDropNumber(Guid id)
