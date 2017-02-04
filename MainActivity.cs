@@ -211,10 +211,19 @@
                     Intent intent = new Intent(this, typeof(DropDetailsActivity));
                     intent.PutExtra("ID", dropmanager.getDropNumber(mapdrop.id));
 
-                    StartActivity(intent);
+                    StartActivityForResult(intent, 0);
                 };
 
                 maplayout.AddView(drop_button);
+            }
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            // Check which request we're responding to
+            if (requestCode == 0)
+            {
+                ResetDropButtons();
             }
         }
         //Drops auf Karte darstellen ###########################################################
