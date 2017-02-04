@@ -23,16 +23,61 @@
 		bool hap1_button_on = false;
 		bool hap2_button_on = true;
 		bool hap3_button_on = true;
+		DropManager dropmanager = DropManager.Instance;
 
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
  			SetContentView(Resource.Layout.Main);
 
-            DropManager.Instance.updateDrops();
+            DropManager.Instance.updateDrops();//bringt an der stelle nur 1x und zwar beim start der app was
 
-            //OPEN-HISTORY##############################################################
-            ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
+			//Drops auf Karte darstellen ###########################################################
+			ImageButton aktualisieren = FindViewById<ImageButton>(Resource.Id.imageButton104);
+			aktualisieren.Click += (object sender, EventArgs e) =>
+			{
+				List<Drop> mapDrops = dropmanager.getBuildingDrops(Building.Z);
+				RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
+                ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.ImageViewKarte);
+                for (int i = 0; i < mapDrops.Count; i++)
+				{
+					ImageButton testbutton = new ImageButton(this);
+					switch (mapDrops[i].category)
+					{
+						case Category.EVENT:
+							testbutton.SetImageResource(Resource.Drawable.icon_hap1);
+							break;
+						case Category.WARNING:
+							testbutton.SetImageResource(Resource.Drawable.icon_hap2);
+							break;
+						case Category.VOTE:
+							testbutton.SetImageResource(Resource.Drawable.icon_hap3);
+							break;
+					}
+					testbutton.SetBackgroundColor(Color.Transparent);
+
+                    float left = ((float)kartenlayout.Width - ((float)1224 / (float)2176) * (float)kartenlayout.Height) / (float)2;
+                    float scaleX = (float)kartenlayout.Width / (float)1224;
+                    float scaleY = (float)kartenlayout.Height / (float)2176;
+
+                    int[] screen = new int[2];
+                    kartenlayout.GetLocationOnScreen(screen);
+                    int screenX = screen[0];
+                    int screenY = screen[1];
+
+                    testbutton.SetX(mapDrops[i].location.position.X * scaleY - testbutton.Width / 2 - screenX + 0.44f * left);
+                    testbutton.SetY(mapDrops[i].location.position.Y * scaleY - testbutton.Height / 2 - screenY);
+
+                    maplayout.AddView(testbutton);
+                }
+			};
+			//Drops auf Karte darstellen ###########################################################
+
+
+
+
+			 //OPEN-HISTORY##############################################################
+			ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
 			history_button.Click += (object sender, EventArgs e) =>
 			{
 				StartActivity(typeof(HistoryActivity));

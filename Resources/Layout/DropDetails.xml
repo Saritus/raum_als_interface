@@ -220,26 +220,107 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/imageButton569"
-            android:layout_weight="0.3"
-            android:background="@android:color/transparent" />
-        <TextView
-            android:text="Mittwoch, 25. Jan"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:background="@android:color/transparent"
+            android:layout_weight="0.1" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView239"
-            android:layout_weight="0.7"
-            android:gravity="center"
-            android:textColor="#807c7b" />
-        <TextView
-            android:text="15:00 - 19:00"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/textView24"
-            android:layout_weight="0.3"
-            android:gravity="center_vertical"
-            android:textColor="#807c7b" />
+            android:id="@+id/linearLayout136"
+            android:layout_weight="0.7">
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/linearLayout1438"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0">
+                <TextView
+                    android:text="Von:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView33"
+                    android:textColor="#807c7b" />
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView36"
+                    android:textColor="@android:color/transparent" />
+                <TextView
+                    android:text="Bis:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView22"
+                    android:textColor="#807c7b" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/linearLayout14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2">
+                <TextView
+                    android:text="dd.mm.yyyy"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView39"
+                    android:gravity="center"
+                    android:textColor="#807c7b" />
+                <TextView
+                    android:text="Small Text"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView36"
+                    android:textColor="@android:color/transparent" />
+                <TextView
+                    android:text="dd.mm.yyyy"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView29"
+                    android:textColor="#807c7b"
+                    android:gravity="center" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/linearLayout143"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2">
+                <TextView
+                    android:text="15:00"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView33"
+                    android:textColor="#807c7b" />
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView36"
+                    android:textColor="@android:color/transparent" />
+                <TextView
+                    android:text="19:00"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView22"
+                    android:textColor="#807c7b" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
     <RelativeLayout
         android:minWidth="25px"

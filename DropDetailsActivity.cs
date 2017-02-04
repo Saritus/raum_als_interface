@@ -85,8 +85,8 @@ namespace TouchWalkthrough
             TextView titel = FindViewById<TextView>(Resource.Id.textView22);
             TextView raum = FindViewById<TextView>(Resource.Id.textView3);
             TextView beschreibung = FindViewById<TextView>(Resource.Id.textView1);
-            TextView datum = FindViewById<TextView>(Resource.Id.textView239);
-
+            TextView startdatum = FindViewById<TextView>(Resource.Id.textView39);
+			TextView enddatum = FindViewById<TextView>(Resource.Id.textView29);
             
             titel.Text = drop.name;
             raum.Text = drop.location.name;
@@ -97,7 +97,8 @@ namespace TouchWalkthrough
 			//image.SetImageURI(contentUri);
 			//imageVollbild.SetImageURI(contentUri);
 
-            datum.Text = drop.startTime.ToString("dd.MM.yyyy");
+            startdatum.Text = drop.startTime.ToString("dd.MM.yyyy");
+			enddatum.Text = drop.endTime.ToString("yy.MM.yyyy");
             //Drop Infos anzeigen ENDE #############################################
 
         }
