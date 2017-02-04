@@ -225,10 +225,19 @@
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             // Check which request we're responding to
-            if (requestCode == 0)
+            if (requestCode == HISTORY_REQUEST)
             {
-                ResetDropButtons();
+
             }
+            else if (requestCode == DROPDETAIL_REQUEST)
+            {
+
+            }
+            else if (requestCode == NEWDROP_REQUEST)
+            {
+
+            }
+            ResetDropButtons();
         }
         //Drops auf Karte darstellen ###########################################################
 
