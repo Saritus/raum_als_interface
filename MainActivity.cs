@@ -59,21 +59,16 @@
                     float left = ((float)kartenlayout.Width - ((float)1224 / (float)2176) * (float)kartenlayout.Height) / (float)2;
                     float scaleX = (float)kartenlayout.Width / (float)1224;
                     float scaleY = (float)kartenlayout.Height / (float)2176;
-                    float layoutX = kartenlayout.GetX();
-                    float layoutY = kartenlayout.GetY();
 
                     int[] screen = new int[2];
                     kartenlayout.GetLocationOnScreen(screen);
                     int screenX = screen[0];
                     int screenY = screen[1];
 
-                    testbutton.SetX(mapDrops[i].location.position.X * scaleY - layoutX - testbutton.Width / 2 - screenX + scaleY*left);
-                    testbutton.SetY(mapDrops[i].location.position.Y * scaleY - layoutY - testbutton.Height / 2 - screenY);
+                    testbutton.SetX(mapDrops[i].location.position.X * scaleY - testbutton.Width / 2 - screenX + scaleY * left);
+                    testbutton.SetY(mapDrops[i].location.position.Y * scaleY - testbutton.Height / 2 - screenY);
 
                     maplayout.AddView(testbutton);
-
-                    //testbutton.SetX(mapDrops[i].location.position.X);
-                    //testbutton.SetY(mapDrops[i].location.position.Y);
                 }
 			};
 			//Drops auf Karte darstellen ###########################################################
