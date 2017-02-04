@@ -14,6 +14,11 @@
     [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/logo", Theme = "@android:style/Theme.NoTitleBar")]
     public class MainActivity : Activity
     {
+        // request codes
+        static int HISTORY_REQUEST = 1001;
+        static int DROPDETAIL_REQUEST = 1002;
+        static int NEWDROP_REQUEST = 1003;
+
         bool filter_button_on = false;
         bool hap1_button_on = false;
         bool hap2_button_on = true;
