@@ -41,20 +41,20 @@
                 ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.ImageViewKarte);
                 for (int i = 0; i < mapDrops.Count; i++)
 				{
-					ImageButton testbutton = new ImageButton(this);
+					ImageButton dropbutton = new ImageButton(this);
 					switch (mapDrops[i].category)
 					{
 						case Category.EVENT:
-							testbutton.SetImageResource(Resource.Drawable.icon_hap1);
+							dropbutton.SetImageResource(Resource.Drawable.icon_hap1);
 							break;
 						case Category.WARNING:
-							testbutton.SetImageResource(Resource.Drawable.icon_hap2);
+							dropbutton.SetImageResource(Resource.Drawable.icon_hap2);
 							break;
 						case Category.VOTE:
-							testbutton.SetImageResource(Resource.Drawable.icon_hap3);
+							dropbutton.SetImageResource(Resource.Drawable.icon_hap3);
 							break;
 					}
-					testbutton.SetBackgroundColor(Color.Transparent);
+					dropbutton.SetBackgroundColor(Color.Transparent);
 
                     float left = ((float)kartenlayout.Width - ((float)1224 / (float)2176) * (float)kartenlayout.Height) / (float)2;
                     float scaleX = (float)kartenlayout.Width / (float)1224;
@@ -65,10 +65,10 @@
                     int screenX = screen[0];
                     int screenY = screen[1];
 
-                    testbutton.SetX(mapDrops[i].location.position.X * scaleY - testbutton.Width / 2 - screenX + 0.44f * left);
-                    testbutton.SetY(mapDrops[i].location.position.Y * scaleY - testbutton.Height / 2 - screenY);
+                    dropbutton.SetX(mapDrops[i].location.position.X * scaleY - dropbutton.Width / 2 - screenX + 0.44f * left);
+                    dropbutton.SetY(mapDrops[i].location.position.Y * scaleY - dropbutton.Height / 2 - screenY);
 
-                    maplayout.AddView(testbutton);
+                    maplayout.AddView(dropbutton);
                 }
 			};
 			//Drops auf Karte darstellen ###########################################################
