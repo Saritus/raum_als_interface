@@ -31,8 +31,6 @@
  			SetContentView(Resource.Layout.Main);
 
             DropManager.Instance.updateDrops();//bringt an der stelle nur 1x und zwar beim start der app was
-            ResetDropButtons();
-
             
             ImageButton aktualisieren = FindViewById<ImageButton>(Resource.Id.imageButton104);
 			aktualisieren.Click += (object sender, EventArgs e) =>
