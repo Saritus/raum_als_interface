@@ -143,6 +143,7 @@
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
                     android:textColor="#ffbdbdbd"
                     android:typeface="normal" />
                 <TextView
@@ -151,6 +152,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
                     android:typeface="normal"
                     android:textColor="#ffbdbdbd" />
             </LinearLayout>
