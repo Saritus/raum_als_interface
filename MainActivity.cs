@@ -40,6 +40,9 @@
 				//RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
 				RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayout1);
                 ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.ImageViewKarte);
+
+                maplayout.RemoveAllViews();
+
                 foreach (Drop mapdrop in mapDrops)
 				{
 					ImageButton drop_button = mapdrop.ToImageButton(this);
