@@ -18,6 +18,9 @@ namespace TouchWalkthrough
         private Timer timer;
         Drop drop;
 
+        // Interface
+        RelativeLayout maplayout;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
