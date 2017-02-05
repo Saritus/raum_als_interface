@@ -78,12 +78,12 @@ namespace TouchWalkthrough
 
         public void saveImages(string filename)
         {
-            XML.Save(images, filename);
+            Binary.Save(images, filename);
         }
 
         public void loadImages(string filename)
         {
-            images = XML.Load<Dictionary<string, Bitmap>>(filename);
+            images = Binary.Load<Dictionary<string, Bitmap>>(filename);
         }
     }
 }

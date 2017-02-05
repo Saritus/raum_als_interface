@@ -103,12 +103,12 @@ namespace TouchWalkthrough
 
         public void saveDrops(string filename)
         {
-            XML.Save(drops, filename);
+            Binary.Save(drops, filename);
         }
 
         public void loadDrops(string filename)
         {
-            drops = XML.Load<List<Drop>>(filename);
+            drops = Binary.Load<List<Drop>>(filename);
         }
 
         // server-part
