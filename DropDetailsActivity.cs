@@ -90,7 +90,7 @@ namespace TouchWalkthrough
             //Drop Infos anzeigen ENDE #############################################
 
             // Switch
-            Switch ignore_switch = FindViewById<Switch>(Resource.Id.switch_button);
+            ignore_switch = FindViewById<Switch>(Resource.Id.switch_button);
 
             ignore_switch.Checked = drop.ignored;
 
@@ -102,8 +102,8 @@ namespace TouchWalkthrough
 
 			//Auf Karte anzeigen
 			LinearLayout aufKarteAnzeigen = FindViewById<LinearLayout>(Resource.Id.linearLayout133);
-			RelativeLayout kartenlayer = FindViewById<RelativeLayout>(Resource.Id.relativeLayout2);
-			TextView ingoreText = FindViewById<TextView>(Resource.Id.textView26);
+			kartenlayer = FindViewById<RelativeLayout>(Resource.Id.relativeLayout2);
+			ingoreText = FindViewById<TextView>(Resource.Id.textView26);
             maplayout = FindViewById<RelativeLayout>(Resource.Id.maplayout2);
 
 			kartenlayer.Visibility = ViewStates.Gone;
