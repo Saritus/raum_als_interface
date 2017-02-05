@@ -77,7 +77,7 @@ namespace TouchWalkthrough
             //imageVollbild.SetImageURI(contentUri);
 
             startdatum.Text = drop.startTime.ToString("dd.MM.yyyy");
-            enddatum.Text = drop.endTime.ToString("yy.MM.yyyy");
+            enddatum.Text = drop.endTime.ToString("dd.MM.yyyy");
             //Drop Infos anzeigen ENDE #############################################
 
             // Switch
