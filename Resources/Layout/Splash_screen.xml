@@ -6,6 +6,7 @@
   <item>
     <bitmap
         android:src="@drawable/loadscreen"
-        android:tileMode="disabled"/> 
+        android:tileMode="disabled"
+        android:scaleType="centerCrop"/>
   </item>
 </layer-list>
