@@ -101,11 +101,11 @@ namespace TouchWalkthrough
 			kartenlayer.Visibility = ViewStates.Gone;
 			aufKarteAnzeigen.Click += (object sender, EventArgs e) =>
 			{
-				ResetDropButtons(drop);
 				kartenlayer.Visibility = ViewStates.Visible;
 				ignore_switch.Visibility = ViewStates.Gone;
 				ingoreText.Visibility = ViewStates.Gone;
-			};
+                timer = new Timer(x => timerEvent(), null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+            };
 			kartenlayer.Click += (object sender, EventArgs e) =>
 			{
 				kartenlayer.Visibility = ViewStates.Gone;
@@ -115,6 +115,17 @@ namespace TouchWalkthrough
 			//Auf Karte anzeigen
         }
 
+        private void timerEvent()
+        {
+            if (timer != null)
+            {
+                this.RunOnUiThread(() => ResetDropButtons(drop));
+
+                // stop timer
+                timer.Dispose();
+                timer = null;
+            }
+        }
 
 		//Drops auf Karte darstellen ###########################################################
 		public void ResetDropButtons(Drop mapdrop)
