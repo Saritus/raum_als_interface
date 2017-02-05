@@ -36,7 +36,6 @@ namespace TouchWalkthrough
         {
             var listView2 = sender as ListView;
             var t = tableItems[e.Position];
-            Android.Widget.Toast.MakeText(this, t.Heading, Android.Widget.ToastLength.Short).Show();
 
             //gebe Daten des drops an Activity DropDetailsActivity.cs weiter... ID des drops reicht eigentlich oder?
             Intent intent = new Intent(this, typeof(DropDetailsActivity));
