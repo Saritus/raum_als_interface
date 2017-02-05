@@ -104,7 +104,7 @@ namespace TouchWalkthrough
 				kartenlayer.Visibility = ViewStates.Visible;
 				ignore_switch.Visibility = ViewStates.Gone;
 				ingoreText.Visibility = ViewStates.Gone;
-                timer = new Timer(x => timerEvent(), null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+                timer = new Timer(x => timerEvent(), null, TimeSpan.FromSeconds(0.1), TimeSpan.FromSeconds(0.1));
             };
 			kartenlayer.Click += (object sender, EventArgs e) =>
 			{
