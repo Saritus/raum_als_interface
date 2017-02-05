@@ -21,7 +21,13 @@ namespace TouchWalkthrough
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
-			System.Threading.Thread.Sleep(3000); //Let's wait awhile...
+
+            // Lade neue Drops
+            DropManager dropmanager = DropManager.Instance;
+            dropmanager.updateDrops();//bringt an der stelle nur 1x und zwar beim start der app was
+            dropmanager.sortDrops();
+
+            System.Threading.Thread.Sleep(3000); //Let's wait awhile...
 			this.StartActivity(typeof(MainActivity));
 		}
 	}
