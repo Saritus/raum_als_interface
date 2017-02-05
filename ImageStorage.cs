@@ -2,6 +2,7 @@ using Android.Content;
 using Android.Graphics;
 using Android.Provider;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 
 namespace TouchWalkthrough
@@ -14,7 +15,7 @@ namespace TouchWalkthrough
 
         private ImageStorage()
         {
-            images = new Dictionary<string, Bitmap>();
+            images = new Dictionary<string, byte[]>();
         }
 
         public static ImageStorage Instance
@@ -31,18 +32,18 @@ namespace TouchWalkthrough
 
         // Storage-part
 
-        private static Dictionary<string, Bitmap> images;
+        private static Dictionary<string, byte[]> images;
 
         public Bitmap getBitmap(string path)
         {
-            Bitmap bitmap;
-            images.TryGetValue(path, out bitmap);
-            return bitmap;
+            byte[] bitmapData;
+            images.TryGetValue(path, out bitmapData);
+            return ByteToImage(bitmapData);
         }
 
         public void addBitmap(string path, Bitmap bitmap)
         {
-            images.Add(path, bitmap);
+            images.Add(path, ImageToByte(bitmap));
         }
 
         public void addURL(string path)
@@ -83,7 +84,23 @@ namespace TouchWalkthrough
 
         public void loadImages(string filename)
         {
-            images = Binary.Load<Dictionary<string, Bitmap>>(filename);
+            images = Binary.Load<Dictionary<string, byte[]>>(filename);
+        }
+
+        public static byte[] ImageToByte(Bitmap bitmap)
+        {
+            byte[] bitmapData;
+            using (var stream = new MemoryStream())
+            {
+                bitmap.Compress(Bitmap.CompressFormat.Png, 0, stream);
+                bitmapData = stream.ToArray();
+            }
+            return bitmapData;
+        }
+
+        public static Bitmap ByteToImage(byte[] bitmapData)
+        {
+            return BitmapFactory.DecodeByteArray(bitmapData, 0, bitmapData.Length);
         }
     }
 }
