@@ -25,5 +25,9 @@ namespace TouchWalkthrough
                 return instance;
             }
         }
+
+        // Storage-part
+
+        static Dictionary<string, Bitmap> images;
     }
 }
