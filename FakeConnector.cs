@@ -74,7 +74,7 @@ namespace TouchWalkthrough
 
         public List<Drop> getNewDrops(DateTime lastUpdate)
         {
-            if (lastUpdate == new DateTime())
+            if (DropManager.Instance.getDrops().Count == 0)
             {
                 return dummyDrops.Where(drop => drop.lastChange >= lastUpdate).ToList();
             }
