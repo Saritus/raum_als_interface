@@ -89,8 +89,60 @@ namespace TouchWalkthrough
             {
                 drop.ignored = ignore_switch.Checked;
             };
-            // Switch ENDE
+			// Switch ENDE
 
+			//Auf Karte anzeigen
+			LinearLayout aufKarteAnzeigen = FindViewById<LinearLayout>(Resource.Id.linearLayout133);
+			RelativeLayout kartenlayer = FindViewById<RelativeLayout>(Resource.Id.relativeLayout2);
+			TextView ingoreText = FindViewById<TextView>(Resource.Id.textView26);
+			kartenlayer.Visibility = ViewStates.Gone;
+			aufKarteAnzeigen.Click += (object sender, EventArgs e) =>
+			{
+				ResetDropButtons(drop);
+				kartenlayer.Visibility = ViewStates.Visible;
+				ignore_switch.Visibility = ViewStates.Gone;
+				ingoreText.Visibility = ViewStates.Gone;
+			};
+			kartenlayer.Click += (object sender, EventArgs e) =>
+			{
+				kartenlayer.Visibility = ViewStates.Gone;
+				ignore_switch.Visibility = ViewStates.Visible;
+				ingoreText.Visibility = ViewStates.Visible;
+			};
+			//Auf Karte anzeigen
         }
+
+
+		//Drops auf Karte darstellen ###########################################################
+		public void ResetDropButtons(Drop mapdrop)
+		{
+			
+			RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.maplayout2);
+			ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.imageView5);
+
+			maplayout.RemoveAllViews();
+
+			ImageButton drop_button = mapdrop.ToImageButton(this);
+
+			// Position
+			float left = ((float)kartenlayout.Width - ((float)1224 / (float)2176) * (float)kartenlayout.Height) / (float)2;
+			float scaleX = (float)kartenlayout.Width / (float)1224;
+			float scaleY = (float)kartenlayout.Height / (float)2176;
+
+			int[] screen = new int[2];
+			kartenlayout.GetLocationOnScreen(screen);
+			int screenX = screen[0];
+			int screenY = screen[1];
+			drop_button.SetX(mapdrop.location.position.X * scaleY - drop_button.Width / 2 - screenX + 0.44f * left);
+			drop_button.SetY(mapdrop.location.position.Y * scaleY - drop_button.Height / 2 - screenY);
+
+			maplayout.AddView(drop_button);
+		}
+		//Drops auf Karte darstellen ENDE###########################################################
+
+
+
+
+
     }
 }
