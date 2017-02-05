@@ -1,4 +1,5 @@
 using Android.Graphics;
+using Android.Provider;
 using System.Collections.Generic;
 using System.Net;
 
@@ -63,6 +64,12 @@ namespace TouchWalkthrough
             }
 
             return imageBitmap;
+        }
+
+        public void addURI(string path, Android.Net.Uri uri, Android.Content.ContentResolver cr)
+        {
+            Bitmap bitmap = MediaStore.Images.Media.GetBitmap(cr, uri);
+            addBitmap(path, bitmap);
         }
     }
 }
