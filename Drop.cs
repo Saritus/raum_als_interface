@@ -5,16 +5,21 @@ using System;
 
 namespace TouchWalkthrough
 {
+    [Serializable()]
     public class Drop
     {
         // Internal settings
+
         public Guid id { get; private set; }
+
         public DateTime lastChange { get; private set; }
 
         // Creator settings
+
         public string name { get; set; }
 
         public Category category { get; set; }
+
         public string description { get; set; }
 
         public DateTime startTime { get; set; }
@@ -26,7 +31,9 @@ namespace TouchWalkthrough
         public string picturePath { get; set; }
 
         // User settings
+
         public bool followed { get; set; }
+
         public bool ignored { get; set; }
 
         public Drop(Guid id, string name, Category category, string description, DateTime startTime, DateTime endTime, HTWLocation location, string picturePath)
@@ -80,6 +87,11 @@ namespace TouchWalkthrough
 
         public Drop(string name, Category category, DateTime startTime, HTWLocation location, string picturePath)
             : this(Guid.NewGuid(), name, category, "", startTime, startTime.AddHours(1), location, picturePath)
+        {
+
+        }
+
+        public Drop()
         {
 
         }
