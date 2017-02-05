@@ -4,7 +4,7 @@ using System.Net;
 
 namespace TouchWalkthrough
 {
-    class ImageStorage
+    public class ImageStorage
     {
         // Singelton-part
 
@@ -29,27 +29,27 @@ namespace TouchWalkthrough
 
         // Storage-part
 
-        static Dictionary<string, Bitmap> images;
+        private static Dictionary<string, Bitmap> images;
 
-        public static Bitmap getBitmap(string path)
+        public Bitmap getBitmap(string path)
         {
             Bitmap bitmap;
             images.TryGetValue(path, out bitmap);
             return bitmap;
         }
 
-        public static void addBitmap(string path, Bitmap bitmap)
+        public void addBitmap(string path, Bitmap bitmap)
         {
             images.Add(path, bitmap);
         }
 
-        public static void addURL(string path)
+        public void addURL(string path)
         {
             Bitmap bitmap = GetImageBitmapFromUrl(path);
             addBitmap(path, bitmap);
         }
 
-        private static Bitmap GetImageBitmapFromUrl(string url)
+        private Bitmap GetImageBitmapFromUrl(string url)
         {
             Bitmap imageBitmap = null;
 
