@@ -36,6 +36,7 @@ namespace TouchWalkthrough
         {
             List<Drop> dummyDrops = new List<Drop>();
 
+            ImageStorage.Instance.addURL("http://media.einfachtierisch.de/thumbnail/600/0/media.einfachtierisch.de/images/2013/01/Junge-Katze-Erziehen.jpg");
             dummyDrops.Add(new Drop("Ausstellung Architektur", Category.EVENT, new DateTime(2017, 1, 13), new HTWLocation("Z150"), "http://media.einfachtierisch.de/thumbnail/600/0/media.einfachtierisch.de/images/2013/01/Junge-Katze-Erziehen.jpg"));
             dummyDrops.Add(new Drop("Party Semesterstart", Category.WARNING, new DateTime(2017, 2, 20), new HTWLocation("Z154b"), "http://media.einfachtierisch.de/thumbnail/600/0/media.einfachtierisch.de/images/2013/01/Junge-Katze-Erziehen.jpg"));
             dummyDrops.Add(new Drop("Grillen Fak. Informatik", Category.VOTE, new DateTime(2017, 3, 12), new HTWLocation("Z146b"), "http://media.einfachtierisch.de/thumbnail/600/0/media.einfachtierisch.de/images/2013/01/Junge-Katze-Erziehen.jpg"));
