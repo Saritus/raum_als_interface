@@ -1,7 +1,8 @@
+using Android.Graphics;
 using Android.Locations;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
+//using System.Drawing;
 using System.Text.RegularExpressions;
 
 namespace TouchWalkthrough
