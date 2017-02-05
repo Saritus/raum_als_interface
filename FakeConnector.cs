@@ -50,7 +50,10 @@ namespace TouchWalkthrough
             dummyDrops.Add(new Drop("Weihnachtsfeier", Category.EVENT, new DateTime(2017, 12, 21), new HTWLocation("Z113a")));
 
             // Better examples
-            dummyDrops.Add(new Drop("Kommission Hochschulmarketing", Category.EVENT, "", new DateTime(2017, 2, 13, 8, 0, 0), new DateTime(2017, 2, 13, 9, 30, 0), new HTWLocation("Z241")));
+            dummyDrops.Add(new Drop("Kommission Hochschulmarketing", Category.EVENT, "Organisator: Prof. Dr. Ralph Sonntag", new DateTime(2017, 2, 13, 8, 0, 0), new DateTime(2017, 2, 13, 9, 30, 0), new HTWLocation("Z241")));
+            dummyDrops.Add(new Drop("Kommission IT-Service", Category.EVENT, "Organisator: Prof. Dr. Dirk Reichelt", new DateTime(2017, 2, 28, 14, 0, 0), new DateTime(2017, 2, 28, 15, 30, 0), new HTWLocation("Z343")));
+
+            dummyDrops.Add(new Drop("Dies Academicus", Category.EVENT, "", new DateTime(2017, 6, 1, 9, 0, 0), new DateTime(2017, 6, 1, 10, 30, 0), new HTWLocation("Z107"), "dies_academicus.png"));
 
             return dummyDrops;
         }
