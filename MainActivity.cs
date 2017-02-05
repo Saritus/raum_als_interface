@@ -11,7 +11,7 @@
     using System.Collections.Generic; //For ListView
     using System.Threading;
 
-    [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/logo", Theme = "@android:style/Theme.NoTitleBar")]
+    [Activity(Label = "@string/app_name", Icon = "@drawable/logo", Theme = "@android:style/Theme.NoTitleBar")]
     public class MainActivity : Activity
     {
         // request codes
