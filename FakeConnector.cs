@@ -74,7 +74,14 @@ namespace TouchWalkthrough
 
         public List<Drop> getNewDrops(DateTime lastUpdate)
         {
-            return dummyDrops.Where(drop => drop.lastChange >= lastUpdate).ToList();
+            if (lastUpdate == new DateTime())
+            {
+                return dummyDrops.Where(drop => drop.lastChange >= lastUpdate).ToList();
+            }
+            else
+            {
+                return new List<Drop>();
+            }
         }
 
         public bool saveNewDrop(Drop newDrop)
