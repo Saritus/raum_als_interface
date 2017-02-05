@@ -42,9 +42,7 @@ namespace TouchWalkthrough
                 var imageView = FindViewById<ImageView>(Resource.Id.imageView1);
                 imageView.SetImageURI(data.Data);
                 imagepath = data.DataString;
-                Android.Net.Uri uri = Android.Net.Uri.Parse(data.Data.Path);
-                Bitmap bitmap = MediaStore.Images.Media.GetBitmap(ContentResolver, data.Data);
-                ImageStorage.Instance.addBitmap(imagepath, bitmap);
+                ImageStorage.Instance.addURI(imagepath, data.Data, this.ContentResolver);
             }
             //Fuer FilePicker ENDE #############################
 
