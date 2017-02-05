@@ -37,5 +37,9 @@ namespace TouchWalkthrough
             return bitmap;
         }
 
+        public static void addBitmap(string path, Bitmap bitmap)
+        {
+            images.Add(path, bitmap);
+        }
     }
 }
