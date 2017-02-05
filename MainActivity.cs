@@ -145,7 +145,6 @@
             };
             //For arrow_left Button ENDE ##############################################################
 
-
             maplayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayout1);
             timer = new Timer(x => timerEvent(), null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
         }
@@ -154,11 +153,14 @@
         { 
             if (timer != null)
             {
-                this.RunOnUiThread(() => ResetDropButtons());
+                if (maplayout.Width > 0)
+                {
+                    this.RunOnUiThread(() => ResetDropButtons());
 
-                // stop timer
-                timer.Dispose();
-                timer = null;
+                    // stop timer
+                    timer.Dispose();
+                    timer = null;
+                }
             }
         }
 
