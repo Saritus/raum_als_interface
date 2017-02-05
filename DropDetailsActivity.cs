@@ -20,6 +20,9 @@ namespace TouchWalkthrough
 
         // Interface
         RelativeLayout maplayout;
+        RelativeLayout kartenlayer;
+        Switch ignore_switch;
+        TextView ingoreText;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
