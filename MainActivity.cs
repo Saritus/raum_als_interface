@@ -249,5 +249,13 @@
             ResetDropButtons();
         }
         //Drops auf Karte darstellen ###########################################################
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            dropmanager.saveDrops("drops.xml");
+            ImageStorage.Instance.saveImages("images.xml");
+        }
     }
 }
