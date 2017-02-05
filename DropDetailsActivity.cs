@@ -159,7 +159,15 @@ namespace TouchWalkthrough
 			drop_button.SetX(mapdrop.location.position.X * scaleY - drop_button.Width / 2 - screenX + 0.44f * left);
 			drop_button.SetY(mapdrop.location.position.Y * scaleY - drop_button.Height / 2 - screenY);
 
-			maplayout.AddView(drop_button);
+            // Funktion
+            drop_button.Click += (object sender, EventArgs e) =>
+            {
+                kartenlayer.Visibility = ViewStates.Gone;
+                ignore_switch.Visibility = ViewStates.Visible;
+                ingoreText.Visibility = ViewStates.Visible;
+            };
+
+            maplayout.AddView(drop_button);
 		}
 		//Drops auf Karte darstellen ENDE###########################################################
 
