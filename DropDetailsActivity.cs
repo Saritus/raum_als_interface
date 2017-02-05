@@ -29,20 +29,7 @@ namespace TouchWalkthrough
 
             // Kategorie
             ImageView category = FindViewById<ImageView>(Resource.Id.imageView1);
-            switch (drop.category)
-            {
-                case Category.EVENT:
-                    category.SetImageResource(Resource.Drawable.icon_hap1);
-                    break;
-                case Category.WARNING:
-                    category.SetImageResource(Resource.Drawable.icon_hap2);
-                    break;
-                case Category.VOTE:
-                    category.SetImageResource(Resource.Drawable.icon_hap3);
-                    break;
-                default:
-                    break;
-            }
+            category.SetImageResource(drop.GetIconId("art"));
             // Kategorie Ende
 
             //Vollbild ##############################################################
