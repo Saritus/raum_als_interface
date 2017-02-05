@@ -16,6 +16,8 @@ namespace TouchWalkthrough
         bool imageVollbild_on = false;
 
         private Timer timer;
+        Drop drop;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -23,7 +25,7 @@ namespace TouchWalkthrough
 
             //Emfpange Daten des angelickten drops von der Activity HistoryActivity.cs
             string id = Intent.GetStringExtra("ID");
-            Drop drop = dropmanager.getDrop(id);
+            drop = dropmanager.getDrop(id);
             //Emfpange Daten des angelickten drops von der Activity HistoryActivity.cs ENDE
 
             // Create your application here
