@@ -25,12 +25,13 @@
             android:alpha="0"
             android:background="@android:color/transparent" />
         <ImageView
-            android:src="@drawable/dropart1"
+            android:src="@drawable/icon_hap1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView1"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/button1" />
+            android:layout_toLeftOf="@+id/button1"
+            android:background="@drawable/drop_bg" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
