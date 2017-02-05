@@ -53,7 +53,7 @@ namespace TouchWalkthrough
             dummyDrops.Add(new Drop("Kommission Hochschulmarketing", Category.EVENT, "Organisator: Prof. Dr. Ralph Sonntag", new DateTime(2017, 2, 13, 8, 0, 0), new DateTime(2017, 2, 13, 9, 30, 0), new HTWLocation("Z241")));
             dummyDrops.Add(new Drop("Kommission IT-Service", Category.EVENT, "Organisator: Prof. Dr. Dirk Reichelt", new DateTime(2017, 2, 28, 14, 0, 0), new DateTime(2017, 2, 28, 15, 30, 0), new HTWLocation("Z343")));
 
-            dummyDrops.Add(new Drop("Dies Academicus", Category.EVENT, "", new DateTime(2017, 6, 1, 9, 0, 0), new DateTime(2017, 6, 1, 10, 30, 0), new HTWLocation("Z107"), "dies_academicus.png"));
+            dummyDrops.Add(new Drop("Dies Academicus", Category.EVENT, "", new DateTime(2017, 6, 1, 9, 0, 0), new DateTime(2017, 6, 1, 10, 30, 0), new HTWLocation("Z107"), "https://www.htw-dresden.de/uploads/tx_templavoila/16_Banner_Dies.png"));
 
             return dummyDrops;
         }
