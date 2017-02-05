@@ -119,6 +119,8 @@ namespace TouchWalkthrough
         {
             if (timer != null)
             {
+                ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.imageView5);
+
                 this.RunOnUiThread(() => ResetDropButtons(drop));
 
                 // stop timer
