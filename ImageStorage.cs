@@ -1,5 +1,6 @@
 using Android.Graphics;
 using System.Collections.Generic;
+using System.Net;
 
 namespace TouchWalkthrough
 {
@@ -40,6 +41,28 @@ namespace TouchWalkthrough
         public static void addBitmap(string path, Bitmap bitmap)
         {
             images.Add(path, bitmap);
+        }
+
+        public static void addURL(string path)
+        {
+            Bitmap bitmap = GetImageBitmapFromUrl(path);
+            addBitmap(path, bitmap);
+        }
+
+        private static Bitmap GetImageBitmapFromUrl(string url)
+        {
+            Bitmap imageBitmap = null;
+
+            using (var webClient = new WebClient())
+            {
+                var imageBytes = webClient.DownloadData(url);
+                if (imageBytes != null && imageBytes.Length > 0)
+                {
+                    imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
+                }
+            }
+
+            return imageBitmap;
         }
     }
 }
