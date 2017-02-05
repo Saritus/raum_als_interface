@@ -49,6 +49,8 @@ namespace TouchWalkthrough
             dummyDrops.Add(new Drop("Bewerbungsfotoshooting", Category.WARNING, new DateTime(2017, 12, 8), new HTWLocation("Z138")));
             dummyDrops.Add(new Drop("Weihnachtsfeier", Category.EVENT, new DateTime(2017, 12, 21), new HTWLocation("Z113a")));
 
+            // Better examples
+
             return dummyDrops;
         }
 
