@@ -49,7 +49,7 @@ namespace TouchWalkthrough
         }
 
         public Drop(string name, Category category, string description, DateTime startTime, HTWLocation location, string picturePath)
-            : this(Guid.NewGuid(), name, category, description, startTime, startTime, location, picturePath)
+            : this(Guid.NewGuid(), name, category, description, startTime, startTime.AddHours(1), location, picturePath)
         {
 
         }
@@ -61,7 +61,7 @@ namespace TouchWalkthrough
         }
 
         public Drop(string name, Category category, string description, DateTime startTime, HTWLocation location)
-            : this(Guid.NewGuid(), name, category, description, startTime, startTime, location, null)
+            : this(Guid.NewGuid(), name, category, description, startTime, startTime.AddHours(1), location, null)
         {
 
         }
@@ -73,7 +73,7 @@ namespace TouchWalkthrough
         }
 
         public Drop(string name, Category category, DateTime startTime, HTWLocation location)
-            : this(Guid.NewGuid(), name, category, "", startTime, startTime, location, null)
+            : this(Guid.NewGuid(), name, category, "", startTime, startTime.AddHours(1), location, null)
         {
 
         }
