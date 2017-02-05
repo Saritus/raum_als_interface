@@ -119,7 +119,7 @@
     <AndroidResource Include="Resources\Drawable\bild_hinzuf.png" />
     <AndroidResource Include="Resources\Values\Styles.xml" />
     <AndroidResource Include="Resources\Values\Colors.xml" />
-    <AndroidResource Include="Resources\Drawable\Splash_screen.xml" />
+    <AndroidResource Include="Resources\Layout\Splash_screen.xml" />
     <AndroidResource Include="Resources\Drawable\loadscreen.png" />
   </ItemGroup>
   <ItemGroup>

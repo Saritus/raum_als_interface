@@ -13,7 +13,7 @@
 
 	
   <style name="Theme.Splash" parent="@android:style/Theme.NoTitleBar">  
-    <item name="android:windowBackground">@drawable/Splash_screen</item>  
+    <item name="android:windowBackground">@layout/Splash_screen</item>  
     <item name="android:windowNoTitle">true</item>  
   </style>   
 </resources>
