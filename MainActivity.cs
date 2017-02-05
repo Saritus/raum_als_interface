@@ -35,13 +35,6 @@
             dropmanager.updateDrops();//bringt an der stelle nur 1x und zwar beim start der app was
             dropmanager.sortDrops();
 
-            ImageButton aktualisieren = FindViewById<ImageButton>(Resource.Id.imageButton104);
-            aktualisieren.Click += (object sender, EventArgs e) =>
-            {
-                ResetDropButtons();
-            };
-
-
             //OPEN-HISTORY##############################################################
             ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
             history_button.Click += (object sender, EventArgs e) =>
