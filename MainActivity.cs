@@ -26,6 +26,7 @@
         DropManager dropmanager = DropManager.Instance;
 
         private Timer timer;
+        RelativeLayout maplayout;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -145,6 +146,7 @@
             //For arrow_left Button ENDE ##############################################################
 
 
+            maplayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayout1);
             timer = new Timer(x => timerEvent(), null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
         }
 
@@ -189,7 +191,6 @@
         {
             List<Drop> mapDrops = dropmanager.getBuildingDrops(Building.Z);
             //RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.RelativeLayoutMap);
-            RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayout1);
             ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.ImageViewKarte);
 
             maplayout.RemoveAllViews();
