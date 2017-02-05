@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace TouchWalkthrough
 {
+    [Serializable()]
     public class HTWLocation
     {
         static Dictionary<string, Point> roomTable;
@@ -18,7 +19,7 @@ namespace TouchWalkthrough
 
         public string room { get; set; }
 
-        public Location location { get; set; }
+        //public Location location { get; set; }
 
         public Point position { get; set; }
 
