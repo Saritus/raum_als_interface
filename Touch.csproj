@@ -74,6 +74,7 @@
     <Compile Include="TableItem.cs" />
     <Compile Include="DropDetailsActivity.cs" />
     <Compile Include="NewDropActivity.cs" />
+    <Compile Include="LoadScreenActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -118,6 +119,8 @@
     <AndroidResource Include="Resources\Drawable\bild_hinzuf.png" />
     <AndroidResource Include="Resources\Values\Styles.xml" />
     <AndroidResource Include="Resources\Values\Colors.xml" />
+    <AndroidResource Include="Resources\Layout\Splash_screen.xml" />
+    <AndroidResource Include="Resources\Drawable\loadscreen.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />

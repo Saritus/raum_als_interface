@@ -10,4 +10,10 @@
   <style name="ActionBarTheme" parent="android:Widget.Holo.Light.ActionBar.Solid.Inverse">
     <item name="android:background">@drawable/background</item>
   </style>
+
+	
+  <style name="Theme.Splash" parent="@android:style/Theme.NoTitleBar">  
+    <item name="android:windowBackground">@layout/Splash_screen</item>  
+    <item name="android:windowNoTitle">true</item>  
+  </style>   
 </resources>

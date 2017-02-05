@@ -124,22 +124,25 @@ namespace TouchWalkthrough
 			public const int kreuz = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int logo = 2130837525;
+			public const int loadscreen = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int navbar_background = 2130837526;
+			public const int logo = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int plus_button = 2130837527;
+			public const int navbar_background = 2130837527;
 			
 			// aapt resource value: 0x7f020018
-			public const int switch1 = 2130837528;
+			public const int plus_button = 2130837528;
 			
 			// aapt resource value: 0x7f020019
-			public const int switch2 = 2130837529;
+			public const int switch1 = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int wann_icon = 2130837530;
+			public const int switch2 = 2130837530;
+			
+			// aapt resource value: 0x7f02001b
+			public const int wann_icon = 2130837531;
 			
 			static Drawable()
 			{
@@ -572,6 +575,9 @@ namespace TouchWalkthrough
 			// aapt resource value: 0x7f030007
 			public const int Plus_Menue = 2130903047;
 			
+			// aapt resource value: 0x7f030008
+			public const int Splash_screen = 2130903048;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -631,6 +637,9 @@ namespace TouchWalkthrough
 			
 			// aapt resource value: 0x7f070000
 			public const int MyAppTheme = 2131165184;
+			
+			// aapt resource value: 0x7f070002
+			public const int Theme_Splash = 2131165186;
 			
 			static Style()
 			{
