@@ -102,13 +102,14 @@ namespace TouchWalkthrough
 			RelativeLayout kartenlayer = FindViewById<RelativeLayout>(Resource.Id.relativeLayout2);
 			TextView ingoreText = FindViewById<TextView>(Resource.Id.textView26);
             maplayout = FindViewById<RelativeLayout>(Resource.Id.maplayout2);
+
 			kartenlayer.Visibility = ViewStates.Gone;
 			aufKarteAnzeigen.Click += (object sender, EventArgs e) =>
 			{
 				kartenlayer.Visibility = ViewStates.Visible;
 				ignore_switch.Visibility = ViewStates.Gone;
 				ingoreText.Visibility = ViewStates.Gone;
-                timer = new Timer(x => timerEvent(), null, 0, 50);
+                timer = new Timer(x => timerEvent(), null, 0, 25);
             };
 			kartenlayer.Click += (object sender, EventArgs e) =>
 			{
