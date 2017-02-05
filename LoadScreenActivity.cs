@@ -24,6 +24,10 @@ namespace TouchWalkthrough
 
             // Lade neue Drops
             DropManager dropmanager = DropManager.Instance;
+
+            dropmanager.loadDrops("drops.xml");
+            ImageStorage.Instance.loadImages("images.xml");
+
             dropmanager.updateDrops();//bringt an der stelle nur 1x und zwar beim start der app was
             dropmanager.sortDrops();
 
