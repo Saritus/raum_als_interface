@@ -18,6 +18,12 @@ namespace TouchWalkthrough
         private Timer timer;
         Drop drop;
 
+        // Interface
+        RelativeLayout maplayout;
+        RelativeLayout kartenlayer;
+        Switch ignore_switch;
+        TextView ingoreText;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -84,7 +90,7 @@ namespace TouchWalkthrough
             //Drop Infos anzeigen ENDE #############################################
 
             // Switch
-            Switch ignore_switch = FindViewById<Switch>(Resource.Id.switch_button);
+            ignore_switch = FindViewById<Switch>(Resource.Id.switch_button);
 
             ignore_switch.Checked = drop.ignored;
 
@@ -96,15 +102,17 @@ namespace TouchWalkthrough
 
 			//Auf Karte anzeigen
 			LinearLayout aufKarteAnzeigen = FindViewById<LinearLayout>(Resource.Id.linearLayout133);
-			RelativeLayout kartenlayer = FindViewById<RelativeLayout>(Resource.Id.relativeLayout2);
-			TextView ingoreText = FindViewById<TextView>(Resource.Id.textView26);
+			kartenlayer = FindViewById<RelativeLayout>(Resource.Id.relativeLayout2);
+			ingoreText = FindViewById<TextView>(Resource.Id.textView26);
+            maplayout = FindViewById<RelativeLayout>(Resource.Id.maplayout2);
+
 			kartenlayer.Visibility = ViewStates.Gone;
 			aufKarteAnzeigen.Click += (object sender, EventArgs e) =>
 			{
 				kartenlayer.Visibility = ViewStates.Visible;
 				ignore_switch.Visibility = ViewStates.Gone;
 				ingoreText.Visibility = ViewStates.Gone;
-                timer = new Timer(x => timerEvent(), null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+                timer = new Timer(x => timerEvent(), null, 0, 25);
             };
 			kartenlayer.Click += (object sender, EventArgs e) =>
 			{
@@ -119,19 +127,20 @@ namespace TouchWalkthrough
         {
             if (timer != null)
             {
-                this.RunOnUiThread(() => ResetDropButtons(drop));
+                if (maplayout.Width > 0)
+                {
+                    this.RunOnUiThread(() => ResetDropButtons(drop));
 
-                // stop timer
-                timer.Dispose();
-                timer = null;
+                    // stop timer
+                    timer.Dispose();
+                    timer = null;
+                }
             }
         }
 
 		//Drops auf Karte darstellen ###########################################################
 		public void ResetDropButtons(Drop mapdrop)
 		{
-			
-			RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.maplayout2);
 			ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.imageView5);
 
 			maplayout.RemoveAllViews();
@@ -150,7 +159,15 @@ namespace TouchWalkthrough
 			drop_button.SetX(mapdrop.location.position.X * scaleY - drop_button.Width / 2 - screenX + 0.44f * left);
 			drop_button.SetY(mapdrop.location.position.Y * scaleY - drop_button.Height / 2 - screenY);
 
-			maplayout.AddView(drop_button);
+            // Funktion
+            drop_button.Click += (object sender, EventArgs e) =>
+            {
+                kartenlayer.Visibility = ViewStates.Gone;
+                ignore_switch.Visibility = ViewStates.Visible;
+                ingoreText.Visibility = ViewStates.Visible;
+            };
+
+            maplayout.AddView(drop_button);
 		}
 		//Drops auf Karte darstellen ENDE###########################################################
 
