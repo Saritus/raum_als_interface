@@ -1,3 +1,4 @@
+using Android.Content;
 using Android.Graphics;
 using Android.Provider;
 using System.Collections.Generic;
@@ -69,7 +70,7 @@ namespace TouchWalkthrough
             return imageBitmap;
         }
 
-        public void addURI(string path, Android.Net.Uri uri, Android.Content.ContentResolver cr)
+        public void addURI(string path, Android.Net.Uri uri, ContentResolver cr)
         {
             Bitmap bitmap = MediaStore.Images.Media.GetBitmap(cr, uri);
             addBitmap(path, bitmap);
