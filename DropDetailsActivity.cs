@@ -15,6 +15,7 @@ namespace TouchWalkthrough
         DropManager dropmanager = DropManager.Instance;
         bool imageVollbild_on = false;
 
+        private Timer timer;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
