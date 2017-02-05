@@ -146,7 +146,7 @@
             //For arrow_left Button ENDE ##############################################################
 
             maplayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayout1);
-            timer = new Timer(x => timerEvent(), null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+            timer = new Timer(x => timerEvent(), null, 0, 25);
         }
 
         private void timerEvent()
