@@ -75,5 +75,15 @@ namespace TouchWalkthrough
             Bitmap bitmap = MediaStore.Images.Media.GetBitmap(cr, uri);
             addBitmap(path, bitmap);
         }
+
+        public void saveImages(string filename)
+        {
+            XML.Save(images, filename);
+        }
+
+        public void loadImages(string filename)
+        {
+            images = XML.Load<Dictionary<string, Bitmap>>(filename);
+        }
     }
 }
