@@ -90,16 +90,40 @@ namespace TouchWalkthrough
             this.picturePath = newDrop.picturePath;
         }
 
-        public int GetIconId()
+        public int GetIconId(string type)
         {
             switch (category)
             {
                 case Category.EVENT:
-                    return Resource.Drawable.icon_hap1;
+                    switch (type)
+                    {
+                        case "icon":
+                            return Resource.Drawable.icon_hap1;
+                        case "art":
+                            return Resource.Drawable.dropart1;
+                        default:
+                            return Resource.Drawable.icon_hap1;
+                    }
                 case Category.VOTE:
-                    return Resource.Drawable.icon_hap3;
+                    switch (type)
+                    {
+                        case "icon":
+                            return Resource.Drawable.icon_hap3;
+                        case "art":
+                            return Resource.Drawable.dropart3;
+                        default:
+                            return Resource.Drawable.icon_hap3;
+                    }
                 case Category.WARNING:
-                    return Resource.Drawable.icon_hap2;
+                    switch (type)
+                    {
+                        case "icon":
+                            return Resource.Drawable.icon_hap2;
+                        case "art":
+                            return Resource.Drawable.dropart2;
+                        default:
+                            return Resource.Drawable.icon_hap2;
+                    }
                 default:
                     return -1;
             }
@@ -113,7 +137,7 @@ namespace TouchWalkthrough
 
             tableitem.SubHeading = location.ToString() + "; " + startTime.ToString("dd.MM.yyyy");
 
-            tableitem.ImageResourceId = GetIconId();
+            tableitem.ImageResourceId = GetIconId("icon");
 
             tableitem.id = id;
 
@@ -125,7 +149,7 @@ namespace TouchWalkthrough
             ImageButton drop_button = new ImageButton(context);
 
             // Aussehen
-            drop_button.SetImageResource(GetIconId());
+            drop_button.SetImageResource(GetIconId("icon"));
             drop_button.SetBackgroundColor(Color.Transparent);
 
             return drop_button;
