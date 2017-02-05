@@ -29,5 +29,13 @@ namespace TouchWalkthrough
         // Storage-part
 
         static Dictionary<string, Bitmap> images;
+
+        public static Bitmap getBitmap(string path)
+        {
+            Bitmap bitmap;
+            images.TryGetValue(path, out bitmap);
+            return bitmap;
+        }
+
     }
 }
