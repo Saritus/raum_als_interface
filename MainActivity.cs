@@ -254,8 +254,16 @@
         {
             base.OnDestroy();
 
-            dropmanager.saveDrops("drops.xml");
-            ImageStorage.Instance.saveImages("images.xml");
+            dropmanager.saveDrops("drops.bin");
+            ImageStorage.Instance.saveImages("images.bin");
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+
+            dropmanager.saveDrops("drops.bin");
+            ImageStorage.Instance.saveImages("images.bin");
         }
     }
 }
