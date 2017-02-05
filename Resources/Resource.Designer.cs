@@ -85,7 +85,6 @@ namespace TouchWalkthrough
 			public const int dropart2 = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-
 			public const int dropart3 = 2130837512;
 			
 			// aapt resource value: 0x7f020009
