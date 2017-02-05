@@ -2,6 +2,7 @@
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
+using Android.Provider;
 using Android.Views;
 using Android.Widget;
 using System;
@@ -41,6 +42,9 @@ namespace TouchWalkthrough
                 var imageView = FindViewById<ImageView>(Resource.Id.imageView1);
                 imageView.SetImageURI(data.Data);
                 imagepath = data.DataString;
+                Android.Net.Uri uri = Android.Net.Uri.Parse(data.Data.Path);
+                Bitmap bitmap = MediaStore.Images.Media.GetBitmap(ContentResolver, data.Data);
+                ImageStorage.Instance.addBitmap(imagepath, bitmap);
             }
             //Fuer FilePicker ENDE #############################
 
