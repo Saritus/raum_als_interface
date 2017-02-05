@@ -101,6 +101,7 @@ namespace TouchWalkthrough
 			LinearLayout aufKarteAnzeigen = FindViewById<LinearLayout>(Resource.Id.linearLayout133);
 			RelativeLayout kartenlayer = FindViewById<RelativeLayout>(Resource.Id.relativeLayout2);
 			TextView ingoreText = FindViewById<TextView>(Resource.Id.textView26);
+            maplayout = FindViewById<RelativeLayout>(Resource.Id.maplayout2);
 			kartenlayer.Visibility = ViewStates.Gone;
 			aufKarteAnzeigen.Click += (object sender, EventArgs e) =>
 			{
@@ -138,8 +139,6 @@ namespace TouchWalkthrough
 		//Drops auf Karte darstellen ###########################################################
 		public void ResetDropButtons(Drop mapdrop)
 		{
-			
-			RelativeLayout maplayout = FindViewById<RelativeLayout>(Resource.Id.maplayout2);
 			ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.imageView5);
 
 			maplayout.RemoveAllViews();
