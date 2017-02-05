@@ -14,12 +14,11 @@ namespace TouchWalkthrough
 
             try
             {
-                using (Stream stream = File.Open(file, FileMode.Open))
+                using (FileStream strm = File.OpenRead(file))
                 {
-                    BinaryFormatter bin = new BinaryFormatter();
-
-                    var result = (T)bin.Deserialize(stream);
-                    return result;
+                    BinaryFormatter ser = new BinaryFormatter();
+                    T something = (T)ser.Deserialize(strm);
+                    return something;
                 }
             }
             catch (IOException ioe)
