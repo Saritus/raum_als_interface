@@ -1,10 +1,12 @@
 ﻿
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
 using System;
+using System.Net;
 using System.Threading;
 
 namespace TouchWalkthrough
@@ -82,10 +84,12 @@ namespace TouchWalkthrough
             raum.Text = drop.location.name;
             beschreibung.Text = drop.description;
 
-            //File file = new File(drop.picturePath);
-            //Uri contentUri = Uri.FromFile(file);
-            //image.SetImageURI(contentUri);
-            //imageVollbild.SetImageURI(contentUri);
+            if (drop.picturePath != null)
+            {
+                Bitmap imageBitmap = ImageStorage.Instance.getBitmap(drop.picturePath);
+                image.SetImageBitmap(imageBitmap);
+                imageVollbild.SetImageBitmap(imageBitmap);
+            }
 
             startdatum.Text = drop.startTime.ToString("dd.MM.yyyy");
             startzeit.Text = drop.startTime.ToString("HH:mm");
@@ -173,11 +177,6 @@ namespace TouchWalkthrough
 
             maplayout.AddView(drop_button);
 		}
-		//Drops auf Karte darstellen ENDE###########################################################
-
-
-
-
-
+        //Drops auf Karte darstellen ENDE###########################################################
     }
 }

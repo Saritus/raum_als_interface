@@ -55,6 +55,7 @@
     <Compile Include="Connector.cs" />
     <Compile Include="DateRange.cs" />
     <Compile Include="FakeConnector.cs" />
+    <Compile Include="ImageStorage.cs" />
     <Compile Include="MySqlConnector.cs" />
     <Compile Include="Drop.cs" />
     <Compile Include="EventClient.cs" />
@@ -112,7 +113,6 @@
     <AndroidResource Include="Resources\Drawable\switch1.png" />
     <AndroidResource Include="Resources\Drawable\switch2.png" />
     <AndroidResource Include="Resources\Layout\DropDetails.axml" />
-    <AndroidResource Include="Resources\Drawable\beispielbild.JPG" />
     <AndroidResource Include="Resources\Drawable\aufmap_icon.png" />
     <AndroidResource Include="Resources\Drawable\wann_icon.png" />
     <AndroidResource Include="Resources\Drawable\dropart1.png" />
@@ -121,9 +121,18 @@
     <AndroidResource Include="Resources\Values\Colors.xml" />
     <AndroidResource Include="Resources\Layout\Splash_screen.axml" />
     <AndroidResource Include="Resources\Drawable\loadscreen.png" />
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+    <AndroidResource Include="Resources\Drawable\logo.png" />
+    <AndroidResource Include="Resources\Drawable\dropart2.png" />
+    <AndroidResource Include="Resources\Drawable\dropart3.png" />
+    <AndroidResource Include="Resources\Drawable\latex.png" />
+    <AndroidResource Include="Resources\Drawable\mi14.JPG" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\dies_academicus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -133,16 +142,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\dropart2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\dropart3.png" />
-  </ItemGroup>
 </Project>

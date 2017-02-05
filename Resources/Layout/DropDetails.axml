@@ -331,11 +331,11 @@
         android:layout_below="@+id/linearLayout134"
         android:layout_above="@+id/relativeLayout_navbar2">
         <ImageView
-            android:src="@drawable/beispielbild"
+            android:src="@drawable/mi14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView2"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             android:layout_below="@+id/imageButton5696"
             android:layout_above="@+id/imageButton5697"
             android:layout_toRightOf="@+id/imageButton5698"
@@ -395,7 +395,7 @@
                 android:background="#ff212121"
                 android:alpha="0.9" />
             <ImageView
-                android:src="@drawable/beispielbild"
+                android:src="@drawable/mi14"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/imageView3" />

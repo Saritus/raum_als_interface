@@ -2,6 +2,7 @@
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
+using Android.Provider;
 using Android.Views;
 using Android.Widget;
 using System;
@@ -41,6 +42,7 @@ namespace TouchWalkthrough
                 var imageView = FindViewById<ImageView>(Resource.Id.imageView1);
                 imageView.SetImageURI(data.Data);
                 imagepath = data.DataString;
+                ImageStorage.Instance.addURI(imagepath, data.Data, this.ContentResolver);
             }
             //Fuer FilePicker ENDE #############################
 

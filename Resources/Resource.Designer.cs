@@ -73,10 +73,10 @@ namespace TouchWalkthrough
 			public const int background = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int beispielbild = 2130837508;
+			public const int bild_hinzuf = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int bild_hinzuf = 2130837509;
+			public const int dies_academicus = 2130837509;
 			
 			// aapt resource value: 0x7f020006
 			public const int dropart1 = 2130837510;
@@ -124,25 +124,31 @@ namespace TouchWalkthrough
 			public const int kreuz = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int loadscreen = 2130837525;
+			public const int latex = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int logo = 2130837526;
+			public const int loadscreen = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int navbar_background = 2130837527;
+			public const int logo = 2130837527;
 			
 			// aapt resource value: 0x7f020018
-			public const int plus_button = 2130837528;
+			public const int mi14 = 2130837528;
 			
 			// aapt resource value: 0x7f020019
-			public const int switch1 = 2130837529;
+			public const int navbar_background = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int switch2 = 2130837530;
+			public const int plus_button = 2130837530;
 			
 			// aapt resource value: 0x7f02001b
-			public const int wann_icon = 2130837531;
+			public const int switch1 = 2130837531;
+			
+			// aapt resource value: 0x7f02001c
+			public const int switch2 = 2130837532;
+			
+			// aapt resource value: 0x7f02001d
+			public const int wann_icon = 2130837533;
 			
 			static Drawable()
 			{
