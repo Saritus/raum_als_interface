@@ -11,37 +11,38 @@ using Android.Widget;
 using System.Threading.Tasks;
 using Android.Util;
 using System.Threading;
+using System.IO;
 
 namespace TouchWalkthrough
 {
-	[Activity(Label = "LoadScreenActivity", MainLauncher = true, NoHistory = true, Theme = "@style/Theme.Splash")]
-	public class LoadScreenActivity : Activity
-	{
-		
-		protected override void OnCreate(Bundle bundle)
-		{
-			base.OnCreate(bundle);
+    [Activity(Label = "LoadScreenActivity", MainLauncher = true, NoHistory = true, Theme = "@style/Theme.Splash")]
+    public class LoadScreenActivity : Activity
+    {
+
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
 
             // Lade neue Drops
             DropManager dropmanager = DropManager.Instance;
 
             try
             {
-                dropmanager.loadDrops("drops.xml");
+                dropmanager.loadDrops("drops.bin");
             }
-            catch (Exception) { }
+            catch (IOException) { }
 
             try
             {
-                ImageStorage.Instance.loadImages("images.xml");
+                ImageStorage.Instance.loadImages("images.bin");
             }
-            catch (Exception) { }
+            catch (IOException) { }
 
             dropmanager.updateDrops();//bringt an der stelle nur 1x und zwar beim start der app was
             dropmanager.sortDrops();
 
             System.Threading.Thread.Sleep(3000); //Let's wait awhile...
-			this.StartActivity(typeof(MainActivity));
-		}
-	}
+            this.StartActivity(typeof(MainActivity));
+        }
+    }
 }
