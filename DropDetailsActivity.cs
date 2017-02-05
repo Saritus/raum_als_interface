@@ -123,9 +123,7 @@ namespace TouchWalkthrough
         {
             if (timer != null)
             {
-                ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.imageView5);
-
-                if (kartenlayout.Width > 0)
+                if (maplayout.Width > 0)
                 {
                     this.RunOnUiThread(() => ResetDropButtons(drop));
 
