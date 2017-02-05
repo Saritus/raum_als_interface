@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -7,9 +8,13 @@ namespace TouchWalkthrough
     {
         public static T Load<T>(string filename)
         {
+
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string file = Path.Combine(path, filename);
+
             try
             {
-                using (Stream stream = File.Open(filename, FileMode.Open))
+                using (Stream stream = File.Open(file, FileMode.Open))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
 
@@ -25,9 +30,13 @@ namespace TouchWalkthrough
 
         public static void Save<T>(T ToSerialize, string filename)
         {
+
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string file = Path.Combine(path, filename);
+
             try
             {
-                using (Stream stream = File.Open(filename, FileMode.Create))
+                using (Stream stream = File.Open(file, FileMode.Create))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
                     bin.Serialize(stream, ToSerialize);
