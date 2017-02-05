@@ -20,6 +20,9 @@ namespace TouchWalkthrough
 
         // Interface
         RelativeLayout maplayout;
+        RelativeLayout kartenlayer;
+        Switch ignore_switch;
+        TextView ingoreText;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -87,7 +90,7 @@ namespace TouchWalkthrough
             //Drop Infos anzeigen ENDE #############################################
 
             // Switch
-            Switch ignore_switch = FindViewById<Switch>(Resource.Id.switch_button);
+            ignore_switch = FindViewById<Switch>(Resource.Id.switch_button);
 
             ignore_switch.Checked = drop.ignored;
 
@@ -99,8 +102,8 @@ namespace TouchWalkthrough
 
 			//Auf Karte anzeigen
 			LinearLayout aufKarteAnzeigen = FindViewById<LinearLayout>(Resource.Id.linearLayout133);
-			RelativeLayout kartenlayer = FindViewById<RelativeLayout>(Resource.Id.relativeLayout2);
-			TextView ingoreText = FindViewById<TextView>(Resource.Id.textView26);
+			kartenlayer = FindViewById<RelativeLayout>(Resource.Id.relativeLayout2);
+			ingoreText = FindViewById<TextView>(Resource.Id.textView26);
             maplayout = FindViewById<RelativeLayout>(Resource.Id.maplayout2);
 
 			kartenlayer.Visibility = ViewStates.Gone;
@@ -156,7 +159,15 @@ namespace TouchWalkthrough
 			drop_button.SetX(mapdrop.location.position.X * scaleY - drop_button.Width / 2 - screenX + 0.44f * left);
 			drop_button.SetY(mapdrop.location.position.Y * scaleY - drop_button.Height / 2 - screenY);
 
-			maplayout.AddView(drop_button);
+            // Funktion
+            drop_button.Click += (object sender, EventArgs e) =>
+            {
+                kartenlayer.Visibility = ViewStates.Gone;
+                ignore_switch.Visibility = ViewStates.Visible;
+                ingoreText.Visibility = ViewStates.Visible;
+            };
+
+            maplayout.AddView(drop_button);
 		}
 		//Drops auf Karte darstellen ENDE###########################################################
 
