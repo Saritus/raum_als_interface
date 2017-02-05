@@ -106,6 +106,7 @@ namespace TouchWalkthrough
             roomTable["Z156"] = new Point(947, 362);
             roomTable["Z208"] = new Point();
             roomTable["Z211"] = new Point();
+            roomTable["Z241"] = new Point(524, 393); // nicht sicher
             roomTable["Z254"] = new Point();
             roomTable["Z302"] = new Point();
             roomTable["Z308"] = new Point();
