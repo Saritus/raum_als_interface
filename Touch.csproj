@@ -99,7 +99,7 @@
     <AndroidResource Include="Resources\Drawable\icon_hap1.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap2.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap3.png" />
-    <AndroidResource Include="Resources\Layout\Plus_Menue.xml" />
+    <AndroidResource Include="Resources\Layout\Plus_Menue.axml" />
     <AndroidResource Include="Resources\Drawable\icon_hap1_off.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap2_off.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap3_off.png" />
