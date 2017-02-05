@@ -94,12 +94,12 @@
     <AndroidResource Include="Resources\Layout\Main.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\Layout\History.xml" />
-    <AndroidResource Include="Resources\Layout\Filter_Menue.xml" />
+    <AndroidResource Include="Resources\Layout\History.axml" />
+    <AndroidResource Include="Resources\Layout\Filter_Menue.axml" />
     <AndroidResource Include="Resources\Drawable\icon_hap1.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap2.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap3.png" />
-    <AndroidResource Include="Resources\Layout\Plus_Menue.xml" />
+    <AndroidResource Include="Resources\Layout\Plus_Menue.axml" />
     <AndroidResource Include="Resources\Drawable\icon_hap1_off.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap2_off.png" />
     <AndroidResource Include="Resources\Drawable\icon_hap3_off.png" />
@@ -111,7 +111,7 @@
     <AndroidResource Include="Resources\Drawable\kreuz.png" />
     <AndroidResource Include="Resources\Drawable\switch1.png" />
     <AndroidResource Include="Resources\Drawable\switch2.png" />
-    <AndroidResource Include="Resources\Layout\DropDetails.xml" />
+    <AndroidResource Include="Resources\Layout\DropDetails.axml" />
     <AndroidResource Include="Resources\Drawable\beispielbild.JPG" />
     <AndroidResource Include="Resources\Drawable\aufmap_icon.png" />
     <AndroidResource Include="Resources\Drawable\wann_icon.png" />
@@ -119,7 +119,7 @@
     <AndroidResource Include="Resources\Drawable\bild_hinzuf.png" />
     <AndroidResource Include="Resources\Values\Styles.xml" />
     <AndroidResource Include="Resources\Values\Colors.xml" />
-    <AndroidResource Include="Resources\Layout\Splash_screen.xml" />
+    <AndroidResource Include="Resources\Layout\Splash_screen.axml" />
     <AndroidResource Include="Resources\Drawable\loadscreen.png" />
   </ItemGroup>
   <ItemGroup>
