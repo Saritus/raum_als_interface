@@ -121,11 +121,14 @@ namespace TouchWalkthrough
             {
                 ImageView kartenlayout = FindViewById<ImageView>(Resource.Id.imageView5);
 
-                this.RunOnUiThread(() => ResetDropButtons(drop));
+                if (kartenlayout.Width > 0)
+                {
+                    this.RunOnUiThread(() => ResetDropButtons(drop));
 
-                // stop timer
-                timer.Dispose();
-                timer = null;
+                    // stop timer
+                    timer.Dispose();
+                    timer = null;
+                }
             }
         }
 
