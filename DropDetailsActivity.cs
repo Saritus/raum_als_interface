@@ -74,9 +74,9 @@ namespace TouchWalkthrough
             TextView raum = FindViewById<TextView>(Resource.Id.textView3);
             TextView beschreibung = FindViewById<TextView>(Resource.Id.textView1);
             TextView startdatum = FindViewById<TextView>(Resource.Id.textView39);
-            TextView startzeit = FindViewById<TextView>(Resource.Id.textView33);
+            TextView startzeit = FindViewById<TextView>(Resource.Id.textView28);
             TextView enddatum = FindViewById<TextView>(Resource.Id.textView29);
-            TextView endzeit = FindViewById<TextView>(Resource.Id.textView22);
+            TextView endzeit = FindViewById<TextView>(Resource.Id.textView27);
 
             titel.Text = drop.name;
             raum.Text = drop.location.name;
