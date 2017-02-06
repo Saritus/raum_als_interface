@@ -49,8 +49,12 @@ namespace TouchWalkthrough
         {
             if (path != null && !images.ContainsKey(path))
             {
-                Bitmap bitmap = GetImageBitmapFromUrl(path);
-                addBitmap(path, bitmap);
+                try
+                {
+                    Bitmap bitmap = GetImageBitmapFromUrl(path);
+                    addBitmap(path, bitmap);
+                }
+                catch (System.Net.WebException) { }
             }
         }
 
