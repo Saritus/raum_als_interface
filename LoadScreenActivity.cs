@@ -14,7 +14,7 @@ using System.Threading;
 
 namespace TouchWalkthrough
 {
-	[Activity(Label = "LoadScreenActivity", MainLauncher = true, NoHistory = true, Theme = "@style/Theme.Splash")]
+	[Activity(Label = "@string/app_name", MainLauncher = true, NoHistory = true, Theme = "@style/Theme.Splash")]
 	public class LoadScreenActivity : Activity
 	{
 		
