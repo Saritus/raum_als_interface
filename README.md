@@ -6,7 +6,7 @@
 
 <div>
 
-<img style="float: right;" src="http://i.imgur.com/OUkLi.gif" alt="LoadScreen" height="300">
+<img style="float: left;" src="http://i.imgur.com/OUkLi.gif" alt="LoadScreen" height="300">
 
 Während des Ladebildschirms werden die Drops und die Bilder heruntergeladen.
 
@@ -36,11 +36,15 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 #### Detailansicht
 
-<img style="float: right;" src="https://i.redd.it/ol7ea42tl1dy.gif" alt="DropDetailsView" height="300">
+<div>
+
+<img style="clear: right;" src="https://i.redd.it/ol7ea42tl1dy.gif" alt="DropDetailsView" height="300">
 
 In der DropDetailsActivity werden die Interface-Elemente der DropDetailsView mit den Daten eines bestimmten Drops gefüllt.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+</div>
 
 #### Neuen Drop erstellen
 
