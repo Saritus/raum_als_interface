@@ -2,6 +2,7 @@ using Android.Content;
 using Android.Graphics;
 using Android.Provider;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 
 namespace TouchWalkthrough
@@ -14,7 +15,7 @@ namespace TouchWalkthrough
 
         private ImageStorage()
         {
-            images = new Dictionary<string, Bitmap>();
+            images = new Dictionary<string, Android.Net.Uri>();
         }
 
         public static ImageStorage Instance
@@ -31,18 +32,13 @@ namespace TouchWalkthrough
 
         // Storage-part
 
-        private static Dictionary<string, Bitmap> images;
+        private static Dictionary<string, Android.Net.Uri> images;
 
-        public Bitmap getBitmap(string path)
+        public Android.Net.Uri getURI(string path)
         {
-            Bitmap bitmap;
-            images.TryGetValue(path, out bitmap);
-            return bitmap;
-        }
-
-        public void addBitmap(string path, Bitmap bitmap)
-        {
-            images.Add(path, bitmap);
+            Android.Net.Uri uri;
+            images.TryGetValue(path, out uri);
+            return uri;
         }
 
         public void addURL(string path)
@@ -52,7 +48,8 @@ namespace TouchWalkthrough
                 try
                 {
                     Bitmap bitmap = GetImageBitmapFromUrl(path);
-                    addBitmap(path, bitmap);
+                    Android.Net.Uri uri = SaveBitmap(bitmap, path);
+                    images.Add(path, uri);
                 }
                 catch (System.Net.WebException) { }
             }
@@ -74,10 +71,19 @@ namespace TouchWalkthrough
             return imageBitmap;
         }
 
-        public void addURI(string path, Android.Net.Uri uri, ContentResolver cr)
+        public void addURI(string path, Android.Net.Uri uri)
         {
-            Bitmap bitmap = MediaStore.Images.Media.GetBitmap(cr, uri);
-            addBitmap(path, bitmap);
+            images.Add(path, uri);
+        }
+
+        Android.Net.Uri SaveBitmap(Bitmap bitmap, string filename)
+        {
+            var sdCardPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+            var filePath = System.IO.Path.Combine(sdCardPath, filename.GetHashCode().ToString());
+            var stream = new FileStream(filePath, FileMode.Create);
+            bitmap.Compress(Bitmap.CompressFormat.Png, 100, stream);
+            stream.Close();
+            return Android.Net.Uri.Parse(filePath);
         }
     }
 }
