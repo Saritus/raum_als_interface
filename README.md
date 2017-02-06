@@ -22,7 +22,7 @@ Der ImageStorage ist für die lokale Verwaltung von Bildern zuständig. Er besit
 
 Programmiert ist der ImageStorage nach dem Prinzip des Singleton-Patterns, welches dafür sorgt, dass unterschiedliche Activities auf dieselbe Instanz zugreifen können, ohne sie mittels eines Parameters zu übergeben.
 
-## Objektmanager
+## DropManager
 
 <img src="https://cdn.rawgit.com/Saritus/hap/Continue-docu/docs/dropmanager.png" alt="DropManager" width="100%">
 
