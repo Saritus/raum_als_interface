@@ -2,6 +2,24 @@
 
 [Download](http://www.google.de)
 
+## Lokale Daten
+
+Die lokalen Daten bestehen aus den Drops und den Bildern.
+
+#### Drops
+
+#### ImageStorage
+
+Der ImageStorage ist ein Dictionary, welches alle benötigten Bilder gespeichert und ihren jeweiligen Links zugeordnet hat.
+
+## Objektmanager
+
+Der Objektmanager verwaltet die lokalen Daten.
+
+## Verbindung
+
+Die Verbindung wird über einen Connector aufgebaut, der die Drops aus einer externen Quelle lädt.
+
 ## Interface
 
 #### Ladebildschirm
@@ -43,24 +61,6 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 In der NewDropActivity werden die vom Nutzer eingegebenen Daten ausgewertet und als neuer Drop abgespeichert.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-## Objektmanager
-
-Der Objektmanager verwaltet die lokalen Daten.
-
-## Lokale Daten
-
-Die lokalen Daten bestehen aus den Drops und den Bildern.
-
-#### Drops
-
-#### ImageStorage
-
-Der ImageStorage ist ein Dictionary, welches alle benötigten Bilder gespeichert und ihren jeweiligen Links zugeordnet hat.
-
-## Verbindung
-
-Die Verbindung wird über einen Connector aufgebaut, der die Drops aus einer externen Quelle lädt.
 
 ## Beteiligte
 
