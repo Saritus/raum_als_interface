@@ -42,7 +42,7 @@ namespace TouchWalkthrough
                 var imageView = FindViewById<ImageView>(Resource.Id.imageView1);
                 imageView.SetImageURI(data.Data);
                 imagepath = data.DataString;
-                ImageStorage.Instance.addURI(imagepath, data.Data);
+                ImageStorage.Instance.addURI(imagepath, data.Data, this.ContentResolver);
             }
             //Fuer FilePicker ENDE #############################
 
