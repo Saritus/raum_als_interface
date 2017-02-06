@@ -14,7 +14,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 #### Hauptbildschirm
 
-<img src="/docs/ignore.gif?raw=true" alt="MainScreen" height="300">
+<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/ignore.gif" alt="MainScreen" height="300">
 
 In der MainActivity werden alle im Objektmanager vorhandenen Drops als Buttons an der richtigen Stelle auf der Karte angezeigt.
 
