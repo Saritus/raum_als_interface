@@ -8,7 +8,7 @@
 
 ##### MainScreen
 
-<img src="docs/ignore.gif" alt="MainScreen" height="450">
+<img src="https://github.com/Saritus/IT2_Beleg/raw/master/docs/ignore.gif" alt="MainScreen" height="450">
 
 ##### HistoryView
 
