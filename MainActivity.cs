@@ -33,9 +33,6 @@
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
-            dropmanager.updateDrops();//bringt an der stelle nur 1x und zwar beim start der app was
-            dropmanager.sortDrops();
-
             //OPEN-HISTORY##############################################################
             ImageButton history_button = FindViewById<ImageButton>(Resource.Id.imageButton6);
             history_button.Click += (object sender, EventArgs e) =>

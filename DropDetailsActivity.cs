@@ -1,10 +1,12 @@
 ﻿
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
 using System;
+using System.Net;
 using System.Threading;
 
 namespace TouchWalkthrough
@@ -74,19 +76,25 @@ namespace TouchWalkthrough
             TextView raum = FindViewById<TextView>(Resource.Id.textView3);
             TextView beschreibung = FindViewById<TextView>(Resource.Id.textView1);
             TextView startdatum = FindViewById<TextView>(Resource.Id.textView39);
+            TextView startzeit = FindViewById<TextView>(Resource.Id.textView28);
             TextView enddatum = FindViewById<TextView>(Resource.Id.textView29);
+            TextView endzeit = FindViewById<TextView>(Resource.Id.textView27);
 
             titel.Text = drop.name;
             raum.Text = drop.location.name;
             beschreibung.Text = drop.description;
 
-            //File file = new File(drop.picturePath);
-            //Uri contentUri = Uri.FromFile(file);
-            //image.SetImageURI(contentUri);
-            //imageVollbild.SetImageURI(contentUri);
+            if (drop.picturePath != null)
+            {
+                Bitmap imageBitmap = ImageStorage.Instance.getBitmap(drop.picturePath);
+                image.SetImageBitmap(imageBitmap);
+                imageVollbild.SetImageBitmap(imageBitmap);
+            }
 
             startdatum.Text = drop.startTime.ToString("dd.MM.yyyy");
+            startzeit.Text = drop.startTime.ToString("HH:mm");
             enddatum.Text = drop.endTime.ToString("dd.MM.yyyy");
+            endzeit.Text = drop.endTime.ToString("HH:mm");
             //Drop Infos anzeigen ENDE #############################################
 
             // Switch
@@ -169,11 +177,6 @@ namespace TouchWalkthrough
 
             maplayout.AddView(drop_button);
 		}
-		//Drops auf Karte darstellen ENDE###########################################################
-
-
-
-
-
+        //Drops auf Karte darstellen ENDE###########################################################
     }
 }
