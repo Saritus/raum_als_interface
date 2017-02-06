@@ -4,7 +4,7 @@
 
 ## Projekt
 
-<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/classdiagram.png" alt="LoadingScreen" height="300">
+<img src="https://cdn.rawgit.com/Saritus/hap/Continue-docu/docs/classdiagram.png" alt="Klassendiagramm" height="300">
 
 ## Lokale Daten
 
@@ -12,7 +12,7 @@ Die lokalen Daten bestehen aus den Drops und den Bildern.
 
 #### Drops
 
-<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/drop.png" alt="Drop" height="300">
+<img src="https://cdn.rawgit.com/Saritus/hap/Continue-docu/docs/drop.png" alt="Drop" width="100%">
 
 Die Grundlage von hap sind die sogenannten Drops. Das, was für den Kalender der Termin ist, ist für HAP der Drop. Er speichert Informationen, wie ID, Name, Beschreibung, Kategorie, Ort, Zeit und Bild.
 
@@ -20,9 +20,11 @@ Die Grundlage von hap sind die sogenannten Drops. Das, was für den Kalender der
 
 Der ImageStorage ist für die lokale Verwaltung von Bildern zuständig. Er besitzt ein Nachschlagewerk, welches jedem Bild einen eindeutigen Verweis zugeordnet. Das sorgt dafür, dass Drops, die das gleiche Bild besitzen, dieses nicht mehrfach an unterschiedlichen Stellen gespeichert haben müssen. Außerdem kümmert sich der ImageStorage um das Herunterladen von Bildern aus dem Internet, sollte es sich bei dem eingetragenen Verweis um eine URL handeln.
 
+Programmiert ist der ImageStorage nach dem Prinzip des Singleton-Patterns, welches dafür sorgt, dass unterschiedliche Activities auf dieselbe Instanz zugreifen können, ohne sie mittels eines Parameters zu übergeben.
+
 ## Objektmanager
 
-<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/dropmanager.png" alt="DropManager" height="300">
+<img src="https://cdn.rawgit.com/Saritus/hap/Continue-docu/docs/dropmanager.png" alt="DropManager" width="100%">
 
 Der Objektmanager verwaltet die lokalen Daten.
 
