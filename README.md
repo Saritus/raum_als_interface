@@ -4,23 +4,23 @@
 
 ##### LoadScreen
 
-![](http://i.imgur.com/OUkLi.gif)
+![][LoadScreen]
 
 ##### MainScreen
 
-![](http://i.imgur.com/Ssfp7.gif)
+![][MainScreen]
 
 ##### HistoryView
 
-![](http://i.imgur.com/60bts.gif)
+![][HistoryView]
 
 ##### DropDetailsView
 
-![](https://camo.githubusercontent.com/4e07a7d190ed9d3a622bbf33f2c80f1a31f7d7fb/68747470733a2f2f33382e6d656469612e74756d626c722e636f6d2f74756d626c725f6d32776b70383937725931727072786b726f315f3530302e676966)
+![][DropDetailsView]
 
 ##### NewDropView
 
-![](https://cloud.githubusercontent.com/assets/9791728/15725985/40269d02-2803-11e6-9ea3-2c78d16459e3.gif)
+![][NewDropView]
 
 ### Activities
 
@@ -55,3 +55,9 @@ Gestaltung: Thomas Theling
 Front-End: Julian Fuchs
 
 Back-End: Sebastian Mischke
+
+[LoadScreen]: http://i.imgur.com/OUkLi.gif
+[MainScreen]: http://i.imgur.com/Ssfp7.gif
+[HistoryView]: http://i.imgur.com/60bts.gif
+[DropDetailsView]: https://i.redd.it/ol7ea42tl1dy.gif
+[NewDropView]: https://i.redd.it/2vjq5pxf209y.gif
