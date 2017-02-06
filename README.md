@@ -6,7 +6,7 @@
 
 ###### LoadScreen
 
-<img src="http://i.imgur.com/OUkLi.gif" alt="LoadScreen" height="300">
+<img style="float: right;" src="http://i.imgur.com/OUkLi.gif" alt="LoadScreen" height="300">
 
 ###### LoadScreenActivity
 
@@ -16,7 +16,7 @@ Während des Ladebildschirms werden die Drops und die Bilder heruntergeladen.
 
 ###### MainScreen
 
-<img src="/docs/ignore.gif" alt="MainScreen" height="300">
+<img style="float: right;" src="/docs/ignore.gif?raw=true" alt="MainScreen" height="300">
 
 ###### MainActivity
 
@@ -26,7 +26,7 @@ In der MainActivity werden alle im Objektmanager vorhandenen Drops als Buttons a
 
 ###### HistoryView
 
-<img src="http://i.imgur.com/60bts.gif" alt="HistoryView" height="300">
+<img style="float: right;" src="http://i.imgur.com/60bts.gif" alt="HistoryView" height="300">
 
 ###### HistoryActivity
 
@@ -36,7 +36,7 @@ In der HistoryActivity wird die Listenanzeige mit den Daten der Drops gefüllt.
 
 ###### DropDetailsView
 
-<img src="https://i.redd.it/ol7ea42tl1dy.gif" alt="DropDetailsView" height="300">
+<img style="float: right;" src="https://i.redd.it/ol7ea42tl1dy.gif" alt="DropDetailsView" height="300">
 
 ###### DropDetailsActivity
 
@@ -46,7 +46,7 @@ In der DropDetailsActivity werden die Interface-Elemente der DropDetailsView mit
 
 ###### NewDropView
 
-<img src="https://i.redd.it/2vjq5pxf209y.gif" alt="NewDropView" height="300">
+<img style="float: right;" src="https://i.redd.it/2vjq5pxf209y.gif" alt="NewDropView" height="300">
 
 ###### NewDropActivity
 
