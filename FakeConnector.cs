@@ -50,6 +50,9 @@ namespace TouchWalkthrough
             dummyDrops.Add(new Drop("Grillen Fak. Informatik", Category.EVENT, new DateTime(2017, 9, 23), new HTWLocation("Parkplatz", 852, 1472)));
             dummyDrops.Add(new Drop("Tag der offenen Tür", Category.EVENT, new DateTime(2017, 4, 21), new HTWLocation("Haupteingang", 409, 1024)));
 
+            ImageStorage.Instance.addURL("http://www.stura.htw-dresden.de/weitere/fsr/fsr-i-m/Layout_Latex_WS15_16_n.png/image");
+            dummyDrops.Add(new Drop("Latex-Kurs", Category.EVENT, "", new DateTime(2017, 11, 9), new HTWLocation("S329"), "http://www.stura.htw-dresden.de/weitere/fsr/fsr-i-m/Layout_Latex_WS15_16_n.png/image"));
+
             return dummyDrops;
         }
 
