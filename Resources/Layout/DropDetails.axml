@@ -331,7 +331,7 @@
         android:layout_below="@+id/linearLayout134"
         android:layout_above="@+id/relativeLayout_navbar2">
         <ImageView
-            android:src="@drawable/mi14"
+            android:src="@drawable/nopic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView2"
@@ -395,7 +395,7 @@
                 android:background="#ff212121"
                 android:alpha="0.9" />
             <ImageView
-                android:src="@drawable/mi14"
+                android:src="@drawable/nopic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/imageView3" />

@@ -125,14 +125,13 @@
     <AndroidResource Include="Resources\Drawable\logo.png" />
     <AndroidResource Include="Resources\Drawable\dropart2.png" />
     <AndroidResource Include="Resources\Drawable\dropart3.png" />
-    <AndroidResource Include="Resources\Drawable\latex.png" />
     <AndroidResource Include="Resources\Drawable\mi14.JPG" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\dies_academicus.png" />
+    <AndroidResource Include="Resources\Drawable\nopic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
