@@ -41,7 +41,10 @@ namespace TouchWalkthrough
             this.picturePath = picturePath;
             this.lastChange = DateTime.Now;
 
-            ImageStorage.Instance.addURL(picturePath);
+            if (picturePath != null)
+            {
+                ImageStorage.Instance.addURL(picturePath);
+            }
         }
 
         public Drop(string name, Category category, string description, DateTime startTime, DateTime endTime, HTWLocation location, string picturePath)
