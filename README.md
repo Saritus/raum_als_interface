@@ -2,6 +2,10 @@
 
 [Download](http://www.google.de)
 
+## Projekt
+
+<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/classdiagram.png" alt="LoadingScreen" height="300">
+
 ## Lokale Daten
 
 Die lokalen Daten bestehen aus den Drops und den Bildern.
