@@ -98,14 +98,17 @@ namespace TouchWalkthrough
 
         public void update(Drop newDrop)
         {
-            this.id = newDrop.id;
-            this.name = newDrop.name;
-            this.description = newDrop.description;
-            this.category = newDrop.category;
-            this.startTime = newDrop.startTime;
-            this.endTime = newDrop.endTime;
-            this.location = newDrop.location;
-            this.picturePath = newDrop.picturePath;
+            if (id == newDrop.id)
+            {
+                this.id = newDrop.id;
+                this.name = newDrop.name;
+                this.description = newDrop.description;
+                this.category = newDrop.category;
+                this.startTime = newDrop.startTime;
+                this.endTime = newDrop.endTime;
+                this.location = newDrop.location;
+                this.picturePath = newDrop.picturePath;
+            }
         }
 
         public int GetIconId(string type)
