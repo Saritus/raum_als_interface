@@ -10,9 +10,9 @@ namespace TouchWalkthrough
     {
         // Internal settings
 
-        public Guid id { get; private set; }
+        public Guid id { get; set; }
 
-        public DateTime lastChange { get; private set; }
+        public DateTime lastChange { get; set; }
 
         // Creator settings
 
