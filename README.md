@@ -4,23 +4,23 @@
 
 ##### LoadScreen
 
-![][LoadScreen]
+<img src="http://i.imgur.com/OUkLi.gif" alt="LoadScreen" height="450">
 
 ##### MainScreen
 
-![][MainScreen]
+<img src="documentation/ignore.gif" alt="MainScreen" height="450">
 
 ##### HistoryView
 
-![][HistoryView]
+<img src="http://i.imgur.com/60bts.gif" alt="HistoryView" height="450">
 
 ##### DropDetailsView
 
-![][DropDetailsView]
+<img src="https://i.redd.it/ol7ea42tl1dy.gif" alt="DropDetailsView" height="450">
 
 ##### NewDropView
 
-![][NewDropView]
+<img src="https://i.redd.it/2vjq5pxf209y.gif" alt="NewDropView" height="450">
 
 ### Activities
 
@@ -56,8 +56,12 @@ Front-End: Julian Fuchs
 
 Back-End: Sebastian Mischke
 
-[LoadScreen]: http://i.imgur.com/OUkLi.gif
-[MainScreen]: http://i.imgur.com/Ssfp7.gif
-[HistoryView]: http://i.imgur.com/60bts.gif
-[DropDetailsView]: https://i.redd.it/ol7ea42tl1dy.gif
-[NewDropView]: https://i.redd.it/2vjq5pxf209y.gif
+[loadscreen]: http://i.imgur.com/OUkLi.gif
+
+[mainscreen2]: http://i.imgur.com/Ssfp7.gif
+
+[historyview]: http://i.imgur.com/60bts.gif
+
+[dropdetailsview]: https://i.redd.it/ol7ea42tl1dy.gif
+
+[newdropview]: https://i.redd.it/2vjq5pxf209y.gif
