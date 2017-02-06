@@ -6,7 +6,11 @@
 
 <div>
 
+<p>
+
 <img style="float: left;" src="http://i.imgur.com/OUkLi.gif" alt="LoadScreen" height="300">
+
+</p>
 
 Während des Ladebildschirms werden die Drops und die Bilder heruntergeladen.
 
