@@ -57,6 +57,16 @@ namespace TouchWalkthrough
             ImageStorage.Instance.addURL("https://www.htw-dresden.de/uploads/tx_templavoila/16_Banner_Dies.png");
             dummyDrops.Add(new Drop("Dies Academicus", Category.EVENT, "", new DateTime(2017, 6, 1, 9, 0, 0), new DateTime(2017, 6, 1, 10, 30, 0), new HTWLocation("Z107"), "https://www.htw-dresden.de/uploads/tx_templavoila/16_Banner_Dies.png"));
 
+            // Präsentation
+            dummyDrops.Add(new Drop("BA-Ausstellung Architektur", Category.EVENT, new DateTime(2017, 2, 9), new HTWLocation("Z903")));
+            dummyDrops.Add(new Drop("Rundgang Produktgestaltung", Category.EVENT, new DateTime(2017, 2, 8), new HTWLocation("S403")));
+            dummyDrops.Add(new Drop("Party Semesterstart", Category.EVENT, new DateTime(2017, 3, 13), new HTWLocation("Z103")));
+            dummyDrops.Add(new Drop("Abstimmung Kicker", Category.VOTE, new DateTime(2017, 3, 9), new HTWLocation("Z903")));
+            dummyDrops.Add(new Drop("Baustelle", Category.WARNING, new DateTime(2017, 2, 9), new HTWLocation("Z903")));
+            dummyDrops.Add(new Drop("", Category.EVENT, new DateTime(2017, 2, 9), new HTWLocation("")));
+            dummyDrops.Add(new Drop("", Category.EVENT, new DateTime(2017, 2, 9), new HTWLocation("")));
+            dummyDrops.Add(new Drop("Aufzug defekt", Category.WARNING, new DateTime(2017, 2, 9), new HTWLocation("Z-Gebäude")));
+
             return dummyDrops;
         }
 
