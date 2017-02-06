@@ -49,9 +49,13 @@ namespace TouchWalkthrough
             }
         }
 
-        public HTWLocation(Building building, string room)
-            : this(building.ToString() + room)
+        public HTWLocation(string name, int x, int y)
         {
+            position = new Point(x, y);
+
+            this.name = name;
+
+            building = Building.Z;
         }
 
         public HTWLocation()
@@ -130,7 +134,7 @@ namespace TouchWalkthrough
             roomTable["Z841"] = new Point();
             roomTable["Z901"] = new Point();
             roomTable["Z902"] = new Point(479, 689); // nicht sicher
-            roomTable["Z903"] = new Point();
+            roomTable["Z903"] = new Point(507, 519); // nicht sicher
             roomTable["Z907"] = new Point();
             roomTable["Z908"] = new Point();
         }
