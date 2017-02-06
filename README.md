@@ -8,7 +8,7 @@
 
 ##### MainScreen
 
-<img src="documentation/ignore.gif" alt="MainScreen" height="450">
+<img src="docs/ignore.gif" alt="MainScreen" height="450">
 
 ##### HistoryView
 
@@ -26,23 +26,41 @@
 
 ##### LoadScreenActivity
 
+Während des Ladebildschirms werden die Drops und die Bilder heruntergeladen.
+
 ##### MainActivity
+
+In der MainActivity werden alle im Objektmanager vorhandenen Drops als Buttons an der richtigen Stelle auf der Karte angezeigt.
 
 ##### HistoryActivity
 
+In der HistoryActivity wird die Listenanzeige mit den Daten der Drops gefüllt.
+
 ##### DropDetailsActivity
+
+In der DropDetailsActivity werden die Interface-Elemente der DropDetailsView mit den Daten eines bestimmten Drops gefüllt.
 
 ##### NewDropActivity
 
+In der NewDropActivity werden die vom Nutzer eingegebenen Daten ausgewertet und als neuer Drop abgespeichert.
+
 ### Objektmanager
 
+Der Objektmanager verwaltet die lokalen Daten.
+
 ### Lokale Daten
+
+Die lokalen Daten bestehen aus den Drops und den Bildern.
 
 ##### Drops
 
 ##### ImageStorage
 
+Der ImageStorage ist ein Dictionary, welches alle benötigten Bilder gespeichert und ihren jeweiligen Links zugeordnet hat.
+
 ### Verbindung
+
+Die Verbindung wird über einen Connector aufgebaut, der die Drops aus einer externen Quelle lädt.
 
 ### Beteiligte
 
