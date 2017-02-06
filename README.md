@@ -12,13 +12,17 @@ Die lokalen Daten bestehen aus den Drops und den Bildern.
 
 #### Drops
 
+<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/drop.png" alt="Drop" height="300">
 
+Die Grundlage von hap sind die sogenannten Drops. Das, was für den Kalender der Termin ist, ist für HAP der Drop. Er speichert Informationen, wie ID, Name, Beschreibung, Kategorie, Ort, Zeit und Bild.
 
 #### ImageStorage
 
-Der ImageStorage ist ein Dictionary, welches alle benötigten Bilder gespeichert und ihren jeweiligen Links zugeordnet hat.
+Der ImageStorage ist für die lokale Verwaltung von Bildern zuständig. Er besitzt ein Nachschlagewerk, welches jedem Bild einen eindeutigen Verweis zugeordnet. Das sorgt dafür, dass Drops, die das gleiche Bild besitzen, dieses nicht mehrfach an unterschiedlichen Stellen gespeichert haben müssen. Außerdem kümmert sich der ImageStorage um das Herunterladen von Bildern aus dem Internet, sollte es sich bei dem eingetragenen Verweis um eine URL handeln.
 
 ## Objektmanager
+
+<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/dropmanager.png" alt="DropManager" height="300">
 
 Der Objektmanager verwaltet die lokalen Daten.
 
