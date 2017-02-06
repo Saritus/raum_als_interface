@@ -47,7 +47,7 @@ namespace TouchWalkthrough
 
         public void addURL(string path)
         {
-            if (!images.ContainsKey(path))
+            if (path != null && !images.ContainsKey(path))
             {
                 Bitmap bitmap = GetImageBitmapFromUrl(path);
                 addBitmap(path, bitmap);
