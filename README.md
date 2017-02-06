@@ -6,7 +6,7 @@
 
 #### Ladebildschirm
 
-<img src="http://i.imgur.com/OUkLi.gif" alt="LoadScreen" height="300">
+<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/LoadingScreen.png" alt="LoadingScreen" height="300">
 
 Während des Ladebildschirms werden die Drops und die Bilder heruntergeladen.
 
@@ -14,7 +14,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 #### Hauptbildschirm
 
-<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/ignore.gif" alt="MainScreen" height="300">
+<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/MainScreen.png" alt="MainScreen" height="300">
 
 In der MainActivity werden alle im Objektmanager vorhandenen Drops als Buttons an der richtigen Stelle auf der Karte angezeigt.
 
@@ -22,7 +22,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 #### Dropliste
 
-<img src="http://i.imgur.com/60bts.gif" alt="HistoryView" height="300">
+<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/History.png" alt="History" height="300">
 
 In der HistoryActivity wird die Listenanzeige mit den Daten der Drops gefüllt.
 
@@ -30,7 +30,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 #### Detailansicht
 
-<img src="https://i.redd.it/ol7ea42tl1dy.gif" alt="DropDetailsView" height="300">
+<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/DropDetail.png" alt="DropDetail" height="300">
 
 In der DropDetailsActivity werden die Interface-Elemente der DropDetailsView mit den Daten eines bestimmten Drops gefüllt.
 
@@ -38,7 +38,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 #### Neuen Drop erstellen
 
-<img src="https://i.redd.it/2vjq5pxf209y.gif" alt="NewDropView" height="300">
+<img src="https://raw.githubusercontent.com/Saritus/hap/master/docs/NewDrop.png" alt="NewDrop" height="300">
 
 In der NewDropActivity werden die vom Nutzer eingegebenen Daten ausgewertet und als neuer Drop abgespeichert.
 
