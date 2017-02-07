@@ -2,16 +2,16 @@
 
 [Download](http://www.google.de)
 
-Werbung
+## Werbung
 
-<video width="320" height="240" controls>
+<video width="100%" controls>
   <source src="https://github.com/Saritus/hap/blob/master/docs/advertisingvideo.mp4?raw=true" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
-Anwendung
+## Anwendung
 
-<video width="320" height="240" controls>
+<video width="100%" controls>
   <source src="https://github.com/Saritus/hap/blob/master/docs/applicationvideo.mp4?raw=true" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -44,7 +44,7 @@ Der Objektmanager verwaltet die lokalen Daten.
 
 ## Verbindung
 
-<img src="https://github.com/Saritus/hap/blob/master/docs/fakeconnector.png?raw=true" alt="FakeConnector" height="300">
+<img src="https://github.com/Saritus/hap/blob/master/docs/fakeconnector.png?raw=true" alt="FakeConnector" width="100%">
 
 Die Verbindung wird über einen Connector aufgebaut, der die Drops aus einer externen Quelle lädt.
 
