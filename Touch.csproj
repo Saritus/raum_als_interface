@@ -64,7 +64,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GestureRecognizerView.cs" />
     <Compile Include="DropManager.cs" />
-    <Compile Include="Voting.cs" />
     <Compile Include="XML.cs" />
     <Compile Include="HistoryActivity.cs" />
     <Compile Include="BitmapHelpers.cs" />
