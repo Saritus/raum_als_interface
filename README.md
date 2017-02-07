@@ -28,7 +28,7 @@ Die lokalen Daten bestehen aus den Drops und den Bildern.
 
 <img src="https://github.com/Saritus/hap/blob/master/docs/drop.png?raw=true" alt="Drop" width="100%">
 
-Die Grundlage von hap sind die sogenannten Drops. Das, was für den Kalender der Termin ist, ist für HAP der Drop. Er speichert Informationen, wie ID, Name, Beschreibung, Kategorie, Ort, Zeit und Bild.
+Die Grundlage von hap sind die sogenannten Drops. Das, was für den Kalender der Termin ist, ist für HAP der Drop. Er speichert Informationen, wie ID, Name, Beschreibung, Kategorie, Ort, Zeit und Bild. Außerdem wird im Drop gekennzeichnet, ob ein Nutzer diesen Drop ignoriert hat.
 
 #### ImageStorage
 
