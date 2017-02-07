@@ -2,6 +2,20 @@
 
 [Download](http://www.google.de)
 
+Werbung
+
+<video width="320" height="240" controls>
+  <source src="https://github.com/Saritus/hap/blob/Continue-docu/docs/advertisingvideo.mp4?raw=true" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+Anwendung
+
+<video width="320" height="240" controls>
+  <source src="https://github.com/Saritus/hap/blob/Continue-docu/docs/applicationvideo.mp4?raw=true" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 ## Projekt
 
 <img src="https://cdn.rawgit.com/Saritus/hap/Continue-docu/docs/classdiagram.png" alt="Klassendiagramm" height="300">
@@ -72,7 +86,7 @@ Projektmanager: [Tom Ille](https://github.com/JamesTheButler)
 
 Konzeptor: Konstantin George
 
-Gestaltung: Thomas Theling
+Gestaltung: [Thomas Theling](https://www.thomastheling.com)
 
 Front-End: [Julian Fuchs](https://github.com/Julian93MI)
 
