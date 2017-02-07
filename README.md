@@ -46,7 +46,7 @@ Der DropManager verwaltet sämtliche im System vorhandenen Drops. Er bietet mehr
 
 <img src="https://github.com/Saritus/hap/blob/master/docs/fakeconnector.png?raw=true" alt="FakeConnector" width="100%">
 
-Die Verbindung zu einer externen Quelle wird über ein Klasse gelöst, die das Connector-Interface implementiert. Dies sorgt dafür, dass die Art der Verbindung schnell und leicht gewechselt werden kann, da eine alternative Verbindungsklasse ebenfalls die Funktionen getNewDrops und saveNewDrop implementiert haben muss. Ebenso ist es möglich, einen FakeConnector zu benutzen, die zwar reagiert wie ein tatsächlicher Connector, in Wirklichkeit aber sämtliche Daten lokal vorliegen hat.
+Die Verbindung zu einer externen Quelle wird über eine Klasse gelöst, die das Connector-Interface implementiert. Dies sorgt dafür, dass die Art der Verbindung schnell und leicht gewechselt werden kann, da eine alternative Verbindungsklasse ebenfalls die Funktionen getNewDrops und saveNewDrop implementiert haben muss. Ebenso ist es möglich, einen FakeConnector zu benutzen, die zwar reagiert wie ein tatsächlicher Connector, in Wirklichkeit aber sämtliche Daten lokal vorliegen hat.
 
 ## Interface
 
@@ -60,7 +60,11 @@ Während des Ladebildschirms werden die bisher heruntergeladenen und erstellten 
 
 <img src="https://cdn.rawgit.com/Saritus/hap/master/docs/MainScreen.png" alt="MainScreen" height="300">
 
-In der MainActivity werden alle im Objektmanager vorhandenen Drops als Buttons an der richtigen Stelle auf der Karte angezeigt.
+Die Hauptansicht ist die Ansicht, die nach dem Start der App geöffnet wird. Sie sieht als Übersichtsansichts, von derer man in alle anderen Oberflächen gelangen kann.
+
+Die MainActivity nimmt alle im DropManager vorhandenen Drops und erzeugt aus ihnen ImageButtons, welche dann an der richtigen Stelle auf der Karte eingefügt werden und auf die DropDetailsView des jeweiligen Drops verweisen.
+
+Außerdem ist es in der Hauptansicht möglich, die Filterauswahl zu öffnen, mit derer man die Drops, welche auf der Karte angezeigt werden, nach Kategorien filtern kann.
 
 #### Dropliste
 
