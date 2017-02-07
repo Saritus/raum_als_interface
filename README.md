@@ -6,14 +6,14 @@
 
 <video width="100%" controls>
   <source src="https://github.com/Saritus/hap/blob/master/docs/advertisingvideo.mp4?raw=true" type="video/mp4">
-<a href="https://github.com/Saritus/hap/blob/master/docs/advertisingvideo.mp4">Zum Video</a>
+<a href="https://github.com/Saritus/hap/blob/master/docs/advertisingvideo.mp4?raw=true">Zum Video</a>
 </video>
 
 ## Anwendung
 
 <video width="100%" controls>
   <source src="https://github.com/Saritus/hap/blob/master/docs/applicationvideo.mp4?raw=true" type="video/mp4">
-<a href="https://github.com/Saritus/hap/blob/master/docs/applicationvideo.mp4">Zum Video</a>
+<a href="https://github.com/Saritus/hap/blob/master/docs/applicationvideo.mp4?raw=true">Zum Video</a>
 </video>
 
 ## Projekt
