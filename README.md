@@ -78,7 +78,7 @@ In der DropDetailsActivity werden die Interface-Elemente der DropDetailsView mit
 
 <img src="https://cdn.rawgit.com/Saritus/hap/master/docs/NewDrop.png" alt="NewDrop" height="300">
 
-In der NewDropActivity werden die vom Nutzer eingegebenen Daten ausgewertet und als neuer Drop abgespeichert.
+Das Erstellen eines neuen Drops erfolgt in einer gesonderten Eingabemaske. Hier kann der Nutzer den Namen, die Beschreibung und den Ort des Drop in einem Textfeld eingeben. Für den Ort wird anschließend in einer vorgefertigten Tabelle geschaut, an welcher Position sich der eingegebene Raum befindet. Die Start- und Endzeit wird vom Nutzer in einer sich zusätzlich öffnenden Kalenderansicht ausgewählt und danach intern in Form einer DateTime gespeichert. Wenn der Nutzer ein Bild für den Drop hinzufügen möchte, so wird dafür der Android-interne "Foto auswählen"-Dialog geöffnet und der Nutzer kann sich entweder eines der bereits auf dem Handy befindlichen Bilder aussuchen, oder über das Kamera-Menü ein neues aufnehmen und dieses benutzen. Nachdem sich für ein Bild entschieden wurde, so wird dieses dem ImageStorage hinzugefügt und der Verweis darauf im Drop hinterlegt.
 
 ## Beteiligte
 
