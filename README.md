@@ -1,15 +1,13 @@
-# HAP
+# hap
 
-[Download](http://www.google.de)
+[Download](https://www.dropbox.com/s/j4p9k4wdd0rhlev/hap.apk?dl=1)
 
-## Werbung
+## Videos
 
 <video width="100%" controls>
   <source src="https://github.com/Saritus/hap/blob/master/docs/advertisingvideo.mp4?raw=true" type="video/mp4">
 <a href="https://github.com/Saritus/hap/blob/master/docs/advertisingvideo.mp4?raw=true">Download Video</a>
 </video>
-
-## Anwendung
 
 <video width="100%" controls>
   <source src="https://github.com/Saritus/hap/blob/master/docs/applicationvideo.mp4?raw=true" type="video/mp4">
@@ -18,7 +16,11 @@
 
 ## Projekt
 
+Bei hap handelt es sich um eine Android App, welche mittels [Xamarin][xamarin] erstellt wurde. Das Interface wird erzeugt durch axml-Dateien und die Funktionalität wurde in C# programmiert.
+
 <img src="https://cdn.rawgit.com/Saritus/hap/master/docs/classdiagram.png" alt="Klassendiagramm" height="300">
+
+Die Klassenstruktur hält sich an die Regeln des [Model-View-Controllers][model-view-controllers] und enthält eine klare Trennung von Views, Activities, dem Objektmanager, den lokalen Daten und externen Verbindungen.
 
 ## Lokale Daten
 
@@ -26,7 +28,7 @@
 
 <img src="https://github.com/Saritus/hap/blob/master/docs/drop.png?raw=true" alt="Drop" width="100%">
 
-Die Grundlage von hap sind die sogenannten Drops. Das, was für den Kalender der Termin ist, ist für HAP der Drop. Er speichert Informationen, wie ID, Name, Beschreibung, Kategorie, Ort, Zeit und Bild. Außerdem wird im Drop gekennzeichnet, ob ein Nutzer diesen Drop ignoriert hat.
+Die Grundlage von hap sind die sogenannten Drops. Das, was für den Kalender der Termin ist, ist für hap der Drop. Er speichert Informationen, wie ID, Name, Beschreibung, Kategorie, Ort, Zeit und Bild. Außerdem wird im Drop gekennzeichnet, ob ein Nutzer diesen Drop ignoriert hat.
 
 #### ImageStorage
 
@@ -91,3 +93,7 @@ Front-End: [Julian Fuchs](https://github.com/Julian93MI)
 Back-End: [Sebastian Mischke](https://github.com/Saritus)
 
 [singleton]: https://msdn.microsoft.com/en-us/library/ff650316.aspx
+
+[xamarin]: https://www.xamarin.com/
+
+[model-view-controllers]: https://de.wikipedia.org/wiki/Model_View_Controller
