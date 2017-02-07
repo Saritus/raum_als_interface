@@ -6,14 +6,14 @@
 
 <video width="100%" controls>
   <source src="https://github.com/Saritus/hap/blob/master/docs/advertisingvideo.mp4?raw=true" type="video/mp4">
-<a href="https://github.com/Saritus/hap/blob/master/docs/advertisingvideo.mp4?raw=true">Zum Video</a>
+<a href="https://github.com/Saritus/hap/blob/master/docs/advertisingvideo.mp4?raw=true">Download Video</a>
 </video>
 
 ## Anwendung
 
 <video width="100%" controls>
   <source src="https://github.com/Saritus/hap/blob/master/docs/applicationvideo.mp4?raw=true" type="video/mp4">
-<a href="https://github.com/Saritus/hap/blob/master/docs/applicationvideo.mp4?raw=true">Zum Video</a>
+<a href="https://github.com/Saritus/hap/blob/master/docs/applicationvideo.mp4?raw=true">Download Video</a>
 </video>
 
 ## Projekt
@@ -21,8 +21,6 @@
 <img src="https://cdn.rawgit.com/Saritus/hap/master/docs/classdiagram.png" alt="Klassendiagramm" height="300">
 
 ## Lokale Daten
-
-Die lokalen Daten bestehen aus den Drops und den Bildern.
 
 #### Drops
 
@@ -46,7 +44,7 @@ Der Objektmanager verwaltet die lokalen Daten.
 
 <img src="https://github.com/Saritus/hap/blob/master/docs/fakeconnector.png?raw=true" alt="FakeConnector" width="100%">
 
-Die Verbindung wird über einen Connector aufgebaut, der die Drops aus einer externen Quelle lädt.
+Die Verbindung zu einer externen Quelle wird über ein Klasse gelöst, die das Connector-Interface implementiert. Dies sorgt dafür, dass die Art der Verbindung schnell und leicht gewechselt werden kann, da eine alternative Verbindungsklasse ebenfalls die Funktionen getNewDrops und saveNewDrop implementiert haben muss. Ebenso ist es möglich, einen FakeConnector zu benutzen, die zwar reagiert wie ein tatsächlicher Connector, in Wirklichkeit aber sämtliche Daten lokal vorliegen hat.
 
 ## Interface
 
