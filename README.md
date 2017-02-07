@@ -12,7 +12,7 @@ Die lokalen Daten bestehen aus den Drops und den Bildern.
 
 #### Drops
 
-<img src="https://cdn.rawgit.com/Saritus/hap/Continue-docu/docs/drop.png" alt="Drop" width="100%">
+<img src="https://github.com/Saritus/hap/blob/Continue-docu/docs/drop.png?raw=true" alt="Drop" width="100%">
 
 Die Grundlage von hap sind die sogenannten Drops. Das, was für den Kalender der Termin ist, ist für HAP der Drop. Er speichert Informationen, wie ID, Name, Beschreibung, Kategorie, Ort, Zeit und Bild.
 
@@ -20,15 +20,17 @@ Die Grundlage von hap sind die sogenannten Drops. Das, was für den Kalender der
 
 Der ImageStorage ist für die lokale Verwaltung von Bildern zuständig. Er besitzt ein Nachschlagewerk, welches jedem Bild einen eindeutigen Verweis zugeordnet. Das sorgt dafür, dass Drops, die das gleiche Bild besitzen, dieses nicht mehrfach an unterschiedlichen Stellen gespeichert haben müssen. Außerdem kümmert sich der ImageStorage um das Herunterladen von Bildern aus dem Internet, sollte es sich bei dem eingetragenen Verweis um eine URL handeln.
 
-Programmiert ist der ImageStorage nach dem Prinzip des Singleton-Patterns, welches dafür sorgt, dass unterschiedliche Activities auf dieselbe Instanz zugreifen können, ohne sie mittels eines Parameters zu übergeben.
+Programmiert ist der ImageStorage nach dem Prinzip des [Singleton-Patterns][singleton], welches dafür sorgt, dass unterschiedliche Activities auf dieselbe Instanz zugreifen können, ohne sie mittels eines Parameters zu übergeben.
 
 ## DropManager
 
-<img src="https://cdn.rawgit.com/Saritus/hap/Continue-docu/docs/dropmanager.png" alt="DropManager" width="100%">
+<img src="https://github.com/Saritus/hap/blob/Continue-docu/docs/dropmanager.png?raw=true" alt="DropManager" width="100%">
 
 Der Objektmanager verwaltet die lokalen Daten.
 
 ## Verbindung
+
+<img src="https://github.com/Saritus/hap/blob/Continue-docu/docs/fakeconnector.png?raw=true" alt="FakeConnector" height="300">
 
 Die Verbindung wird über einen Connector aufgebaut, der die Drops aus einer externen Quelle lädt.
 
@@ -75,3 +77,5 @@ Gestaltung: Thomas Theling
 Front-End: [Julian Fuchs](https://github.com/Julian93MI)
 
 Back-End: [Sebastian Mischke](https://github.com/Saritus)
+
+[singleton]: https://msdn.microsoft.com/en-us/library/ff650316.aspx
