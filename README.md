@@ -66,7 +66,7 @@ In der MainActivity werden alle im Objektmanager vorhandenen Drops als Buttons a
 
 <img src="https://cdn.rawgit.com/Saritus/hap/master/docs/History.png" alt="History" height="300">
 
-In der HistoryActivity wird die Listenanzeige mit den Daten der Drops gefüllt.
+In der HistoryActivity werden alle Drops des DropManager, sortiert nach ihrem jeweiligen Startdatum, in der Listenansicht angezeigt. Dafür wird für jeden Drop ein TableItem erstellt, welches die ID, den Namen, den Ort, die Startzeit und das Logo entsprechend der Kategorie des Drop besitzt. Diese TableItems werden dann der ListView hinzugefügt.
 
 #### Detailansicht
 
