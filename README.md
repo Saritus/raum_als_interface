@@ -46,7 +46,7 @@ Der DropManager verwaltet sämtliche im System vorhandenen Drops. Er bietet mehr
 
 <img src="https://github.com/Saritus/hap/blob/master/docs/fakeconnector.png?raw=true" alt="FakeConnector" width="100%">
 
-Die Verbindung zu einer externen Quelle wird über ein Klasse gelöst, die das Connector-Interface implementiert. Dies sorgt dafür, dass die Art der Verbindung schnell und leicht gewechselt werden kann, da eine alternative Verbindungsklasse ebenfalls die Funktionen getNewDrops und saveNewDrop implementiert haben muss. Ebenso ist es möglich, einen FakeConnector zu benutzen, die zwar reagiert wie ein tatsächlicher Connector, in Wirklichkeit aber sämtliche Daten lokal vorliegen hat.
+Die Verbindung zu einer externen Quelle wird über eine Klasse gelöst, die das Connector-Interface implementiert. Dies sorgt dafür, dass die Art der Verbindung schnell und leicht gewechselt werden kann, da eine alternative Verbindungsklasse ebenfalls die Funktionen getNewDrops und saveNewDrop implementiert haben muss. Ebenso ist es möglich, einen FakeConnector zu benutzen, die zwar reagiert wie ein tatsächlicher Connector, in Wirklichkeit aber sämtliche Daten lokal vorliegen hat.
 
 ## Interface
 
