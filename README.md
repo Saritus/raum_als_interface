@@ -54,7 +54,7 @@ Die Verbindung wird über einen Connector aufgebaut, der die Drops aus einer ext
 
 <img src="https://cdn.rawgit.com/Saritus/hap/master/docs/LoadingScreen.png" alt="LoadingScreen" height="300">
 
-Während des Ladebildschirms werden die Drops und die Bilder heruntergeladen.
+Während des Ladebildschirms werden die bisher heruntergeladenen und erstellten Drop aus einer Datei geladen. Anschließend wird geprüft, ob es neue Drops auf dem Server gibt, so dass diese ebenfalls dem DropManager hinzugefügt werden können. Sollte es bei den neuen Drops auch neue Bilder geben, so werden auch diese heruntergeladen und im ImageStorage vermerkt.
 
 #### Hauptbildschirm
 
