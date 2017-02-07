@@ -72,7 +72,7 @@ In der HistoryActivity werden alle Drops des DropManager, sortiert nach ihrem je
 
 <img src="https://cdn.rawgit.com/Saritus/hap/master/docs/DropDetail.png" alt="DropDetail" height="300">
 
-In der DropDetailsActivity werden die Interface-Elemente der DropDetailsView mit den Daten eines bestimmten Drops gefüllt.
+Die Detailansicht dient dazu, dem Nutzer sämtliche in einem Drop gespeicherte Informationen anzuzeigen. Dafür werden Name, Beschreibung, Start- und Endzeit sowie Ort in einer einfachen Textansicht dargestellt. Für die Kategorie wird ein entsprechendes Icon abgebildet. Außerdem wird das im Drop eingetragene Bild angezeigt und wechselt beim Klick darauf in den Vollbildmodus. Zudem ist es möglich, sich die Position des Drop separiert auf einer Karte anzuschauen. Ebenfalls kann der Nutzer den Drop ignorieren, so dass er in der Hauptansicht nicht mehr auf der Karte abgebildet wird.
 
 #### Neuen Drop erstellen
 
