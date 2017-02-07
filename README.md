@@ -4,14 +4,14 @@
 
 ## Werbung
 
-<video width="100%" controls>
+<video height="300" controls>
   <source src="https://github.com/Saritus/hap/blob/master/docs/advertisingvideo.mp4?raw=true" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
 ## Anwendung
 
-<video width="100%" controls>
+<video height="300" controls>
   <source src="https://github.com/Saritus/hap/blob/master/docs/applicationvideo.mp4?raw=true" type="video/mp4">
 Your browser does not support the video tag.
 </video>
