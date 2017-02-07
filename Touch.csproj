@@ -65,7 +65,6 @@
     <Compile Include="GestureRecognizerView.cs" />
     <Compile Include="DropManager.cs" />
     <Compile Include="Voting.cs" />
-    <Compile Include="Warning.cs" />
     <Compile Include="XML.cs" />
     <Compile Include="HistoryActivity.cs" />
     <Compile Include="BitmapHelpers.cs" />
