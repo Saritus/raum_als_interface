@@ -38,7 +38,7 @@ Programmiert ist der ImageStorage nach dem Prinzip des [Singleton-Patterns][sing
 
 <img src="https://github.com/Saritus/hap/blob/master/docs/dropmanager.png?raw=true" alt="DropManager" width="100%">
 
-Der Objektmanager verwaltet die lokalen Daten.
+Der DropManager verwaltet sämtliche im System vorhandenen Drops. Er bietet mehrere Funktionen um die Liste nach bestimmten Kriterien, wie Gebäude oder Kategorie, zu filtern, nach Drops zu suchen, alle Drops in einer Datei zu speichern oder von einer Datei Drops zu laden, mittels eines Connectors sich mit einer Datenbank zu verbinden und somit Drops mit anderen Nutzern zu synchronisieren.
 
 ## Verbindung
 
