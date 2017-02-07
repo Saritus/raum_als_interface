@@ -60,7 +60,7 @@ Während des Ladebildschirms werden die bisher heruntergeladenen und erstellten 
 
 <img src="https://cdn.rawgit.com/Saritus/hap/master/docs/MainScreen.png" alt="MainScreen" height="300">
 
-Die Hauptansicht ist die Ansicht, die nach dem Start der App geöffnet wird. Sie sieht als Übersichtsansichts, von derer man in alle anderen Oberflächen gelangen kann.
+Die Hauptansicht ist die Ansicht, die nach dem Start der App geöffnet wird. Sie sieht als Übersichtsansicht, von derer man in alle anderen Oberflächen gelangen kann.
 
 Die MainActivity nimmt alle im DropManager vorhandenen Drops und erzeugt aus ihnen ImageButtons, welche dann an der richtigen Stelle auf der Karte eingefügt werden und auf die DropDetailsView des jeweiligen Drops verweisen.
 
