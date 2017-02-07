@@ -58,7 +58,6 @@
     <Compile Include="ImageStorage.cs" />
     <Compile Include="MySqlConnector.cs" />
     <Compile Include="Drop.cs" />
-    <Compile Include="EventClient.cs" />
     <Compile Include="HTWLocation.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
